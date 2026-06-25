@@ -28,7 +28,7 @@ export default function ContactPage() {
             <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-primary/3 blur-[100px] rounded-full pointer-events-none -z-10" />
 
             <div className="relative z-10 container mx-auto px-4 pt-28 md:pt-36 pb-24">
-                
+
                 {/* Header Principal */}
                 <FadeIn direction="down">
                     <div className="text-center mb-16">
@@ -47,7 +47,7 @@ export default function ContactPage() {
 
                 {/* Grid principal: Formulario a la izquierda, Información a la derecha */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 max-w-6xl mx-auto items-stretch">
-                    
+
                     {/* Columna Izquierda: Formulario de Mensaje */}
                     <div className="lg:col-span-7 h-full">
                         <FadeIn delay={0.2} direction="left" className="h-full">
@@ -116,7 +116,7 @@ export default function ContactPage() {
 
                     {/* Columna Derecha: Tarjetas de Información Organizables */}
                     <div className="lg:col-span-5 flex flex-col gap-6 h-full justify-between">
-                        
+
                         {/* Tarjeta 1: Canales Directos */}
                         <FadeIn delay={0.3} direction="right">
                             <div className="bg-white/90 backdrop-blur-md p-6 rounded-3xl border border-primary/10 shadow-[0_15px_35px_rgba(113,0,122,0.03)] flex flex-col gap-5">
