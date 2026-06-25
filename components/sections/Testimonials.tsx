@@ -20,7 +20,7 @@ export default function Testimonials() {
         >
             <FadeIn>
                 <div className="flex flex-col items-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-black text-center mb-4 text-gray-900 drop-shadow-sm">
+                    <h2 className="text-3xl md:text-5xl font-brizel text-center mb-4 text-gray-900 drop-shadow-sm uppercase tracking-wide">
                         Lo que dicen de <span className="text-primary">Nosotros</span>
                     </h2>
                     <div className="w-24 h-1 bg-primary rounded-full"></div>
@@ -31,7 +31,7 @@ export default function Testimonials() {
                 {testimonialsData.map((testimonial, index) => (
                     <FadeIn key={testimonial.id} delay={index * 0.2} direction="up" className="h-full">
                         <Card
-                            className="relative overflow-hidden border border-gray-200/50 hover:border-primary/30 transition-all duration-500 p-8 md:p-10 shadow-sm hover:shadow-md rounded-2xl group flex flex-col h-full"
+                            className="relative overflow-hidden border border-gray-200/50 hover:border-primary/20 transition-all duration-500 p-8 md:p-10 shadow-sm hover:shadow-[0_15px_35px_rgba(113,0,122,0.06)] rounded-2xl group flex flex-col h-full"
                             style={{ backgroundColor: siteConfig.theme.backgroundCard }}
                         >
                             {/* Decorative Quote Icon */}

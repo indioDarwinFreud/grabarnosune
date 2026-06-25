@@ -142,7 +142,7 @@ const Footer = () => {
                     <div className="font-urbanist text-gray-400 text-xs tracking-widest uppercase flex flex-col md:flex-row items-center gap-2 md:gap-3">
                         <span>Creado por</span>
                         <Link
-                            href="https://imperiavirtual.com"
+                            href="https://imperiavirtual.com.ar"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-primary via-neutral-300 to-primary font-black text-sm md:text-base tracking-[0.2em] transform hover:scale-105 transition-all duration-300 drop-shadow-[0_0_12px_rgba(192,192,192,0.8)] hover:drop-shadow-[0_0_25px_rgba(192,192,192,1)]"

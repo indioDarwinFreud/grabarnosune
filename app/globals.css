@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Tipografía de Marca: BRIZEL ── */
+@font-face {
+  font-family: 'Brizel';
+  src: url('/fonts/Brizel.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*
  * =====================================================================
  * ESTILOS GLOBALES — PlantillaProducto
@@ -21,10 +30,9 @@
 
 html,
 body {
-  /* La fuente se define vía --font-urbanist inyectada desde layout.tsx */
-  color: #fff;
   font-family: var(--font-urbanist), sans-serif;
   font-size: var(--font-size-base, 16px);
+  color: #1a1a1a;
   overflow-x: hidden;
 }
 

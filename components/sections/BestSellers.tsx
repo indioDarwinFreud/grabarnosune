@@ -18,7 +18,7 @@ export default function BestSellers() {
         >
             <FadeIn>
                 <div className="flex flex-col items-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-black text-center mb-4 text-gray-900 drop-shadow-sm">
+                    <h2 className="text-3xl md:text-5xl font-brizel text-center mb-4 text-gray-900 drop-shadow-sm uppercase tracking-wide">
                         Catálogo <span className="text-primary">Destacado</span>
                     </h2>
                     <div className="w-24 h-1 bg-primary rounded-full"></div>

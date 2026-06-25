@@ -26,10 +26,10 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
 
     return (
         <Card
-            className="overflow-hidden border-primary/20 hover:border-primary/50 transition-all duration-500 group shadow-md hover:shadow-lg flex flex-col h-full hover:-translate-y-2 cursor-pointer relative backdrop-blur-md"
+            className="overflow-hidden border border-primary/10 hover:border-primary/30 transition-all duration-500 group shadow-sm hover:shadow-[0_20px_45px_rgba(113,0,122,0.08)] flex flex-col h-full hover:-translate-y-2 cursor-pointer relative backdrop-blur-md rounded-2xl"
             style={{
                 backgroundColor: siteConfig.theme.backgroundCard,
-                backgroundImage: `url(${siteConfig.theme.cardImage})`,
+                backgroundImage: `url("${siteConfig.theme.cardImage}")`,
                 backgroundSize: siteConfig.theme.cardImage.startsWith('data:') ? 'auto' : 'cover',
                 backgroundRepeat: 'repeat',
                 backgroundBlendMode: 'overlay'
@@ -60,16 +60,33 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
                     </div>
                 )}
 
-                {/* Badge de Precio */}
-                {product.price && (
-                    <div className="absolute top-4 right-4 z-20">
+                {/* Badge de Stock y Precio */}
+                <div className="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
+                    {product.stock !== null && product.stock !== undefined && (
+                        <span
+                            className={`text-xs font-black px-3 py-1.5 rounded-full shadow-lg tracking-wide border ${
+                                product.stock === 0
+                                    ? "bg-red-50 text-red-700 border-red-200"
+                                    : product.stock < 5
+                                    ? "bg-amber-50 text-amber-700 border-amber-200"
+                                    : "bg-green-50 text-green-700 border-green-200"
+                            }`}
+                        >
+                            {product.stock === 0
+                                ? "Sin stock"
+                                : product.stock < 5
+                                ? `Últimas ${product.stock}`
+                                : `Stock: ${product.stock}`}
+                        </span>
+                    )}
+                    {product.price && (
                         <span
                             className="text-neutral-900 text-xs font-black px-3 py-1.5 rounded-full shadow-lg tracking-wide bg-white/95 border border-primary/30"
                         >
                             {product.price}
                         </span>
-                    </div>
-                )}
+                    )}
+                </div>
             </div>
 
             {/* Contenido */}

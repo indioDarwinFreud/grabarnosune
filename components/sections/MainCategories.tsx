@@ -96,7 +96,7 @@ export default function MainCategories() {
         >
             <FadeIn>
                 <div className="flex flex-col items-center mb-12">
-                    <h2 className="text-3xl md:text-5xl font-black text-center mb-4 text-gray-900 drop-shadow-sm">
+                    <h2 className="text-3xl md:text-5xl font-brizel text-center mb-4 text-gray-900 drop-shadow-sm uppercase tracking-wide">
                         Lo Más <span className="text-primary">Buscado</span>
                     </h2>
                     <p className="text-gray-600 text-sm md:text-base font-medium text-center max-w-md">
@@ -110,7 +110,7 @@ export default function MainCategories() {
                 {categories.map((cat, index) => (
                     <FadeIn key={cat.id} delay={index * 0.05} direction="up" className="h-full">
                         <Link href="/products" className="block h-full group">
-                            <div className={`h-full p-5 md:p-6 rounded-2xl border transition-all duration-300 flex flex-col justify-between backdrop-blur-md shadow-md ${cat.color} ${cat.bgClass}`}>
+                            <div className={`h-full p-5 md:p-6 rounded-2xl border transition-all duration-500 flex flex-col justify-between shadow-sm hover:shadow-[0_12px_30px_rgba(113,0,122,0.06)] ${cat.color} ${cat.bgClass}`}>
                                 <div className="mb-4">
                                     {cat.icon}
                                 </div>

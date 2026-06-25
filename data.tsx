@@ -17,7 +17,7 @@
 
 import { HomeIcon, Store, Users, Mail, MessageSquareQuote, ShieldCheck, MapPin, Facebook, Instagram, Phone } from "lucide-react";
 import { siteConfig } from "./config";
-import type { NavItem, Product, Testimonial, ContactItem, BusinessHour } from "./types";
+import type { NavItem, Product, Testimonial, ContactItem, BusinessHour, BlogPost } from "./types";
 
 // ============================================================
 // MENÚ DE NAVEGACIÓN
@@ -68,7 +68,9 @@ export const productsData: Product[] = [
         location: "Insumos - Secado Rápido",
         description: "Hojas de alta transferencia y secado instantáneo. Garantizan una nitidez de imagen del 99% para estampar en telas y tazas.",
         image: "/assets/productos/papel_sublimacion.png",
+        category: "Insumos",
         price: "$8.500",
+        stock: 35,
         website: "/contact",
     },
     {
@@ -77,7 +79,9 @@ export const productsData: Product[] = [
         location: "Sustratos - Calidad Premium",
         description: "Taza de cerámica extra blanca con el recubrimiento polimérico Orca original. Brillo duradero y resistente al microondas.",
         image: "/assets/productos/taza_orca.png",
+        category: "Sustratos",
         price: "$4.500",
+        stock: 3,
         website: "/contact",
     },
     {
@@ -86,7 +90,9 @@ export const productsData: Product[] = [
         location: "Tintas - Alta Densidad",
         description: "Set de 4 tintas CMYK (100ml c/u). Colores intensos, negros puros y fórmula fluida que cuida y protege tus cabezales.",
         image: "/assets/productos/tintas_sublimacion.png",
+        category: "Insumos",
         price: "$22.000",
+        stock: 12,
         website: "/contact",
     },
     {
@@ -95,7 +101,9 @@ export const productsData: Product[] = [
         location: "Textiles - Aptas Sublimación",
         description: "Remeras blancas tacto algodón de poliéster 100%. Costuras reforzadas de cuello a hombro, listas para estampar full color.",
         image: "/assets/grabar_about.png",
+        category: "Textiles",
         price: "$6.200",
+        stock: null,
         website: "/contact",
     },
     {
@@ -104,7 +112,9 @@ export const productsData: Product[] = [
         location: "Gorras y Accesorios",
         description: "Gorras con frente espumado blanco y red de colores variados. Hebilla regulable trasera. Acabado textil de alta calidad.",
         image: "/assets/hero_bg.png",
+        category: "Textiles",
         price: "$3.500",
+        stock: 0,
         website: "/contact",
     },
     {
@@ -113,7 +123,9 @@ export const productsData: Product[] = [
         location: "Regalos - Vuelta al Cole",
         description: "Incluye taza plástica escolar irrompible, cantimplora deportiva y juego de etiquetas autoadhesivas impermeables.",
         image: "/assets/banner_papeles.png",
+        category: "Regalos",
         price: "$14.500",
+        stock: 8,
         website: "/contact",
     },
 ];
@@ -194,3 +206,36 @@ export const contactData: ContactItem[] = [
 // ⚠️ Para cambiar los horarios, modificá config.ts → businessHours.
 // ============================================================
 export const businessHours: BusinessHour[] = siteConfig.businessHours;
+
+// ============================================================
+// BLOG — Consejos y guías para sublimadores
+// ============================================================
+export const blogPosts: BlogPost[] = [
+    {
+        id: 1,
+        title: "Guía definitiva para sublimar en tazas de cerámica",
+        excerpt: "Temperatura, tiempo y presión ideales para lograr estampados nítidos y duraderos en tazas Orca y de cerámica estándar.",
+        image: "/assets/productos/taza_orca.png",
+        slug: "guia-sublimar-tazas-ceramica",
+        category: "Tutoriales",
+        readTime: "4 min",
+    },
+    {
+        id: 2,
+        title: "Cómo elegir el papel de sublimación correcto",
+        excerpt: "Secado rápido vs secado instantáneo: diferencias clave, compatibilidad con tintas y cuál conviene según tu volumen de producción.",
+        image: "/assets/productos/papel_sublimacion.png",
+        slug: "elegir-papel-sublimacion",
+        category: "Insumos",
+        readTime: "3 min",
+    },
+    {
+        id: 3,
+        title: "Tips para estampar remeras de poliéster sin manchas",
+        excerpt: "Evitá fantasmas, sombras y manchas amarillas con estos consejos prácticos de prensado, enfundado y enfriado.",
+        image: "/assets/grabar_about.png",
+        slug: "tips-remeras-poliester",
+        category: "Tutoriales",
+        readTime: "5 min",
+    },
+];

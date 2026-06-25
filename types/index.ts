@@ -25,12 +25,24 @@ export interface Product {
     description: string;
     /** Ruta de la imagen en /public o URL externa */
     image: string;
-    /** Categoría del producto (ej: "Premium", "Essential") */
-    //category: string;
+    /** Categoría del producto (ej: "Insumos", "Sustratos", "Textiles") */
+    category?: string;
     /** Link al que lleva el botón de la tarjeta (puede ser /contact o URL externa) */
     website: string;
     /** Precio opcional para mostrar en la tarjeta */
     price?: string;
+    /** Stock disponible. Si es 0, muestra "Sin stock". Si es <5, "Últimas". Si es null, no muestra badge. */
+    stock?: number | null;
+}
+
+export interface BlogPost {
+    id: number;
+    title: string;
+    excerpt: string;
+    image: string;
+    slug: string;
+    category: string;
+    readTime: string;
 }
 
 // -------------------------------------------------------

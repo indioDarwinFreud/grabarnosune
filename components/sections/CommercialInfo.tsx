@@ -1,6 +1,5 @@
 import FadeIn from "@/components/ui/FadeIn";
 import { Truck, ShieldCheck, MapPin } from "lucide-react";
-import { siteConfig } from "@/config";
 
 export default function CommercialInfo() {
     return (
@@ -12,19 +11,14 @@ export default function CommercialInfo() {
             {/* Banner de Cupones */}
             <FadeIn>
                 <div 
-                    className="relative rounded-3xl p-8 md:p-12 mb-16 overflow-hidden shadow-lg border border-primary/10 backdrop-blur-md"
-                    style={{
-                        backgroundColor: siteConfig.theme.backgroundCard,
-                        backgroundImage: `url(${siteConfig.theme.cardImage})`,
-                        backgroundSize: 'cover',
-                        backgroundBlendMode: 'overlay'
-                    }}
+                    className="relative rounded-3xl p-8 md:p-12 mb-16 overflow-hidden border border-primary/10 shadow-sm"
+                    style={{ backgroundColor: 'white' }}
                 >
                     <div className="absolute inset-0 bg-gradient-to-r from-white via-white/75 to-transparent z-0" />
                     
                     <div className="relative z-10 max-w-2xl flex flex-col justify-center">
                         <span className="text-primary font-black uppercase tracking-widest text-xs mb-3 block">Descuentos Exclusivos</span>
-                        <h3 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 leading-tight">
+                        <h3 className="text-3xl md:text-5xl font-brizel text-gray-900 mb-4 leading-tight uppercase tracking-wide">
                             Cupones de Ahorro <br /> <span className="text-primary">¡Más comprás, más ahorrás!</span>
                         </h3>
                         <p className="text-gray-600 font-medium mb-8 leading-relaxed">
@@ -53,7 +47,7 @@ export default function CommercialInfo() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Beneficio 1 */}
                 <FadeIn delay={0.1} direction="up">
-                    <div className="flex gap-4 p-6 rounded-2xl bg-white/60 border border-gray-200/80 backdrop-blur-sm h-full hover:border-primary/30 transition-all shadow-sm">
+                    <div className="flex gap-4 p-6 rounded-2xl bg-white/90 border border-primary/5 hover:border-primary/20 h-full hover:shadow-[0_10px_30px_rgba(113,0,122,0.05)] transition-all shadow-sm">
                         <div className="p-3 rounded-xl bg-primary/10 text-primary h-fit">
                             <Truck size={24} />
                         </div>
@@ -68,7 +62,7 @@ export default function CommercialInfo() {
 
                 {/* Beneficio 2 */}
                 <FadeIn delay={0.2} direction="up">
-                    <div className="flex gap-4 p-6 rounded-2xl bg-white/60 border border-gray-200/80 backdrop-blur-sm h-full hover:border-primary/30 transition-all shadow-sm">
+                    <div className="flex gap-4 p-6 rounded-2xl bg-white/90 border border-primary/5 hover:border-primary/20 h-full hover:shadow-[0_10px_30px_rgba(113,0,122,0.05)] transition-all shadow-sm">
                         <div className="p-3 rounded-xl bg-primary/10 text-primary h-fit">
                             <ShieldCheck size={24} />
                         </div>
@@ -83,7 +77,7 @@ export default function CommercialInfo() {
 
                 {/* Beneficio 3 */}
                 <FadeIn delay={0.3} direction="up">
-                    <div className="flex gap-4 p-6 rounded-2xl bg-white/60 border border-gray-200/80 backdrop-blur-sm h-full hover:border-primary/30 transition-all shadow-sm">
+                    <div className="flex gap-4 p-6 rounded-2xl bg-white/90 border border-primary/5 hover:border-primary/20 h-full hover:shadow-[0_10px_30px_rgba(113,0,122,0.05)] transition-all shadow-sm">
                         <div className="p-3 rounded-xl bg-primary/10 text-primary h-fit">
                             <MapPin size={24} />
                         </div>

@@ -43,42 +43,43 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isPurpleCraft = siteConfig.activeTheme === "PURPLE_CRAFT";
+  
   return (
     <html lang="en">
       <body
-        className={`text-black font-sans ${urbanist.variable} ${cinzel.variable} ${montserrat.variable} relative`}
+        className={`font-sans ${urbanist.variable} ${cinzel.variable} ${montserrat.variable} relative min-h-screen`}
         style={{
-          // Colores y formas (from config.ts → theme)
+          // CSS Variables del tema (colores, tipografía)
           "--primary-color": siteConfig.theme.primaryColor,
           "--primary-hover": siteConfig.theme.primaryHover,
           "--radius": siteConfig.theme.radius,
-          // Tamaños de texto (from config.ts → typography)
           "--font-size-base": siteConfig.typography.sizeBase,
           "--font-size-lg": siteConfig.typography.sizeLg,
           "--font-size-xl": siteConfig.typography.sizeXl,
+          backgroundColor: siteConfig.theme.backgroundColor,
         } as React.CSSProperties}
       >
-        {/* Global Seamless Background Texture (Blurred to hide pixelation) */}
-        <div
-          className="fixed inset-0 -z-50 w-full h-full pointer-events-none transition-all duration-700"
-          style={{
-            backgroundImage: `url(${siteConfig.theme.backgroundImage})`,
-            backgroundColor: siteConfig.theme.backgroundColor || '#111827', // Fallback color sólido
-            backgroundSize: siteConfig.theme.backgroundImage.startsWith('data:') ? 'auto' : 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: siteConfig.theme.backgroundImage.startsWith('data:') ? 'repeat' : 'no-repeat',
-            //filter: 'blur(20px)',     /* Difumina los píxeles grandes */
-            //transform: 'scale(1.05)'  /* Escala para evitar los bordes blancos del blur */
-          }}
+        {/* Capa de fondo 1: Color sólido de fondo */}
+        <div 
+          className="fixed inset-0 -z-50 pointer-events-none"
+          style={{ backgroundColor: siteConfig.theme.backgroundColor }}
         />
 
-        {/* Noise overlay to give it a premium physical texture and remove banding/pixelation */}
-        <div 
-          className="fixed inset-0 -z-40 w-full h-full pointer-events-none opacity-[0.03] mix-blend-overlay"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`
-          }}
-        />
+        {/* Capa de fondo 2: Textura de rodillo con opacidad controlada para perfecta legibilidad */}
+        {siteConfig.theme.backgroundImage && (
+          <div 
+            className="fixed inset-0 -z-40 pointer-events-none transition-opacity duration-300"
+            style={{
+              backgroundImage: `url("${siteConfig.theme.backgroundImage}")`,
+              backgroundSize: siteConfig.theme.backgroundImageSize ?? "auto",
+              backgroundRepeat: siteConfig.theme.backgroundImageRepeat ?? "repeat",
+              backgroundAttachment: "fixed",
+              opacity: isPurpleCraft ? 0.07 : 0.15, // 7% para el rodillo de Grabar Nos Une para que los textos sean legibles, 15% para otros temas
+              mixBlendMode: isPurpleCraft ? "multiply" : "normal",
+            }}
+          />
+        )}
 
         <ImperiaEditorProvider>
           <Navbar />

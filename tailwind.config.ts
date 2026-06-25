@@ -17,6 +17,7 @@ export default {
         body: ["var(--font-urbanist)", "sans-serif"], // Texto general
         display: ["var(--font-cinzel)", "serif"],      // Logo y títulos de alto impacto
         alt: ["var(--font-montserrat)", "sans-serif"], // Títulos modernos/geométricos
+        brizel: ["'Brizel'", "sans-serif"],             // Tipografía de marca artesanal
       },
       // ------------------------------------------------------------------
       // Colores del Sistema

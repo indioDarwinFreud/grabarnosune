@@ -47,7 +47,7 @@ export const RacingCardContainer = ({ children, className = "", glass = false, .
     // Estilos para el modo Normal (fondo del tema)
     const normalStyle = {
         backgroundColor: siteConfig.theme.backgroundCard,
-        backgroundImage: `url(${siteConfig.theme.cardImage})`,
+        backgroundImage: `url("${siteConfig.theme.cardImage}")`,
         backgroundSize: siteConfig.theme.cardImage?.startsWith('data:') ? 'auto' : 'cover',
         backgroundRepeat: 'repeat',
         backgroundBlendMode: 'overlay',

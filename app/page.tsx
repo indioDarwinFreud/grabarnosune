@@ -6,6 +6,7 @@ import Testimonials from "@/components/sections/Testimonials";
 import Separador from "@/components/ui/separador";
 import MainCategories from "@/components/sections/MainCategories";
 import CommercialInfo from "@/components/sections/CommercialInfo";
+import BlogPreview from "@/components/sections/BlogPreview";
 
 export default function Home() {
   return (
@@ -48,6 +49,13 @@ export default function Home() {
       {/* Commercial Info & Coupons Section */}
       <div className="relative z-20">
         <CommercialInfo />
+      </div>
+
+      <Separador />
+
+      {/* Blog Section */}
+      <div className="relative z-20">
+        <BlogPreview />
       </div>
 
       <Separador />

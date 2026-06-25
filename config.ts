@@ -20,6 +20,8 @@ export interface ThemeConfig {
     backgroundCard: string;
     backgroundFooter: string;
     backgroundImage: string;
+    backgroundImageSize?: string;
+    backgroundImageRepeat?: string;
     cardImage: string;
     radius: string;
     navbarStyle: "nucleus";
@@ -107,7 +109,9 @@ export const siteConfig = {
             },
             // Texturas físicas reales de rodillo y papel proporcionadas por el cliente
             backgroundImage: "/textura para fondo.png",
-            cardImage: "/grabar nos une palabra repetida textura.png"
+            backgroundImageSize: "400px",  // Tamaño del tile de la textura artesanal
+            backgroundImageRepeat: "repeat",  // Se repite en mosaico como papel de empapelar
+            cardImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
         },
 
         // TEMA 3: ELECTRIC BLUE (Tecnológico - Azul y Cyan)

@@ -1,8 +1,8 @@
 import FadeIn from "@/components/ui/FadeIn";
-import { siteConfig } from "@/config";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { siteConfig } from "@/config";
 
 export default function AboutPreview() {
     return (
@@ -16,13 +16,8 @@ export default function AboutPreview() {
                 {/* Image Section - Premium Glass Card */}
                 <FadeIn delay={0.2} direction="right" className="w-full lg:w-1/2 relative">
                     <div
-                        className="relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_15px_35px_rgba(0,0,0,0.6)] border border-primary/20 backdrop-blur-md"
-                        style={{
-                            backgroundColor: siteConfig.theme.backgroundCard,
-                            backgroundImage: `url(${siteConfig.theme.cardImage})`,
-                            backgroundSize: 'cover',
-                            backgroundBlendMode: 'overlay'
-                        }}
+                        className="relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_45px_rgba(113,0,122,0.07)] border border-primary/10"
+                        style={{ backgroundColor: 'white' }}
                     >
                         {/* Interactive overlay */}
                         <div className="absolute inset-0 bg-gradient-to-tr from-black/80 to-transparent z-10" />
@@ -52,7 +47,7 @@ export default function AboutPreview() {
                         </p>
                     </div>
 
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6 drop-shadow-md">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-brizel text-gray-900 leading-tight mb-6 drop-shadow-md uppercase tracking-wide">
                         Creamos recuerdos que <br /> <span className="text-primary">perduran en el tiempo.</span>
                     </h2>
 

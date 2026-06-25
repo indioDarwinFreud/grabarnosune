@@ -10,7 +10,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 80);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -18,29 +18,22 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="fixed z-40 w-full top-5 flex justify-start px-10">
-      <header className="flex justify-start">
+    <div className="fixed z-40 w-full top-5 flex justify-start px-6 pointer-events-none">
+      <header className="flex justify-start pointer-events-auto">
         <Link href="/" className="group">
           <div
-            className="flex flex-col items-center justify-center p-2 transition-all duration-500 bg-transparent"
+            className={`flex flex-col items-center justify-center p-2 transition-all duration-500 ${
+              scrolled ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
+            }`}
             data-imperia-id="Header__logo__0"
             data-imperia-path="components/layout/Header.tsx"
           >
             <Image
               src={siteConfig.logo.main}
               alt={`Logo ${siteConfig.name}`}
-              width={100}
-              height={50}
-              className={`rounded-xl transition-all duration-500 group-hover:scale-105 
-                ${scrolled ? "" : "drop-shadow-lg"}`}
-              style={
-                scrolled
-                  ? {
-                    filter:
-                      "drop-shadow(0 0 15px rgba(255,255,255,1)) drop-shadow(0 0 5px rgba(255,255,255,1))",
-                  }
-                  : {}
-              }
+              width={90}
+              height={45}
+              className="rounded-xl transition-all duration-500 group-hover:scale-105 drop-shadow-lg"
             />
           </div>
         </Link>

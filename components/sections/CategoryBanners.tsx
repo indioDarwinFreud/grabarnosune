@@ -18,7 +18,7 @@ export default function CategoryBanners() {
         >
             <FadeIn>
                 <div className="flex flex-col items-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-black text-center mb-4 text-gray-900 drop-shadow-sm">
+                    <h2 className="text-3xl md:text-5xl font-brizel text-center mb-4 text-gray-900 drop-shadow-sm uppercase tracking-wide">
                         Nuestras <span className="text-primary">Líneas de Trabajo</span>
                     </h2>
                     <div className="w-24 h-1 bg-primary rounded-full"></div>
@@ -30,10 +30,10 @@ export default function CategoryBanners() {
                 <FadeIn delay={0.2} direction="up" className="lg:col-span-2 h-full">
                     <Link href="/products">
                         <Card
-                            className="relative overflow-hidden group h-64 md:h-80 transition-all duration-500 rounded-2xl cursor-pointer shadow-lg hover:shadow-xl border-primary/20 backdrop-blur-md"
+                            className="relative overflow-hidden group h-64 md:h-80 transition-all duration-500 rounded-2xl cursor-pointer shadow-sm hover:shadow-[0_20px_45px_rgba(113,0,122,0.08)] border border-primary/10 hover:border-primary/30 backdrop-blur-md"
                             style={{
                                 backgroundColor: siteConfig.theme.backgroundCard,
-                                backgroundImage: `url(${siteConfig.theme.cardImage})`,
+                                backgroundImage: `url("${siteConfig.theme.cardImage}")`,
                                 backgroundSize: 'cover',
                                 backgroundBlendMode: 'overlay'
                             }}
@@ -70,10 +70,10 @@ export default function CategoryBanners() {
                 <FadeIn delay={0.4} direction="up" className="h-full">
                     <Link href="/products">
                         <Card
-                            className="relative overflow-hidden group h-64 md:h-80 transition-all duration-500 rounded-2xl cursor-pointer shadow-[0_10px_30px_rgba(0,0,0,0.5)] border-primary/20 backdrop-blur-md"
+                            className="relative overflow-hidden group h-64 md:h-80 transition-all duration-500 rounded-2xl cursor-pointer shadow-sm hover:shadow-[0_20px_45px_rgba(113,0,122,0.08)] border border-primary/10 hover:border-primary/30 backdrop-blur-md"
                             style={{
                                 backgroundColor: siteConfig.theme.backgroundCard,
-                                backgroundImage: `url(${siteConfig.theme.cardImage})`,
+                                backgroundImage: `url("${siteConfig.theme.cardImage}")`,
                                 backgroundSize: 'cover',
                                 backgroundBlendMode: 'overlay'
                             }}
