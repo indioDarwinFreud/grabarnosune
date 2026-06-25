@@ -25,7 +25,7 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
 
     return (
         <Card
-            className="overflow-hidden border-primary/20 hover:border-primary/50 transition-all duration-500 group shadow-2xl flex flex-col h-full hover:-translate-y-2 cursor-pointer relative backdrop-blur-md"
+            className="overflow-hidden border-primary/20 hover:border-primary/50 transition-all duration-500 group shadow-md hover:shadow-lg flex flex-col h-full hover:-translate-y-2 cursor-pointer relative backdrop-blur-md"
             style={{
                 backgroundColor: siteConfig.theme.backgroundCard,
                 backgroundImage: `url(${siteConfig.theme.cardImage})`,
@@ -97,7 +97,7 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
                 </p>
 
                 {/* Footer de Tarjeta / Botón */}
-                <div className="mt-auto pt-4 border-t border-white/10">
+                <div className="mt-auto pt-4 border-t border-gray-100">
                     <Link
                         href={whatsappUrl}
                         target="_blank"
@@ -113,7 +113,7 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
                             }}
                             onMouseOver={(e) => {
                                 e.currentTarget.style.background = siteConfig.theme.primaryColor;
-                                e.currentTarget.style.color = '#090214'; // Fondo oscuro violeta para contraste
+                                e.currentTarget.style.color = '#ffffff'; // Blanco para contraste sobre el primario oscuro
                             }}
                             onMouseOut={(e) => {
                                 e.currentTarget.style.background = siteConfig.theme.backgroundMain;

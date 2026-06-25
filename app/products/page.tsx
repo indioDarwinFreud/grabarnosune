@@ -26,22 +26,22 @@ function ProductsContent() {
             <div className="relative z-10 container mx-auto px-4 pt-32 pb-24">
                 <FadeIn direction="down">
                     <div className="text-center mb-12 relative z-10 py-8">
-                        <h1 className="text-5xl md:text-7xl font-black uppercase tracking-wide mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary via-neutral-200 to-primary drop-shadow-sm font-gotham">
+                        <h1 className="text-5xl md:text-7xl font-black uppercase tracking-wide mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary via-gray-900 to-primary drop-shadow-sm font-gotham">
                             Nuestros Productos
                         </h1>
-                        <p className="text-xl text-neutral-300 max-w-2xl mx-auto drop-shadow-sm font-sans">
+                        <p className="text-xl text-gray-700 max-w-2xl mx-auto drop-shadow-sm font-sans">
                             Explorá nuestro catálogo de insumos para sublimación y regalos personalizados.
                         </p>
                     </div>
 
                     {/* Search Bar */}
-                    <div className="flex flex-col md:flex-row gap-4 mb-16 max-w-2xl mx-auto p-2 bg-black/60 backdrop-blur-xl rounded-2xl border border-primary/20 shadow-xl">
+                    <div className="flex flex-col md:flex-row gap-4 mb-16 max-w-2xl mx-auto p-2 bg-white/80 backdrop-blur-md rounded-2xl border border-gray-200/80 shadow-md">
                         <div className="flex-1 relative group">
-                            <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-primary/50 group-hover:text-primary transition-colors" />
+                            <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-primary/60 group-hover:text-primary transition-colors" />
                             <input
                                 type="text"
                                 placeholder="Buscar insumos o personalizados..."
-                                className="w-full bg-transparent border-none rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none placeholder:text-gray-400 font-sans"
+                                className="w-full bg-transparent border-none rounded-xl py-4 pl-12 pr-4 text-gray-900 focus:outline-none placeholder:text-gray-500 font-sans"
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
                             />
@@ -90,7 +90,7 @@ function ProductsContent() {
 
 export default function ProductsPage() {
     return (
-        <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-white">Cargando productos...</div>}>
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-primary">Cargando productos...</div>}>
             <ProductsContent />
         </Suspense>
     );

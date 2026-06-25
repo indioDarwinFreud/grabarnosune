@@ -10,7 +10,7 @@ export default function AboutPage() {
             <div className="relative z-10 container mx-auto px-4 pt-32 pb-24">
                 <FadeIn direction="down">
                     <div className="text-center mb-16 relative z-10">
-                        <h1 className="text-5xl md:text-7xl font-gotham font-black mb-4 tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-primary via-neutral-100 to-primary drop-shadow-sm">
+                        <h1 className="text-5xl md:text-7xl font-gotham font-black mb-4 tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-primary via-gray-900 to-primary drop-shadow-sm">
                             QUIÉNES SOMOS
                         </h1>
                     </div>
@@ -25,29 +25,19 @@ export default function AboutPage() {
                             className="w-full flex flex-col md:flex-row min-h-[300px]"
                         >
                             <div className="relative z-10 py-12 px-8 md:px-16 flex flex-col items-center justify-center text-center h-full w-full mx-auto">
-                                <h2 className="text-3xl md:text-5xl font-gotham font-black italic text-white mb-10 drop-shadow-lg uppercase leading-tight tracking-wide">
+                                <h2 className="text-3xl md:text-5xl font-gotham font-black italic text-gray-900 mb-10 drop-shadow-sm uppercase leading-tight tracking-wide">
                                     NUESTRA HISTORIA
                                 </h2>
 
                                 <div
-                                    className="space-y-4 text-gray-200 font-light text-lg md:text-2xl leading-relaxed font-sans max-w-3xl p-6 md:p-10 rounded-2xl mx-auto transition-all duration-500 relative overflow-hidden bg-black/20 backdrop-blur-xl"
+                                    className="space-y-6 text-gray-700 font-normal text-lg md:text-xl leading-relaxed font-sans max-w-3xl p-8 md:p-12 rounded-3xl mx-auto transition-all duration-500 relative overflow-hidden bg-white/90 backdrop-blur-md shadow-lg"
                                     style={{
-                                        border: `2px solid ${siteConfig.theme.primaryColor}80`,
-                                        borderTop: `2px solid ${siteConfig.theme.primaryColor}50`,
-                                        borderBottom: `2px solid ${siteConfig.theme.primaryColor}50`,
-                                        boxShadow: `0 0px 50px -10px ${siteConfig.theme.primaryColor}40`,
+                                        border: `1px solid ${siteConfig.theme.primaryColor}20`,
+                                        boxShadow: `0 20px 40px -15px ${siteConfig.theme.primaryColor}15`,
                                     }}
                                 >
-                                    <div
-                                        className="absolute inset-0 pointer-events-none -z-10 bg-black/40"
-                                        style={{
-                                            filter: 'blur(40px)',
-                                            transform: 'scale(1.2)'
-                                        }}
-                                    />
-
                                     <div className="relative z-10">
-                                        <p>
+                                        <p className="mb-4">
                                             En Grabar Nos Une, fusionamos la pasión por el diseño creativo con insumos de sublimación de alta gama y regalos personalizados meticulosos. Nos especializamos en materializar ideas audaces.
                                         </p>
                                         <p>

@@ -31,13 +31,13 @@ export default function AboutPreview() {
                             className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                         />
                         {/* Decorative Badge */}
-                        <div className="absolute bottom-6 left-6 z-20 bg-primary/10 backdrop-blur-md border border-primary/30 text-white p-4 rounded-xl shadow-lg">
+                        <div className="absolute bottom-6 left-6 z-20 bg-white/90 backdrop-blur-md border border-gray-200 text-gray-900 p-4 rounded-xl shadow-lg">
                             <p className="font-black text-2xl text-primary">100%</p>
-                            <p className="text-sm text-neutral-300 font-medium">Garantía Creativa</p>
+                            <p className="text-sm text-gray-700 font-medium">Garantía Creativa</p>
                         </div>
                     </div>
                     {/* Decorative back glow */}
-                    <div className="absolute -inset-4 bg-primary/10 blur-3xl -z-10 rounded-full opacity-50 pointer-events-none" />
+                    <div className="absolute -inset-4 bg-primary/5 blur-3xl -z-10 rounded-full opacity-50 pointer-events-none" />
                 </FadeIn>
 
                 {/* Text Content Section */}
@@ -49,20 +49,20 @@ export default function AboutPreview() {
                         </p>
                     </div>
 
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 drop-shadow-md">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6 drop-shadow-md">
                         Creamos recuerdos que <br /> <span className="text-primary">perduran en el tiempo.</span>
                     </h2>
 
-                    <p className="text-lg text-neutral-300 leading-relaxed mb-10 max-w-lg">
-                        En <span className="font-bold text-white">{siteConfig.name}</span>, acompañamos a sublimadores y emprendedores creativos con insumos de primer nivel y soluciones de personalización únicas. Nuestra misión es potenciar tu pasión mediante herramientas confiables y terminaciones de excelencia.
+                    <p className="text-lg text-gray-700 leading-relaxed mb-10 max-w-lg">
+                        En <span className="font-bold text-gray-950">{siteConfig.name}</span>, acompañamos a sublimadores y emprendedores creativos con insumos de primer nivel y soluciones de personalización uniques. Nuestra misión es potenciar tu pasión mediante herramientas confiables y terminaciones de excelencia.
                     </p>
 
                     <Link href="/about" className="group flex items-center gap-4 w-fit">
-                        <span className="text-white font-bold text-lg group-hover:text-primary transition-colors">
+                        <span className="text-gray-900 font-bold text-lg group-hover:text-primary transition-colors">
                             Conocé nuestra historia
                         </span>
-                        <div className="w-12 h-12 rounded-full border border-primary/50 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all shadow-[0_0_15px_rgba(139,92,246,0.2)] group-hover:shadow-[0_0_20px_rgba(139,92,246,0.5)]">
-                            <ArrowRight className="text-primary group-hover:text-black transition-colors" />
+                        <div className="w-12 h-12 rounded-full border border-primary/50 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all shadow-md group-hover:shadow-lg">
+                            <ArrowRight className="text-primary group-hover:text-white transition-colors" />
                         </div>
                     </Link>
                 </FadeIn>

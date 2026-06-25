@@ -64,9 +64,9 @@ export default function RootLayout({
           style={{
             backgroundImage: `url(${siteConfig.theme.backgroundImage})`,
             backgroundColor: siteConfig.theme.backgroundColor || '#111827', // Fallback color sólido
-            backgroundSize: 'cover',
+            backgroundSize: siteConfig.theme.backgroundImage.startsWith('data:') ? 'auto' : 'cover',
             backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
+            backgroundRepeat: siteConfig.theme.backgroundImage.startsWith('data:') ? 'repeat' : 'no-repeat',
             //filter: 'blur(20px)',     /* Difumina los píxeles grandes */
             //transform: 'scale(1.05)'  /* Escala para evitar los bordes blancos del blur */
           }}

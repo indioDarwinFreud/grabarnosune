@@ -89,26 +89,26 @@ export const siteConfig = {
             cardImage: "data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='2' cy='2' r='1'/%3E%3Ccircle cx='22' cy='22' r='1'/%3E%3C/g%3E%3C/svg%3E"
         },
 
-        // TEMA 2: PURPLE_CRAFT (Artesanal & Creativo - Violeta Premium)
         PURPLE_CRAFT: {
-            primaryColor: "#A78BFA", // Violeta Claro Neón
-            primaryHover: "#8B5CF6", // Violeta Principal
-            backgroundMain: "linear-gradient(135deg, #090214 0%, #18082c 100%)",
-            backgroundColor: "#090214", // Base sólida para blending
-            backgroundCard: "rgba(24, 8, 44, 0.7)", // Violeta oscuro semitransparente
-            backgroundFooter: "linear-gradient(135deg, #090214 0%, #130623 100%)",
-            radius: "0.85rem",
+            primaryColor: "#71007A", // Púrpura oscuro oficial del manual
+            primaryHover: "#55005C", // Púrpura más oscuro para hover
+            backgroundMain: "#FAF9FB", // Fondo claro y limpio estilo lino/papel de algodón
+            backgroundColor: "#FAF9FB", // Base sólida
+            backgroundCard: "rgba(255, 255, 255, 0.85)", // Tarjetas blancas con sutil transparencia y glassmorphic blur
+            backgroundFooter: "#1A0A1D", // Footer oscuro profundo para anclaje visual y elegancia
+            radius: "1rem",
             navbarStyle: "nucleus" as const,
             textColors: {
-                primaryLight: "#F5F3FF",
-                secondaryLight: "#A78BFA",
-                cardTitle: "#FFFFFF",
-                cardBody: "#E9D5FF",
-                cardMuted: "#C084FC"
+                primaryLight: "#FAF9FB", // Textos claros para el footer oscuro
+                secondaryLight: "#71007A", // Acentos principales en púrpura
+                cardTitle: "#220025", // Títulos en púrpura ultra oscuro
+                cardBody: "#534255", // Cuerpo de texto en gris púrpura elegante
+                cardMuted: "#88748C" // Subtítulos o notas
             },
-            backgroundImage: "/assets/backgrounds/purple_bg_premium.png",
-            // Patrón de grabado artesanal / textura geométrica
-            cardImage: "data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%238B5CF6' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E"
+            // Patrón SVG repetitivo que simula las pasadas y marcas de un rodillo de grabado artesanal
+            backgroundImage: "data:image/svg+xml,%3Csvg width='360' height='360' viewBox='0 0 360 360' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2371007A' fill-opacity='0.015'%3E%3Cpath d='M30,0 C25,60 35,120 28,180 C32,240 26,300 31,360 L45,360 C40,300 46,240 42,180 C49,120 39,60 44,0 Z'/%3E%3Cpath d='M160,0 C156,80 164,160 158,240 C162,280 157,320 161,360 L176,360 C172,320 177,280 173,240 C179,160 171,80 175,0 Z'/%3E%3Cpath d='M290,0 C285,100 295,200 288,300 L303,300 C310,200 300,100 305,0 Z'/%3E%3Cpath d='M0,80 Q90,75 180,85 T360,80 L360,88 Q270,93 180,83 T0,88 Z'/%3E%3Cpath d='M0,260 Q90,255 180,265 T360,260 L360,268 Q270,273 180,263 T0,268 Z'/%3E%3Ccircle cx='100' cy='50' r='1.5'/%3E%3Ccircle cx='220' cy='210' r='2'/%3E%3Ccircle cx='80' cy='310' r='1'/%3E%3Ccircle cx='320' cy='120' r='1.8'/%3E%3C/g%3E%3C/svg%3E",
+            // Textura granulada de papel de algodón rústico
+            cardImage: "data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.44 0 0 0 0 0.0 0 0 0 0 0.48 0 0 0 0.012 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paperNoise)'/%3E%3C/svg%3E"
         },
 
         // TEMA 3: ELECTRIC BLUE (Tecnológico - Azul y Cyan)

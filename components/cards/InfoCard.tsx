@@ -24,11 +24,11 @@ export const InfoCard = ({ icon: Icon, title, description, className, href, comp
     const Content = () => (
         <RacingCardContainer
             glass
-            className={`h-full flex items-center ${compact ? 'py-2 px-4 gap-3' : 'p-10 gap-6'} ${className} ${href ? 'cursor-pointer hover:bg-white/5 transition-colors' : ''}`}
+            className={`h-full flex items-center ${compact ? 'py-2 px-4 gap-3' : 'p-10 gap-6'} ${className} ${href ? 'cursor-pointer hover:bg-primary/5 transition-colors' : ''}`}
         >
             {/* Icon Box - Left Side */}
             <div className="shrink-0">
-                <div className={`${compact ? 'w-9 h-9 rounded-lg' : 'w-14 h-14 rounded-2xl'} bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary group-hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] transition-all duration-500`}>
+                <div className={`${compact ? 'w-9 h-9 rounded-lg' : 'w-14 h-14 rounded-2xl'} bg-primary/5 border border-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary transition-all duration-500 shadow-sm`}>
                     <Icon className={`text-primary ${compact ? 'w-4 h-4' : 'w-7 h-7'} group-hover:text-white transition-colors`} />
                 </div>
             </div>
@@ -37,13 +37,13 @@ export const InfoCard = ({ icon: Icon, title, description, className, href, comp
             <div>
                 <h3
                     className={`${compact ? 'text-sm md:text-base' : 'text-xl md:text-2xl'} font-bold ${compact ? 'mb-0' : 'mb-2'} font-gotham tracking-tight uppercase`}
-                    style={{ color: siteConfig.theme.textColors.primaryLight }}
+                    style={{ color: siteConfig.theme.textColors.cardTitle }}
                 >
                     {title}
                 </h3>
                 <p
-                    className={`leading-relaxed font-light transition-colors ${compact ? 'text-xs md:text-sm' : 'text-sm md:text-base'}`}
-                    style={{ color: siteConfig.theme.textColors.secondaryLight }}
+                    className={`leading-relaxed font-normal transition-colors ${compact ? 'text-xs md:text-sm' : 'text-sm md:text-base'}`}
+                    style={{ color: siteConfig.theme.textColors.cardBody }}
                 >
                     {description}
                 </p>

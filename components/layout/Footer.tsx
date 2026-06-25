@@ -22,7 +22,8 @@ const Footer = () => {
 
     return (
         <footer
-            className="w-full backdrop-blur-xl py-12 md:py-20 border-t border-primary/30 relative overflow-hidden shadow-[0_-10px_40px_-15px_rgba(192,192,192,0.15)]"
+            className="w-full backdrop-blur-xl py-12 md:py-20 border-t border-primary/20 relative overflow-hidden shadow-md"
+            style={{ background: siteConfig.theme.backgroundFooter }}
             data-imperia-id="Footer__container__0"
             data-imperia-path="components/layout/Footer.tsx"
         >
@@ -72,7 +73,7 @@ const Footer = () => {
 
                         {/* Elegant Brand Logo */}
                         <div 
-                            className="relative w-72 h-32 group-hover:scale-105 transition-transform duration-500 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"
+                            className="relative w-72 h-32 group-hover:scale-105 transition-transform duration-500"
                             data-imperia-id="Footer__logo__0"
                             data-imperia-path="components/layout/Footer.tsx"
                         >
@@ -82,7 +83,7 @@ const Footer = () => {
                                 fill
                                 className="object-contain"
                                 style={{
-                                    filter: "drop-shadow(0 0 10px rgba(255,255,255,0.8)) drop-shadow(0 0 20px rgba(255,255,255,0.4))",
+                                    filter: "brightness(0) invert(1)",
                                 }}
                             />
                         </div>

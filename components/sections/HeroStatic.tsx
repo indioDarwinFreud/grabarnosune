@@ -25,15 +25,13 @@ export default function HeroStatic() {
 
             <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-4xl mx-auto">
                 <FadeIn delay={0.2} direction="up">
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight text-[#C0C0C0] drop-shadow-sm">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight text-primary">
                         Bienvenidos a {siteConfig.name}
                     </h1>
                 </FadeIn>
 
-
-
                 <FadeIn delay={0.4} direction="up">
-                    <p className="text-lg md:text-2xl text-neutral-300 mb-12 font-medium racking-wide">
+                    <p className="text-lg md:text-2xl text-gray-700 mb-12 font-medium tracking-wide">
                         {siteConfig.description}
                     </p>
                 </FadeIn>
