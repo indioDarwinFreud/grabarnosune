@@ -205,7 +205,7 @@ export default function ContactPage() {
                                     <div className="flex-1 space-y-1">
                                         {siteConfig.businessHours.map((hour, index) => (
                                             <div key={index} className="flex justify-between text-xs md:text-sm font-semibold">
-                                                <span className="text-gray-500">{hour.days}:</span>
+                                                <span className="text-gray-500">{hour.day}:</span>
                                                 <span className="text-gray-800">{hour.hours}</span>
                                             </div>
                                         ))}
