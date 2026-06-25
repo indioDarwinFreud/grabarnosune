@@ -152,3 +152,14 @@
     - **[MOTOR AST V2]**: Se mejoró el parseador de escenas (`/api/scene/parse`). Ahora es capaz de resolver exportaciones por alias (`export default Navbar`) siguiendo el símbolo original y cuenta con un "Greedy Fallback" que detecta el root JSX de forma agresiva, eliminando errores 404 de parseo.
     - **[MAPPING GLOBAL]**: Los componentes de layout (`Header.tsx`, `Navbar.tsx`, `Footer.tsx`) y las secciones principales de la home fueron inyectados con metadatos, completando la experiencia de edición visual de punta a punta.
     - **[ESTABILIDAD]**: Se blindó el `PropertiesPanel` contra errores de runtime (`null value at styles.x`) mediante validaciones de existencia de nodo, permitiendo una transición fluida entre selección de elementos externos e internos.
+
+**Junio 2026 - Rebranding Minimalista "Grabar Nos Une"**
+*   **25/06/2026 - Transición a Tema Claro y Rodillo Artesanal:**
+    - **[OBJETIVO]**: Adaptar la web al manual de marca del cliente con una identidad minimalista física, clara, basada en texturas de pasadas de rodillo e insumos tradicionales de grabado.
+    - **[RECONFIGURACIÓN DE TEMA]**: Se modificó el tema `PURPLE_CRAFT` en `config.ts` estableciendo un fondo claro premium (`#FAF9FB`) con un patrón SVG inline que emula las pasadas de rodillo con tinta y papel de algodón de forma sutil.
+    - **[CORRECCIÓN DE CONTRASTE GLOBAL]**: Se modificaron todos los componentes principales y páginas (`HeroStatic`, `MainCategories`, `CategoryBanners`, `BestSellers`, `AboutPreview`, `CommercialInfo`, `Testimonials`, `ProductCard`, `InfoCard`, `Footer`, `Navbar`, `/products`, `/about`, `/contact`) para cambiar los textos estáticos en blanco y lilas por tonos oscuros legibles (`text-gray-900`, `text-gray-700`, `text-gray-600`), eliminando glows galácticos y sombras invasivas.
+    - **[REORGANIZACIÓN NAV/FOOTER]**:
+        - El `Footer.tsx` conservó un fondo oscuro propio (`backgroundFooter` del tema: `#1A0A1D`) y se le aplicó un filtro CSS `brightness(0) invert(1)` al logo corporativo para mostrarlo en blanco de forma minimalista.
+        - La pastilla flotante `Navbar.tsx` se modificó para usar el color púrpura profundo del tema en lugar del color negro puro, dándole cohesión estética total al degradado inferior.
+    - **[GIT SYNC]**: Se integraron todos los cambios y se subieron exitosamente al repositorio en GitHub `https://github.com/indioDarwinFreud/grabarnosune.git` en la rama `main`, garantizando la preservación del proyecto sin afectar el repositorio original.
+
