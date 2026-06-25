@@ -1,6 +1,5 @@
 "use client"
 
-import { Card } from "@/components/ui/card";
 import FadeIn from "@/components/ui/FadeIn";
 import { siteConfig } from "@/config";
 import { RacingCardContainer } from "@/components/ui/RacingCardContainer";
@@ -11,7 +10,7 @@ export default function AboutPage() {
             <div className="relative z-10 container mx-auto px-4 pt-32 pb-24">
                 <FadeIn direction="down">
                     <div className="text-center mb-16 relative z-10">
-                        <h1 className="text-4xl md:text-7xl font-gotham font-black mb-4 tracking-wide bg-clip-text bg-gradient-to-r from-neutral-100 text-white">
+                        <h1 className="text-5xl md:text-7xl font-gotham font-black mb-4 tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-primary via-neutral-100 to-primary drop-shadow-sm">
                             QUIÉNES SOMOS
                         </h1>
                     </div>
@@ -49,10 +48,10 @@ export default function AboutPage() {
 
                                     <div className="relative z-10">
                                         <p>
-                                            En plantilla producto, fusionamos la manufactura de alta gama con un diseño de autor meticuloso. Nos especializamos en materializar ideas audaces.
+                                            En Grabar Nos Une, fusionamos la pasión por el diseño creativo con insumos de sublimación de alta gama y regalos personalizados meticulosos. Nos especializamos en materializar ideas audaces.
                                         </p>
                                         <p>
-                                            Desde conceptos minimalistas hasta desarrollos a gran escala, nuestro compromiso es entregar productos que no solo resisten el paso del tiempo, sino que verdaderamente imponen presencia y exclusividad en su entorno.
+                                            Desde insumos de alta transferencia para potenciar tu emprendimiento hasta grabados de alta precisión para ocasiones especiales, nuestro compromiso es ofrecerte calidad premium que resista el paso del tiempo.
                                         </p>
                                     </div>
                                 </div>

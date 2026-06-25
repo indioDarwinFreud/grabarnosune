@@ -1,20 +1,21 @@
 import { siteConfig } from "@/config";
 
 import type { Metadata } from "next";
-import { Urbanist, Cinzel, Montserrat } from "next/font/google"; // Re-import Urbanist
+import { Urbanist, Outfit, Montserrat } from "next/font/google";
 
 import "./globals.css";
 
 import Navbar from "@/components/layout/Navbar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ImperiaEditorProvider from "@/components/providers/ImperiaEditorProvider";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
   variable: "--font-urbanist",
 });
 
-const cinzel = Cinzel({
+const cinzel = Outfit({
   subsets: ["latin"],
   variable: "--font-cinzel",
 });
@@ -61,8 +62,8 @@ export default function RootLayout({
         <div
           className="fixed inset-0 -z-50 w-full h-full pointer-events-none transition-all duration-700"
           style={{
-            backgroundImage: `url(${(siteConfig.theme as any).backgroundImage})`,
-            backgroundColor: (siteConfig.theme as any).backgroundColor || '#111827', // Fallback color sólido
+            backgroundImage: `url(${siteConfig.theme.backgroundImage})`,
+            backgroundColor: siteConfig.theme.backgroundColor || '#111827', // Fallback color sólido
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -79,10 +80,12 @@ export default function RootLayout({
           }}
         />
 
-        <Navbar />
-        <Header />
-        {children}
-        <Footer />
+        <ImperiaEditorProvider>
+          <Navbar />
+          <Header />
+          {children}
+          <Footer />
+        </ImperiaEditorProvider>
       </body>
     </html>
   );

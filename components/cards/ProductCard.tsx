@@ -28,8 +28,8 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
             className="overflow-hidden border-primary/20 hover:border-primary/50 transition-all duration-500 group shadow-2xl flex flex-col h-full hover:-translate-y-2 cursor-pointer relative backdrop-blur-md"
             style={{
                 backgroundColor: siteConfig.theme.backgroundCard,
-                backgroundImage: `url(${(siteConfig.theme as any).cardImage})`,
-                backgroundSize: (siteConfig.theme as any).cardImage.startsWith('data:') ? 'auto' : 'cover',
+                backgroundImage: `url(${siteConfig.theme.cardImage})`,
+                backgroundSize: siteConfig.theme.cardImage.startsWith('data:') ? 'auto' : 'cover',
                 backgroundRepeat: 'repeat',
                 backgroundBlendMode: 'overlay'
             }}
@@ -58,15 +58,16 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
                     </div>
                 )}
 
-                {/* Badge de Categoría */}
-                <div className="absolute top-4 right-4 z-20">
-                    <span
-                        className="text-white text-[10px] font-black px-3 py-1 rounded-full shadow-lg uppercase tracking-wider"
-                        style={{ backgroundColor: siteConfig.theme.primaryColor }}
-                    >
-                        {product.category}
-                    </span>
-                </div>
+                {/* Badge de Precio */}
+                {product.price && (
+                    <div className="absolute top-4 right-4 z-20">
+                        <span
+                            className="text-neutral-900 text-xs font-black px-3 py-1.5 rounded-full shadow-lg tracking-wide bg-white/95 border border-primary/30"
+                        >
+                            {product.price}
+                        </span>
+                    </div>
+                )}
             </div>
 
             {/* Contenido */}
@@ -96,7 +97,7 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
                 </p>
 
                 {/* Footer de Tarjeta / Botón */}
-                <div className="mt-auto pt-4 border-t border-black/20">
+                <div className="mt-auto pt-4 border-t border-white/10">
                     <Link
                         href={whatsappUrl}
                         target="_blank"
@@ -112,7 +113,7 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
                             }}
                             onMouseOver={(e) => {
                                 e.currentTarget.style.background = siteConfig.theme.primaryColor;
-                                e.currentTarget.style.color = '#021824'; // Fondo oscuro para contraste
+                                e.currentTarget.style.color = '#090214'; // Fondo oscuro violeta para contraste
                             }}
                             onMouseOut={(e) => {
                                 e.currentTarget.style.background = siteConfig.theme.backgroundMain;
@@ -120,7 +121,7 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
                             }}
                         >
                             <MessageCircle size={18} />
-                            Consultar
+                            Pedir por WhatsApp
                         </Button>
                     </Link>
                 </div>

@@ -1,12 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Cinzel } from "next/font/google";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { siteConfig } from "@/config";
-
-const cinzel = Cinzel({ subsets: ["latin"] });
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -26,6 +23,8 @@ const Header = () => {
         <Link href="/" className="group">
           <div
             className="flex flex-col items-center justify-center p-2 transition-all duration-500 bg-transparent"
+            data-imperia-id="Header__logo__0"
+            data-imperia-path="components/layout/Header.tsx"
           >
             <Image
               src={siteConfig.logo.main}

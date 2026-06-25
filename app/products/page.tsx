@@ -1,16 +1,15 @@
 "use client"
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, Suspense } from "react";
 import { productsData } from "@/data";
 import { Search as SearchIcon, X } from "lucide-react";
-import { siteConfig } from "@/config";
 
 import { useSearchParams } from "next/navigation";
 import FadeIn from "@/components/ui/FadeIn";
 import ProductCard from "@/components/cards/ProductCard";
 
 function ProductsContent() {
-    const searchParams = useSearchParams();
+    useSearchParams(); // Mantener para compatibilidad con Suspense boundary
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -27,24 +26,22 @@ function ProductsContent() {
             <div className="relative z-10 container mx-auto px-4 pt-32 pb-24">
                 <FadeIn direction="down">
                     <div className="text-center mb-12 relative z-10 py-8">
-                        <h1 className="text-5xl md:text-7xl font-black uppercase tracking-wide mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-neutral-400 drop-shadow-sm font-gotham">
+                        <h1 className="text-5xl md:text-7xl font-black uppercase tracking-wide mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary via-neutral-200 to-primary drop-shadow-sm font-gotham">
                             Nuestros Productos
                         </h1>
-                        <p className="text-xl text-gray-600 max-w-2xl mx-auto drop-shadow-sm font-sans">
-                            Explorá nuestro catálogo exclusivo de productos premium y ediciones limitadas.
+                        <p className="text-xl text-neutral-300 max-w-2xl mx-auto drop-shadow-sm font-sans">
+                            Explorá nuestro catálogo de insumos para sublimación y regalos personalizados.
                         </p>
                     </div>
 
-
-
                     {/* Search Bar */}
-                    <div className="flex flex-col md:flex-row gap-4 mb-16 max-w-2xl mx-auto p-2 bg-white/80 backdrop-blur-xl rounded-2xl border border-primary/20 shadow-xl">
+                    <div className="flex flex-col md:flex-row gap-4 mb-16 max-w-2xl mx-auto p-2 bg-black/60 backdrop-blur-xl rounded-2xl border border-primary/20 shadow-xl">
                         <div className="flex-1 relative group">
                             <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-primary/50 group-hover:text-primary transition-colors" />
                             <input
                                 type="text"
-                                placeholder={`Buscar en ...`}
-                                className="w-full bg-transparent border-none rounded-xl py-4 pl-12 pr-4 text-black focus:outline-none placeholder:text-gray-400 font-sans"
+                                placeholder="Buscar insumos o personalizados..."
+                                className="w-full bg-transparent border-none rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none placeholder:text-gray-400 font-sans"
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
                             />

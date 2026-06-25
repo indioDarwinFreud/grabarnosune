@@ -13,7 +13,11 @@ import { siteConfig } from "@/config";
  */
 export default function Testimonials() {
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 mt-16 mb-24">
+        <div 
+            className="w-full max-w-7xl mx-auto px-4 mt-16 mb-24"
+            data-imperia-id="Testimonials__container__0"
+            data-imperia-path="components/sections/Testimonials.tsx"
+        >
             <FadeIn>
                 <div className="flex flex-col items-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-black text-center mb-4 text-white drop-shadow-sm">
@@ -44,7 +48,7 @@ export default function Testimonials() {
                                     className="text-lg md:text-xl italic font-medium leading-relaxed flex-grow mb-8"
                                     style={{ color: siteConfig.theme.textColors.cardBody }}
                                 >
-                                    "{testimonial.content}"
+                                    &ldquo;{testimonial.content}&rdquo;
                                 </p>
 
                                 <div className="flex items-center gap-4 mt-auto pt-6 border-t border-neutral-300">

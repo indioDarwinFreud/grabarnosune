@@ -1,9 +1,6 @@
 import FadeIn from "@/components/ui/FadeIn";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
 import { siteConfig } from "@/config";
-import Separador from "@/components/ui/separador";
 import { NeonButton } from "@/components/ui/NeonButton";
 
 /**
@@ -14,15 +11,13 @@ import { NeonButton } from "@/components/ui/NeonButton";
  * Datos: `siteConfig.name` y `siteConfig.description` de config.ts.
  */
 export default function HeroStatic() {
-    const handleScroll = () => {
-        window.scrollTo({
-            top: window.innerHeight,
-            behavior: 'smooth'
-        });
-    };
 
     return (
-        <div className="relative w-full min-h-[80vh] flex flex-col items-center justify-center bg-transparent">
+        <div 
+            className="relative w-full min-h-[80vh] flex flex-col items-center justify-center bg-transparent"
+            data-imperia-id="HeroStatic__container__0"
+            data-imperia-path="components/sections/HeroStatic.tsx"
+        >
             {/* The global background gradient now handles the overall color */}
 
             {/* Decorative Glow */}

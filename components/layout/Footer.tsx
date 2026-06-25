@@ -23,6 +23,8 @@ const Footer = () => {
     return (
         <footer
             className="w-full backdrop-blur-xl py-12 md:py-20 border-t border-primary/30 relative overflow-hidden shadow-[0_-10px_40px_-15px_rgba(192,192,192,0.15)]"
+            data-imperia-id="Footer__container__0"
+            data-imperia-path="components/layout/Footer.tsx"
         >
             {/* Capa de fondo "Fumigada" aislada para no desenfocar el texto */}
             <div 
@@ -69,7 +71,11 @@ const Footer = () => {
                         <div className="hidden md:block absolute top-0 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
 
                         {/* Elegant Brand Logo */}
-                        <div className="relative w-72 h-32 group-hover:scale-105 transition-transform duration-500 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                        <div 
+                            className="relative w-72 h-32 group-hover:scale-105 transition-transform duration-500 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]"
+                            data-imperia-id="Footer__logo__0"
+                            data-imperia-path="components/layout/Footer.tsx"
+                        >
                             <Image
                                 src={siteConfig.logo.main}
                                 alt={`Logo ${siteConfig.name}`}

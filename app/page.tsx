@@ -1,14 +1,11 @@
-"use client"
-
-
 import HeroStatic from "@/components/sections/HeroStatic";
 import AboutPreview from "@/components/sections/AboutPreview";
-
-
 import BestSellers from "@/components/sections/BestSellers";
 import CategoryBanners from "@/components/sections/CategoryBanners";
 import Testimonials from "@/components/sections/Testimonials";
 import Separador from "@/components/ui/separador";
+import MainCategories from "@/components/sections/MainCategories";
+import CommercialInfo from "@/components/sections/CommercialInfo";
 
 export default function Home() {
   return (
@@ -20,17 +17,45 @@ export default function Home() {
 
       <Separador />
 
+      {/* Main Categories Section (Lo más buscado) */}
+      <div className="relative z-20">
+        <MainCategories />
+      </div>
+
+      <Separador />
+
+      {/* About Preview Section (Quiénes somos) */}
       <div className="relative z-20">
         <AboutPreview />
       </div>
 
       <Separador />
 
-      <CategoryBanners />
+      {/* Category Banners Section (Líneas de trabajo) */}
+      <div className="relative z-20">
+        <CategoryBanners />
+      </div>
 
-      <BestSellers />
+      <Separador />
 
-      <Testimonials />
+      {/* Best Sellers Section (Catálogo destacado) */}
+      <div className="relative z-20">
+        <BestSellers />
+      </div>
+
+      <Separador />
+
+      {/* Commercial Info & Coupons Section */}
+      <div className="relative z-20">
+        <CommercialInfo />
+      </div>
+
+      <Separador />
+
+      {/* Testimonials Section */}
+      <div className="relative z-20 pb-20">
+        <Testimonials />
+      </div>
 
     </main>
   );

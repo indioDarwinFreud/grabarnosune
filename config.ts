@@ -12,15 +12,35 @@
  * ============================================================
  */
 
+export interface ThemeConfig {
+    primaryColor: string;
+    primaryHover: string;
+    backgroundMain: string;
+    backgroundColor: string;
+    backgroundCard: string;
+    backgroundFooter: string;
+    backgroundImage: string;
+    cardImage: string;
+    radius: string;
+    navbarStyle: "nucleus";
+    textColors: {
+        primaryLight: string;
+        secondaryLight: string;
+        cardTitle: string;
+        cardBody: string;
+        cardMuted: string;
+    };
+}
+
 export const siteConfig = {
     // ---------------------------------------------------------------------------
     // 1. Identidad de Marca Principal
     //    → Cambiá name, shortName y description para el nombre del negocio.
     // ---------------------------------------------------------------------------
-    name: "Plantilla Producto",
-    shortName: "Plantilla",
-    description: "La mejor solución para presentar tus productos de manera premium.",
-    url: "https://plantillaproducto.com",
+    name: "Grabar Nos Une",
+    shortName: "GrabarNosUne",
+    description: "Insumos para sublimar y regalos personalizados premium. Creamos recuerdos que perduran en el tiempo.",
+    url: "https://grabarnosune.com.ar",
 
     // ---------------------------------------------------------------------------
     // 2. Tipografía del Sitio
@@ -31,12 +51,12 @@ export const siteConfig = {
     // ---------------------------------------------------------------------------
     typography: {
         fontBody: "Urbanist",    // Fuente del cuerpo, párrafos y navegación
-        fontHeading: "Cinzel",      // Fuente de logos y títulos de alto impacto
+        fontHeading: "Outfit",      // Fuente de logos y títulos de alto impacto
         fontAlt: "Montserrat",  // Fuente alternativa para títulos modernos/geométricos
 
         // Escala de tamaños de texto base
         // Estos valores se inyectan como CSS variables (--font-size-base, --font-size-lg, --font-size-xl)
-        sizeBase: "16px",  // Tamaño de párrafo estándar
+        sizeBase: "14px",  // Tamaño de párrafo estándar
         sizeLg: "18px",  // Tamaño de texto grande (subtítulos pequeños)
         sizeXl: "20px",  // Tamaño de texto extra-grande
     },
@@ -47,7 +67,7 @@ export const siteConfig = {
     //    → Cada tema controla colores, fondos y textos de manera armonizada.
     // ---------------------------------------------------------------------------
     themes: {
-        // TEMA 1: SILVER PREMIUM (Actual - Minimalista y metálico)
+        // TEMA 1: SILVER PREMIUM (Minimalista y metálico)
         SILVER_PREMIUM: {
             primaryColor: "#C0C0C0",
             primaryHover: "#9CA3AF",
@@ -69,26 +89,26 @@ export const siteConfig = {
             cardImage: "data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='2' cy='2' r='1'/%3E%3Ccircle cx='22' cy='22' r='1'/%3E%3C/g%3E%3C/svg%3E"
         },
 
-        // TEMA 2: GOLD EMPIRE (Lujoso - Negro y Dorado)
-        GOLD_EMPIRE: {
-            primaryColor: "#D4AF37", // Oro Clásico
-            primaryHover: "#B8860B", // Oro Oscuro
-            backgroundMain: "linear-gradient(160deg, #000000 0%, #1a1a1a 100%)",
-            backgroundColor: "#000000", // Base sólida para blending
-            backgroundCard: "rgba(26, 26, 26, 0.8)", // Negro lujo semitransparente
-            backgroundFooter: "linear-gradient(160deg, #000000 0%, #1a1a1a 100%)",
-            radius: "0.5rem",
+        // TEMA 2: PURPLE_CRAFT (Artesanal & Creativo - Violeta Premium)
+        PURPLE_CRAFT: {
+            primaryColor: "#A78BFA", // Violeta Claro Neón
+            primaryHover: "#8B5CF6", // Violeta Principal
+            backgroundMain: "linear-gradient(135deg, #090214 0%, #18082c 100%)",
+            backgroundColor: "#090214", // Base sólida para blending
+            backgroundCard: "rgba(24, 8, 44, 0.7)", // Violeta oscuro semitransparente
+            backgroundFooter: "linear-gradient(135deg, #090214 0%, #130623 100%)",
+            radius: "0.85rem",
             navbarStyle: "nucleus" as const,
             textColors: {
-                primaryLight: "#FFFFFF",
-                secondaryLight: "#D4AF37",
+                primaryLight: "#F5F3FF",
+                secondaryLight: "#A78BFA",
                 cardTitle: "#FFFFFF",
-                cardBody: "#E5E7EB",
-                cardMuted: "#9CA3AF"
+                cardBody: "#E9D5FF",
+                cardMuted: "#C084FC"
             },
-            backgroundImage: "/assets/backgrounds/gold_bg.png",
-            // Patrón de tejido de lujo en oro para consistencia
-            cardImage: "data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23D4AF37' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E"
+            backgroundImage: "/assets/backgrounds/purple_bg_premium.png",
+            // Patrón de grabado artesanal / textura geométrica
+            cardImage: "data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%238B5CF6' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E"
         },
 
         // TEMA 3: ELECTRIC BLUE (Tecnológico - Azul y Cyan)
@@ -110,13 +130,13 @@ export const siteConfig = {
             },
             backgroundImage: "/assets/backgrounds/blue_bg.png",
             // Textura de rejilla técnica cian para el tema Blue
-            cardImage: "data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%2300E5FF' stroke-opacity='0.15' stroke-width='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4v-4H4v4H0v2h4v4h2v-4h4v-2H6zm30 0v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"
+            cardImage: "data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%2300E5FF' stroke-opacity='0.15' stroke-width='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4v-4H4v4H0v2h4v4h2v-4h4v-2H6zm30 0v-4h-2v4h-4v2h4v4h2v-4h4v-2-h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"
         }
     },
 
     // ESTO ELIGE EL TEMA ACTIVO
-    // Podés cambiarlo a: "SILVER_PREMIUM", "GOLD_EMPIRE" o "ELECTRIC_BLUE"
-    activeTheme: "SILVER_PREMIUM" as const,
+    // Podés cambiarlo a: "SILVER_PREMIUM", "PURPLE_CRAFT" o "ELECTRIC_BLUE"
+    activeTheme: "PURPLE_CRAFT" as const,
 
     get theme() {
         return this.themes[this.activeTheme];
@@ -127,7 +147,7 @@ export const siteConfig = {
     //    → Reemplazá los archivos en /public/ y actualizá las rutas aquí.
     // ---------------------------------------------------------------------------
     logo: {
-        main: "/placeholder.svg", // Logo del Navbar y Footer (SVG o PNG recomendado)
+        main: "/assets/logo.png", // Logo del Navbar y Footer (SVG o PNG recomendado)
         icon: "/favicon.ico",     // Favicon del navegador
     },
 
@@ -136,9 +156,9 @@ export const siteConfig = {
     //    → Define cómo se ve el sitio en Google y al compartir en redes.
     // ---------------------------------------------------------------------------
     seo: {
-        keywords: ["productos", "negocios", "plantilla", "ecommerce", "premium", "venta"],
-        author: "Imperia Virtual",
-        ogImage: "/placeholder.svg", // Imagen que aparece al compartir en WhatsApp/Facebook (1200x630px ideal)
+        keywords: ["sublimacion", "insumos para sublimar", "regalos personalizados", "grabar nos une", "tazas personalizadas", "Mendoza", "las heras"],
+        author: "Grabar Nos Une",
+        ogImage: "/assets/logo.png", // Imagen que aparece al compartir en WhatsApp/Facebook (1200x630px ideal)
     },
 
     // ---------------------------------------------------------------------------
@@ -147,11 +167,11 @@ export const siteConfig = {
     //    → Formato del phone: +[CódigoPaís][CódigoÁrea][Número] sin espacios.
     // ---------------------------------------------------------------------------
     contact: {
-        email: "contacto@plantillaproducto.com",
-        phone: "+5492612700341",    // Ej: +5492612345678
-        whatsappText: "¡Hola! Vengo desde su página web y me gustaría hacer una consulta.",
-        location: "Mendoza, Argentina",
-        mapsLink: "https://maps.google.com/?q=Mendoza,Argentina"
+        email: "daianayamil7@hotmail.com",
+        phone: "+5492616572658",    // De la tarjeta de presentación
+        whatsappText: "¡Hola Daiana! Vengo desde su página web y me gustaría consultar por insumos y personalizados.",
+        location: "B° Las Compuertas, Las Heras, Mendoza",
+        mapsLink: "https://maps.google.com/?q=Las+Heras,Mendoza,Argentina"
     },
 
     // ---------------------------------------------------------------------------
@@ -161,11 +181,11 @@ export const siteConfig = {
     //      luego incluirla en data.tsx dentro de contactData.
     // ---------------------------------------------------------------------------
     socials: {
-        instagram: "https://www.instagram.com/plantilla.producto/",
-        instagramHandle: "@plantilla_producto",
+        instagram: "https://www.instagram.com/grabarnosune/",
+        instagramHandle: "@grabarnosune",
 
-        facebook: "https://www.facebook.com/PlantillaProducto",
-        facebookHandle: "/PlantillaProducto",
+        facebook: "https://www.facebook.com/grabar.nos.une",
+        facebookHandle: "/grabarnosune",
     },
 
     // ---------------------------------------------------------------------------

@@ -1,10 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { User, MessageSquare, Send } from "lucide-react";
 import { siteConfig } from "@/config";
-import Separador from "@/components/ui/separador";
 import { NeonButton } from "@/components/ui/NeonButton";
 
 import FadeIn from "@/components/ui/FadeIn";
@@ -21,8 +19,9 @@ export default function ContactPage() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        const phoneNumber = "5492612700341";
-        const text = `Hola, soy ${name}. ${message}`;
+        // Limpiar el número de teléfono para wa.me (dejar solo dígitos)
+        const phoneNumber = siteConfig.contact.phone.replace(/\D/g, "");
+        const text = `Hola, soy ${name}. Vengo de la web y te quería consultar por: ${message}`;
         const encodedText = encodeURIComponent(text);
 
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;

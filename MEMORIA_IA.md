@@ -142,3 +142,13 @@
     - **[PROPIEDAD GLASS]**: Se profesionalizó el código creando la prop `glass` en `RacingCardContainer.tsx`. Esta propiedad centraliza el estilo de transparencia, desenfoque profundo y borde dorado neón. Se añadieron comentarios técnicos detallados en el componente para facilitar su uso.
     - **[UNIFICACIÓN CONTACTO]**: Se aplicó la prop `glass` al formulario de contacto y a todas las `InfoCard.tsx` (Email, Teléfono, etc.), logrando que toda la web comparta el mismo lenguaje visual de "vidrio esmerilado" y opulencia.
     - **[CONFIGURACIÓN]**: El usuario seleccionó el tema `SILVER_PREMIUM` como activo para la sesión final.
+
+**Abril 2026 - Imperia Visual Editor (Revolución del Workflow)**
+*   **19/04/2026 - Refactor de UI & Navegación "Go-to-Source":**
+    - **[UI SIMPLIFICADA]**: Se eliminó la redundancia de pestañas (Componentes/Explorador). El `ProjectExplorer` es ahora la vista única y persistente a la izquierda, funcionando como un IDE profesional.
+    - **[NAVEGACIÓN AUTOMÁTICA]**: Al cliquear cualquier elemento en el visor (Iframe), el explorador se expande automáticamente, resalta el archivo `.tsx` correspondiente y su código se carga de forma instantánea en el panel inferior (`CodePanel`).
+    - **[SINCRONIZACIÓN DE SCROLL 1:1]**: Se resolvió el bug del "cuadro de selección flotante". Ahora el SDK envía coordenadas en tiempo real al hacer scroll dentro del Iframe, permitiendo que los marcos de selección (`VisualOverlay`) se mantengan perfectamente pegados a los elementos visuales sin importar el desplazamiento.
+    - **[DETECCIÓN INDESTRUCTIBLE]**: El SDK migró a `e.composedPath()` para la captura de eventos. Esto permite que elementos con alta profundidad (como el logo IV o iconos anidados) transmitan correctamente sus metadatos (`data-imperia-*`) al padre, garantizando una respuesta del 100% al clic.
+    - **[MOTOR AST V2]**: Se mejoró el parseador de escenas (`/api/scene/parse`). Ahora es capaz de resolver exportaciones por alias (`export default Navbar`) siguiendo el símbolo original y cuenta con un "Greedy Fallback" que detecta el root JSX de forma agresiva, eliminando errores 404 de parseo.
+    - **[MAPPING GLOBAL]**: Los componentes de layout (`Header.tsx`, `Navbar.tsx`, `Footer.tsx`) y las secciones principales de la home fueron inyectados con metadatos, completando la experiencia de edición visual de punta a punta.
+    - **[ESTABILIDAD]**: Se blindó el `PropertiesPanel` contra errores de runtime (`null value at styles.x`) mediante validaciones de existencia de nodo, permitiendo una transición fluida entre selección de elementos externos e internos.
