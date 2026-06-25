@@ -3,6 +3,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { MessageCircle, Ruler } from "lucide-react";
 import { siteConfig } from "@/config";
 import type { Product } from "@/types";
@@ -42,11 +43,12 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
                 {/* Sombra interna suave */}
                 <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.1)] z-10 pointer-events-none" />
 
-                <img
+                <Image
                     src={product.image}
                     alt={product.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
-                    loading="lazy"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
 
                 {/* Overlay de Zoom (solo visible si hay onImageClick) */}

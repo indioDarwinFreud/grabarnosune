@@ -3,6 +3,7 @@
 import { useState, Suspense } from "react";
 import { productsData } from "@/data";
 import { Search as SearchIcon, X } from "lucide-react";
+import Image from "next/image";
 
 import { useSearchParams } from "next/navigation";
 import FadeIn from "@/components/ui/FadeIn";
@@ -75,11 +76,13 @@ function ProductsContent() {
                         >
                             <X size={32} />
                         </button>
-                        <img
+                        <Image
                             src={selectedImage}
                             alt="Vista Previa"
-                            className="w-full h-full object-contain rounded-lg shadow-2xl drop-shadow-[0_0_50px_rgba(192,192,192,0.2)]"
+                            fill
+                            className="object-contain rounded-lg shadow-2xl"
                             onClick={(e) => e.stopPropagation()}
+                            sizes="100vw"
                         />
                     </div>
                 </div>

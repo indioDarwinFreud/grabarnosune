@@ -105,10 +105,9 @@ export const siteConfig = {
                 cardBody: "#534255", // Cuerpo de texto en gris púrpura elegante
                 cardMuted: "#88748C" // Subtítulos o notas
             },
-            // Patrón SVG repetitivo que simula las pasadas y marcas de un rodillo de grabado artesanal
-            backgroundImage: "data:image/svg+xml,%3Csvg width='360' height='360' viewBox='0 0 360 360' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2371007A' fill-opacity='0.015'%3E%3Cpath d='M30,0 C25,60 35,120 28,180 C32,240 26,300 31,360 L45,360 C40,300 46,240 42,180 C49,120 39,60 44,0 Z'/%3E%3Cpath d='M160,0 C156,80 164,160 158,240 C162,280 157,320 161,360 L176,360 C172,320 177,280 173,240 C179,160 171,80 175,0 Z'/%3E%3Cpath d='M290,0 C285,100 295,200 288,300 L303,300 C310,200 300,100 305,0 Z'/%3E%3Cpath d='M0,80 Q90,75 180,85 T360,80 L360,88 Q270,93 180,83 T0,88 Z'/%3E%3Cpath d='M0,260 Q90,255 180,265 T360,260 L360,268 Q270,273 180,263 T0,268 Z'/%3E%3Ccircle cx='100' cy='50' r='1.5'/%3E%3Ccircle cx='220' cy='210' r='2'/%3E%3Ccircle cx='80' cy='310' r='1'/%3E%3Ccircle cx='320' cy='120' r='1.8'/%3E%3C/g%3E%3C/svg%3E",
-            // Textura granulada de papel de algodón rústico
-            cardImage: "data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paperNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.44 0 0 0 0 0.0 0 0 0 0 0.48 0 0 0 0.012 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paperNoise)'/%3E%3C/svg%3E"
+            // Texturas físicas reales de rodillo y papel proporcionadas por el cliente
+            backgroundImage: "/textura para fondo.png",
+            cardImage: "/grabar nos une palabra repetida textura.png"
         },
 
         // TEMA 3: ELECTRIC BLUE (Tecnológico - Azul y Cyan)
@@ -147,7 +146,7 @@ export const siteConfig = {
     //    → Reemplazá los archivos en /public/ y actualizá las rutas aquí.
     // ---------------------------------------------------------------------------
     logo: {
-        main: "/assets/logo.png", // Logo del Navbar y Footer (SVG o PNG recomendado)
+        main: "/logo con nombre.png", // Logo del Navbar y Footer (SVG o PNG recomendado)
         icon: "/favicon.ico",     // Favicon del navegador
     },
 
@@ -158,7 +157,7 @@ export const siteConfig = {
     seo: {
         keywords: ["sublimacion", "insumos para sublimar", "regalos personalizados", "grabar nos une", "tazas personalizadas", "Mendoza", "las heras"],
         author: "Grabar Nos Une",
-        ogImage: "/assets/logo.png", // Imagen que aparece al compartir en WhatsApp/Facebook (1200x630px ideal)
+        ogImage: "/logo con nombre.png", // Imagen que aparece al compartir en WhatsApp/Facebook (1200x630px ideal)
     },
 
     // ---------------------------------------------------------------------------

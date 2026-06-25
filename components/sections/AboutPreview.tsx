@@ -2,6 +2,7 @@ import FadeIn from "@/components/ui/FadeIn";
 import { siteConfig } from "@/config";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AboutPreview() {
     return (
@@ -25,10 +26,12 @@ export default function AboutPreview() {
                     >
                         {/* Interactive overlay */}
                         <div className="absolute inset-0 bg-gradient-to-tr from-black/80 to-transparent z-10" />
-                        <img
+                        <Image
                             src="/assets/grabar_about.png"
                             alt="Taller Grabar Nos Une"
-                            className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                            fill
+                            className="object-cover transform hover:scale-105 transition-transform duration-700"
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                         {/* Decorative Badge */}
                         <div className="absolute bottom-6 left-6 z-20 bg-white/90 backdrop-blur-md border border-gray-200 text-gray-900 p-4 rounded-xl shadow-lg">

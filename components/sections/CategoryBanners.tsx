@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import FadeIn from "@/components/ui/FadeIn";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/config";
 
@@ -37,12 +38,16 @@ export default function CategoryBanners() {
                                 backgroundBlendMode: 'overlay'
                             }}
                         >
-                            <img
-                                src="/assets/banner_papeles.png"
-                                alt="Insumos para sublimación"
-                                className="absolute right-0 top-0 w-full md:w-1/2 h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-50 md:opacity-85"
-                                style={{ maskImage: "linear-gradient(to right, transparent, black 80%)" }}
-                            />
+                            <div className="absolute right-0 top-0 w-full md:w-1/2 h-full z-0">
+                                <Image
+                                    src="/assets/banner_papeles.png"
+                                    alt="Insumos para sublimación"
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-50 md:opacity-85"
+                                    style={{ maskImage: "linear-gradient(to right, transparent, black 80%)" }}
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                />
+                            </div>
                             <div className="absolute inset-0 z-20 flex flex-col justify-end p-6 md:p-8 w-full md:w-2/3 bg-gradient-to-t from-white via-white/80 to-transparent md:bg-none">
                                 <div className="flex justify-between items-end">
                                     <div>
@@ -73,10 +78,12 @@ export default function CategoryBanners() {
                                 backgroundBlendMode: 'overlay'
                             }}
                         >
-                            <img
+                            <Image
                                 src="/assets/banner_sustratos.png"
                                 alt="Sustratos e importados"
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-40 group-hover:opacity-60"
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-40 group-hover:opacity-60"
+                                sizes="(max-width: 768px) 100vw, 33vw"
                             />
                             <div className="absolute inset-0 z-20 flex flex-col justify-end p-6 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
                                 <div className="flex justify-between items-end">
