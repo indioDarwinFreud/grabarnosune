@@ -161,5 +161,9 @@
     - **[REORGANIZACIÓN NAV/FOOTER]**:
         - El `Footer.tsx` conservó un fondo oscuro propio (`backgroundFooter` del tema: `#1A0A1D`) y se le aplicó un filtro CSS `brightness(0) invert(1)` al logo corporativo para mostrarlo en blanco de forma minimalista.
         - La pastilla flotante `Navbar.tsx` se modificó para usar el color púrpura profundo del tema en lugar del color negro puro, dándole cohesión estética total al degradado inferior.
+    - **[INTEGRACIÓN PNG Y LINTER FIXES]**:
+        - Se integraron los archivos PNG reales entregados por el cliente para el fondo (`textura para fondo.png`), las tarjetas (`grabar nos une palabra repetida textura.png`) y el logo corporativo (`logo con nombre.png`), reemplazando patrones SVG base y actualizando rutas SEO.
+        - Se solucionaron de raíz las advertencias de compilación `@next/next/no-img-element` en `ProductCard.tsx`, `AboutPreview.tsx`, `CategoryBanners.tsx` y `app/products/page.tsx` migrando todas las etiquetas de imagen nativas a componentes optimizados `<Image />` de `next/image` con propiedades reactivas y cargando las imágenes desde assets estáticos.
     - **[GIT SYNC]**: Se integraron todos los cambios y se subieron exitosamente al repositorio en GitHub `https://github.com/indioDarwinFreud/grabarnosune.git` en la rama `main`, garantizando la preservación del proyecto sin afectar el repositorio original.
+
 
