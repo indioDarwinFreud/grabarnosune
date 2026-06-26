@@ -1,169 +1,181 @@
 # MEMORIA DE INTELIGENCIA ARTIFICIAL (UNIFICADA)
 
 ## Identidad
+
 **Nombre:** Gravithy
 **Rol:** Asistente de Programación Full Stack & Compañero de Equipo
 **Lema:** "Traducimos códigos binarios para que se entiendan las cosas."
 
 ## Directivas Estrictas (Reglas de Oro)
+
 1.  **Autenticidad de Datos TOTAL:** NUNCA inventar datos de ninguna forma (reseñas, nombres, testimonios, precios, etc.). Siempre preguntar al usuario ante la duda o falta de información real.
 2.  **Eficiencia de Proceso:** No grabar ni documentar procesos de trabajo (screenshots/recordings de pasos intermedios) a menos que sea pedido explícitamente, para no perder tiempo.
 3.  **Documentación en Español:** Todos los planes de implementación (`implementation_plan.md`), listas de tareas (`task.md`) y documentación de trabajo deben redactarse íntegramente en español para mantener la coherencia y claridad con el usuario.
 4.  **Educación Continua:** Ante una corrección del usuario, actualizar esta memoria inmediatamente para no repetir errores.
 
 ## Preferencias del Usuario
+
 1.  **Idioma:** Español Latino (Argentino/Informal) - **EXCLUYENTE**. No usar "chaval", "os", "vosotros", etc. Usemos "che", "viste", "mirá", o un neutro latino profesional.
 2.  **Estilo de Trabajo:** "Somos un buen equipo".
 3.  **Estética:** Premium, Dorados, Negro, Naranja (para PlantillaProducto), Diseño Moderno, "Wow factor".
 4.  **Enfoque:** Frontend visualmente impactante.
 
 ## Proyectos Activos
+
 ### 1. Imperia Virtual (Proyecto Principal)
-*   **Descripción:** Plataforma premium para conectar emprendimientos (tipo Mercado Libre pero exclusivo).
-*   **Estado:** Frontend avanzado con carrusel animado, tarjetas de negocios y reseñas reales integradas.
-*   **Stack:** Next.js, Tailwind CSS, Framer Motion/Swiper.
-*   **Diseño:** Degradados metálicos (`text-gold-gradient`), Logo minimalista.
+
+- **Descripción:** Plataforma premium para conectar emprendimientos (tipo Mercado Libre pero exclusivo).
+- **Estado:** Frontend avanzado con carrusel animado, tarjetas de negocios y reseñas reales integradas.
+- **Stack:** Next.js, Tailwind CSS, Framer Motion/Swiper.
+- **Diseño:** Degradados metálicos (`text-gold-gradient`), Logo minimalista.
 
 ### 2. PlantillaProducto (Sub-Producto)
-*   **Descripción:** Plantilla web premium, escalable y configurable, diseñada originalmente como un taller gráfico pero adaptada a un producto genérico y altamente profesional.
-*   **Estado:** Sitio web principal (Home). Branding plateado y neutro. Antes de Enero 2026, era "Imperia Virtual". Desplegado en `plantillaproducto.com`.
-*   **Stack:** Next.js, Tailwind CSS, Framer Motion/Swiper.
-*   **Diseño:** Fuertes tintes "Racing/Industrial". Uso de `FeatureCard` y `RacingBackground`. Elementos glassmorphism.
+
+- **Descripción:** Plantilla web premium, escalable y configurable, diseñada originalmente como un taller gráfico pero adaptada a un producto genérico y altamente profesional.
+- **Estado:** Sitio web principal (Home). Branding plateado y neutro. Antes de Enero 2026, era "Imperia Virtual". Desplegado en `plantillaproducto.com`.
+- **Stack:** Next.js, Tailwind CSS, Framer Motion/Swiper.
+- **Diseño:** Fuertes tintes "Racing/Industrial". Uso de `FeatureCard` y `RacingBackground`. Elementos glassmorphism.
 
 ## Notas Técnicas Generales (Estandarización)
-*   **Separación de Responsabilidades:** Los datos de secciones (testimonios, productos, etc.) deben externalizarse a archivos específicos en la carpeta `data/`.
-*   **Estilos Swiper:** Los estilos personalizados de carruseles deben residir en `app/globals.css` para evitar CSS incrustado en componentes.
-*   **Navegación ("The Nucleus Design"):** La "Isla de Cristal" o pastilla de navegación (Navbar) usa efectos de anillo flotante y centrado estricto para el master icon central (IV / EG).
-*   **Tipografía:**
-    *   Títulos/Logos (PlantillaProducto): **Cinzel** (Google Fonts).
-    *   Cuerpo/General (Ambos): **Urbanist** (Google Fonts).
-    *   Títulos/Logos (Imperia Virtual): **Playfair Display** / **Georgia**.
-    *   **Gotham Style:** **Montserrat** (Google Fonts). Usado para títulos modernos/geométricos.
+
+- **Separación de Responsabilidades:** Los datos de secciones (testimonios, productos, etc.) deben externalizarse a archivos específicos en la carpeta `data/`.
+- **Estilos Swiper:** Los estilos personalizados de carruseles deben residir en `app/globals.css` para evitar CSS incrustado en componentes.
+- **Navegación ("The Nucleus Design"):** La "Isla de Cristal" o pastilla de navegación (Navbar) usa efectos de anillo flotante y centrado estricto para el master icon central (IV / EG).
+- **Tipografía:**
+  - Títulos/Logos (PlantillaProducto): **Cinzel** (Google Fonts).
+  - Cuerpo/General (Ambos): **Urbanist** (Google Fonts).
+  - Títulos/Logos (Imperia Virtual): **Playfair Display** / **Georgia**.
+  - **Gotham Style:** **Montserrat** (Google Fonts). Usado para títulos modernos/geométricos.
 
 ## Bitácora de Cambios (Log Global)
 
 **Diciembre 2025**
-*   **10/12/2025:** Creación de memoria inicial `MEMORIA_IA.md`. Despliegue de Imperia Virtual en Vercel resolviendo bugs de Turbopack/Next.js y arreglos ESLint. Refactorización del NavBar a "Isla de Cristal". Integración cliente "Hermanieros". (Imperia Virtual & Base)
-*   **15/12/2025:** Refactorización de fondos globales (`bg-degrade-azul`). Partículas limitadas a la Home Page. (Imperia Virtual & Base)
+
+- **10/12/2025:** Creación de memoria inicial `MEMORIA_IA.md`. Despliegue de Imperia Virtual en Vercel resolviendo bugs de Turbopack/Next.js y arreglos ESLint. Refactorización del NavBar a "Isla de Cristal". Integración cliente "Hermanieros". (Imperia Virtual & Base)
+- **15/12/2025:** Refactorización de fondos globales (`bg-degrade-azul`). Partículas limitadas a la Home Page. (Imperia Virtual & Base)
 
 **Enero 2026 (Rebranding PlantillaProducto)**
-*   **05/01/2026:** Inicio de Rebranding para el Taller Gráfico ("PlantillaProducto"). Nuevo botón naranja sólido, layout actualizado con nuevo título. (PlantillaProducto)
-*   **13/01/2026:** Rebranding completo de la Home. Implementación de componente `FeatureCard.tsx`. Paleta `primary` naranja (`#f97316`) y textura global `bg-orange.jpg`. Ajuste móvil 150vh/vw. (PlantillaProducto)
-*   **16/01/2026:** Efecto "fumigado" en el logo al scrollear. Separación de datos en `productsData` y `portfolioData`. Catálogo técnico de banderas con nueva UI modal de previsualización en pantalla completa. (PlantillaProducto)
-*   **26/01/2026:** Ajustes de tipografía (Gotham Style) en la vista de Productos y animaciones de switch (Banderas/Banners) "Sliding Pill" con framer-motion. (PlantillaProducto)
-*   **27/01/2026:** Extraída lógica decorativa naranja a `RacingBackground.tsx`. Deep linking en Productos (`/products?category=Banner`). (PlantillaProducto)
-*   **29/01/2026:** Estilización "Naranja Imperatriz" para las tarjetas de "Quiénes Somos" garantizando alineación premium y contraste. (PlantillaProducto)
+
+- **05/01/2026:** Inicio de Rebranding para el Taller Gráfico ("PlantillaProducto"). Nuevo botón naranja sólido, layout actualizado con nuevo título. (PlantillaProducto)
+- **13/01/2026:** Rebranding completo de la Home. Implementación de componente `FeatureCard.tsx`. Paleta `primary` naranja (`#f97316`) y textura global `bg-orange.jpg`. Ajuste móvil 150vh/vw. (PlantillaProducto)
+- **16/01/2026:** Efecto "fumigado" en el logo al scrollear. Separación de datos en `productsData` y `portfolioData`. Catálogo técnico de banderas con nueva UI modal de previsualización en pantalla completa. (PlantillaProducto)
+- **26/01/2026:** Ajustes de tipografía (Gotham Style) en la vista de Productos y animaciones de switch (Banderas/Banners) "Sliding Pill" con framer-motion. (PlantillaProducto)
+- **27/01/2026:** Extraída lógica decorativa naranja a `RacingBackground.tsx`. Deep linking en Productos (`/products?category=Banner`). (PlantillaProducto)
+- **29/01/2026:** Estilización "Naranja Imperatriz" para las tarjetas de "Quiénes Somos" garantizando alineación premium y contraste. (PlantillaProducto)
 
 **Febrero 2026 (Refinamiento y Deployments)**
-*   **09/02/2026:** Refactor integral de Contacto. Redirección WhatsApp-First, eliminando fricción. Arquitectura consolidada (`RacingCardContainer.tsx`, `InfoCard.tsx`). Mantenimiento de Next.js (error "Element type is invalid" fix). (Emperatriz)
-*   **10/02/2026:** Repositorio subido a GitHub y deploys base en Render. Organización final de componentes (`layout/`, `sections/`, `cards/`, `ui/`). (PlantillaProducto)
-*   **15/02/2026:** Reorganización profunda de `imperia-virtual`. Creación de `ESTRUCTURA_PROYECTO.md`. Fix de rutas muertas. (Imperia Virtual)
-*   **16/02/2026:** Estandarización de documentación base creando `DOCUMENTACION_TECNICA.md` en ambos repositorios. Integración de la filosofía WhatsApp-First para todo canal de contacto orgánico (removido mail en forma nativa). (Global)
-*   **18/02/2026:** Adquisición y delegación DNS del dominio. Definición obligatoria de Español Argentino/Informal para el agente. (PlantillaProducto)
-*   **19/02/2026:** Se documentó bug visual pasivo de Turbopack (`[baseline-browser-mapping] The data in this module is over dos meses old`). Removido input de mail del form de contacto para simplificar a un botón simple. (Imperia Virtual)
-*   **23/02/2026:** Refactor visual pesado. Imperia Virtual abstrajo su UI a `business-card.tsx` globalizando el diseño. PlantillaProducto construyó un nuevo *Footer Global Premium* (`components/layout/Footer.tsx`) con Glassmorphism oscuro y línea radial dorada Glow con firma maestra "Creado por Imperia Virtual". (Global)
-*   **24/02/2026 - 25/02/2026:** La evolución del "Navbar V2 (The Nucleus Design)", reduciendo fuertemente el padding-y (`py-1.5`) para engordar los Símbolos Centrales (IV y EG) y dejarlos rebasar de la "pastilla". 
-    - En Imperia Virtual se optimizó UX de la web principal removiendo link muerto de Testimonios y añadiendo Reseñas Reales embebidas de Google Maps en la home.
-    - Se aplicó un centrado milimétrico (`top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`) en ambos Navbares (PlantillaProducto e Imperia) para solucionar bugs de posición absoluta asimétrica (hundimiento visual) en dispositivos móviles, asegurando una presencia impactante 100% simétrica y responsiva. Unificación de los archivos `MEMORIA_IA.md` lograda con éxito. (Global)
-    - **[BUG CERRADO - 25/02/2026]**: Se solucionó de raíz el bug de Safari/iOS (navbar desplazado en X e Y al scrollear). Se aplicó `overflow-x-hidden` global en `<html>` y `<body>` (evitando recálculos asimétricos de centrado en viewport móvil) y en la barra de navegación propiamente dicha se implementó el soporte nativo de `pb-[env(safe-area-inset-bottom)]` combinado con `left-0 w-full` (reemplazando flex+inset). El navbar V2 The Nucleus Design funciona ahora con solidez militar en ecosistemas Apple.
-    - **[INICIO BLUEPRINT TEMPLATES]**: Se definió crear dos plantillas base altamente escalables (Productos y Servicios) aplicando *Arquitectura Config-Driven* (manejo de marca, colores y catálogo a través de un único archivo `config.ts`). El Navbar Genérico retornará tráfico a Imperia Virtual. 
-    - **[CAMBIO DE ENTORNO - BLUEPRINT]**: Se suspende la creación de las plantillas dentro del repositorio temporal de `imperia-virtual`. El usuario indica que abrirá de forma nativa el repositorio de `PlantillaProducto` para utilizar su código fuente y estructura real como base fundacional para la creación de las plantillas genéricas. Se confirmó y validó que no quedó rastro del código de las plantillas genéricas en la instancia de `imperia-virtual`.
-*   **25/02/2026 (Noche) - Ejecución Blueprint PlantillaProducto:**
-    - Limpieza absoluta de la identidad "Emperatriz Taller Gráfico". Se eliminaron logos antíguos, backgrounds (`bg-orange.jpg`) y referencias de colores estáticos codificados en los componentes.
-    - Se implementó la **Arquitectura Config-Driven** creando un archivo central `config.ts` desde el cual toda la web (Metadata, Navbar, Footer y `data.tsx`) consume su esquema de colores, logo y enlaces.
-    - Paleta de colores migrada de un Naranja Estático a un Plateado/Neutral dinámico y elegante (`#c0c0c0` general, inyectado vía variables CSS al Tailwind global).
-    - **Generalización total:** Se eliminó el vasto catálogo de "banderas" y la jerga "textil" del portal. Se introdujo texto _filler_ orientado a "Soluciones Premium" con categorías versátiles (`Premium`, `Essential`, `Innovación`). La base funge ahora como un *Boilerplate* puro, neutro y altamente profesional, completamente desligado de su contexto de negocio original.
-*   **26/02/2026 (Noche) - Rediseño Home como Plantilla E-Commerce Genérica:**
-    - **[OBJETIVO]**: Transformar el boilerplate neutro en una landing page de ventas muy directo al punto, orientada a emprendedores que venden productos (ropa, zapatillas, bijouterie, celulares, etc.) sin local físico.
-    - **[FILOSOFÍA WHATSAPP-FIRST]**: Todos los botones de acción de los productos generan un enlace dinámico a WhatsApp con el texto: *"Hola, me interesa el producto: [Nombre del Producto]"*. De esta manera, cada consulta llega directamente al teléfono del cliente.
-    - **[ESTÉTICA]**: Se adoptó la paleta de colores de **Imperia Virtual** para los fondos (`backgroundMain: linear-gradient(170deg, #021824 0%, #011b1a 100%)`). Todas las tarjetas usan ahora un fondo plateado premium (`backgroundCard: #f3f4f6`) con textos oscuros para máxima legibilidad. El color primario de los detalles y botones pasó a ser un Plata/Silver (`primaryColor: #C0C0C0`), eliminando los anteriores acentos azules (`#0066FF`). Toda la página es oscura pero con un contraste elegante y metálico.
-    - **[ESTRUCTURA HOME FINAL]**: Hero -> Sobre Nosotros (Preview) -> Nuestra Promesa -> Colecciones (Banners) -> Productos Destacados -> Testimonios.
-    - **[NUEVOS COMPONENTES]**:
-        - `HeroStatic.tsx`: Reemplaza `HeroCarousel`. Sección Hero estática con título (`siteConfig.name`), subtítulo (`siteConfig.description`) y botón de presupuesto a `/contact`. Sin carrusel.
-        - `AboutPreview.tsx`: Nueva sección visual inyectada debajo del Hero. Presenta una tarjeta glassmorphism con imagen de alta calidad e información introductoria ("El estándar de excelencia").
-        - `BestSellers.tsx`: Reemplaza `FeaturedWorks`. Grilla de productos con botón de WhatsApp dinámico por producto. Fondo de tarjeta plata y sombras metálicas.
-        - `CategoryBanners.tsx`: Dos "bloques" visuales grandes que enlazan a colecciones (`/products?category=...`). Efecto hover de escala e iluminación plata.
-        - `Testimonials.tsx`: Sección de reseñas de clientes con estrellas, tarjetas fondo plata y avatar de iniciales.
-        - `FeatureSection.tsx`: Rediseñada como "Texto Descomunal" centrado (sin tarjetas), genérico para cualquier negocio. Transmite confianza con tipografía de alto impacto.
-        - `Footer.tsx`: Refactorizado para consumir la propiedad `backgroundFooter` directamente desde `config.ts`, usando la misma textura en degradado azul marino de Imperia Virtual.
-    - **[CONFIG.TS ACTUALIZADO]**: El bloque `theme` del `config.ts` controla 100% de la paleta. Los fondos oscuros harcodeados fueron purgados.
-*   **28/02/2026 - Ultra-Simplificación del Boilerplate:**
-    - Creación de un nuevo micro-componente `<Separador />` elegante con líneas en gradiente plateado para estructurar secciones de la Home de manera sofisticada. 
-    - Limpieza profunda de textos, categorías específicas (Premium, Essential, Innovación) y elementos estilísticos (barras de búsqueda con filtros, tabs) en `/products`, `/about` y `/contact` para dejar el Boilerplate en su mínima expresión, listo para amoldarse a cualquier cliente sin que arrastre conceptos del template anterior.
-    - Se eliminó el `<RacingBackground />` diagonal de las tarjetas (`RacingCardContainer`) buscando una estética puramente limpia, apoyándose en la sobriedad metálica de la configuración actual.
-    - **[TAREAS COMPLETADAS]**:
-- [x] Analyze current themes in `config.ts`
-- [x] Redesign neon button in `HeroStatic.tsx` (Transparent + Silver Outline)
-- [x] Refactor neon button to a reusable component `NeonButton.tsx`
-- [x] Integrate `NeonButton` into `HeroStatic.tsx`
-- [x] Integrate `NeonButton` into `app/contact/page.tsx`
-- [x] Generate/Find background images for the 3 themes (Silver, Gold, Blue)
-- [x] Implement site-wide background images in `config.ts`
-- [x] Implement card-specific background textures in `ProductCard`, `InfoCard`, etc.
-- [x] Verify visual harmony and responsiveness
-- [x] Finalize documentation in `MEMORIA_IA.md`
-*   **02/03/2026 - Centralización Avanzada de Colores y Textos:**
-    - Integración profunda de `siteConfig.theme` en todas las tarjetas de la plataforma (`Card`, `RacingCardContainer`, `InfoCard`, `BestSellers`, `Testimonials`, `Products`).
-    - Se introdujo el bloque dinámico `textColors` en el archivo principal `config.ts`.
-    - Esto permite modificar el color del fondo de TODAS las tarjetas de la web (`backgroundCard`) y el color de sus títulos y descripciones desde un único lugar, eliminando las clases fijas (`text-white`, `text-neutral-900`) de Tailwind en los componentes.
-*   **05/03/2026 - Logros de Estandarización y Temas:**
-    - **[UNIFICACIÓN DE PRODUCTOS]**: Se consolidó toda la UI de los productos en un único componente `ProductCard.tsx`. Esto garantiza que cualquier cambio de diseño, botón o color se replique instantáneamente en la Home y en el Catálogo.
-    - **[SISTEMA DE TEMAS]**: Se refactorizó el `config.ts` para soportar una biblioteca de temas (`SILVER_PREMIUM`, `GOLD_EMPIRE`, `ELECTRIC_BLUE`). Ahora basta con cambiar una variable para mutar la identidad visual de toda la web.
-    - **[EFECTOS NEÓN]**: Se integraron efectos de "luz de neón" (bordes brillantes y resplandores) en los cuadros de descripción de "Sobre Nosotros" y en el botón principal de WhatsApp en "Contacto". Estos efectos son dinámicos y cambian de color según el tema activo.
-    - **[COMPONENTE REUTILIZABLE]**: Se creó el componente `<NeonButton />` que encapsula la estética de "rectángulo de luz" transparente con borde plateado and resplandor neón de alto impacto. Este componente se integró en el Hero y en el formulario de Contacto, centralizando la lógica visual.
-    - **[ASSETS VISUALES PREMIUM]**: Se generaron e integraron texturas de alta resolución para los fondos globales (`silver_bg`, `gold_bg`, `blue_bg`). Se implementó un modo de mezcla (`multiply/overlay`) para fusionar estas texturas con los degradados base, aportando profundidad táctil sin romper la estética original.
-    - **[GLASSMORPISM & SVG CLEANUP]**: 
-        - Se dio el salto al **Glassmorphism** completo: todas las tarjetas poseen ahora fondos semi-transparentes coordinados con el tema y efecto de desenfoque de fondo (`backdrop-blur-md`).
-        - Se eliminaron las texturas de tarjetas generadas por IA que contenían errores de texto o marcas de agua, reemplazándolas por un sistema de **Patrones SVG Vectoriales** (Technical Grids/Luxury Weaves) inyectados directamente en el código. Esto garantiza una nitidez absoluta y un rendimiento superior.
-        - **Unificación Visual**: Se barrió toda la web (`About`, `Contact`, `Products`, `Banners`) para asegurar que ninguna sección quedara "vacía" o con cajas blancas, logrando una atmósfera inmersiva y 100% premium en los tres temas disponibles.
-        - **[FIX FONDO GLOBAL]**: Se resolvió un glitch visual de "imagen cortada" en el fondo de pantalla. Se simplificó la arquitectura de capas en `layout.tsx` a un único contenedor con `background-size: cover` y `background-repeat: no-repeat`, eliminando efectos de mezcla conflictivos y garantizando que la textura metálica/premium sea 100% visible y fluida en cualquier resolución.
-    - **[ROBUSTEZ]**: Se corrigieron errores de tipos en `layout.tsx` vinculando propiedades de `radius` y `navbarStyle` directamente al motor de temas, asegurando un build de producción estable (Exit code 0).
-    - **[MEMORIA]**: Actualización de la documentación técnica para reflejar la nueva arquitectura orientada a múltiples clientes.
 
-*   **07/03/2026 - Optimización de Rendimiento Visual y Entorno:**
-    - **[FIX ENTORNO]**: Se resolvió el bloqueo de PowerShell en Windows para ejecutar scripts locales como `npm run dev` mediante la habilitación de `RemoteSigned` en `ExecutionPolicy`.
-    - **[IMÁGENES 4K]**: Se generaron nuevos fondos abstractos premium en alta resolución para los tres temas (`silver_bg_premium`, `gold_bg_premium`, `blue_bg_premium`) reemplazando versiones de baja calidad.
-    - **[ANTI-PIXELACIÓN]**: Para evitar que las imágenes de fondo se vean pixeladas o "estiradas" en pantallas grandes (1080p/4K), se implementó un sistema de doble capa en `layout.tsx`:
-        1.  **Blur Profundo**: Se aplica un `filter: blur(20px)` y `transform: scale(1.05)` a la imagen base para suavizar por completo cualquier escalado de píxeles, manteniendo las matrices de color intactas.
-        2.  **Noise Overlay**: Por encima del blur, se inyectó una capa SVG generada por código (`feTurbulence`) con `mix-blend-overlay` y opacidad mínima (`0.03`). Esto aporta un "grano fotográfico" o textura física ultra realista de alta resolución infinita que camufla perfectamente cualquier defecto subyacente de low-res y eleva dramáticamente el "Wow factor" del sitio web.
-    - **[EFECTO FUMIGADO FOOTER]**: Se corrigió el efecto de fondo desenfocado en el `Footer.tsx`. Se aisló el estilo `filter: blur(20px)` y `transform: scale(1.05)` en un contenedor absoluto interior (`-z-10`) para evitar desenfocar de forma heredada los textos y logos, asegurando legibilidad perfecta.
-    - **[CAMBIO DE IDENTIDAD]**: Se configuró como tema activo de la plantilla el `ELECTRIC_BLUE`.
+- **09/02/2026:** Refactor integral de Contacto. Redirección WhatsApp-First, eliminando fricción. Arquitectura consolidada (`RacingCardContainer.tsx`, `InfoCard.tsx`). Mantenimiento de Next.js (error "Element type is invalid" fix). (Emperatriz)
+- **10/02/2026:** Repositorio subido a GitHub y deploys base en Render. Organización final de componentes (`layout/`, `sections/`, `cards/`, `ui/`). (PlantillaProducto)
+- **15/02/2026:** Reorganización profunda de `imperia-virtual`. Creación de `ESTRUCTURA_PROYECTO.md`. Fix de rutas muertas. (Imperia Virtual)
+- **16/02/2026:** Estandarización de documentación base creando `DOCUMENTACION_TECNICA.md` en ambos repositorios. Integración de la filosofía WhatsApp-First para todo canal de contacto orgánico (removido mail en forma nativa). (Global)
+- **18/02/2026:** Adquisición y delegación DNS del dominio. Definición obligatoria de Español Argentino/Informal para el agente. (PlantillaProducto)
+- **19/02/2026:** Se documentó bug visual pasivo de Turbopack (`[baseline-browser-mapping] The data in this module is over dos meses old`). Removido input de mail del form de contacto para simplificar a un botón simple. (Imperia Virtual)
+- **23/02/2026:** Refactor visual pesado. Imperia Virtual abstrajo su UI a `business-card.tsx` globalizando el diseño. PlantillaProducto construyó un nuevo _Footer Global Premium_ (`components/layout/Footer.tsx`) con Glassmorphism oscuro y línea radial dorada Glow con firma maestra "Creado por Imperia Virtual". (Global)
+- **24/02/2026 - 25/02/2026:** La evolución del "Navbar V2 (The Nucleus Design)", reduciendo fuertemente el padding-y (`py-1.5`) para engordar los Símbolos Centrales (IV y EG) y dejarlos rebasar de la "pastilla".
+  - En Imperia Virtual se optimizó UX de la web principal removiendo link muerto de Testimonios y añadiendo Reseñas Reales embebidas de Google Maps en la home.
+  - Se aplicó un centrado milimétrico (`top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`) en ambos Navbares (PlantillaProducto e Imperia) para solucionar bugs de posición absoluta asimétrica (hundimiento visual) en dispositivos móviles, asegurando una presencia impactante 100% simétrica y responsiva. Unificación de los archivos `MEMORIA_IA.md` lograda con éxito. (Global)
+  - **[BUG CERRADO - 25/02/2026]**: Se solucionó de raíz el bug de Safari/iOS (navbar desplazado en X e Y al scrollear). Se aplicó `overflow-x-hidden` global en `<html>` y `<body>` (evitando recálculos asimétricos de centrado en viewport móvil) y en la barra de navegación propiamente dicha se implementó el soporte nativo de `pb-[env(safe-area-inset-bottom)]` combinado con `left-0 w-full` (reemplazando flex+inset). El navbar V2 The Nucleus Design funciona ahora con solidez militar en ecosistemas Apple.
+  - **[INICIO BLUEPRINT TEMPLATES]**: Se definió crear dos plantillas base altamente escalables (Productos y Servicios) aplicando _Arquitectura Config-Driven_ (manejo de marca, colores y catálogo a través de un único archivo `config.ts`). El Navbar Genérico retornará tráfico a Imperia Virtual.
+  - **[CAMBIO DE ENTORNO - BLUEPRINT]**: Se suspende la creación de las plantillas dentro del repositorio temporal de `imperia-virtual`. El usuario indica que abrirá de forma nativa el repositorio de `PlantillaProducto` para utilizar su código fuente y estructura real como base fundacional para la creación de las plantillas genéricas. Se confirmó y validó que no quedó rastro del código de las plantillas genéricas en la instancia de `imperia-virtual`.
+- **25/02/2026 (Noche) - Ejecución Blueprint PlantillaProducto:**
+  - Limpieza absoluta de la identidad "Emperatriz Taller Gráfico". Se eliminaron logos antíguos, backgrounds (`bg-orange.jpg`) y referencias de colores estáticos codificados en los componentes.
+  - Se implementó la **Arquitectura Config-Driven** creando un archivo central `config.ts` desde el cual toda la web (Metadata, Navbar, Footer y `data.tsx`) consume su esquema de colores, logo y enlaces.
+  - Paleta de colores migrada de un Naranja Estático a un Plateado/Neutral dinámico y elegante (`#c0c0c0` general, inyectado vía variables CSS al Tailwind global).
+  - **Generalización total:** Se eliminó el vasto catálogo de "banderas" y la jerga "textil" del portal. Se introdujo texto _filler_ orientado a "Soluciones Premium" con categorías versátiles (`Premium`, `Essential`, `Innovación`). La base funge ahora como un _Boilerplate_ puro, neutro y altamente profesional, completamente desligado de su contexto de negocio original.
+- **26/02/2026 (Noche) - Rediseño Home como Plantilla E-Commerce Genérica:**
+  - **[OBJETIVO]**: Transformar el boilerplate neutro en una landing page de ventas muy directo al punto, orientada a emprendedores que venden productos (ropa, zapatillas, bijouterie, celulares, etc.) sin local físico.
+  - **[FILOSOFÍA WHATSAPP-FIRST]**: Todos los botones de acción de los productos generan un enlace dinámico a WhatsApp con el texto: _"Hola, me interesa el producto: [Nombre del Producto]"_. De esta manera, cada consulta llega directamente al teléfono del cliente.
+  - **[ESTÉTICA]**: Se adoptó la paleta de colores de **Imperia Virtual** para los fondos (`backgroundMain: linear-gradient(170deg, #021824 0%, #011b1a 100%)`). Todas las tarjetas usan ahora un fondo plateado premium (`backgroundCard: #f3f4f6`) con textos oscuros para máxima legibilidad. El color primario de los detalles y botones pasó a ser un Plata/Silver (`primaryColor: #C0C0C0`), eliminando los anteriores acentos azules (`#0066FF`). Toda la página es oscura pero con un contraste elegante y metálico.
+  - **[ESTRUCTURA HOME FINAL]**: Hero -> Sobre Nosotros (Preview) -> Nuestra Promesa -> Colecciones (Banners) -> Productos Destacados -> Testimonios.
+  - **[NUEVOS COMPONENTES]**:
+    - `HeroStatic.tsx`: Reemplaza `HeroCarousel`. Sección Hero estática con título (`siteConfig.name`), subtítulo (`siteConfig.description`) y botón de presupuesto a `/contact`. Sin carrusel.
+    - `AboutPreview.tsx`: Nueva sección visual inyectada debajo del Hero. Presenta una tarjeta glassmorphism con imagen de alta calidad e información introductoria ("El estándar de excelencia").
+    - `BestSellers.tsx`: Reemplaza `FeaturedWorks`. Grilla de productos con botón de WhatsApp dinámico por producto. Fondo de tarjeta plata y sombras metálicas.
+    - `CategoryBanners.tsx`: Dos "bloques" visuales grandes que enlazan a colecciones (`/products?category=...`). Efecto hover de escala e iluminación plata.
+    - `Testimonials.tsx`: Sección de reseñas de clientes con estrellas, tarjetas fondo plata y avatar de iniciales.
+    - `FeatureSection.tsx`: Rediseñada como "Texto Descomunal" centrado (sin tarjetas), genérico para cualquier negocio. Transmite confianza con tipografía de alto impacto.
+    - `Footer.tsx`: Refactorizado para consumir la propiedad `backgroundFooter` directamente desde `config.ts`, usando la misma textura en degradado azul marino de Imperia Virtual.
+  - **[CONFIG.TS ACTUALIZADO]**: El bloque `theme` del `config.ts` controla 100% de la paleta. Los fondos oscuros harcodeados fueron purgados.
+- **28/02/2026 - Ultra-Simplificación del Boilerplate:**
+  - Creación de un nuevo micro-componente `<Separador />` elegante con líneas en gradiente plateado para estructurar secciones de la Home de manera sofisticada.
+  - Limpieza profunda de textos, categorías específicas (Premium, Essential, Innovación) y elementos estilísticos (barras de búsqueda con filtros, tabs) en `/products`, `/about` y `/contact` para dejar el Boilerplate en su mínima expresión, listo para amoldarse a cualquier cliente sin que arrastre conceptos del template anterior.
+  - Se eliminó el `<RacingBackground />` diagonal de las tarjetas (`RacingCardContainer`) buscando una estética puramente limpia, apoyándose en la sobriedad metálica de la configuración actual.
+  - **[TAREAS COMPLETADAS]**:
 
-*   **12/03/2026 - Sincronización Global de Memorias:**
-    *   **Refactorización Senior:** Estandarización de arquitectura en todo el ecosistema. Se impulsó la separación de responsabilidades (datos en `/data`, estilos en `globals.css`) para componentes complejos.
-    *   **Directivas Globales:** Sincronización de reglas de oro (No inventar datos, Documentación en Español, Eficiencia de proceso) en todos los proyectos de la red Imperia.
-    *   **Interactividad Premium:** Implementación de carruseles avanzados con tarjetas CTA integradas y leyendas inteligentes para mejorar la conversión y UX.
+* [x] Analyze current themes in `config.ts`
+* [x] Redesign neon button in `HeroStatic.tsx` (Transparent + Silver Outline)
+* [x] Refactor neon button to a reusable component `NeonButton.tsx`
+* [x] Integrate `NeonButton` into `HeroStatic.tsx`
+* [x] Integrate `NeonButton` into `app/contact/page.tsx`
+* [x] Generate/Find background images for the 3 themes (Silver, Gold, Blue)
+* [x] Implement site-wide background images in `config.ts`
+* [x] Implement card-specific background textures in `ProductCard`, `InfoCard`, etc.
+* [x] Verify visual harmony and responsiveness
+* [x] Finalize documentation in `MEMORIA_IA.md`
 
-*   **09/03/2026 - Unificación Visual y Refinamiento Premium:**
-    - **[LIMPIEZA DE DATOS]**: Se eliminó la propiedad `category` de los productos en `data.tsx` y se comentó en `types/index.ts` para simplificar la estructura de datos y evitar distracciones visuales (tabs/filtros) en el catálogo.
-    - **[REFACTORIZACIÓN ABOUT]**: Se migró la sección "Nuestra Historia" en la página de Quiénes Somos al componente estándar `RacingCardContainer.tsx`. Esto garantiza la reutilización de código y la coherencia visual con el resto del sitio.
-    - **[ESTILO FUMIGADO AVANZADO]**: Se rediseñó el recuadro de texto interior en "Nuestra Historia" aplicando un efecto de **Glassmorphism Fumigado** (`backdrop-blur-md` + `bg-black/40`). 
-    - **[REFINAMIENTO FUMIGADO]**: Se eliminó el fondo opaco del `RacingCardContainer` en la sección "Nuestra Historia" para permitir la visibilidad del fondo global de mármol. Se aumentó el desenfoque a `backdrop-blur-xl` y se ajustó la capa interna con un blur de 40px, logrando una paridad estética total con el efecto del Footer.
-    - **[PROPIEDAD GLASS]**: Se profesionalizó el código creando la prop `glass` en `RacingCardContainer.tsx`. Esta propiedad centraliza el estilo de transparencia, desenfoque profundo y borde dorado neón. Se añadieron comentarios técnicos detallados en el componente para facilitar su uso.
-    - **[UNIFICACIÓN CONTACTO]**: Se aplicó la prop `glass` al formulario de contacto y a todas las `InfoCard.tsx` (Email, Teléfono, etc.), logrando que toda la web comparta el mismo lenguaje visual de "vidrio esmerilado" y opulencia.
-    - **[CONFIGURACIÓN]**: El usuario seleccionó el tema `SILVER_PREMIUM` como activo para la sesión final.
+- **02/03/2026 - Centralización Avanzada de Colores y Textos:**
+  - Integración profunda de `siteConfig.theme` en todas las tarjetas de la plataforma (`Card`, `RacingCardContainer`, `InfoCard`, `BestSellers`, `Testimonials`, `Products`).
+  - Se introdujo el bloque dinámico `textColors` en el archivo principal `config.ts`.
+  - Esto permite modificar el color del fondo de TODAS las tarjetas de la web (`backgroundCard`) y el color de sus títulos y descripciones desde un único lugar, eliminando las clases fijas (`text-white`, `text-neutral-900`) de Tailwind en los componentes.
+- **05/03/2026 - Logros de Estandarización y Temas:**
+  - **[UNIFICACIÓN DE PRODUCTOS]**: Se consolidó toda la UI de los productos en un único componente `ProductCard.tsx`. Esto garantiza que cualquier cambio de diseño, botón o color se replique instantáneamente en la Home y en el Catálogo.
+  - **[SISTEMA DE TEMAS]**: Se refactorizó el `config.ts` para soportar una biblioteca de temas (`SILVER_PREMIUM`, `GOLD_EMPIRE`, `ELECTRIC_BLUE`). Ahora basta con cambiar una variable para mutar la identidad visual de toda la web.
+  - **[EFECTOS NEÓN]**: Se integraron efectos de "luz de neón" (bordes brillantes y resplandores) en los cuadros de descripción de "Sobre Nosotros" y en el botón principal de WhatsApp en "Contacto". Estos efectos son dinámicos y cambian de color según el tema activo.
+  - **[COMPONENTE REUTILIZABLE]**: Se creó el componente `<NeonButton />` que encapsula la estética de "rectángulo de luz" transparente con borde plateado and resplandor neón de alto impacto. Este componente se integró en el Hero y en el formulario de Contacto, centralizando la lógica visual.
+  - **[ASSETS VISUALES PREMIUM]**: Se generaron e integraron texturas de alta resolución para los fondos globales (`silver_bg`, `gold_bg`, `blue_bg`). Se implementó un modo de mezcla (`multiply/overlay`) para fusionar estas texturas con los degradados base, aportando profundidad táctil sin romper la estética original.
+  - **[GLASSMORPISM & SVG CLEANUP]**:
+    - Se dio el salto al **Glassmorphism** completo: todas las tarjetas poseen ahora fondos semi-transparentes coordinados con el tema y efecto de desenfoque de fondo (`backdrop-blur-md`).
+    - Se eliminaron las texturas de tarjetas generadas por IA que contenían errores de texto o marcas de agua, reemplazándolas por un sistema de **Patrones SVG Vectoriales** (Technical Grids/Luxury Weaves) inyectados directamente en el código. Esto garantiza una nitidez absoluta y un rendimiento superior.
+    - **Unificación Visual**: Se barrió toda la web (`About`, `Contact`, `Products`, `Banners`) para asegurar que ninguna sección quedara "vacía" o con cajas blancas, logrando una atmósfera inmersiva y 100% premium en los tres temas disponibles.
+    - **[FIX FONDO GLOBAL]**: Se resolvió un glitch visual de "imagen cortada" en el fondo de pantalla. Se simplificó la arquitectura de capas en `layout.tsx` a un único contenedor con `background-size: cover` y `background-repeat: no-repeat`, eliminando efectos de mezcla conflictivos y garantizando que la textura metálica/premium sea 100% visible y fluida en cualquier resolución.
+  - **[ROBUSTEZ]**: Se corrigieron errores de tipos en `layout.tsx` vinculando propiedades de `radius` y `navbarStyle` directamente al motor de temas, asegurando un build de producción estable (Exit code 0).
+  - **[MEMORIA]**: Actualización de la documentación técnica para reflejar la nueva arquitectura orientada a múltiples clientes.
+
+- **07/03/2026 - Optimización de Rendimiento Visual y Entorno:**
+  - **[FIX ENTORNO]**: Se resolvió el bloqueo de PowerShell en Windows para ejecutar scripts locales como `npm run dev` mediante la habilitación de `RemoteSigned` en `ExecutionPolicy`.
+  - **[IMÁGENES 4K]**: Se generaron nuevos fondos abstractos premium en alta resolución para los tres temas (`silver_bg_premium`, `gold_bg_premium`, `blue_bg_premium`) reemplazando versiones de baja calidad.
+  - **[ANTI-PIXELACIÓN]**: Para evitar que las imágenes de fondo se vean pixeladas o "estiradas" en pantallas grandes (1080p/4K), se implementó un sistema de doble capa en `layout.tsx`:
+    1.  **Blur Profundo**: Se aplica un `filter: blur(20px)` y `transform: scale(1.05)` a la imagen base para suavizar por completo cualquier escalado de píxeles, manteniendo las matrices de color intactas.
+    2.  **Noise Overlay**: Por encima del blur, se inyectó una capa SVG generada por código (`feTurbulence`) con `mix-blend-overlay` y opacidad mínima (`0.03`). Esto aporta un "grano fotográfico" o textura física ultra realista de alta resolución infinita que camufla perfectamente cualquier defecto subyacente de low-res y eleva dramáticamente el "Wow factor" del sitio web.
+  - **[EFECTO FUMIGADO FOOTER]**: Se corrigió el efecto de fondo desenfocado en el `Footer.tsx`. Se aisló el estilo `filter: blur(20px)` y `transform: scale(1.05)` en un contenedor absoluto interior (`-z-10`) para evitar desenfocar de forma heredada los textos y logos, asegurando legibilidad perfecta.
+  - **[CAMBIO DE IDENTIDAD]**: Se configuró como tema activo de la plantilla el `ELECTRIC_BLUE`.
+
+- **12/03/2026 - Sincronización Global de Memorias:**
+  - **Refactorización Senior:** Estandarización de arquitectura en todo el ecosistema. Se impulsó la separación de responsabilidades (datos en `/data`, estilos en `globals.css`) para componentes complejos.
+  - **Directivas Globales:** Sincronización de reglas de oro (No inventar datos, Documentación en Español, Eficiencia de proceso) en todos los proyectos de la red Imperia.
+  - **Interactividad Premium:** Implementación de carruseles avanzados con tarjetas CTA integradas y leyendas inteligentes para mejorar la conversión y UX.
+
+- **09/03/2026 - Unificación Visual y Refinamiento Premium:**
+  - **[LIMPIEZA DE DATOS]**: Se eliminó la propiedad `category` de los productos en `data.tsx` y se comentó en `types/index.ts` para simplificar la estructura de datos y evitar distracciones visuales (tabs/filtros) en el catálogo.
+  - **[REFACTORIZACIÓN ABOUT]**: Se migró la sección "Nuestra Historia" en la página de Quiénes Somos al componente estándar `RacingCardContainer.tsx`. Esto garantiza la reutilización de código y la coherencia visual con el resto del sitio.
+  - **[ESTILO FUMIGADO AVANZADO]**: Se rediseñó el recuadro de texto interior en "Nuestra Historia" aplicando un efecto de **Glassmorphism Fumigado** (`backdrop-blur-md` + `bg-black/40`).
+  - **[REFINAMIENTO FUMIGADO]**: Se eliminó el fondo opaco del `RacingCardContainer` en la sección "Nuestra Historia" para permitir la visibilidad del fondo global de mármol. Se aumentó el desenfoque a `backdrop-blur-xl` y se ajustó la capa interna con un blur de 40px, logrando una paridad estética total con el efecto del Footer.
+  - **[PROPIEDAD GLASS]**: Se profesionalizó el código creando la prop `glass` en `RacingCardContainer.tsx`. Esta propiedad centraliza el estilo de transparencia, desenfoque profundo y borde dorado neón. Se añadieron comentarios técnicos detallados en el componente para facilitar su uso.
+  - **[UNIFICACIÓN CONTACTO]**: Se aplicó la prop `glass` al formulario de contacto y a todas las `InfoCard.tsx` (Email, Teléfono, etc.), logrando que toda la web comparta el mismo lenguaje visual de "vidrio esmerilado" y opulencia.
+  - **[CONFIGURACIÓN]**: El usuario seleccionó el tema `SILVER_PREMIUM` como activo para la sesión final.
 
 **Abril 2026 - Imperia Visual Editor (Revolución del Workflow)**
-*   **19/04/2026 - Refactor de UI & Navegación "Go-to-Source":**
-    - **[UI SIMPLIFICADA]**: Se eliminó la redundancia de pestañas (Componentes/Explorador). El `ProjectExplorer` es ahora la vista única y persistente a la izquierda, funcionando como un IDE profesional.
-    - **[NAVEGACIÓN AUTOMÁTICA]**: Al cliquear cualquier elemento en el visor (Iframe), el explorador se expande automáticamente, resalta el archivo `.tsx` correspondiente y su código se carga de forma instantánea en el panel inferior (`CodePanel`).
-    - **[SINCRONIZACIÓN DE SCROLL 1:1]**: Se resolvió el bug del "cuadro de selección flotante". Ahora el SDK envía coordenadas en tiempo real al hacer scroll dentro del Iframe, permitiendo que los marcos de selección (`VisualOverlay`) se mantengan perfectamente pegados a los elementos visuales sin importar el desplazamiento.
-    - **[DETECCIÓN INDESTRUCTIBLE]**: El SDK migró a `e.composedPath()` para la captura de eventos. Esto permite que elementos con alta profundidad (como el logo IV o iconos anidados) transmitan correctamente sus metadatos (`data-imperia-*`) al padre, garantizando una respuesta del 100% al clic.
-    - **[MOTOR AST V2]**: Se mejoró el parseador de escenas (`/api/scene/parse`). Ahora es capaz de resolver exportaciones por alias (`export default Navbar`) siguiendo el símbolo original y cuenta con un "Greedy Fallback" que detecta el root JSX de forma agresiva, eliminando errores 404 de parseo.
-    - **[MAPPING GLOBAL]**: Los componentes de layout (`Header.tsx`, `Navbar.tsx`, `Footer.tsx`) y las secciones principales de la home fueron inyectados con metadatos, completando la experiencia de edición visual de punta a punta.
-    - **[ESTABILIDAD]**: Se blindó el `PropertiesPanel` contra errores de runtime (`null value at styles.x`) mediante validaciones de existencia de nodo, permitiendo una transición fluida entre selección de elementos externos e internos.
+
+- **19/04/2026 - Refactor de UI & Navegación "Go-to-Source":**
+  - **[UI SIMPLIFICADA]**: Se eliminó la redundancia de pestañas (Componentes/Explorador). El `ProjectExplorer` es ahora la vista única y persistente a la izquierda, funcionando como un IDE profesional.
+  - **[NAVEGACIÓN AUTOMÁTICA]**: Al cliquear cualquier elemento en el visor (Iframe), el explorador se expande automáticamente, resalta el archivo `.tsx` correspondiente y su código se carga de forma instantánea en el panel inferior (`CodePanel`).
+  - **[SINCRONIZACIÓN DE SCROLL 1:1]**: Se resolvió el bug del "cuadro de selección flotante". Ahora el SDK envía coordenadas en tiempo real al hacer scroll dentro del Iframe, permitiendo que los marcos de selección (`VisualOverlay`) se mantengan perfectamente pegados a los elementos visuales sin importar el desplazamiento.
+  - **[DETECCIÓN INDESTRUCTIBLE]**: El SDK migró a `e.composedPath()` para la captura de eventos. Esto permite que elementos con alta profundidad (como el logo IV o iconos anidados) transmitan correctamente sus metadatos (`data-imperia-*`) al padre, garantizando una respuesta del 100% al clic.
+  - **[MOTOR AST V2]**: Se mejoró el parseador de escenas (`/api/scene/parse`). Ahora es capaz de resolver exportaciones por alias (`export default Navbar`) siguiendo el símbolo original y cuenta con un "Greedy Fallback" que detecta el root JSX de forma agresiva, eliminando errores 404 de parseo.
+  - **[MAPPING GLOBAL]**: Los componentes de layout (`Header.tsx`, `Navbar.tsx`, `Footer.tsx`) y las secciones principales de la home fueron inyectados con metadatos, completando la experiencia de edición visual de punta a punta.
+  - **[ESTABILIDAD]**: Se blindó el `PropertiesPanel` contra errores de runtime (`null value at styles.x`) mediante validaciones de existencia de nodo, permitiendo una transición fluida entre selección de elementos externos e internos.
 
 **Junio 2026 - Rebranding Minimalista "Grabar Nos Une"**
-*   **25/06/2026 - Transición a Tema Claro y Rodillo Artesanal:**
-    - **[OBJETIVO]**: Adaptar la web al manual de marca del cliente con una identidad minimalista física, clara, basada en texturas de pasadas de rodillo e insumos tradicionales de grabado.
-    - **[RECONFIGURACIÓN DE TEMA]**: Se modificó el tema `PURPLE_CRAFT` en `config.ts` estableciendo un fondo claro premium (`#FAF9FB`) con un patrón SVG inline que emula las pasadas de rodillo con tinta y papel de algodón de forma sutil.
-    - **[CORRECCIÓN DE CONTRASTE GLOBAL]**: Se modificaron todos los componentes principales y páginas (`HeroStatic`, `MainCategories`, `CategoryBanners`, `BestSellers`, `AboutPreview`, `CommercialInfo`, `Testimonials`, `ProductCard`, `InfoCard`, `Footer`, `Navbar`, `/products`, `/about`, `/contact`) para cambiar los textos estáticos en blanco y lilas por tonos oscuros legibles (`text-gray-900`, `text-gray-700`, `text-gray-600`), eliminando glows galácticos y sombras invasivas.
-    - **[REORGANIZACIÓN NAV/FOOTER]**:
-        - El `Footer.tsx` conservó un fondo oscuro propio (`backgroundFooter` del tema: `#1A0A1D`) y se le aplicó un filtro CSS `brightness(0) invert(1)` al logo corporativo para mostrarlo en blanco de forma minimalista.
-        - La pastilla flotante `Navbar.tsx` se modificó para usar el color púrpura profundo del tema en lugar del color negro puro, dándole cohesión estética total al degradado inferior.
-    - **[INTEGRACIÓN PNG Y LINTER FIXES]**:
-        - Se integraron los archivos PNG reales entregados por el cliente para el fondo (`textura para fondo.png`), las tarjetas (`grabar nos une palabra repetida textura.png`) y el logo corporativo (`logo con nombre.png`), reemplazando patrones SVG base y actualizando rutas SEO.
-        - Se solucionaron de raíz las advertencias de compilación `@next/next/no-img-element` en `ProductCard.tsx`, `AboutPreview.tsx`, `CategoryBanners.tsx` y `app/products/page.tsx` migrando todas las etiquetas de imagen nativas a componentes optimizados `<Image />` de `next/image` con propiedades reactivas y cargando las imágenes desde assets estáticos.
-    - **[GIT SYNC]**: Se integraron todos los cambios y se subieron exitosamente al repositorio en GitHub `https://github.com/indioDarwinFreud/grabarnosune.git` en la rama `main`, garantizando la preservación del proyecto sin afectar el repositorio original.
 
-
+- **25/06/2026 - Transición a Tema Claro y Rodillo Artesanal:**
+  - **[OBJETIVO]**: Adaptar la web al manual de marca del cliente con una identidad minimalista física, clara, basada en texturas de pasadas de rodillo e insumos tradicionales de grabado.
+  - **[RECONFIGURACIÓN DE TEMA]**: Se modificó el tema `PURPLE_CRAFT` en `config.ts` estableciendo un fondo claro premium (`#FAF9FB`) con un patrón SVG inline que emula las pasadas de rodillo con tinta y papel de algodón de forma sutil.
+  - **[CORRECCIÓN DE CONTRASTE GLOBAL]**: Se modificaron todos los componentes principales y páginas (`HeroStatic`, `MainCategories`, `CategoryBanners`, `BestSellers`, `AboutPreview`, `CommercialInfo`, `Testimonials`, `ProductCard`, `InfoCard`, `Footer`, `Navbar`, `/products`, `/about`, `/contact`) para cambiar los textos estáticos en blanco y lilas por tonos oscuros legibles (`text-gray-900`, `text-gray-700`, `text-gray-600`), eliminando glows galácticos y sombras invasivas.
+  - **[REORGANIZACIÓN NAV/FOOTER]**:
+    - El `Footer.tsx` conservó un fondo oscuro propio (`backgroundFooter` del tema: `#1A0A1D`) y se le aplicó un filtro CSS `brightness(0) invert(1)` al logo corporativo para mostrarlo en blanco de forma minimalista.
+    - La pastilla flotante `Navbar.tsx` se modificó para usar el color púrpura profundo del tema en lugar del color negro puro, dándole cohesión estética total al degradado inferior.
+  - **[INTEGRACIÓN PNG Y LINTER FIXES]**:
+    - Se integraron los archivos PNG reales entregados por el cliente para el fondo (`textura para fondo.png`), las tarjetas (`grabar nos une palabra repetida textura.png`) y el logo corporativo (`logo con nombre.png`), reemplazando patrones SVG base y actualizando rutas SEO.
+    - Se solucionaron de raíz las advertencias de compilación `@next/next/no-img-element` en `ProductCard.tsx`, `AboutPreview.tsx`, `CategoryBanners.tsx` y `app/products/page.tsx` migrando todas las etiquetas de imagen nativas a componentes optimizados `<Image />` de `next/image` con propiedades reactivas y cargando las imágenes desde assets estáticos.
+  - **[GIT SYNC]**: Se integraron todos los cambios y se subieron exitosamente al repositorio en GitHub `https://github.com/indioDarwinFreud/grabarnosune.git` en la rama `main`, garantizando la preservación del proyecto sin afectar el repositorio original.
