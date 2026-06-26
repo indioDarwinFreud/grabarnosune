@@ -179,3 +179,9 @@
     - Se integraron los archivos PNG reales entregados por el cliente para el fondo (`textura para fondo.png`), las tarjetas (`grabar nos une palabra repetida textura.png`) y el logo corporativo (`logo con nombre.png`), reemplazando patrones SVG base y actualizando rutas SEO.
     - Se solucionaron de raíz las advertencias de compilación `@next/next/no-img-element` en `ProductCard.tsx`, `AboutPreview.tsx`, `CategoryBanners.tsx` y `app/products/page.tsx` migrando todas las etiquetas de imagen nativas a componentes optimizados `<Image />` de `next/image` con propiedades reactivas y cargando las imágenes desde assets estáticos.
   - **[GIT SYNC]**: Se integraron todos los cambios y se subieron exitosamente al repositorio en GitHub `https://github.com/indioDarwinFreud/grabarnosune.git` en la rama `main`, garantizando la preservación del proyecto sin afectar el repositorio original.
+
+- **26/06/2026 - Limpieza General del Proyecto:**
+  - **[LIMPIEZA DE CÓDIGO MUERTO]**: Se eliminaron componentes no utilizados (`BannerCard.tsx`, `InfoCard.tsx`, `NeonButton.tsx`, `RacingCardContainer.tsx`) y archivos huérfanos (`TarjetaPersonalElla.jpeg`, `grabar_about_old.png`, `assets/logo.png`, `logo grabar nos une.png`, `logotipo grabar nos une.png`, carpeta `brizel/`, carpeta vacía `utils/`, `types/vanta.d.ts`, interface `PortfolioItem`).
+  - **[FIXES]**: Se corrigió `lang="en"` → `lang="es"` en `layout.tsx`. Se actualizó `fontFamily.display` a `sans-serif` en `tailwind.config.ts`. Se reemplazó la referencia a `/favicon.ico` por el logo PNG en `config.ts`.
+  - **[DEPENDENCIAS]**: Se purgaron ~24 paquetes no utilizados de `package.json` (dnd-kit, monaco-editor, tsparticles, swiper, three, vanta, next-auth, zustand, drizzle-orm, etc.). Se renombró el proyecto a `grabarnosune`.
+  - **[BUILD]**: Build de producción exitoso (exit code 0). Se requirió limpiar cache `.next/` para el modo dev tras los cambios de dependencias.

@@ -46,7 +46,7 @@ export default function RootLayout({
   const isPurpleCraft = siteConfig.activeTheme === "PURPLE_CRAFT";
   
   return (
-    <html lang="en">
+    <html lang="es">
       <body
         className={`font-sans ${urbanist.variable} ${cinzel.variable} ${montserrat.variable} relative min-h-screen`}
         style={{

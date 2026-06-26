@@ -46,19 +46,6 @@ export interface BlogPost {
 }
 
 // -------------------------------------------------------
-// Item del Portfolio — usado en portfolioData (data.tsx)
-// -------------------------------------------------------
-export interface PortfolioItem {
-    id: number;
-    title: string;
-    location: string;
-    description: string;
-    image: string;
-    category: string;
-    website: string;
-}
-
-// -------------------------------------------------------
 // Testimonio — usado en testimonialsData (data.tsx)
 // -------------------------------------------------------
 export interface Testimonial {

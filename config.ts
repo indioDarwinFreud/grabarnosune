@@ -151,7 +151,7 @@ export const siteConfig = {
     // ---------------------------------------------------------------------------
     logo: {
         main: "/logo con nombre.png", // Logo del Navbar y Footer (SVG o PNG recomendado)
-        icon: "/favicon.ico",     // Favicon del navegador
+        icon: "/logo con nombre.png", // Favicon del navegador (PNG compatible)
     },
 
     // ---------------------------------------------------------------------------
