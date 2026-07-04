@@ -185,3 +185,11 @@
   - **[FIXES]**: Se corrigió `lang="en"` → `lang="es"` en `layout.tsx`. Se actualizó `fontFamily.display` a `sans-serif` en `tailwind.config.ts`. Se reemplazó la referencia a `/favicon.ico` por el logo PNG en `config.ts`.
   - **[DEPENDENCIAS]**: Se purgaron ~24 paquetes no utilizados de `package.json` (dnd-kit, monaco-editor, tsparticles, swiper, three, vanta, next-auth, zustand, drizzle-orm, etc.). Se renombró el proyecto a `grabarnosune`.
   - **[BUILD]**: Build de producción exitoso (exit code 0). Se requirió limpiar cache `.next/` para el modo dev tras los cambios de dependencias.
+
+**Julio 2026 - Integración de Recursos Visuales**
+
+- **04/07/2026 - Actualización de Imágenes de Gorras y Limpieza de Código:**
+  - **[CATÁLOGO]**: Se actualizó el producto "Gorras Trucker Sublimables" (`id: 5`) reemplazando la imagen temporal por la foto real de gorras en general (`/product/GorrasTodosColores.png`).
+  - **[PRODUCTOS NUEVOS]**: Se agregaron dos productos específicos al catálogo de gorras: "Gorra Trucker Gris Oscura" (`id: 7`, `/product/GorraGrisOscura.png`) y "Gorra Trucker Verde y Gris" (`id: 8`, `/product/GorraVerdeMediaGris.png`), con precios de $4.000 y stock inicial.
+  - **[CALIDAD]**: Validación de compilación aprobada con éxito. Se corrigieron errores de linter en `data.tsx` eliminando importaciones no utilizadas (`MessageSquareQuote`, `ShieldCheck`).
+

@@ -15,7 +15,7 @@
  * ============================================================
  */
 
-import { HomeIcon, Store, Users, Mail, MessageSquareQuote, ShieldCheck, MapPin, Facebook, Instagram, Phone } from "lucide-react";
+import { HomeIcon, Store, Users, Mail, MapPin, Facebook, Instagram, Phone } from "lucide-react";
 import { siteConfig } from "./config";
 import type { NavItem, Product, Testimonial, ContactItem, BusinessHour, BlogPost } from "./types";
 
@@ -111,10 +111,10 @@ export const productsData: Product[] = [
         title: "Gorras Trucker Sublimables",
         location: "Gorras y Accesorios",
         description: "Gorras con frente espumado blanco y red de colores variados. Hebilla regulable trasera. Acabado textil de alta calidad.",
-        image: "/assets/hero_bg.png",
+        image: "/product/GorrasTodosColores.png",
         category: "Textiles",
         price: "$3.500",
-        stock: 0,
+        stock: 30,
         website: "/contact",
     },
     {
@@ -126,6 +126,28 @@ export const productsData: Product[] = [
         category: "Regalos",
         price: "$14.500",
         stock: 8,
+        website: "/contact",
+    },
+    {
+        id: 7,
+        title: "Gorra Trucker Gris Oscura",
+        location: "Gorras y Accesorios",
+        description: "Gorra trucker lisa de excelente calidad con frente espumado gris y red al tono. Ideal para personalizar y sublimar.",
+        image: "/product/GorraGrisOscura.png",
+        category: "Textiles",
+        price: "$4.000",
+        stock: 12,
+        website: "/contact",
+    },
+    {
+        id: 8,
+        title: "Gorra Trucker Verde y Gris",
+        location: "Gorras y Accesorios",
+        description: "Gorra trucker bicolor con frente verde oliva y red gris. Costuras reforzadas y ajuste regulable de alta resistencia.",
+        image: "/product/GorraVerdeMediaGris.png",
+        category: "Textiles",
+        price: "$4.000",
+        stock: 10,
         website: "/contact",
     },
 ];
