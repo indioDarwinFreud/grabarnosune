@@ -39,7 +39,7 @@ export default function ContactPage() {
                             </span>
                         </div>
                         <h1 className="text-5xl md:text-7xl font-brizel text-gray-900 drop-shadow-sm tracking-wide">
-                            Contáctenos
+                            TE CONTAMOS QUE TENEMOS EN STOCK :  ESCRIBINO
                         </h1>
                         <div className="w-20 h-1 bg-primary/30 rounded-full mx-auto mt-4" />
                     </div>

@@ -49,7 +49,7 @@ const Footer = () => {
                     <FadeIn delay={0.1} className="flex flex-col items-center md:items-start space-y-5">
                         <div className="flex items-center space-x-3 text-primary mb-1">
                             <MapPin className="w-6 h-6 drop-shadow-[0_0_8px_rgba(192,192,192,0.8)]" />
-                            <h4 className="font-gotham font-black uppercase tracking-[0.2em] text-sm text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
+                            <h4 className="font-alt font-black uppercase tracking-[0.2em] text-sm text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
                                 Dónde Estamos
                             </h4>
                         </div>
@@ -114,7 +114,7 @@ const Footer = () => {
                     <FadeIn delay={0.3} className="flex flex-col items-center md:items-end space-y-5">
                         <div className="flex items-center space-x-3 text-primary mb-1">
                             <Clock className="w-6 h-6 drop-shadow-[0_0_8px_rgba(192,192,192,0.8)]" />
-                            <h4 className="font-gotham font-black uppercase tracking-[0.2em] text-sm text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
+                            <h4 className="font-alt font-black uppercase tracking-[0.2em] text-sm text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
                                 Horarios
                             </h4>
                         </div>

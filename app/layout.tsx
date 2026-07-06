@@ -15,9 +15,9 @@ const urbanist = Urbanist({
   variable: "--font-urbanist",
 });
 
-const cinzel = Outfit({
+const outfit = Outfit({
   subsets: ["latin"],
-  variable: "--font-cinzel",
+  variable: "--font-outfit",
 });
 
 const montserrat = Montserrat({
@@ -48,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`font-sans ${urbanist.variable} ${cinzel.variable} ${montserrat.variable} relative min-h-screen`}
+        className={`font-sans ${urbanist.variable} ${outfit.variable} ${montserrat.variable} relative min-h-screen`}
         style={{
           // CSS Variables del tema (colores, tipografía)
           "--primary-color": siteConfig.theme.primaryColor,

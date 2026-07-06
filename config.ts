@@ -41,8 +41,7 @@ export const siteConfig = {
     // ---------------------------------------------------------------------------
     name: "Grabar Nos Une",
     shortName: "GrabarNosUne",
-    description: "Insumos para sublimar y regalos personalizados premium. Creamos recuerdos que perduran en el tiempo.",
-    url: "https://grabarnosune.com.ar",
+    description: "Tazas de ceramica y polimero, remeras, buzos, camperas y gorras trucker, articulos de madera, llaveros, portarretratos, mates y mucho mas, vinilos, etc.",
 
     // ---------------------------------------------------------------------------
     // 2. Tipografía del Sitio
@@ -173,8 +172,8 @@ export const siteConfig = {
         email: "daianayamil7@hotmail.com",
         phone: "+5492616572658",    // De la tarjeta de presentación
         whatsappText: "¡Hola Daiana! Vengo desde su página web y me gustaría consultar por insumos y personalizados.",
-        location: "B° Las Compuertas, Las Heras, Mendoza",
-        mapsLink: "https://maps.google.com/?q=Las+Heras,Mendoza,Argentina"
+        location: "Chacabuco 99 - Ciudad - Mendoza (Esquina Rioja)",
+        mapsLink: "https://www.google.com/maps/place/32%C2%B052'39.4%22S+68%C2%B050'05.9%22W/@-32.8776109,-68.8356077,19z/data=!3m1!4b1!4m4!3m3!8m2!3d-32.877612!4d-68.834964"
     },
 
     // ---------------------------------------------------------------------------
@@ -184,7 +183,7 @@ export const siteConfig = {
     //      luego incluirla en data.tsx dentro de contactData.
     // ---------------------------------------------------------------------------
     socials: {
-        instagram: "https://www.instagram.com/grabarnosune/",
+        instagram: "https://www.instagram.com/grabarnosuneinsumos/",
         instagramHandle: "@grabarnosune",
 
         facebook: "https://www.facebook.com/grabar.nos.une",
@@ -196,7 +195,7 @@ export const siteConfig = {
     //    → Podés agregar o quitar filas según los días del cliente.
     // ---------------------------------------------------------------------------
     businessHours: [
-        { day: "Lunes a Viernes", hours: "9:00 - 13:00 / 17:00 - 20:00" },
-        { day: "Sábados", hours: "9:00 - 13:00" },
+        { day: "Lunes a Viernes", hours: "8:30 - 12:00 / 15:00 - 18:00" },
+        { day: "Sábados", hours: "10:00 - 13:00" },
     ]
 };

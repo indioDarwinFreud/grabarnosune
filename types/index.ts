@@ -14,6 +14,13 @@ import type { LucideIcon } from "lucide-react";
 // -------------------------------------------------------
 // Producto — usado en productsData (data.tsx)
 // -------------------------------------------------------
+export interface ProductVariant {
+    colorName: string;
+    colorCode: string; // CSS style for background (e.g. hex or gradient)
+    image: string;
+    stock?: number | null;
+}
+
 export interface Product {
     /** ID único del producto (numérico, autoincremental) */
     id: number;
@@ -29,10 +36,10 @@ export interface Product {
     category?: string;
     /** Link al que lleva el botón de la tarjeta (puede ser /contact o URL externa) */
     website: string;
-    /** Precio opcional para mostrar en la tarjeta */
-    price?: string;
     /** Stock disponible. Si es 0, muestra "Sin stock". Si es <5, "Últimas". Si es null, no muestra badge. */
     stock?: number | null;
+    /** Variaciones de color del producto */
+    variants?: ProductVariant[];
 }
 
 export interface BlogPost {

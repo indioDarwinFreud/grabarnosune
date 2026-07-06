@@ -1,18 +1,16 @@
 "use client";
 
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { MessageCircle, Ruler } from "lucide-react";
 import { siteConfig } from "@/config";
-import type { Product } from "@/types";
+import type { Product, ProductVariant } from "@/types";
 
 interface ProductCardProps {
     product: Product;
-    /** Delay para la animación FadeIn (opcional) */
-    delay?: number;
-    /** Función para manejar el click en la imagen (ej: zoom modal) */
     onImageClick?: (image: string) => void;
 }
 
@@ -22,7 +20,14 @@ interface ProductCardProps {
  * Centraliza el diseño, colores y lógica de contacto por WhatsApp.
  */
 export default function ProductCard({ product, onImageClick }: ProductCardProps) {
-    const whatsappUrl = `https://wa.me/${siteConfig.contact.phone.replace("+", "")}?text=Hola, me interesa el producto: ${encodeURIComponent(product.title)}`;
+    const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(null);
+
+    // Propiedades dinámicas basadas en la variante seleccionada
+    const displayImage = selectedVariant ? selectedVariant.image : product.image;
+    const displayStock = selectedVariant && selectedVariant.stock !== undefined ? selectedVariant.stock : product.stock;
+    const displayTitle = selectedVariant ? `${product.title} (${selectedVariant.colorName})` : product.title;
+
+    const whatsappUrl = `https://wa.me/${siteConfig.contact.phone.replace("+", "")}?text=Hola, me interesa el producto: ${encodeURIComponent(displayTitle)}`;
 
     return (
         <Card
@@ -38,14 +43,14 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
             {/* Contenedor de Imagen */}
             <div
                 className="h-64 relative overflow-hidden bg-neutral-200 group/img"
-                onClick={() => onImageClick?.(product.image)}
+                onClick={() => onImageClick?.(displayImage)}
             >
                 {/* Sombra interna suave */}
                 <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.1)] z-10 pointer-events-none" />
 
                 <Image
-                    src={product.image}
-                    alt={product.title}
+                    src={displayImage}
+                    alt={displayTitle}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -60,30 +65,23 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
                     </div>
                 )}
 
-                {/* Badge de Stock y Precio */}
+                {/* Badge de Stock */}
                 <div className="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
-                    {product.stock !== null && product.stock !== undefined && (
+                    {displayStock !== null && displayStock !== undefined && (
                         <span
                             className={`text-xs font-black px-3 py-1.5 rounded-full shadow-lg tracking-wide border ${
-                                product.stock === 0
+                                displayStock === 0
                                     ? "bg-red-50 text-red-700 border-red-200"
-                                    : product.stock < 5
+                                    : displayStock < 5
                                     ? "bg-amber-50 text-amber-700 border-amber-200"
                                     : "bg-green-50 text-green-700 border-green-200"
                             }`}
                         >
-                            {product.stock === 0
+                            {displayStock === 0
                                 ? "Sin stock"
-                                : product.stock < 5
-                                ? `Últimas ${product.stock}`
-                                : `Stock: ${product.stock}`}
-                        </span>
-                    )}
-                    {product.price && (
-                        <span
-                            className="text-neutral-900 text-xs font-black px-3 py-1.5 rounded-full shadow-lg tracking-wide bg-white/95 border border-primary/30"
-                        >
-                            {product.price}
+                                : displayStock < 5
+                                ? `Últimas ${displayStock}`
+                                : `Stock: ${displayStock}`}
                         </span>
                     )}
                 </div>
@@ -114,6 +112,54 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
                 >
                     {product.description}
                 </p>
+
+                {/* Variaciones de color */}
+                {product.variants && product.variants.length > 0 && (
+                    <div className="mb-6" onClick={(e) => e.stopPropagation()}>
+                        <span
+                            className="text-xs font-bold uppercase tracking-wider block mb-2"
+                            style={{ color: siteConfig.theme.textColors.cardMuted }}
+                        >
+                            Color: <span className="font-black" style={{ color: siteConfig.theme.primaryColor }}>{selectedVariant ? selectedVariant.colorName : "Todos"}</span>
+                        </span>
+                        <div className="flex flex-wrap gap-2.5">
+                            {/* Opción por defecto (Todos) */}
+                            <button
+                                onClick={() => setSelectedVariant(null)}
+                                className={`w-7 h-7 rounded-full transition-all duration-300 relative ${
+                                    selectedVariant === null
+                                        ? "ring-2 ring-primary ring-offset-2 scale-110"
+                                        : "hover:scale-105 opacity-80 hover:opacity-100"
+                                }`}
+                                style={{
+                                    background: "conic-gradient(from 0deg, #ef4444, #eab308, #22c55e, #3b82f6, #a855f7, #ef4444)",
+                                    outline: "none"
+                                }}
+                                title="Ver todos los colores"
+                                type="button"
+                            />
+
+                            {/* Variantes individuales */}
+                            {product.variants.map((variant, idx) => (
+                                <button
+                                    key={idx}
+                                    onClick={() => setSelectedVariant(variant)}
+                                    className={`w-7 h-7 rounded-full transition-all duration-300 border border-gray-300/50 relative ${
+                                        selectedVariant === variant
+                                            ? "ring-2 ring-primary ring-offset-2 scale-110"
+                                            : "hover:scale-105 opacity-80 hover:opacity-100"
+                                    }`}
+                                    style={{
+                                        background: variant.colorCode,
+                                        outline: "none"
+                                    }}
+                                    title={variant.colorName}
+                                    type="button"
+                                />
+                            ))}
+                        </div>
+                    </div>
+                )}
 
                 {/* Footer de Tarjeta / Botón */}
                 <div className="mt-auto pt-4 border-t border-gray-100">

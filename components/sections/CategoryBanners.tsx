@@ -44,7 +44,7 @@ export default function CategoryBanners() {
                                     alt="Insumos para sublimación"
                                     fill
                                     className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-50 md:opacity-85"
-                                    style={{ maskImage: "linear-gradient(to right, transparent, black 80%)" }}
+                                    style={{ maskImage: "linear-gradient(to right, transparent, black 80%)", WebkitMaskImage: "linear-gradient(to right, transparent, black 80%)" }}
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                 />
                             </div>

@@ -16,8 +16,6 @@ export default function ImperiaEditorProvider({ children }: { children: React.Re
 
     if (!isDevelopment || !isInsideIframe) return;
 
-    console.log("🛠️ Imperia Visual SDK: Active");
-
     let selectedElement: HTMLElement | null = null;
 
     const findMetadataInPath = (path: EventTarget[]) => {

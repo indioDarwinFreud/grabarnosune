@@ -193,3 +193,8 @@
   - **[PRODUCTOS NUEVOS]**: Se agregaron dos productos específicos al catálogo de gorras: "Gorra Trucker Gris Oscura" (`id: 7`, `/product/GorraGrisOscura.png`) y "Gorra Trucker Verde y Gris" (`id: 8`, `/product/GorraVerdeMediaGris.png`), con precios de $4.000 y stock inicial.
   - **[CALIDAD]**: Validación de compilación aprobada con éxito. Se corrigieron errores de linter en `data.tsx` eliminando importaciones no utilizadas (`MessageSquareQuote`, `ShieldCheck`).
 
+- **06/07/2026 - Agrupamiento de Gorras Trucker y Soporte de Variantes:**
+  - **[CORRECCIÓN GORRAS]**: Se renombró el producto de id: 5 a "Gorras Trucker" eliminando "Sublimables" tanto del catálogo como de la descripción del sitio en `config.ts` dado que esa tela no se sublima.
+  - **[VARIACIONES INTERACTIVAS]**: Se actualizaron las interfaces en `types/index.ts` y se refactorizó `ProductCard.tsx` para soportar un arreglo de `variants`. Al hacer clic en los círculos de color, cambian la imagen, el precio, el stock y el enlace/mensaje de WhatsApp en tiempo real.
+  - **[CONSOLIDACIÓN]**: Se eliminaron los productos individuales sueltos de gorras (id: 7 e id: 8) de `data.tsx` y se integraron como variantes del producto principal.
+

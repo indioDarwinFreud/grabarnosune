@@ -10,7 +10,7 @@ import FadeIn from "@/components/ui/FadeIn";
 import ProductCard from "@/components/cards/ProductCard";
 
 function ProductsContent() {
-    useSearchParams(); // Mantener para compatibilidad con Suspense boundary
+    useSearchParams();
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [activeCategory, setActiveCategory] = useState<string>("Todas");
