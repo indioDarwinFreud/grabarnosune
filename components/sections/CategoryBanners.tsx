@@ -11,7 +11,7 @@ import { siteConfig } from "@/config";
  */
 export default function CategoryBanners() {
     return (
-        <div 
+        <div
             className="w-full max-w-7xl mx-auto px-4 mt-20"
             data-imperia-id="CategoryBanners__container__0"
             data-imperia-path="components/sections/CategoryBanners.tsx"
@@ -79,7 +79,7 @@ export default function CategoryBanners() {
                             }}
                         >
                             <Image
-                                src="/assets/banner_sustratos.png"
+                                src="/assets/Taza8k.png"
                                 alt="Sustratos e importados"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-40 group-hover:opacity-60"
@@ -90,7 +90,7 @@ export default function CategoryBanners() {
                                     <div>
                                         <span className="text-primary text-xs font-bold tracking-wider uppercase mb-1 block">Listos para Estampar</span>
                                         <h3 className="text-2xl font-black text-white group-hover:text-primary transition-colors">Tazas & Sustratos</h3>
-                                        <p className="text-purple-200 text-sm font-medium hidden md:block mb-1">Cerámica Orca AAA, gorras trucker, textiles y polímeros de alta resistencia.</p>
+                                        <p className="text-purple-200 text-sm font-medium hidden md:block mb-1">Cerámica AAA, gorras trucker, textiles y polímeros de alta resistencia.</p>
                                     </div>
                                     <div
                                         className="p-2 rounded-full border border-white/10 group-hover:opacity-80 transition-all shadow-[0_0_15px_rgba(139,92,246,0.2)]"

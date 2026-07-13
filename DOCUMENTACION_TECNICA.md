@@ -1,6 +1,6 @@
 # Documentación Técnica — Grabar Nos Une
 
-**Fecha de Última Actualización:** 26/06/2026
+**Fecha de Última Actualización:** 06/07/2026
 **Versión del Proyecto:** 3.0 (Rebranding Grabar Nos Une)
 
 ---
@@ -63,17 +63,14 @@ Este documento detalla la arquitectura técnica, estructura de carpetas y propó
 │   ├── textura para fondo.png    # Textura de rodillo (fondo del tema activo)
 │   ├── grabar nos une palabra repetida textura.png  # Textura para tarjetas (Hero)
 │   ├── fonts/Brizel.ttf          # Tipografía de marca artesanal
+│   ├── product/                  # 9 imágenes de productos (unificado)
 │   └── assets/
 │       ├── grabar_about.png
-│       ├── hero_bg.png
 │       ├── banner_papeles.png
-│       ├── banner_sustratos.png
-│       └── productos/            # 3 imágenes de productos
+│       └── banner_sustratos.png
 │
 ├── config.ts                     # [CRÍTICO] Configuración global del sitio
 ├── data.tsx                      # [CRÍTICO] Datos del sitio (productos, testimonios, menú)
-├── lib/
-│   └── utils.ts                  # Función cn() (clsx + tailwind-merge)
 ├── types/
 │   └── index.ts                  # Interfaces TypeScript (Product, Testimonial, NavItem, etc.)
 ├── tailwind.config.ts            # Extensión de Tailwind (colores, fuentes)
@@ -216,7 +213,7 @@ Página **WhatsApp-First**: el formulario redirige directamente a WhatsApp con e
 | Títulos modernos/geométricos | **Montserrat** (Google Fonts) | `font-alt` |
 | Tipografía de marca artesanal | **Brizel** (cargada localmente) | `font-brizel` |
 
-Las fuentes de Google se cargan mediante `next/font/google` en `layout.tsx` y se inyectan como CSS variables (`--font-urbanist`, `--font-cinzel`, `--font-montserrat`). La fuente Brizel se carga via `@font-face` en `globals.css`.
+Las fuentes de Google se cargan mediante `next/font/google` en `layout.tsx` y se inyectan como CSS variables (`--font-urbanist`, `--font-outfit`, `--font-montserrat`). La fuente Brizel se carga via `@font-face` en `globals.css`.
 
 ---
 
@@ -264,5 +261,4 @@ El proyecto está configurado para desplegarse en **Vercel** o **Render** desde 
 ## Issues Conocidos
 
 - **Backgrounds de temas inactivos no existen en disco**: Las rutas `"/assets/backgrounds/silver_bg.png"` y `"/assets/backgrounds/blue_bg.png"` están definidas en `config.ts` para SILVER_PREMIUM y ELECTRIC_BLUE, pero los archivos no existen. Si se activa alguno de esos temas, se intentará cargar una imagen inexistente.
-- **Función `cn()` sin uso**: `lib/utils.ts` exporta `cn()` pero ningún componente la importa actualmente. Los `className` se construyen con template strings directamente.
 - **Nombres de archivos con espacios**: Varios PNGs en `public/` tienen espacios en sus nombres (ej: `logo con nombre.png`). Funciona pero puede causar issues en algunos servidores web o herramientas de build.

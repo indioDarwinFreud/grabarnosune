@@ -74,9 +74,9 @@ export const productsData: Product[] = [
     },
     {
         id: 2,
-        title: "Taza de Cerámica Importada Orca AAA",
+        title: "Taza Nacional AAA",
         location: "Sustratos - Calidad Premium",
-        description: "Taza de cerámica extra blanca con el recubrimiento polimérico Orca original. Brillo duradero y resistente al microondas.",
+        description: "Taza de cerámica extra blanca con el recubrimiento polimérico original. Brillo duradero y resistente al microondas.",
         image: "/product/taza_orca.png",
         category: "Sustratos",
         stock: 3,

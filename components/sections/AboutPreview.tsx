@@ -17,17 +17,19 @@ export default function AboutPreview() {
                 <FadeIn delay={0.2} direction="right" className="w-full lg:w-1/2 relative">
                     <div
                         className="relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_45px_rgba(113,0,122,0.07)] border border-primary/10"
-                        style={{ backgroundColor: 'white' }}
+                        style={{ backgroundColor: '#f9fafb' }}
                     >
-                        {/* Interactive overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-black/80 to-transparent z-10" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none" />
+                        
                         <Image
-                            src="/assets/grabar_about.png"
+                            src="/GrabarTaza.jpeg"
                             alt="Taller Grabar Nos Une"
                             fill
-                            className="object-cover transform hover:scale-105 transition-transform duration-700"
+                            className="object-contain p-6 transform hover:scale-102 transition-transform duration-700"
                             sizes="(max-width: 768px) 100vw, 50vw"
+                            priority
                         />
+                        
                         {/* Decorative Badge */}
                         <div className="absolute bottom-6 left-6 z-20 bg-white/90 backdrop-blur-md border border-gray-200 text-gray-900 p-4 rounded-xl shadow-lg">
                             <p className="font-black text-2xl text-primary">100%</p>
