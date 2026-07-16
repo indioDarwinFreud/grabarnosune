@@ -1,19 +1,22 @@
 "use client"
 
 import { useState, Suspense, useMemo } from "react";
-import { productsData } from "@/data";
+import { productsData, blogPosts } from "@/data";
 import { Search as SearchIcon, X } from "lucide-react";
 import Image from "next/image";
 
 import { useSearchParams } from "next/navigation";
 import FadeIn from "@/components/ui/FadeIn";
 import ProductCard from "@/components/cards/ProductCard";
+import GuideModal from "@/components/ui/GuideModal";
+import type { BlogPost } from "@/types";
 
 function ProductsContent() {
     useSearchParams();
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [activeCategory, setActiveCategory] = useState<string>("Todas");
+    const [activeGuide, setActiveGuide] = useState<BlogPost | null>(null);
 
     const categories = useMemo(() => {
         const cats = [...new Set(productsData.map(p => p.category).filter(Boolean) as string[])];
@@ -25,6 +28,11 @@ function ProductsContent() {
         const matchesCategory = activeCategory === "Todas" || product.category === activeCategory;
         return matchesSearch && matchesCategory;
     });
+
+    const handleGuideClick = (slug: string) => {
+        const guide = blogPosts.find(p => p.slug === slug) ?? null;
+        setActiveGuide(guide);
+    };
 
     return (
         <div className="min-h-screen relative">
@@ -78,6 +86,7 @@ function ProductsContent() {
                             <ProductCard
                                 product={product}
                                 onImageClick={setSelectedImage}
+                                onGuideClick={handleGuideClick}
                             />
                         </FadeIn>
                     ))}
@@ -107,6 +116,14 @@ function ProductsContent() {
                         />
                     </div>
                 </div>
+            )}
+
+            {/* Guide Modal — opens from ProductCard "Ver Guía de Uso" button */}
+            {activeGuide && (
+                <GuideModal
+                    guide={activeGuide}
+                    onClose={() => setActiveGuide(null)}
+                />
             )}
         </div>
     );

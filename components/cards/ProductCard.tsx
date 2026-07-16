@@ -5,13 +5,14 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { MessageCircle, Ruler } from "lucide-react";
+import { MessageCircle, Ruler, BookOpen } from "lucide-react";
 import { siteConfig } from "@/config";
 import type { Product, ProductVariant } from "@/types";
 
 interface ProductCardProps {
     product: Product;
     onImageClick?: (image: string) => void;
+    onGuideClick?: (slug: string) => void;
 }
 
 /**
@@ -19,15 +20,20 @@ interface ProductCardProps {
  * Se utiliza tanto en la Home (BestSellers) como en el catálogo (/products).
  * Centraliza el diseño, colores y lógica de contacto por WhatsApp.
  */
-export default function ProductCard({ product, onImageClick }: ProductCardProps) {
+export default function ProductCard({ product, onImageClick, onGuideClick }: ProductCardProps) {
     const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(null);
 
     // Propiedades dinámicas basadas en la variante seleccionada
     const displayImage = selectedVariant ? selectedVariant.image : product.image;
     const displayStock = selectedVariant && selectedVariant.stock !== undefined ? selectedVariant.stock : product.stock;
     const displayTitle = selectedVariant ? `${product.title} (${selectedVariant.colorName})` : product.title;
+    const displayPrice = selectedVariant && selectedVariant.price !== undefined && selectedVariant.price !== null ? selectedVariant.price : product.price;
 
-    const whatsappUrl = `https://wa.me/${siteConfig.contact.phone.replace("+", "")}?text=Hola, me interesa el producto: ${encodeURIComponent(displayTitle)}`;
+    const displayPriceText = displayPrice 
+        ? ` ($${typeof displayPrice === 'number' ? displayPrice.toLocaleString('es-AR') : displayPrice})` 
+        : '';
+
+    const whatsappUrl = `https://wa.me/${siteConfig.contact.phone.replace("+", "")}?text=Hola, me interesa el producto: ${encodeURIComponent(displayTitle + displayPriceText)}`;
 
     return (
         <Card
@@ -96,18 +102,30 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
                     >
                         {product.title}
                     </h3>
-                    {product.location && (
-                        <p
-                            className="text-xs font-semibold uppercase tracking-widest mt-1"
-                            style={{ color: siteConfig.theme.textColors.cardMuted }}
-                        >
-                            {product.location}
-                        </p>
-                    )}
+                    <div className="flex flex-wrap items-center justify-between gap-2 mt-1">
+                        {product.location && (
+                            <p
+                                className="text-xs font-semibold uppercase tracking-widest"
+                                style={{ color: siteConfig.theme.textColors.cardMuted }}
+                            >
+                                {product.location}
+                            </p>
+                        )}
+                        {displayPrice && (
+                            <span
+                                className="text-lg font-black tracking-tight"
+                                style={{ color: siteConfig.theme.primaryColor }}
+                            >
+                                {typeof displayPrice === 'number'
+                                    ? `$${displayPrice.toLocaleString('es-AR')}`
+                                    : displayPrice}
+                            </span>
+                        )}
+                    </div>
                 </div>
 
                 <p
-                    className="text-sm mb-6 flex-grow leading-relaxed font-medium"
+                    className="text-sm mb-6 mt-2 flex-grow leading-relaxed font-medium"
                     style={{ color: siteConfig.theme.textColors.cardBody }}
                 >
                     {product.description}
@@ -162,7 +180,7 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
                 )}
 
                 {/* Footer de Tarjeta / Botón */}
-                <div className="mt-auto pt-4 border-t border-gray-100">
+                <div className="mt-auto pt-4 border-t border-gray-100 space-y-2">
                     <Link
                         href={whatsappUrl}
                         target="_blank"
@@ -170,7 +188,7 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
                         className="w-full block"
                     >
                         <Button
-                            className="w-full transition-all duration-300 h-12 font-bold flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
+                            className="w-full transition-all duration-300 h-11 font-bold flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
                             style={{
                                 background: siteConfig.theme.backgroundMain,
                                 color: siteConfig.theme.primaryColor,
@@ -189,6 +207,21 @@ export default function ProductCard({ product, onImageClick }: ProductCardProps)
                             Pedir por WhatsApp
                         </Button>
                     </Link>
+
+                    {product.guideSlug && onGuideClick && (
+                        <Button
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                e.preventDefault();
+                                onGuideClick(product.guideSlug!);
+                            }}
+                            className="w-full transition-all duration-300 h-10 text-xs font-bold flex items-center justify-center gap-2 rounded-xl bg-primary/5 hover:bg-primary/10 text-primary border border-primary/15 hover:border-primary/30"
+                            type="button"
+                        >
+                            <BookOpen size={14} />
+                            Ver Guía de Uso / Tutorial
+                        </Button>
+                    )}
                 </div>
             </div>
         </Card>

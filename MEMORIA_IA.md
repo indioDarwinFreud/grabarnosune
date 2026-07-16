@@ -209,3 +209,15 @@
   - **[VARIACIONES INTERACTIVAS]**: Se actualizaron las interfaces en `types/index.ts` y se refactorizó `ProductCard.tsx` para soportar un arreglo de `variants`. Al hacer clic en los círculos de color, cambian la imagen, el precio, el stock y el enlace/mensaje de WhatsApp en tiempo real.
   - **[CONSOLIDACIÓN]**: Se eliminaron los productos individuales sueltos de gorras (id: 7 e id: 8) de `data.tsx` y se integraron como variantes del producto principal.
 
+- **16/07/2026 - Actualización Masiva del Catálogo y Sistema de Precios:**
+  - **[CAMPO PRICE]**: Se agregó la propiedad opcional `price?: number | string | null` a las interfaces `Product` y `ProductVariant` en `types/index.ts`. Permite mostrar precios numéricos (formateados como `$X.XXX`) o strings (ej: `"Consultar"`) directamente en la tarjeta.
+  - **[PRODUCTCARD]**: Se actualizó `ProductCard.tsx` para mostrar el precio en la línea de subtítulo (junto a `location`), en color primario con tipografía negrita de alto impacto. El precio también se incluye en el texto del mensaje de WhatsApp generado dinámicamente.
+  - **[CATÁLOGO COMPLETO — 29 productos]**: Se reemplazó el catálogo parcial por la lista real del cliente con precios:
+    - *Textiles:* Remeras algodón adulto ($8.200), niño ($5.400), talle especial ($9.650), spun adulto ($5.900), spun niño ($2.900), buzo cuello redondo ($21.000), buzo canguro ($23.000), campera ($24.490).
+    - *Gorras:* Trucker adulto ($3.750, variantes de color), trucker niño ($3.550), prelavada ($5.800).
+    - *Tazas:* Cerámica nacional ($3.100), cerámica color interior ($3.900), polímero ($1.650), mimo ($2.700).
+    - *Insumos:* Papel sublimación, tintas, Sublimate aerosol ($4.400), Papel Holofan Inkjet estrellita (Consultar), Winky Paper (Consultar).
+    - *Bazar y souvenirs:* Yerbera/azucarera Workat ($8.900), cubiertos —cuchillo/tenedor/cuchara ($365 c/u)—, vaso cristal glitter ($1.190 / $1.790 personalizado), vaso Argentina (Consultar), vasos milkshake 380cc ($890) y 330cc ($990), valijita plástica ($1.490).
+  - **[IMÁGENES]**: Todos los productos mapeados a imágenes reales existentes en `/public/product/`.
+  - **[BUILD]**: Build de producción exitoso (exit code 0) tras limpieza de caché `.next/`.
+

@@ -19,6 +19,7 @@ export interface ProductVariant {
     colorCode: string; // CSS style for background (e.g. hex or gradient)
     image: string;
     stock?: number | null;
+    price?: number | string | null;
 }
 
 export interface Product {
@@ -40,6 +41,10 @@ export interface Product {
     stock?: number | null;
     /** Variaciones de color del producto */
     variants?: ProductVariant[];
+    /** Precio del producto. Puede ser un número o una cadena (ej: "$8200" o "Consultar") */
+    price?: number | string | null;
+    /** Slug de la guía de uso asociada al producto, si existe */
+    guideSlug?: string;
 }
 
 export interface BlogPost {
@@ -50,6 +55,9 @@ export interface BlogPost {
     slug: string;
     category: string;
     readTime: string;
+    steps?: string[];
+    tips?: string[];
+    infographicImage?: string;
 }
 
 // -------------------------------------------------------
