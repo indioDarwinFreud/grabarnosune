@@ -39,7 +39,7 @@ export default function GuideModal({ guide, onClose }: GuideModalProps) {
 
     return (
         <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-md p-4 md:p-6 transition-all duration-300 animate-in fade-in"
+            className="fixed inset-0 z-[60] flex items-center justify-center bg-black/75 backdrop-blur-md p-4 md:p-6 transition-all duration-300 animate-in fade-in"
             onClick={onClose}
         >
             <div
@@ -154,7 +154,7 @@ export default function GuideModal({ guide, onClose }: GuideModalProps) {
                 </div>
 
                 {/* Footer / Call to action */}
-                <div className="sticky bottom-0 bg-gray-50 px-6 py-5 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="sticky bottom-0 bg-gray-50 px-6 py-5 pb-16 md:pb-5 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <span className="text-xs text-gray-500 font-sans">
                         ¿Dudas sobre los materiales? Te asesoramos por WhatsApp.
                     </span>
