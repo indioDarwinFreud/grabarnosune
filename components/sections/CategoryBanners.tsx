@@ -5,16 +5,11 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/config";
 
-/**
- * CategoryBanners — Bloques visuales de navegación por colecciones
- * Muestra 2 banners grandes tipo "categoría" que enlazan a /products
- */
 export default function CategoryBanners() {
     return (
         <div
             className="w-full max-w-7xl mx-auto px-4 mt-20"
-            data-imperia-id="CategoryBanners__container__0"
-            data-imperia-path="components/sections/CategoryBanners.tsx"
+
         >
             <FadeIn>
                 <div className="flex flex-col items-center mb-16">

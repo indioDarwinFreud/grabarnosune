@@ -2,19 +2,11 @@ import FadeIn from "@/components/ui/FadeIn";
 import { productsData } from "@/data";
 import ProductCard from "@/components/cards/ProductCard";
 
-/**
- * BestSellers — Grilla de productos destacados en la Home
- * Muestra tarjetas de producto reutilizando el componente ProductCard.
- *
- * Datos: `productsData` de data.tsx.
- * Muestra los primeros 4 productos del catálogo principal.
- */
 export default function BestSellers() {
     return (
         <section 
             className="mt-32 w-full max-w-7xl mx-auto px-4 pb-24"
-            data-imperia-id="BestSellers__container__0"
-            data-imperia-path="components/sections/BestSellers.tsx"
+
         >
             <FadeIn>
                 <div className="flex flex-col items-center mb-16">

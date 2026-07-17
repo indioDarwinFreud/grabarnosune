@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { siteConfig } from "@/config";
 
-const Header = () => {
+export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -25,8 +25,6 @@ const Header = () => {
             className={`flex flex-col items-center justify-center p-2 transition-all duration-500 ${
               scrolled ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
             }`}
-            data-imperia-id="Header__logo__0"
-            data-imperia-path="components/layout/Header.tsx"
           >
             <Image
               src={siteConfig.logo.main}
@@ -40,6 +38,4 @@ const Header = () => {
       </header>
     </div>
   );
-};
-
-export default Header;
+}

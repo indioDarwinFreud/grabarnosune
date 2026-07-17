@@ -15,11 +15,6 @@ interface ProductCardProps {
     onGuideClick?: (slug: string) => void;
 }
 
-/**
- * ProductCard — Tarjeta de producto unificada
- * Se utiliza tanto en la Home (BestSellers) como en el catálogo (/products).
- * Centraliza el diseño, colores y lógica de contacto por WhatsApp.
- */
 export default function ProductCard({ product, onImageClick, onGuideClick }: ProductCardProps) {
     const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(null);
 

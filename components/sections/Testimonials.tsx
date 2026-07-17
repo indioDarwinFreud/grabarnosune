@@ -4,19 +4,11 @@ import { testimonialsData } from "@/data";
 import { MessageSquareQuote, Star } from "lucide-react";
 import { siteConfig } from "@/config";
 
-/**
- * Testimonials — Grilla de reseñas de clientes
- * Muestra tarjetas con avatar de iniciales, 5 estrellas, texto y nombre del cliente.
- *
- * Datos: `testimonialsData` de data.tsx.
- * Para agregar un testimonio, agregá un objeto nuevo en `testimonialsData`.
- */
 export default function Testimonials() {
     return (
         <div 
             className="w-full max-w-7xl mx-auto px-4 mt-16 mb-24"
-            data-imperia-id="Testimonials__container__0"
-            data-imperia-path="components/sections/Testimonials.tsx"
+
         >
             <FadeIn>
                 <div className="flex flex-col items-center mb-16">

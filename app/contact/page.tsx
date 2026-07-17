@@ -27,7 +27,7 @@ export default function ContactPage() {
             <div className="absolute top-1/4 right-10 w-96 h-96 bg-primary/5 blur-[120px] rounded-full pointer-events-none -z-10" />
             <div className="absolute bottom-1/4 left-10 w-96 h-96 bg-primary/3 blur-[100px] rounded-full pointer-events-none -z-10" />
 
-            <div className="relative z-10 container mx-auto px-4 pt-28 md:pt-36 pb-24">
+            <div className="relative z-10 container mx-auto px-4 pt-28 md:pt-36 pb-28">
 
                 {/* Header Principal */}
                 <FadeIn direction="down">

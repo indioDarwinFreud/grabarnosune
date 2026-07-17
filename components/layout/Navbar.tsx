@@ -4,58 +4,36 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { itemsNavbar } from "@/data"
 
-/**
- * Navbar — "The Nucleus Design"
- * Barra de navegación flotante fija en la parte inferior de la pantalla.
- * Diseño tipo "pastilla de cristal" con ícono central que enlaza a imperiavirtual.com.
- *
- * Datos: consume `itemsNavbar` de data.tsx.
- * Estilo activo: detecta la ruta actual con `usePathname` y aplica borde + glow al ícono activo.
- */
-const Navbar = () => {
+export default function Navbar() {
     const router = usePathname()
     return (
-        <div 
+        <div
             className="fixed z-50 bottom-10 left-1/2 -translate-x-1/2 w-max"
-            data-imperia-id="Navbar__container__0"
-            data-imperia-path="components/layout/Navbar.tsx"
         >
 
             <nav>
-                <div 
+                <div
                     className="flex items-center justify-center gap-1 md:gap-2 px-3 md:px-6 py-1.5 rounded-full bg-[#1A0A1D]/90 backdrop-blur-2xl border border-white/10 shadow-lg"
-                    data-imperia-id="Navbar__nav__0"
-                    data-imperia-path="components/layout/Navbar.tsx"
                 >
 
-                    {/* First Half Items */}
-                    {itemsNavbar.slice(0, 2).map((item, index) => (
+                    {itemsNavbar.slice(0, 2).map((item) => (
                         <div key={item.id}
                             className={`px-2 md:px-3 py-1.5 transition-all duration-300 relative group
                             rounded-full cursor-pointer hover:scale-110
                             ${router === item.link ? 'bg-transparent border border-primary text-primary shadow-[0_0_15px_rgba(113,0,122,0.4)] scale-110' : 'text-white/80 border border-transparent hover:text-white hover:bg-white/10'}`}
-                            data-imperia-id={`Navbar__item__${index}`}
-                            data-imperia-path="components/layout/Navbar.tsx"
                         >
                             <Link href={item.link} className="relative z-10">{item.icon}</Link>
                         </div>
                     ))}
 
-                    {/* Central Imperia Virtual Shortcut Icon - Popping out of the thin Navbar */}
                     <div className="relative mx-1 md:mx-3 w-[3.8rem] md:w-[4.2rem] flex items-center justify-center">
 
-                        {/* Large Circle container positioned absolute to not stretch the thin navbar */}
-                        {/* Enlace directo a Imperia Virtual */}
-                        <a href="https://imperiavirtual.com.ar" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[4.2rem] h-[4.2rem] md:w-[4.8rem] md:h-[4.8rem] rounded-full bg-[#1A0A1D] border border-primary/50 flex items-center justify-center z-20 
-                            shadow-md hover:shadow-lg 
+                        <a href="https://imperiavirtual.com.ar" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[4.2rem] h-[4.2rem] md:w-[4.8rem] md:h-[4.8rem] rounded-full bg-[#1A0A1D] border border-primary/50 flex items-center justify-center z-20
+                            shadow-md hover:shadow-lg
                             hover:scale-105 transition-all duration-500 cursor-pointer group"
-                            data-imperia-id="Navbar__logo__0"
-                            data-imperia-path="components/layout/Navbar.tsx"
                         >
 
-                            {/* Inner Circle for depth */}
                             <div className="w-[3.2rem] h-[3.2rem] md:w-[3.6rem] md:h-[3.6rem] rounded-full bg-[#29132E] border border-white/5 flex items-center justify-center">
-                                {/* Text With Custom Premium Font */}
                                 <span
                                     className="text-[1.7rem] font-bold tracking-[0.1em] bg-clip-text text-transparent bg-gradient-to-br from-white via-neutral-300 to-primary drop-shadow-lg ml-1"
                                     style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}
@@ -67,14 +45,11 @@ const Navbar = () => {
                         </a>
                     </div>
 
-                    {/* Second Half Items */}
-                    {itemsNavbar.slice(2, 4).map((item, index) => (
+                    {itemsNavbar.slice(2, 4).map((item) => (
                         <div key={item.id}
                             className={`px-2 md:px-3 py-1.5 transition-all duration-300 relative group
                             rounded-full cursor-pointer hover:scale-110
                             ${router === item.link ? 'bg-transparent border border-primary text-primary shadow-[0_0_15px_rgba(113,0,122,0.4)] scale-110' : 'text-white/80 border border-transparent hover:text-white hover:bg-white/10'}`}
-                            data-imperia-id={`Navbar__item__${index + 2}`}
-                            data-imperia-path="components/layout/Navbar.tsx"
                         >
                             <Link href={item.link} className="relative z-10">{item.icon}</Link>
                         </div>
@@ -85,5 +60,3 @@ const Navbar = () => {
         </div>
     )
 }
-
-export default Navbar

@@ -1,27 +1,7 @@
-/**
- * ============================================================
- * DATA.TSX — Datos del Sitio
- * ============================================================
- * Este es el segundo archivo clave para personalizar el sitio
- * (junto con config.ts).
- *
- * GUÍA RÁPIDA:
- *   • Para agregar un producto  → editá `productsData`
- *   • Para agregar un testimonio → editá `testimonialsData`
- *   • Para cambiar el menú     → editá `itemsNavbar`
- *
- * Los íconos se importan de lucide-react. Para ver la lista
- * completa de íconos disponibles: https://lucide.dev/icons/
- * ============================================================
- */
-
 import { HomeIcon, Store, Users, Mail, MapPin, Facebook, Instagram, Phone } from "lucide-react";
 import { siteConfig } from "./config";
 import type { NavItem, Product, Testimonial, ContactItem, BusinessHour, BlogPost } from "./types";
 
-// ============================================================
-// MENÚ DE NAVEGACIÓN
-// ============================================================
 export const itemsNavbar: NavItem[] = [
     {
         id: 1,
@@ -49,18 +29,6 @@ export const itemsNavbar: NavItem[] = [
     },
 ];
 
-// ============================================================
-// PRODUCTOS DEL CATÁLOGO
-// ============================================================
-// ✏️ CÓMO AGREGAR UN PRODUCTO:
-//   1. Copiá uno de los bloques de abajo.
-//   2. Cambiale el `id` (debe ser único y numérico).
-//   3. Reemplazá title, location, description, image y category.
-//   4. Subí la imagen a la carpeta /public y ponés la ruta aquí
-//      (ej: "/mi-producto.jpg").
-//   5. El botón "WhatsApp" se arma automáticamente con el nombre
-//      del producto y el teléfono de config.ts.
-// ============================================================
 export const productsData: Product[] = [
     {
         id: 1,
@@ -458,14 +426,6 @@ export const productsData: Product[] = [
     }
 ];
 
-// ============================================================
-// TESTIMONIOS DE CLIENTES
-// ============================================================
-// ✏️ CÓMO AGREGAR UN TESTIMONIO:
-//   1. Copiá un bloque, cambiá el id, name, role, initials y content.
-//   2. Las iniciales (initials) son las 2 primeras letras del nombre
-//      (ej: "Elena Martínez" → "EM").
-// ============================================================
 export const testimonialsData: Testimonial[] = [
     {
         id: 1,
@@ -483,13 +443,6 @@ export const testimonialsData: Testimonial[] = [
     },
 ];
 
-// ============================================================
-// DATOS DE CONTACTO (generados desde config.ts)
-// ============================================================
-// ⚠️ No edites este bloque directamente.
-//    Para cambiar el teléfono, email, ubicación o redes sociales,
-//    modificá config.ts → secciones contact y socials.
-// ============================================================
 export const contactData: ContactItem[] = [
     {
         id: 1,
@@ -528,16 +481,8 @@ export const contactData: ContactItem[] = [
     },
 ];
 
-// ============================================================
-// HORARIOS DE ATENCIÓN (generados desde config.ts)
-// ============================================================
-// ⚠️ Para cambiar los horarios, modificá config.ts → businessHours.
-// ============================================================
 export const businessHours: BusinessHour[] = siteConfig.businessHours;
 
-// ============================================================
-// BLOG — Consejos y guías para sublimadores
-// ============================================================
 export const blogPosts: BlogPost[] = [
     {
         id: 1,

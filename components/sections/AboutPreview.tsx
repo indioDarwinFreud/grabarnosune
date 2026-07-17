@@ -8,8 +8,7 @@ export default function AboutPreview() {
     return (
         <div 
             className="w-full max-w-7xl mx-auto px-4 py-20"
-            data-imperia-id="AboutPreview__container__0"
-            data-imperia-path="components/sections/AboutPreview.tsx"
+
         >
             <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 

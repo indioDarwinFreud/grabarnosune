@@ -5,8 +5,7 @@ export default function CommercialInfo() {
     return (
         <section 
             className="w-full max-w-7xl mx-auto px-4 mt-32 mb-16"
-            data-imperia-id="CommercialInfo__section__0"
-            data-imperia-path="components/sections/CommercialInfo.tsx"
+
         >
             {/* Banner de Cupones */}
             <FadeIn>

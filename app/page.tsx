@@ -10,7 +10,7 @@ import BlogPreview from "@/components/sections/BlogPreview";
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative flex flex-col pt-16 md:pt-24 bg-transparent">
+    <main className="min-h-screen relative flex flex-col pt-16 md:pt-24 pb-24 md:pb-8 bg-transparent">
       {/* Hero Section */}
       <div className="relative z-30 w-full">
         <HeroStatic />

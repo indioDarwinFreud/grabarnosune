@@ -53,8 +53,7 @@ export default function HeroStatic() {
     return (
         <div
             className="relative w-full min-h-[85vh] lg:min-h-[90vh] flex items-center py-12 md:py-20 overflow-hidden"
-            data-imperia-id="HeroStatic__container__0"
-            data-imperia-path="components/sections/HeroStatic.tsx"
+
         >
             {/* Capa de fondo decorativa: Rastro de rodillo de prueba en el borde derecho (look imprenta) */}
             <div className="absolute right-0 top-0 bottom-0 w-24 md:w-36 bg-primary/[0.01] border-l border-primary/5 pointer-events-none -z-10 overflow-hidden">

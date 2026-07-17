@@ -91,8 +91,7 @@ export default function MainCategories() {
     return (
         <section 
             className="w-full max-w-7xl mx-auto px-4 mt-20"
-            data-imperia-id="MainCategories__section__0"
-            data-imperia-path="components/sections/MainCategories.tsx"
+
         >
             <FadeIn>
                 <div className="flex flex-col items-center mb-12">

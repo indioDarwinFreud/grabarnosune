@@ -1,5 +1,3 @@
-"use client";
-
 import FadeIn from "@/components/ui/FadeIn";
 import { siteConfig } from "@/config";
 import Image from "next/image";
@@ -50,7 +48,7 @@ export default function AboutPage() {
                             {/* Imagen Secundaria: Taza Orca superpuesta, simulando un producto final listo */}
                             <div className="absolute -bottom-8 -right-6 w-1/2 aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white rotate-[3deg] hover:rotate-0 transition-transform duration-500 z-20 hidden sm:block">
                                 <Image
-                                    src="/assets/productos/taza_orca.png"
+                                    src="/product/taza_orca.png"
                                     alt="Personalizados Taza Orca"
                                     fill
                                     className="object-cover"

@@ -8,7 +8,6 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import ImperiaEditorProvider from "@/components/providers/ImperiaEditorProvider";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -81,12 +80,10 @@ export default function RootLayout({
           />
         )}
 
-        <ImperiaEditorProvider>
           <Navbar />
           <Header />
           {children}
           <Footer />
-        </ImperiaEditorProvider>
       </body>
     </html>
   );

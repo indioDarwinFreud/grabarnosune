@@ -7,15 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/config";
 
-/**
- * Footer — Pie de página global premium
- * Grilla de 3 columnas: Ubicación | Logo + Redes | Horarios.
- * Al fondo muestra el Copyright y la firma "Creado por Imperia Virtual".
- *
- * Datos: `contactData` y `businessHours` de data.tsx.
- * Estilo: fondo y color primario de config.ts → theme.backgroundFooter / primaryColor.
- */
-const Footer = () => {
+export default function Footer() {
     const locationData = contactData.find(c => c.title === "Ubicación");
     const socialData = contactData.filter(c => c.title === "Facebook" || c.title === "Instagram" || c.title === "Teléfono");
     const currentYear = new Date().getFullYear();
@@ -24,28 +16,19 @@ const Footer = () => {
         <footer
             className="w-full backdrop-blur-xl py-12 md:py-20 border-t border-primary/20 relative overflow-hidden shadow-md"
             style={{ background: siteConfig.theme.backgroundFooter }}
-            data-imperia-id="Footer__container__0"
-            data-imperia-path="components/layout/Footer.tsx"
         >
-            {/* Capa de fondo "Fumigada" aislada para no desenfocar el texto */}
-            <div 
+            <div
                 className="absolute inset-0 pointer-events-none -z-10"
                 style={{
-                    
-                    filter: 'blur(20px)',     /* Difumina los píxeles grandes */
-                    transform: 'scale(1.05)'  /* Escala para evitar los bordes blancos del blur */
+                    filter: 'blur(20px)',
+                    transform: 'scale(1.05)'
                 }}
             />
 
-            {/* Premium Gradient Overlay with Radial Glow */}
-
-
             <div className="max-w-6xl mx-auto px-6 relative z-10">
 
-                {/* Main Content Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-14 md:gap-8 items-start justify-between text-center md:text-left mb-16">
 
-                    {/* Column 1: Location */}
                     <FadeIn delay={0.1} className="flex flex-col items-center md:items-start space-y-5">
                         <div className="flex items-center space-x-3 text-primary mb-1">
                             <MapPin className="w-6 h-6 drop-shadow-[0_0_8px_rgba(192,192,192,0.8)]" />
@@ -66,16 +49,11 @@ const Footer = () => {
                         )}
                     </FadeIn>
 
-                    {/* Column 2: Logo & Social (Center) */}
                     <FadeIn delay={0.2} className="flex flex-col items-center justify-center space-y-8 md:border-x border-white/5 md:px-8 relative">
-                        {/* Decorative line top */}
                         <div className="hidden md:block absolute top-0 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
 
-                        {/* Elegant Brand Logo */}
-                        <div 
+                        <div
                             className="relative w-72 h-32 group-hover:scale-105 transition-transform duration-500"
-                            data-imperia-id="Footer__logo__0"
-                            data-imperia-path="components/layout/Footer.tsx"
                         >
                             <Image
                                 src={siteConfig.logo.main}
@@ -88,7 +66,6 @@ const Footer = () => {
                             />
                         </div>
 
-                        {/* Premium Social Icons */}
                         {socialData.length > 0 && (
                             <div className="flex space-x-6">
                                 {socialData.map((social) => (
@@ -106,11 +83,9 @@ const Footer = () => {
                             </div>
                         )}
 
-                        {/* Decorative line bottom */}
                         <div className="hidden md:block absolute bottom-0 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
                     </FadeIn>
 
-                    {/* Column 3: Business Hours */}
                     <FadeIn delay={0.3} className="flex flex-col items-center md:items-end space-y-5">
                         <div className="flex items-center space-x-3 text-primary mb-1">
                             <Clock className="w-6 h-6 drop-shadow-[0_0_8px_rgba(192,192,192,0.8)]" />
@@ -129,16 +104,13 @@ const Footer = () => {
                     </FadeIn>
                 </div>
 
-                {/* Footer Bottom: Signature & Copyright */}
                 <FadeIn delay={0.4} className="w-full pt-8 pb-32 md:pb-8 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-6 relative mt-8">
-                    {/* Top divider line */}
                     <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 
                     <p className="font-urbanist text-gray-500 text-xs tracking-widest uppercase">
                         &copy; {currentYear} {siteConfig.name}.
                     </p>
 
-                    {/* The Imperia Virtual Signature */}
                     <div className="font-urbanist text-gray-400 text-xs tracking-widest uppercase flex flex-col md:flex-row items-center gap-2 md:gap-3">
                         <span>Creado por</span>
                         <Link
@@ -148,7 +120,6 @@ const Footer = () => {
                             className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-primary via-neutral-300 to-primary font-black text-sm md:text-base tracking-[0.2em] transform hover:scale-105 transition-all duration-300 drop-shadow-[0_0_12px_rgba(192,192,192,0.8)] hover:drop-shadow-[0_0_25px_rgba(192,192,192,1)]"
                         >
                             IMPERIA VIRTUAL
-                            {/* Decorative glowing underline */}
                             <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-80"></span>
                         </Link>
                     </div>
@@ -156,6 +127,4 @@ const Footer = () => {
             </div>
         </footer>
     );
-};
-
-export default Footer;
+}
