@@ -19,7 +19,7 @@ export interface ThemeConfig {
     backgroundColor: string;
     backgroundCard: string;
     backgroundFooter: string;
-    backgroundImage: string;
+    backgroundImage?: string;
     backgroundImageSize?: string;
     backgroundImageRepeat?: string;
     cardImage: string;
@@ -41,7 +41,7 @@ export const siteConfig = {
     // ---------------------------------------------------------------------------
     name: "Grabar Nos Une",
     shortName: "GrabarNosUne",
-    description: "Tazas de ceramica y polimero, remeras, buzos, camperas y gorras trucker, articulos de madera, llaveros, portarretratos, mates y mucho mas, vinilos, etc.",
+    description: "Vendemos insumos para sublimación, grabado y personalización: tazas de cerámica y polímero, remeras, buzos, camperas, gorras trucker, artículos de bazar, regalos y mucho más. Todo listo para que personalices con tu estilo.",
 
     // ---------------------------------------------------------------------------
     // 2. Tipografía del Sitio
@@ -85,7 +85,6 @@ export const siteConfig = {
                 cardBody: "#D1D5DB",
                 cardMuted: "#9CA3AF"
             },
-            backgroundImage: "/assets/backgrounds/silver_bg.png",
             // Textura técnica limpia de puntos para evitar marcas de agua IA
             cardImage: "data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='2' cy='2' r='1'/%3E%3Ccircle cx='22' cy='22' r='1'/%3E%3C/g%3E%3C/svg%3E"
         },
@@ -130,7 +129,6 @@ export const siteConfig = {
                 cardBody: "#E2E8F0",
                 cardMuted: "#94A3B8"
             },
-            backgroundImage: "/assets/backgrounds/blue_bg.png",
             // Textura de rejilla técnica cian para el tema Blue
             cardImage: "data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%2300E5FF' stroke-opacity='0.15' stroke-width='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4v-4H4v4H0v2h4v4h2v-4h4v-2H6zm30 0v-4h-2v4h-4v2h4v4h2v-4h4v-2-h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"
         }

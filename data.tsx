@@ -600,9 +600,11 @@ export const blogPosts: BlogPost[] = [
             "Retirá la taza con cuidado y quitá el papel inmediatamente para prevenir el efecto fantasma (ghosting)."
         ],
         tips: [
-            "Sumergir la taza en agua tibia inmediatamente después de retirar el papel corta el proceso térmico de inmediato.",
-            "Limpiá siempre la taza con alcohol isopropílico y un paño seco antes de aplicar el papel para remover cualquier grasitud.",
-            "Usar insumos de calidad nacional AAA (como tazas Orca) te garantizará un brillo superior y durabilidad en lavavajillas."
+            "Limpiá siempre la taza con alcohol isopropílico y un paño que no suelte pelusa antes de aplicar el papel. Cualquier partícula de grasa o polvo se hornea en el esmalte y genera motas antiestéticas.",
+            "Ajustá bien la presión de la resistencia de la prensa: tiene que hacer contacto firme y parejo sin deformar la cerámica. Si la zona cerca del asa sale pálida, sumá 15-30 segundos o mejorá el ajuste en ese sector.",
+            "Usá cinta térmica de buena adherencia: dos tiras verticales (de arriba a abajo) más una en el solape. Evitá que la cinta entre en el área de la imagen para prevenir el ghosting (doble contorno).",
+            "No sumerjas la taza en agua fría apenas sale de la prensa — el choque térmico puede generar microfisuras en el esmalte. Dejala enfriar al aire libre sobre una rejilla.",
+            "Si trabajás con tazas cónicas, cortá el papel en forma de trapezoide (más angosto de un lado) para que asiente sin pliegues ni canales verticales que arruinen la estampación."
         ]
     }
 ];

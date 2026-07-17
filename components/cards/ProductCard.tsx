@@ -25,7 +25,6 @@ export default function ProductCard({ product, onImageClick, onGuideClick }: Pro
 
     // Propiedades dinámicas basadas en la variante seleccionada
     const displayImage = selectedVariant ? selectedVariant.image : product.image;
-    const displayStock = selectedVariant && selectedVariant.stock !== undefined ? selectedVariant.stock : product.stock;
     const displayTitle = selectedVariant ? `${product.title} (${selectedVariant.colorName})` : product.title;
     const displayPrice = selectedVariant && selectedVariant.price !== undefined && selectedVariant.price !== null ? selectedVariant.price : product.price;
 
@@ -71,26 +70,6 @@ export default function ProductCard({ product, onImageClick, onGuideClick }: Pro
                     </div>
                 )}
 
-                {/* Badge de Stock */}
-                <div className="absolute top-4 right-4 z-20 flex flex-col gap-2 items-end">
-                    {displayStock !== null && displayStock !== undefined && (
-                        <span
-                            className={`text-xs font-black px-3 py-1.5 rounded-full shadow-lg tracking-wide border ${
-                                displayStock === 0
-                                    ? "bg-red-50 text-red-700 border-red-200"
-                                    : displayStock < 5
-                                    ? "bg-amber-50 text-amber-700 border-amber-200"
-                                    : "bg-green-50 text-green-700 border-green-200"
-                            }`}
-                        >
-                            {displayStock === 0
-                                ? "Sin stock"
-                                : displayStock < 5
-                                ? `Últimas ${displayStock}`
-                                : `Stock: ${displayStock}`}
-                        </span>
-                    )}
-                </div>
             </div>
 
             {/* Contenido */}

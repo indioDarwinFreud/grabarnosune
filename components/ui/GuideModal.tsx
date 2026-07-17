@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect } from "react";
 import Image from "next/image";
 import { X, Check, HelpCircle, FileText } from "lucide-react";
 import { siteConfig } from "@/config";
@@ -11,13 +12,38 @@ interface GuideModalProps {
 }
 
 export default function GuideModal({ guide, onClose }: GuideModalProps) {
+    useEffect(() => {
+        const scrollY = window.scrollY;
+        const body = document.body;
+        const originalOverflow = body.style.overflow;
+        const originalPosition = body.style.position;
+        const originalTop = body.style.top;
+        const originalWidth = body.style.width;
+        const originalHeight = body.style.height;
+
+        body.style.overflow = "hidden";
+        body.style.position = "fixed";
+        body.style.top = `-${scrollY}px`;
+        body.style.width = "100%";
+        body.style.height = "100%";
+
+        return () => {
+            body.style.overflow = originalOverflow;
+            body.style.position = originalPosition;
+            body.style.top = originalTop;
+            body.style.width = originalWidth;
+            body.style.height = originalHeight;
+            window.scrollTo(0, scrollY);
+        };
+    }, []);
+
     return (
         <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-md p-4 md:p-6 transition-all duration-300 animate-in fade-in"
             onClick={onClose}
         >
             <div
-                className="relative bg-white max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl border border-gray-100 flex flex-col animate-in zoom-in-95 duration-200"
+                className="relative bg-white max-w-4xl w-full max-h-[90vh] overflow-y-auto overscroll-contain rounded-3xl shadow-2xl border border-gray-100 flex flex-col animate-in zoom-in-95 duration-200"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Header */}
