@@ -154,7 +154,7 @@ export default function GuideModal({ guide, onClose }: GuideModalProps) {
                 </div>
 
                 {/* Footer / Call to action */}
-                <div className="sticky bottom-0 bg-gray-50 px-6 py-5 pb-16 md:pb-5 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="sticky bottom-0 bg-gray-50 px-6 py-5 pb-24 md:pb-5 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <span className="text-xs text-gray-500 font-sans">
                         ¿Dudas sobre los materiales? Te asesoramos por WhatsApp.
                     </span>
