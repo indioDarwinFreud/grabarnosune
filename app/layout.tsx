@@ -42,30 +42,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const isPurpleCraft = siteConfig.activeTheme === "PURPLE_CRAFT";
-  
   return (
     <html lang="es">
       <body
         className={`font-sans ${urbanist.variable} ${outfit.variable} ${montserrat.variable} relative min-h-screen`}
         style={{
-          // CSS Variables del tema (colores, tipografía)
           "--primary-color": siteConfig.theme.primaryColor,
           "--primary-hover": siteConfig.theme.primaryHover,
           "--radius": siteConfig.theme.radius,
+          "--card-bg": siteConfig.theme.backgroundCard,
+          "--card-title": siteConfig.theme.textColors.cardTitle,
+          "--card-body": siteConfig.theme.textColors.cardBody,
+          "--card-muted": siteConfig.theme.textColors.cardMuted,
+          "--footer-bg": siteConfig.theme.backgroundFooter,
           "--font-size-base": siteConfig.typography.sizeBase,
           "--font-size-lg": siteConfig.typography.sizeLg,
           "--font-size-xl": siteConfig.typography.sizeXl,
           backgroundColor: siteConfig.theme.backgroundColor,
         } as React.CSSProperties}
       >
-        {/* Capa de fondo 1: Color sólido de fondo */}
         <div 
           className="fixed inset-0 -z-50 pointer-events-none"
           style={{ backgroundColor: siteConfig.theme.backgroundColor }}
         />
 
-        {/* Capa de fondo 2: Textura de rodillo con opacidad controlada para perfecta legibilidad */}
         {siteConfig.theme.backgroundImage && (
           <div 
             className="fixed inset-0 -z-40 pointer-events-none transition-opacity duration-300"
@@ -74,8 +74,8 @@ export default function RootLayout({
               backgroundSize: siteConfig.theme.backgroundImageSize ?? "auto",
               backgroundRepeat: siteConfig.theme.backgroundImageRepeat ?? "repeat",
               backgroundAttachment: "fixed",
-              opacity: isPurpleCraft ? 0.07 : 0.15, // 7% para el rodillo de Grabar Nos Une para que los textos sean legibles, 15% para otros temas
-              mixBlendMode: isPurpleCraft ? "multiply" : "normal",
+              opacity: 0.07,
+              mixBlendMode: "multiply",
             }}
           />
         )}

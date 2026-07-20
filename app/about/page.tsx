@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import FadeIn from "@/components/ui/FadeIn";
 import { siteConfig } from "@/config";
 import Image from "next/image";
 import { Sparkles, Heart, ShieldCheck } from "lucide-react";
+
+export const metadata: Metadata = {
+    title: `Quiénes Somos — ${siteConfig.name}`,
+    description: "Conocé la historia de Grabar Nos Une, tu proveedor de insumos para sublimación y regalos personalizados en Mendoza.",
+};
 
 export default function AboutPage() {
     return (
@@ -61,11 +67,14 @@ export default function AboutPage() {
                     {/* Columna Derecha: Historia y Pilares */}
                     <div className="lg:col-span-7 flex flex-col gap-8">
                         <FadeIn delay={0.4} direction="left">
-                            <div className="bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-3xl border border-primary/10 shadow-[0_15px_40px_rgba(113,0,122,0.03)]">
-                                <h2 className="text-3xl md:text-4xl font-brizel text-gray-900 mb-6 tracking-wide">
+                            <div className="backdrop-blur-md p-8 md:p-10 rounded-3xl border shadow-[0_15px_40px_rgba(113,0,122,0.03)]"
+                                style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-muted)' }}>
+                                <h2 className="text-3xl md:text-4xl font-brizel mb-6 tracking-wide"
+                                    style={{ color: 'var(--card-title)' }}>
                                     Nuestra Historia
                                 </h2>
-                                <div className="space-y-4 text-gray-700 text-base md:text-lg leading-relaxed font-medium">
+                                <div className="space-y-4 text-base md:text-lg leading-relaxed font-medium"
+                                    style={{ color: 'var(--card-body)' }}>
                                     <p>
                                         En <span className="text-primary font-bold">{siteConfig.name}</span>, fusionamos la pasión por el diseño creativo con insumos de sublimación de alta gama y regalos personalizados meticulosos. Nos especializamos en materializar ideas audaces.
                                     </p>
@@ -79,32 +88,35 @@ export default function AboutPage() {
                         {/* Pilares de la marca */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <FadeIn delay={0.5} direction="up">
-                                <div className="p-5 bg-white/70 backdrop-blur-md rounded-2xl border border-primary/5 flex flex-col items-center text-center gap-3 shadow-sm hover:shadow-md transition-shadow">
+                                <div className="p-5 backdrop-blur-md rounded-2xl border border-primary/5 flex flex-col items-center text-center gap-3 shadow-sm hover:shadow-md transition-shadow"
+                                    style={{ backgroundColor: 'var(--card-bg)' }}>
                                     <div className="p-3 bg-primary/5 text-primary rounded-xl">
                                         <Sparkles size={20} />
                                     </div>
-                                    <h3 className="font-bold text-gray-900 text-sm tracking-wide">Insumos Premium</h3>
-                                    <p className="text-xs text-gray-600 font-medium">Papeles de alta transferencia y tintas AQ.</p>
+                                    <h3 className="font-bold text-sm tracking-wide" style={{ color: 'var(--card-title)' }}>Insumos Premium</h3>
+                                    <p className="text-xs font-medium" style={{ color: 'var(--card-body)' }}>Papeles de alta transferencia y tintas AQ.</p>
                                 </div>
                             </FadeIn>
 
                             <FadeIn delay={0.6} direction="up">
-                                <div className="p-5 bg-white/70 backdrop-blur-md rounded-2xl border border-primary/5 flex flex-col items-center text-center gap-3 shadow-sm hover:shadow-md transition-shadow">
+                                <div className="p-5 backdrop-blur-md rounded-2xl border border-primary/5 flex flex-col items-center text-center gap-3 shadow-sm hover:shadow-md transition-shadow"
+                                    style={{ backgroundColor: 'var(--card-bg)' }}>
                                     <div className="p-3 bg-primary/5 text-primary rounded-xl">
                                         <Heart size={20} />
                                     </div>
-                                    <h3 className="font-bold text-gray-900 text-sm tracking-wide">Hecho Con Amor</h3>
-                                    <p className="text-xs text-gray-600 font-medium">Detalles cuidados y acabados de excelencia.</p>
+                                    <h3 className="font-bold text-sm tracking-wide" style={{ color: 'var(--card-title)' }}>Hecho Con Amor</h3>
+                                    <p className="text-xs font-medium" style={{ color: 'var(--card-body)' }}>Detalles cuidados y acabados de excelencia.</p>
                                 </div>
                             </FadeIn>
 
                             <FadeIn delay={0.7} direction="up">
-                                <div className="p-5 bg-white/70 backdrop-blur-md rounded-2xl border border-primary/5 flex flex-col items-center text-center gap-3 shadow-sm hover:shadow-md transition-shadow">
+                                <div className="p-5 backdrop-blur-md rounded-2xl border border-primary/5 flex flex-col items-center text-center gap-3 shadow-sm hover:shadow-md transition-shadow"
+                                    style={{ backgroundColor: 'var(--card-bg)' }}>
                                     <div className="p-3 bg-primary/5 text-primary rounded-xl">
                                         <ShieldCheck size={20} />
                                     </div>
-                                    <h3 className="font-bold text-gray-900 text-sm tracking-wide">Garantía Real</h3>
-                                    <p className="text-xs text-gray-600 font-medium">Materiales testeados para tu tranquilidad.</p>
+                                    <h3 className="font-bold text-sm tracking-wide" style={{ color: 'var(--card-title)' }}>Garantía Real</h3>
+                                    <p className="text-xs font-medium" style={{ color: 'var(--card-body)' }}>Materiales testeados para tu tranquilidad.</p>
                                 </div>
                             </FadeIn>
                         </div>

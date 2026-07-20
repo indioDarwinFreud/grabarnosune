@@ -1,25 +1,3 @@
-interface ThemeConfig {
-    primaryColor: string;
-    primaryHover: string;
-    backgroundMain: string;
-    backgroundColor: string;
-    backgroundCard: string;
-    backgroundFooter: string;
-    backgroundImage?: string;
-    backgroundImageSize?: string;
-    backgroundImageRepeat?: string;
-    cardImage: string;
-    radius: string;
-    navbarStyle: "nucleus";
-    textColors: {
-        primaryLight: string;
-        secondaryLight: string;
-        cardTitle: string;
-        cardBody: string;
-        cardMuted: string;
-    };
-}
-
 export const siteConfig = {
     name: "Grabar Nos Une",
     shortName: "GrabarNosUne",
@@ -34,72 +12,25 @@ export const siteConfig = {
         sizeXl: "20px",
     },
 
-    themes: {
-        SILVER_PREMIUM: {
-            primaryColor: "#C0C0C0",
-            primaryHover: "#9CA3AF",
-            backgroundMain: "linear-gradient(135deg, #111827 0%, #1f2937 100%)",
-            backgroundColor: "#111827",
-            backgroundCard: "rgba(31, 41, 55, 0.7)",
-            backgroundFooter: "#111827",
-            radius: "0.75rem",
-            navbarStyle: "nucleus" as const,
-            textColors: {
-                primaryLight: "#F3F4F6",
-                secondaryLight: "#C0C0C0",
-                cardTitle: "#FFFFFF",
-                cardBody: "#D1D5DB",
-                cardMuted: "#9CA3AF"
-            },
-            cardImage: "data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='2' cy='2' r='1'/%3E%3Ccircle cx='22' cy='22' r='1'/%3E%3C/g%3E%3C/svg%3E"
+    theme: {
+        primaryColor: "#71007A",
+        primaryHover: "#55005C",
+        backgroundMain: "#FAF9FB",
+        backgroundColor: "#FAF9FB",
+        backgroundCard: "rgba(255, 255, 255, 0.85)",
+        backgroundFooter: "#1A0A1D",
+        radius: "1rem",
+        textColors: {
+            primaryLight: "#FAF9FB",
+            secondaryLight: "#71007A",
+            cardTitle: "#220025",
+            cardBody: "#534255",
+            cardMuted: "#88748C"
         },
-
-        PURPLE_CRAFT: {
-            primaryColor: "#71007A",
-            primaryHover: "#55005C",
-            backgroundMain: "#FAF9FB",
-            backgroundColor: "#FAF9FB",
-            backgroundCard: "rgba(255, 255, 255, 0.85)",
-            backgroundFooter: "#1A0A1D",
-            radius: "1rem",
-            navbarStyle: "nucleus" as const,
-            textColors: {
-                primaryLight: "#FAF9FB",
-                secondaryLight: "#71007A",
-                cardTitle: "#220025",
-                cardBody: "#534255",
-                cardMuted: "#88748C"
-            },
-            backgroundImage: "/textura para fondo.png",
-            backgroundImageSize: "400px",
-            backgroundImageRepeat: "repeat",
-            cardImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
-        },
-
-        ELECTRIC_BLUE: {
-            primaryColor: "#00E5FF",
-            primaryHover: "#00B8D4",
-            backgroundMain: "linear-gradient(135deg, #020617 0%, #0f172a 100%)",
-            backgroundColor: "#020617",
-            backgroundCard: "rgba(15, 23, 42, 0.75)",
-            backgroundFooter: "linear-gradient(135deg, #020617 0%, #0f172a 100%)",
-            radius: "0.5rem",
-            navbarStyle: "nucleus" as const,
-            textColors: {
-                primaryLight: "#F8FAFC",
-                secondaryLight: "#00E5FF",
-                cardTitle: "#FFFFFF",
-                cardBody: "#E2E8F0",
-                cardMuted: "#94A3B8"
-            },
-            cardImage: "data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%2300E5FF' stroke-opacity='0.15' stroke-width='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4v-4H4v4H0v2h4v4h2v-4h4v-2H6zm30 0v-4h-2v4h-4v2h4v4h2v-4h4v-2-h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"
-        }
-    },
-
-    activeTheme: "PURPLE_CRAFT" as const,
-
-    get theme() {
-        return this.themes[this.activeTheme];
+        backgroundImage: "/textura para fondo.png",
+        backgroundImageSize: "400px",
+        backgroundImageRepeat: "repeat",
+        cardImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
     },
 
     logo: {

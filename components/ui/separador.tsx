@@ -9,7 +9,7 @@ export default function Separador() {
                 className="w-48 md:w-64 h-[2px]"
                 style={{
                     background: `linear-gradient(to right, transparent, ${primary}, transparent)`,
-                    boxShadow: `0 0 10px ${primary}80`
+                    boxShadow: `0 0 12px ${primary}40`
                 }}
             />
         </FadeIn>

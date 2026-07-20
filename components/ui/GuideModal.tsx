@@ -43,11 +43,13 @@ export default function GuideModal({ guide, onClose }: GuideModalProps) {
             onClick={onClose}
         >
             <div
-                className="relative bg-white max-w-4xl w-full max-h-[90vh] overflow-y-auto overscroll-contain rounded-3xl shadow-2xl border border-gray-100 flex flex-col animate-in zoom-in-95 duration-200"
+                className="relative max-w-4xl w-full max-h-[90vh] overflow-y-auto overscroll-contain rounded-3xl shadow-2xl border flex flex-col animate-in zoom-in-95 duration-200"
+                style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-muted)' }}
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Header */}
-                <div className="sticky top-0 bg-white/95 backdrop-blur-md z-10 px-6 py-4 border-b border-gray-100 flex items-center justify-between">
+                <div className="sticky top-0 backdrop-blur-md z-10 px-6 py-4 border-b flex items-center justify-between"
+                    style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-muted)' }}>
                     <div className="flex items-center gap-3">
                         <FileText className="text-primary" size={24} />
                         <span className="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full">
@@ -65,10 +67,11 @@ export default function GuideModal({ guide, onClose }: GuideModalProps) {
                 {/* Content */}
                 <div className="p-6 md:p-8 space-y-8">
                     <div>
-                        <h3 className="text-2xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-3">
+                        <h3 className="text-2xl md:text-4xl font-extrabold leading-tight mb-3"
+                            style={{ color: 'var(--card-title)' }}>
                             {guide.title}
                         </h3>
-                        <p className="text-gray-600 text-base leading-relaxed">
+                        <p className="text-base leading-relaxed" style={{ color: 'var(--card-body)' }}>
                             {guide.excerpt}
                         </p>
                     </div>
@@ -88,7 +91,8 @@ export default function GuideModal({ guide, onClose }: GuideModalProps) {
                                             <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-extrabold">
                                                 {idx + 1}
                                             </span>
-                                            <p className="text-gray-700 text-sm md:text-base pt-0.5 leading-relaxed font-sans">
+                                            <p className="text-sm md:text-base pt-0.5 leading-relaxed font-sans"
+                                                style={{ color: 'var(--card-body)' }}>
                                                 {step}
                                             </p>
                                         </li>
@@ -103,7 +107,8 @@ export default function GuideModal({ guide, onClose }: GuideModalProps) {
                         <div className="space-y-6">
                             {guide.infographicImage ? (
                                 <div className="space-y-3">
-                                    <h4 className="text-lg font-bold text-gray-800 flex items-center gap-2 border-b border-gray-100 pb-2">
+                        <h4 className="text-lg font-bold flex items-center gap-2 border-b pb-2"
+                            style={{ color: 'var(--card-title)', borderColor: 'var(--card-muted)' }}>
                                         <span className="w-1.5 h-6 bg-primary rounded-full"></span>
                                         Guía Visual
                                     </h4>
@@ -134,7 +139,8 @@ export default function GuideModal({ guide, onClose }: GuideModalProps) {
 
                             {/* Tips Box */}
                             {guide.tips && guide.tips.length > 0 && (
-                                <div className="p-5 rounded-2xl bg-[#fcf9fc] border border-primary/10 space-y-3">
+                                <div className="p-5 rounded-2xl border border-primary/10 space-y-3"
+                                    style={{ backgroundColor: 'color-mix(in srgb, var(--card-bg), transparent 50%)' }}>
                                     <h5 className="text-sm font-bold text-primary flex items-center gap-2 uppercase tracking-wider">
                                         <HelpCircle size={16} />
                                         Tips & Recomendaciones
@@ -154,8 +160,9 @@ export default function GuideModal({ guide, onClose }: GuideModalProps) {
                 </div>
 
                 {/* Footer / Call to action */}
-                <div className="sticky bottom-0 bg-gray-50 px-6 py-5 pb-24 md:pb-5 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <span className="text-xs text-gray-500 font-sans">
+                <div className="sticky bottom-0 px-6 py-5 pb-24 md:pb-5 border-t flex flex-col sm:flex-row items-center justify-between gap-4"
+                    style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-muted)' }}>
+                    <span className="text-xs font-sans" style={{ color: 'var(--card-muted)' }}>
                         ¿Dudas sobre los materiales? Te asesoramos por WhatsApp.
                     </span>
                     <a

@@ -16,7 +16,7 @@ export default function AboutPreview() {
                 <FadeIn delay={0.2} direction="right" className="w-full lg:w-1/2 relative">
                     <div
                         className="relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_45px_rgba(113,0,122,0.07)] border border-primary/10"
-                        style={{ backgroundColor: '#f9fafb' }}
+                        style={{ backgroundColor: 'var(--card-bg)' }}
                     >
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none" />
                         
@@ -30,7 +30,8 @@ export default function AboutPreview() {
                         />
                         
                         {/* Decorative Badge */}
-                        <div className="absolute bottom-6 left-6 z-20 bg-white/90 backdrop-blur-md border border-gray-200 text-gray-900 p-4 rounded-xl shadow-lg">
+                        <div className="absolute bottom-6 left-6 z-20 backdrop-blur-md border p-4 rounded-xl shadow-lg"
+                            style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-muted)', color: 'var(--card-title)' }}>
                             <p className="font-black text-2xl text-primary">100%</p>
                             <p className="text-sm text-gray-700 font-medium">Garantía Creativa</p>
                         </div>

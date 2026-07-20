@@ -25,9 +25,14 @@ export default {
       // Los colores `gold` se usan en el Footer y acentos premium.
       // ------------------------------------------------------------------
       colors: {
-        // Color principal (actualizable desde config.ts → theme.primaryColor)
         primary: "var(--primary-color, #c0c0c0)",
         primaryHover: "var(--primary-hover, #e0e0e0)",
+        card: {
+          bg: "var(--card-bg, rgba(255,255,255,0.85))",
+          title: "var(--card-title, #220025)",
+          body: "var(--card-body, #534255)",
+          muted: "var(--card-muted, #88748C)",
+        },
 
         // Escala de dorados – usados en footer, separadores y efectos premium
         gold: {

@@ -80,23 +80,18 @@ Este documento detalla la arquitectura técnica, estructura de carpetas y propó
 
 ## Arquitectura Clave
 
-### Sistema de Temas (Config-Driven)
+### Sistema de Configuración (Config-Driven)
 
-Todo el aspecto visual del sitio se controla desde `config.ts` mediante una biblioteca de 3 temas:
+Todo el aspecto visual del sitio se controla desde el objeto `siteConfig.theme` en `config.ts`:
 
-| Tema | Estilo | Fondo |
+| Propiedad | Valor actual | Uso |
 |---|---|---|
-| `PURPLE_CRAFT` (activo) | Púrpura artesanal / claro | `#FAF9FB` + textura de rodillo |
-| `SILVER_PREMIUM` | Plateado metálico / oscuro | Gradiente gris + textura técnica |
-| `ELECTRIC_BLUE` | Cyan tecnológico / oscuro | Gradiente azul profundo + rejilla |
+| `primaryColor` | `#71007A` | Púrpura de marca, botones, acentos |
+| `backgroundCard` | `rgba(255,255,255,0.85)` | Fondo de tarjetas y paneles |
+| `backgroundFooter` | `#1A0A1D` | Fondo oscuro del pie de página |
+| `backgroundImage` | `/textura para fondo.png` | Textura de rodillo artesanal |
 
-**Para cambiar de tema**, basta con modificar una línea en `config.ts`:
-
-```typescript
-activeTheme: "PURPLE_CRAFT"  // → "SILVER_PREMIUM" o "ELECTRIC_BLUE"
-```
-
-Cada tema define: colores primarios, fondos (sólido, gradiente, imagen), colores de tarjeta y texto, border-radius, y texturas SVG. El getter `siteConfig.theme` resuelve automáticamente el objeto activo, y `layout.tsx` lo inyecta como CSS variables en el `<body>`.
+Los valores se inyectan como CSS variables en `<body>` desde `layout.tsx` y se consumen via `var(--primary-color)`, `var(--card-bg)`, etc.
 
 ### Layout Raíz (`app/layout.tsx`)
 
@@ -109,12 +104,10 @@ Cada tema define: colores primarios, fondos (sólido, gradiente, imagen), colore
     <!-- Capa 2: Textura/imagen (opacidad 7% para PURPLE_CRAFT, 15% otros) -->
     <div class="fixed inset-0 -z-40" />
 
-    <ImperiaEditorProvider>
-      <Header />       ← Logo superior flotante
-      <Navbar />       ← Barra inferior "Nucleus" flotante
-      {children}       ← Contenido de cada ruta
-      <Footer />       ← Pie premium con glassmorphism
-    </ImperiaEditorProvider>
+    <Header />       ← Logo superior flotante
+    <Navbar />       ← Barra inferior "Nucleus" flotante
+    {children}       ← Contenido de cada ruta
+    <Footer />       ← Pie premium con glassmorphism
   </body>
 </html>
 ```
@@ -212,7 +205,7 @@ Las fuentes de Google se cargan mediante `next/font/google` en `layout.tsx` y se
 ## Archivos Clave
 
 ### `config.ts` — Identidad y Temas
-Define: nombre del sitio, tipografía, 3 temas visuales, logos, SEO, contacto (email, WhatsApp), redes sociales y horarios. **Es el único archivo que necesitás tocar para cambiar la identidad completa del sitio.**
+Define: nombre del sitio, tipografía, tema visual (colores, fondos, texturas), logos, SEO, contacto (email, WhatsApp), redes sociales y horarios. **Es el único archivo que necesitás tocar para cambiar la identidad completa del sitio.**
 
 ### `data.tsx` — Contenido
 Define: menú de navegación, productos del catálogo, testimonios, datos de contacto (generados desde `config.ts`), horarios y artículos del blog.
@@ -229,9 +222,9 @@ Extiende Tailwind con: fuentes personalizadas (`font-body`, `font-display`, `fon
 3. **Imágenes**: Usar siempre `<Image />` de `next/image` con rutas relativas a `/public/`.
 4. **Iconos**: Importar desde `lucide-react`.
 5. **Animaciones**: Usar `<FadeIn />` para efectos de entrada. Evitar framer-motion directo.
-6. **Imperia Editor**: Todos los componentes llevan atributos `data-imperia-id` y `data-imperia-path` para el SDK de edición visual.
+6. **Tema**: No hardcodear colores. Usar siempre `siteConfig.theme.*` o las CSS variables (`--primary-color`, `--card-bg`, `--card-title`, etc.).
 7. **Idioma**: Código y comentarios en español.
-8. **Tema**: No hardcodear colores. Usar siempre `siteConfig.theme.*` o las CSS variables (`--primary-color`).
+8. **Separación**: Datos en `data.tsx`, estilos en Tailwind/variables CSS, componentes puramente presentacionales.
 
 ---
 
