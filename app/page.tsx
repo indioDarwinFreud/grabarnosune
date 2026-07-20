@@ -2,6 +2,7 @@ import HeroStatic from "@/components/sections/HeroStatic";
 import AboutPreview from "@/components/sections/AboutPreview";
 import BestSellers from "@/components/sections/BestSellers";
 import CategoryBanners from "@/components/sections/CategoryBanners";
+import MaterialsGrid from "@/components/sections/MaterialsGrid";
 import Testimonials from "@/components/sections/Testimonials";
 import Separador from "@/components/ui/separador";
 import MainCategories from "@/components/sections/MainCategories";
@@ -35,6 +36,13 @@ export default function Home() {
       {/* Category Banners Section (Líneas de trabajo) */}
       <div className="relative z-20">
         <CategoryBanners />
+      </div>
+
+      <Separador />
+
+      {/* Materials Grid Section */}
+      <div className="relative z-20">
+        <MaterialsGrid />
       </div>
 
       <Separador />

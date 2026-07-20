@@ -10,6 +10,7 @@ interface CategoryItem {
     color: string; // Clase CSS para glow/borde
     bgClass: string; // Color de fondo semi-transparente pastel para el look
     textColor: string;
+    href: string; // Link filtrado a productos
 }
 
 const categories: CategoryItem[] = [
@@ -20,7 +21,8 @@ const categories: CategoryItem[] = [
         icon: <GraduationCap size={28} className="text-pink-600 group-hover:scale-110 transition-transform duration-300" />,
         color: "border-pink-200/50 group-hover:border-pink-400 shadow-pink-500/5 hover:shadow-pink-500/10",
         bgClass: "bg-pink-50/70 hover:bg-pink-100/80",
-        textColor: "text-pink-950"
+        textColor: "text-pink-950",
+        href: "/products?search=escolar"
     },
     {
         id: 2,
@@ -29,7 +31,8 @@ const categories: CategoryItem[] = [
         icon: <Coffee size={28} className="text-orange-600 group-hover:scale-110 transition-transform duration-300" />,
         color: "border-orange-200/50 group-hover:border-orange-400 shadow-orange-500/5 hover:shadow-orange-500/10",
         bgClass: "bg-orange-50/70 hover:bg-orange-100/80",
-        textColor: "text-orange-950"
+        textColor: "text-orange-950",
+        href: "/products?category=Sustratos&search=taza"
     },
     {
         id: 3,
@@ -38,7 +41,8 @@ const categories: CategoryItem[] = [
         icon: <Sparkles size={28} className="text-purple-600 group-hover:scale-110 transition-transform duration-300" />,
         color: "border-purple-200/50 group-hover:border-purple-400 shadow-purple-500/5 hover:shadow-purple-500/10",
         bgClass: "bg-purple-50/70 hover:bg-purple-100/80",
-        textColor: "text-purple-950"
+        textColor: "text-purple-950",
+        href: "/products?category=Insumos"
     },
     {
         id: 4,
@@ -47,7 +51,8 @@ const categories: CategoryItem[] = [
         icon: <Shirt size={28} className="text-teal-600 group-hover:scale-110 transition-transform duration-300" />,
         color: "border-teal-200/50 group-hover:border-teal-400 shadow-teal-500/5 hover:shadow-teal-500/10",
         bgClass: "bg-teal-50/70 hover:bg-teal-100/80",
-        textColor: "text-teal-950"
+        textColor: "text-teal-950",
+        href: "/products?category=Textiles"
     },
     {
         id: 5,
@@ -56,7 +61,8 @@ const categories: CategoryItem[] = [
         icon: <Layers size={28} className="text-emerald-600 group-hover:scale-110 transition-transform duration-300" />,
         color: "border-emerald-200/50 group-hover:border-emerald-400 shadow-emerald-500/5 hover:shadow-emerald-500/10",
         bgClass: "bg-emerald-50/70 hover:bg-emerald-100/80",
-        textColor: "text-emerald-950"
+        textColor: "text-emerald-950",
+        href: "/products?category=Sustratos&search=polimero"
     },
     {
         id: 6,
@@ -65,7 +71,8 @@ const categories: CategoryItem[] = [
         icon: <Key size={28} className="text-sky-600 group-hover:scale-110 transition-transform duration-300" />,
         color: "border-sky-200/50 group-hover:border-sky-400 shadow-sky-500/5 hover:shadow-sky-500/10",
         bgClass: "bg-sky-50/70 hover:bg-sky-100/80",
-        textColor: "text-sky-950"
+        textColor: "text-sky-950",
+        href: "/products?category=Regalos"
     },
     {
         id: 7,
@@ -74,7 +81,8 @@ const categories: CategoryItem[] = [
         icon: <Flame size={28} className="text-amber-600 group-hover:scale-110 transition-transform duration-300" />,
         color: "border-amber-200/50 group-hover:border-amber-400 shadow-amber-500/5 hover:shadow-amber-500/10",
         bgClass: "bg-amber-50/70 hover:bg-amber-100/80",
-        textColor: "text-amber-950"
+        textColor: "text-amber-950",
+        href: "/products?search=grabado"
     },
     {
         id: 8,
@@ -83,7 +91,8 @@ const categories: CategoryItem[] = [
         icon: <Percent size={28} className="text-rose-600 group-hover:scale-110 transition-transform duration-300" />,
         color: "border-rose-200/50 group-hover:border-rose-400 shadow-rose-500/5 hover:shadow-rose-500/10",
         bgClass: "bg-rose-50/70 hover:bg-rose-100/80",
-        textColor: "text-rose-950"
+        textColor: "text-rose-950",
+        href: "/products?search=oferta"
     }
 ];
 
@@ -108,7 +117,7 @@ export default function MainCategories() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                 {categories.map((cat, index) => (
                     <FadeIn key={cat.id} delay={index * 0.05} direction="up" className="h-full">
-                        <Link href="/products" className="block h-full group">
+                        <Link href={cat.href} className="block h-full group">
                             <div className={`h-full p-5 md:p-6 rounded-2xl border transition-all duration-500 flex flex-col justify-between shadow-sm hover:shadow-[0_12px_30px_rgba(113,0,122,0.06)] ${cat.color} ${cat.bgClass}`}>
                                 <div className="mb-4">
                                     {cat.icon}

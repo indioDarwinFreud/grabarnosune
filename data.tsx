@@ -423,6 +423,73 @@ export const productsData: Product[] = [
         stock: 80,
         website: "/contact",
         price: 1490,
+    },
+    {
+        id: 30,
+        title: "Taza de Cerámica Glitter",
+        location: "Sustratos - Tazas Especiales",
+        description: "Taza de cerámica importada con un deslumbrante acabado de brillo glitter premium. Apta para microondas, ideal para diseños llamativos.",
+        image: "/product/TazaGlitter.png",
+        category: "Sustratos",
+        stock: 15,
+        website: "/contact",
+        price: 4200,
+    },
+    {
+        id: 31,
+        title: "Taza de Cerámica Perlada",
+        location: "Sustratos - Tazas Especiales",
+        description: "Taza de cerámica con acabado perlado nacarado de alta calidad. Brillo satinado único y elegante. Disponible en colores pasteles metalizados.",
+        image: "/product/TazaPerlada.png",
+        category: "Sustratos",
+        stock: 20,
+        website: "/contact",
+        price: 4200,
+        variants: [
+            {
+                colorName: "Perla Rosa",
+                colorCode: "#fbcfe8",
+                image: "/product/TazaPerlada.png",
+            },
+            {
+                colorName: "Ver Colores",
+                colorCode: "linear-gradient(135deg, #a5b4fc 50%, #fbcfe8 50%)",
+                image: "/product/TazaPerladaColoresDisponibles.png",
+            }
+        ]
+    },
+    {
+        id: 32,
+        title: "Botellita Plástica con Bombilla",
+        location: "Bazar - Infantil",
+        description: "Botella plástica para agua con tapa a rosca de color, pico rebatible y bombilla interna. Liviana e ideal para uso escolar.",
+        image: "/product/BotellitaConBombilla.jpeg",
+        category: "Regalos",
+        stock: 45,
+        website: "/contact",
+        price: 1950,
+    },
+    {
+        id: 33,
+        title: "Llavero de Polímero Sublimable",
+        location: "Regalos - Personalizados",
+        description: "Llavero plástico de polímero rígido importado de alta resistencia. Listo para sublimar a doble cara con excelente brillo.",
+        image: "/product/Llavero.jpeg",
+        category: "Regalos",
+        stock: 120,
+        website: "/contact",
+        price: 850,
+    },
+    {
+        id: 34,
+        title: "Papel de Sublimación Art-Jet A4",
+        location: "Insumos - Transferencia",
+        description: "Resma de papel de sublimación premium A4 marca Art-Jet de 100g. Máxima transferencia de color y secado extra rápido.",
+        image: "/product/PapelSublimar1.jpeg",
+        category: "Insumos",
+        stock: 30,
+        website: "/contact",
+        price: "Consultar",
     }
 ];
 
@@ -551,5 +618,26 @@ export const blogPosts: BlogPost[] = [
             "No sumerjas la taza en agua fría apenas sale de la prensa — el choque térmico puede generar microfisuras en el esmalte. Dejala enfriar al aire libre sobre una rejilla.",
             "Si trabajás con tazas cónicas, cortá el papel en forma de trapezoide (más angosto de un lado) para que asiente sin pliegues ni canales verticales que arruinen la estampación."
         ]
+    },
+    {
+        id: 4,
+        title: "Guía de Confección: Cómo Elegir y Medir tus Remeras",
+        excerpt: "Conocé las diferencias entre las telas Spun, Modal y Algodón peinado, y aprendé a tomar las medidas correctas para elegir tu talle sin errores.",
+        image: "/TiposDeRemeras.png",
+        slug: "guia-confeccion-medidas-remeras",
+        category: "Textiles",
+        readTime: "5 min",
+        steps: [
+            "Identificá el tipo de tela: Spun (100% poliéster tacto algodón) es perfecta para sublimar a todo color. Algodón peinado es ideal para vinilo textil, bordado o DTF.",
+            "Colocá una remera que te calce cómoda sobre una superficie completamente plana sin arrugas ni estirarla.",
+            "Medí el ancho de axila a axila (A) y el largo desde el punto más alto del hombro hasta el borde inferior (B).",
+            "Compará estas medidas con nuestra tabla de talles (para adultos, niños o talles especiales) antes de hacer tu pedido para asegurar el calce ideal."
+        ],
+        tips: [
+            "Las prendas sublimadas pueden tener una pequeña variación del 1-2% en su tamaño debido a la alta temperatura del estampado. Si estás entre dos talles, te aconsejamos elegir el más grande.",
+            "Para sublimar sobre remeras de algodón peinado (que no contienen poliéster), es necesario aplicar previamente un aerosol activador como Sublimate o utilizar vinilos sublimables.",
+            "Lava siempre las prendas de algodón o spun con agua fría y del revés para preservar la definición y colores del estampado por mucho más tiempo."
+        ],
+        infographicImage: "/ComoTomarMedidasRemeras.png"
     }
 ];

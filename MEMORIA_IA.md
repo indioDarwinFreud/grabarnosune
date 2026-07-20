@@ -221,3 +221,16 @@
   - **[IMÁGENES]**: Todos los productos mapeados a imágenes reales existentes en `/public/product/`.
   - **[BUILD]**: Build de producción exitoso (exit code 0) tras limpieza de caché `.next/`.
 
+- **17/07/2026 - Refactor General y Limpieza Profesional:**
+  - **[DESCRIPCIÓN]**: Mejorada la description del sitio en `config.ts`: texto más limpio y profesional, eliminada mención a "vinilos".
+  - **[BACKGROUNDS ROTOS]**: Eliminadas las referencias a `silver_bg.png` y `blue_bg.png` de los temas inactivos. Campo `backgroundImage` vuelto opcional.
+  - **[CÓDIGO MUERTO]**: Eliminados 18 archivos de imagen no referenciados en `public/product/` y `public/assets/`. Eliminadas dependencias `clsx` y `tailwind-merge` de `package.json`. Eliminada clase CSS `.text_balance` no utilizada.
+  - **[IMPERIA EDITOR]**: Eliminado por completo el `ImperiaEditorProvider` (126 líneas de SDK) y todos los atributos `data-imperia-id` y `data-imperia-path` de los 11 componentes que los usaban. Eliminada carpeta `components/providers/`.
+  - **[COMENTARIOS]**: Limpiados todos los JSDoc masivos de componentes, `config.ts`, `data.tsx`, `types/index.ts` y `globals.css`.
+  - **[EXPORTS]**: Estandarizados todos los componentes a `export default function Component()`.
+  - **[RUTA ROTA]**: Corregida ruta de imagen en `about/page.tsx` (`/assets/productos/taza_orca.png` → `/product/taza_orca.png`).
+  - **[SEPARADOR]`: Cambiado de color plateado hardcodeado a usar el color primario del tema activo.
+  - **[SCROLL LOCK]**: Fixeado scroll del fondo al abrir tutoriales (GuideModal) con `position: fixed` + `overscroll-behavior: contain`.
+  - **[MOBILE NAVBAR OVERLAP]**: Agregado `pb-24` al `<main>` de la Home y ajustado padding en Contacto y GuideModal para evitar que el Navbar fijo tape botones en mobile.
+  - **[TIPS TAZAS]**: Mejorados los tips del tutorial de sublimación de tazas con información real de fuentes especializadas.
+

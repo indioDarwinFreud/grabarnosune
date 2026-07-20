@@ -1,6 +1,6 @@
 # Documentación Técnica — Grabar Nos Une
 
-**Fecha de Última Actualización:** 06/07/2026
+**Fecha de Última Actualización:** 17/07/2026
 **Versión del Proyecto:** 3.0 (Rebranding Grabar Nos Une)
 
 ---
@@ -18,7 +18,6 @@ Este documento detalla la arquitectura técnica, estructura de carpetas y propó
 | **Tailwind CSS 3** | Estilos utility-first |
 | **Framer Motion** | Animaciones de entrada (FadeIn) |
 | **Lucide React** | Iconos vectoriales |
-| **clsx + tailwind-merge** | Utilidad `cn()` para clases condicionales |
 
 ---
 
@@ -41,8 +40,6 @@ Este documento detalla la arquitectura técnica, estructura de carpetas y propó
 │   │   ├── Navbar.tsx            # Barra inferior "Nucleus Design" (pastilla flotante)
 │   │   ├── Header.tsx            # Logo superior (aparece al scrollear)
 │   │   └── Footer.tsx            # Pie premium con glassmorphism + glow dorado
-│   ├── providers/
-│   │   └── ImperiaEditorProvider.tsx  # SDK de Imperia Visual Editor
 │   ├── sections/
 │   │   ├── HeroStatic.tsx        # Hero estático con logo + botones CTA
 │   │   ├── MainCategories.tsx    # Grilla "Lo Más Buscado"
@@ -197,11 +194,6 @@ Página **WhatsApp-First**: el formulario redirige directamente a WhatsApp con e
 | `FadeIn.tsx` | Wrapper de animación fade-in con framer-motion |
 | `separador.tsx` | Línea decorativa con gradiente entre secciones |
 
-### `components/providers/`
-| Componente | Descripción |
-|---|---|
-| `ImperiaEditorProvider.tsx` | SDK de Imperia Visual Editor para edición in-situ desde iframe |
-
 ---
 
 ## Tipografía
@@ -260,5 +252,4 @@ El proyecto está configurado para desplegarse en **Vercel** o **Render** desde 
 
 ## Issues Conocidos
 
-- **Backgrounds de temas inactivos no existen en disco**: Las rutas `"/assets/backgrounds/silver_bg.png"` y `"/assets/backgrounds/blue_bg.png"` están definidas en `config.ts` para SILVER_PREMIUM y ELECTRIC_BLUE, pero los archivos no existen. Si se activa alguno de esos temas, se intentará cargar una imagen inexistente.
 - **Nombres de archivos con espacios**: Varios PNGs en `public/` tienen espacios en sus nombres (ej: `logo con nombre.png`). Funciona pero puede causar issues en algunos servidores web o herramientas de build.

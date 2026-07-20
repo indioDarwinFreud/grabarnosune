@@ -27,34 +27,37 @@ export default function BlogPreview() {
                 </div>
             </FadeIn>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex flex-col gap-6 max-w-4xl mx-auto">
                 {blogPosts.map((post, index) => (
-                    <FadeIn key={post.id} delay={index * 0.1} direction="up" className="h-full">
+                    <FadeIn key={post.id} delay={index * 0.1} direction="up" className="w-full">
                         <Card
-                            className="overflow-hidden h-full transition-all duration-500 group cursor-pointer border border-gray-200/50 hover:border-primary/20 shadow-sm hover:shadow-[0_15px_35px_rgba(113,0,122,0.06)] rounded-2xl flex flex-col justify-between"
+                            className="overflow-hidden w-full transition-all duration-500 group cursor-pointer border border-gray-200/50 hover:border-primary/20 shadow-sm hover:shadow-[0_15px_35px_rgba(113,0,122,0.06)] rounded-2xl flex flex-col md:flex-row"
                             style={{ backgroundColor: siteConfig.theme.backgroundCard }}
                             onClick={() => setSelectedPost(post)}
                         >
-                            <div className="h-48 relative overflow-hidden bg-neutral-100">
+                            {/* Image Section */}
+                            <div className="relative w-full md:w-80 h-52 md:h-auto min-h-[200px] flex-shrink-0 overflow-hidden bg-neutral-100">
                                 <Image
                                     src={post.image}
                                     alt={post.title}
                                     fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    className="object-cover transition-transform duration-700 group-hover:scale-103"
+                                    sizes="(max-width: 768px) 100vw, 320px"
                                 />
                                 <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-gray-800 text-xs font-bold px-3 py-1 rounded-full border border-gray-200/50">
                                     {post.category}
                                 </span>
                             </div>
-                            <div className="p-5 flex-1 flex flex-col justify-between">
+
+                            {/* Content Section */}
+                            <div className="p-6 flex-1 flex flex-col justify-between">
                                 <div>
                                     <div className="flex items-center gap-2 text-gray-500 text-xs font-medium mb-3">
                                         <Clock size={14} />
                                         <span>{post.readTime} de lectura</span>
                                     </div>
                                     <h3
-                                        className="font-bold text-lg leading-tight mb-2 transition-colors group-hover:text-primary"
+                                        className="font-bold text-xl leading-snug mb-2 transition-colors group-hover:text-primary"
                                         style={{ color: siteConfig.theme.textColors.cardTitle }}
                                     >
                                         {post.title}
