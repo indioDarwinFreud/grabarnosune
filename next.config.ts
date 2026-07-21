@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Limpio para no inyectar mal un CSP.
+  images: {
+    remotePatterns: [],
+  },
 };
+
 export default nextConfig;

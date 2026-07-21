@@ -221,6 +221,14 @@
   - **[IMÁGENES]**: Todos los productos mapeados a imágenes reales existentes en `/public/product/`.
   - **[BUILD]**: Build de producción exitoso (exit code 0) tras limpieza de caché `.next/`.
 
+- **21/07/2026 - Correcciones de Catálogo:**
+  - **[GORRAS]**: Se movieron las variantes "Gris Oscura" y "Verde y Gris" de `Gorra Trucker Adulto` (id: 9) a `Gorra Prelavada Gastada` (id: 11), ya que esos colores corresponden al modelo prelavado.
+  - **[TAZA MIMO]**: Se renombró "Taza Kawaii con Asa Corazón" a "Taza Mimo" (nombre real del producto).
+  - **[MATE SUBILMATE]**: Se reestructuró la ficha del mate de polímero: ahora la imagen principal por defecto es la foto con los 6 mates (`/product/MateGeneral.jpeg`) y se conservaron las variantes de colores de interiores (`Sublimate1` a `Sublimate6`). Se eliminó el registro duplicado con precio sin definir.
+  - **[CUBIERTOS PLÁSTICOS]**: Se actualizaron las fichas de Cuchillo, Tenedor y Cuchara asignando sus fotos de productos estampados (`CUCHILLO.png`, `tenedor.png`, `cuchara.png`) como imágenes principales, y agregando como variantes seleccionables las placas informativas BPA Free (`especificacion CUCHILLO.png`, `especificacion cubierto.png`, `especificacion cuchara.png`), la foto del set completo (`PLACA PRINCIPAL CUBIERTOS 2.png`) y la demostración de uso (`PLACA PRINCIPAL CUBIERTOS.png`).
+  - **[WINKY PAPER]**: Se eliminó definitivamente el producto duplicado/separado `Llavero Winky Paper Personalizado` (id: 33) y se integró su imagen ([`/product/Llavero.jpeg`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/public/product/Llavero.jpeg)) como una variante de vista dentro del único producto `Winky Paper Termocontraíble` (id: 24).
+  - **[CAMPERA FRISA INVISIBLE]**: Se actualizó el producto `id: 14` a `Campera Frisa Invisible` asignando su foto real ([`/product/Camperafrizainvisible.jpeg`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/public/product/Camperafrizainvisible.jpeg)) y precio `Consultar`.
+
 - **17/07/2026 - Refactor General y Limpieza Profesional:**
   - **[DESCRIPCIÓN]**: Mejorada la description del sitio en `config.ts`: texto más limpio y profesional, eliminada mención a "vinilos".
   - **[BACKGROUNDS ROTOS]**: Eliminadas las referencias a `silver_bg.png` y `blue_bg.png` de los temas inactivos. Campo `backgroundImage` vuelto opcional.
@@ -233,4 +241,6 @@
   - **[SCROLL LOCK]**: Fixeado scroll del fondo al abrir tutoriales (GuideModal) con `position: fixed` + `overscroll-behavior: contain`.
   - **[MOBILE NAVBAR OVERLAP]**: Agregado `pb-24` al `<main>` de la Home y ajustado padding en Contacto y GuideModal para evitar que el Navbar fijo tape botones en mobile.
   - **[TIPS TAZAS]**: Mejorados los tips del tutorial de sublimación de tazas con información real de fuentes especializadas.
+  - **[FIX NEXT CONFIG - image.png]**: Se documentó el error externo `Cannot read "image.png" (this model does not support image input)` proveniente de herramientas/IA que analizan el workspace. No existe `image.png` en el proyecto. Como prevención, se agregó la sección `images: { remotePatterns: [] }` en `next.config.ts` para evitar fallos de compilación por detección de imágenes.
+  - **[BUILD]**: Compilación exitosa (exit code 0) tras agregar configuración de imágenes en `next.config.ts`.
 
