@@ -112,7 +112,7 @@ export default function ProductCard({ product, onImageClick, onGuideClick }: Pro
                             className="text-xs font-bold uppercase tracking-wider block mb-2"
                             style={{ color: siteConfig.theme.textColors.cardMuted }}
                         >
-                            Color: <span className="font-black" style={{ color: siteConfig.theme.primaryColor }}>{selectedVariant ? selectedVariant.colorName : "Todos"}</span>
+                            Opción: <span className="font-black" style={{ color: siteConfig.theme.primaryColor }}>{selectedVariant ? selectedVariant.colorName : "Principal"}</span>
                         </span>
                         <div className="flex flex-wrap gap-2.5">
                             {/* Opción por defecto (Todos) */}

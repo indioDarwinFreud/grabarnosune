@@ -5,7 +5,6 @@ import CategoryBanners from "@/components/sections/CategoryBanners";
 import MaterialsGrid from "@/components/sections/MaterialsGrid";
 import Testimonials from "@/components/sections/Testimonials";
 import Separador from "@/components/ui/separador";
-import MainCategories from "@/components/sections/MainCategories";
 import CommercialInfo from "@/components/sections/CommercialInfo";
 import BlogPreview from "@/components/sections/BlogPreview";
 
@@ -19,9 +18,9 @@ export default function Home() {
 
       <Separador />
 
-      {/* Main Categories Section (Lo más buscado) */}
+      {/* Materials Grid Section (Lo más buscado) */}
       <div className="relative z-20">
-        <MainCategories />
+        <MaterialsGrid />
       </div>
 
       <Separador />
@@ -36,13 +35,6 @@ export default function Home() {
       {/* Category Banners Section (Líneas de trabajo) */}
       <div className="relative z-20">
         <CategoryBanners />
-      </div>
-
-      <Separador />
-
-      {/* Materials Grid Section */}
-      <div className="relative z-20">
-        <MaterialsGrid />
       </div>
 
       <Separador />

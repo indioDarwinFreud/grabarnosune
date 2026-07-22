@@ -50,7 +50,7 @@ export default function AboutPreview() {
                     </div>
 
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-brizel text-gray-900 leading-tight mb-6 drop-shadow-md uppercase tracking-wide">
-                        Creamos recuerdos que <br /> <span className="text-primary">perduran en el tiempo.</span>
+                        Recuerdos que <br /> <span className="text-primary">perduran en el tiempo.</span>
                     </h2>
 
                     <p className="text-lg text-gray-700 leading-relaxed mb-10 max-w-lg">

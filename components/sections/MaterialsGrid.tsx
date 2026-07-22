@@ -1,5 +1,6 @@
 import FadeIn from "@/components/ui/FadeIn";
 import Image from "next/image";
+import Link from "next/link";
 import { siteConfig } from "@/config";
 
 interface MaterialItem {
@@ -8,50 +9,57 @@ interface MaterialItem {
     description: string;
     image: string;
     badge: string;
+    href: string;
 }
 
 const materials: MaterialItem[] = [
     {
         id: 1,
-        title: "Polímero",
-        description: "Mates, tazas y artículos plásticos irrompibles con recubrimiento de polímero brillante de alta calidad para sublimar.",
-        image: "/POLIMERO.png",
-        badge: "Alta Resistencia"
+        title: "Textil",
+        description: "Remeras de algodón peinado, spun, modal, gorras trucker y prendas listas para sublimación, DTF o vinilo.",
+        image: "/Textil.jpeg",
+        badge: "Prendas & Accesorios",
+        href: "/products?category=Textil"
     },
     {
         id: 2,
-        title: "Plástico",
-        description: "Vasos milkshake, botellitas deportivas y souvenirs en plásticos rígidos y duraderos de múltiples colores.",
-        image: "/PLASTICO.png",
-        badge: "Bazar & Eventos"
-    },
-    {
-        id: 3,
-        title: "Madera",
-        description: "Tablas de asado, cubiertos y bazar gastronómico ideales para grabados láser permanentes y de alta definición.",
-        image: "/MADERA.png",
-        badge: "Grabados Láser"
+        title: "Polímero",
+        description: "Mates, tazas y artículos plásticos irrompibles con recubrimiento de polímero brillante de alta calidad para sublimar.",
+        image: "/POLIMERO.png",
+        badge: "Alta Resistencia",
+        href: "/products?category=Pol%C3%ADmero"
     },
     {
         id: 4,
-        title: "Cartón",
-        description: "Cajas de presentación, packagings reforzados y rompecabezas listos para sublimar tu marca o foto favorita.",
-        image: "/CARTON.png",
-        badge: "Packaging"
+        title: "Insumos para Estampar",
+        description: "Tintas CMYK importadas de alta densidad, aerosol activador Sublimate, cintas térmicas y consumibles de taller.",
+        image: "/INSUMOS DE TRABAJO.png",
+        badge: "Consumibles",
+        href: "/products?category=Insumos+para+estampar"
     },
     {
         id: 5,
-        title: "Papeles Especiales",
-        description: "Hojas de sublimación premium, papeles autoadhesivos holográficos y láminas plásticas termocontraíbles.",
-        image: "/PAPELES ESPECIALES.png",
-        badge: "Insumos Estrella"
+        title: "Cartón",
+        description: "Cajas de presentación, packagings reforzados y rompecabezas listos para sublimar tu marca o foto favorita.",
+        image: "/CARTON.png",
+        badge: "Packaging",
+        href: "/products?category=Cart%C3%B3n"
     },
     {
         id: 6,
-        title: "Insumos de Trabajo",
-        description: "Tintas CMYK importadas de alta densidad, aerosol activador Sublimate y herramientas esenciales de taller.",
-        image: "/INSUMOS DE TRABAJO.png",
-        badge: "Consumibles"
+        title: "Papeles Especiales",
+        description: "Hojas de sublimación premium, papeles autoadhesivos holográficos y láminas plásticas termocontraíbles.",
+        image: "/PAPELES ESPECIALES.png",
+        badge: "Insumos Estrella",
+        href: "/products?category=Papeles+especiales"
+    },
+    {
+        id: 7,
+        title: "Plástico",
+        description: "Vasos milkshake, cubiertos personalizables BPA free y souvenirs en plásticos rígidos de múltiples colores.",
+        image: "/PLASTICO.png",
+        badge: "Bazar & Souvenirs",
+        href: "/products?category=Pl%C3%A1stico"
     }
 ];
 
@@ -73,45 +81,50 @@ export default function MaterialsGrid() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {materials.map((mat, index) => (
                     <FadeIn key={mat.id} delay={index * 0.05} direction="up" className="h-full">
-                        <div
-                            className="h-full p-6 rounded-3xl border border-gray-200/60 shadow-sm hover:shadow-[0_15px_30px_rgba(113,0,122,0.05)] transition-all duration-500 flex flex-col justify-between group overflow-hidden relative"
-                            style={{ backgroundColor: siteConfig.theme.backgroundCard }}
-                        >
-                            {/* Decorative Background Pattern */}
-                            <div className="absolute inset-0 opacity-[0.02] group-hover:opacity-[0.04] transition-opacity pointer-events-none"
-                                 style={{
-                                     backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)',
-                                     backgroundSize: '20px 20px'
-                                 }}
-                            />
-                            
-                            <div>
-                                <div className="flex justify-between items-start mb-6">
-                                    <span className="text-[10px] font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">
-                                        {mat.badge}
-                                    </span>
-                                </div>
+                        <Link href={mat.href} className="h-full block group">
+                            <div
+                                className="h-full p-6 rounded-3xl border border-gray-200/60 shadow-sm hover:shadow-[0_15px_30px_rgba(113,0,122,0.08)] hover:-translate-y-1 transition-all duration-500 flex flex-col justify-between overflow-hidden relative cursor-pointer"
+                                style={{ backgroundColor: siteConfig.theme.backgroundCard }}
+                            >
+                                {/* Decorative Background Pattern */}
+                                <div className="absolute inset-0 opacity-[0.02] group-hover:opacity-[0.04] transition-opacity pointer-events-none"
+                                     style={{
+                                         backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)',
+                                         backgroundSize: '20px 20px'
+                                     }}
+                                />
 
-                                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-neutral-50/50 border border-gray-100 flex items-center justify-center p-4">
-                                    <div className="relative w-full h-full transform group-hover:scale-105 transition-transform duration-700">
-                                        <Image
-                                            src={mat.image}
-                                            alt={mat.title}
-                                            fill
-                                            className="object-contain"
-                                            sizes="(max-width: 768px) 100vw, 33vw"
-                                        />
+                                <div>
+                                    <div className="flex justify-between items-start mb-6">
+                                        <span className="text-[10px] font-extrabold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">
+                                            {mat.badge}
+                                        </span>
+                                        <span className="text-primary/40 group-hover:text-primary transition-colors text-xs font-bold uppercase tracking-wider">
+                                            Ver →
+                                        </span>
                                     </div>
-                                </div>
 
-                                <h3 className="text-xl font-black text-gray-900 mb-2 group-hover:text-primary transition-colors">
-                                    {mat.title}
-                                </h3>
-                                <p className="text-sm text-gray-600 font-medium leading-relaxed">
-                                    {mat.description}
-                                </p>
+                                    <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-neutral-50/50 border border-gray-100 flex items-center justify-center p-4">
+                                        <div className="relative w-full h-full transform group-hover:scale-105 transition-transform duration-700">
+                                            <Image
+                                                src={mat.image}
+                                                alt={mat.title}
+                                                fill
+                                                className="object-contain"
+                                                sizes="(max-width: 768px) 100vw, 33vw"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <h3 className="text-xl font-black text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                                        {mat.title}
+                                    </h3>
+                                    <p className="text-sm text-gray-600 font-medium leading-relaxed">
+                                        {mat.description}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     </FadeIn>
                 ))}
             </div>

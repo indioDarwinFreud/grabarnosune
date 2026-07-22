@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useState, Suspense, useMemo, useEffect } from "react";
+import { useState, Suspense, useEffect } from "react";
 import { productsData, blogPosts } from "@/data";
 import { Search as SearchIcon, X } from "lucide-react";
 import Image from "next/image";
@@ -18,10 +18,15 @@ function ProductsContent() {
     const [activeCategory, setActiveCategory] = useState<string>("Todas");
     const [activeGuide, setActiveGuide] = useState<BlogPost | null>(null);
 
-    const categories = useMemo(() => {
-        const cats = [...new Set(productsData.map(p => p.category).filter(Boolean) as string[])];
-        return ["Todas", ...cats];
-    }, []);
+    const categories = [
+        "Todas",
+        "Textil",
+        "Polímero",
+        "Insumos para estampar",
+        "Cartón",
+        "Papeles especiales",
+        "Plástico"
+    ];
 
     const queryCategory = searchParams.get("category");
     const querySearch = searchParams.get("search");
@@ -40,13 +45,31 @@ function ProductsContent() {
         } else {
             setSearchTerm("");
         }
-    }, [queryCategory, querySearch, categories]);
+    }, [queryCategory, querySearch]);
 
     const filteredProducts = productsData.filter(product => {
-        const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                             product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                             (product.location && product.location.toLowerCase().includes(searchTerm.toLowerCase()));
-        const matchesCategory = activeCategory === "Todas" || product.category === activeCategory;
+        const fullText = `${product.title} ${product.description} ${product.location || ''} ${product.category || ''}`.toLowerCase();
+        const matchesSearch = searchTerm === "" || fullText.includes(searchTerm.toLowerCase());
+        
+        let matchesCategory = activeCategory === "Todas";
+        if (!matchesCategory) {
+            const catLower = activeCategory.toLowerCase();
+            if (catLower === "textil") {
+                matchesCategory = product.category === "Textiles" || fullText.includes("textil") || fullText.includes("remera") || fullText.includes("gorra") || fullText.includes("buzo") || fullText.includes("campera");
+            } else if (catLower === "polímero") {
+                matchesCategory = fullText.includes("polímero") || fullText.includes("polimero") || fullText.includes("mate");
+            } else if (catLower === "insumos para estampar") {
+                matchesCategory = product.category === "Insumos" || fullText.includes("tinta") || fullText.includes("aerosol") || fullText.includes("sublimación");
+            } else if (catLower === "cartón") {
+                matchesCategory = fullText.includes("cartón") || fullText.includes("carton") || fullText.includes("caja");
+            } else if (catLower === "papeles especiales") {
+                matchesCategory = fullText.includes("papel") || fullText.includes("holofan") || fullText.includes("winky");
+            } else if (catLower === "plástico") {
+                matchesCategory = fullText.includes("plástico") || fullText.includes("plastico") || fullText.includes("bazar") || fullText.includes("vaso") || fullText.includes("cubierto");
+            } else {
+                matchesCategory = product.category?.toLowerCase() === catLower;
+            }
+        }
         return matchesSearch && matchesCategory;
     });
 
@@ -249,13 +272,6 @@ const infoGuides: InfoGuide[] = [
         description: "Especificaciones de peso y composición de nuestras telas de remera.",
         image: "/TipoRemeraParaSublimar.png",
         category: "Materiales"
-    },
-    {
-        id: 6,
-        title: "Horarios y Ubicación de Retiro",
-        description: "Consultá la dirección exacta del local y horarios de atención.",
-        image: "/horario.png",
-        category: "Contacto"
     }
 ];
 

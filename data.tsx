@@ -32,18 +32,35 @@ export const itemsNavbar: NavItem[] = [
 export const productsData: Product[] = [
     {
         id: 1,
-        title: "Papel de Sublimación A4 Premium",
-        location: "Insumos - Secado Rápido",
-        description: "Hojas de alta transferencia y secado instantáneo. Garantizan una nitidez de imagen del 99% para estampar en telas y tazas.",
-        image: "/product/papel_sublimacion.png",
+        title: "Papel de Sublimación Art-Jet",
+        location: "Insumos - Secado Rápido (A3 / A4)",
+        description: "Resma de papel de sublimación premium marca Art-Jet de 100g. Disponible en formatos A3 y A4. Máxima transferencia de color y secado extra rápido.",
+        image: "/product/AgregarEnPlacaDePapelSublimar.jpeg",
         category: "Insumos",
         stock: 35,
         website: "/contact",
         price: "Consultar",
+        variants: [
+            {
+                colorName: "Portada",
+                colorCode: "#71007A",
+                image: "/product/AgregarEnPlacaDePapelSublimar.jpeg",
+            },
+            {
+                colorName: "Formato A3",
+                colorCode: "#a855f7",
+                image: "/product/PapelA3.jpeg",
+            },
+            {
+                colorName: "Formato A4",
+                colorCode: "#ec4899",
+                image: "/product/PapelA4.jpeg",
+            }
+        ]
     },
     {
         id: 2,
-        title: "Taza de Cerámica Nacional AAA",
+        title: "Taza de Cerámica Nacional",
         location: "Sustratos - Tazas Clásicas",
         description: "Taza de cerámica extra blanca con el recubrimiento polimérico original. Brillo duradero y resistente al microondas.",
         image: "/product/taza_orca.png",
@@ -52,6 +69,18 @@ export const productsData: Product[] = [
         website: "/contact",
         price: 3100,
         guideSlug: "guia-sublimar-tazas-ceramica",
+        variants: [
+            {
+                colorName: "Taza Orca AAA",
+                colorCode: "#ffffff",
+                image: "/product/taza_orca.png",
+            },
+            {
+                colorName: "Muestra de Grabado y Sublimación",
+                colorCode: "#71007A",
+                image: "/GrabarTaza.jpeg",
+            }
+        ]
     },
     {
         id: 3,
@@ -74,13 +103,25 @@ export const productsData: Product[] = [
         stock: null,
         website: "/contact",
         price: 5900,
+        variants: [
+            {
+                colorName: "Remera Blanca Spun",
+                colorCode: "#ffffff",
+                image: "/product/RemeraBlancaSpun.png",
+            },
+            {
+                colorName: "Especificación Técnica Sublimación",
+                colorCode: "#71007A",
+                image: "/TipoRemeraParaSublimar.png",
+            }
+        ]
     },
     {
         id: 5,
         title: "Remera Spun Niño",
         location: "Textiles - Spun Premium",
         description: "Remera infantil blanca de spun. Suave al tacto y lista para sublimar con colores vivos y duraderos.",
-        image: "/product/RemeraBlancaSpun.png",
+        image: "/product/RemeraSpunNiño.png",
         category: "Textiles",
         stock: null,
         website: "/contact",
@@ -130,6 +171,18 @@ export const productsData: Product[] = [
         stock: null,
         website: "/contact",
         price: 9650,
+        variants: [
+            {
+                colorName: "Tabla de Talles y Medidas",
+                colorCode: "#22c55e",
+                image: "/ComoTomarMedidasRemeras.png",
+            },
+            {
+                colorName: "Catálogo de Confección",
+                colorCode: "#a855f7",
+                image: "/CatalogoRemeras.png",
+            }
+        ]
     },
     {
         id: 9,
@@ -535,17 +588,6 @@ export const productsData: Product[] = [
         website: "/contact",
         price: 1950,
     },
-    {
-        id: 34,
-        title: "Papel de Sublimación Art-Jet A4",
-        location: "Insumos - Transferencia",
-        description: "Resma de papel de sublimación premium A4 marca Art-Jet de 100g. Máxima transferencia de color y secado extra rápido.",
-        image: "/product/PapelSublimar1.jpeg",
-        category: "Insumos",
-        stock: 30,
-        website: "/contact",
-        price: "Consultar",
-    }
 ];
 
 export const testimonialsData: Testimonial[] = [
@@ -648,8 +690,7 @@ export const blogPosts: BlogPost[] = [
             "Con el nuevo pegamento extra fuerte 'ultraglue', asegurás una adhesión duradera en cualquier superficie lisa.",
             "El material es impermeable y resistente a salpicaduras, lo que lo hace ideal para personalizar termos, botellas y notebooks.",
             "La base de plástico y resistencia del material evita desgarros y protege tus diseños a todo color."
-        ],
-        infographicImage: "/product/SacarInfoParaInicio.jpeg"
+        ]
     },
     {
         id: 3,

@@ -35,7 +35,7 @@ export default function ContactForm() {
                         </div>
                         <h1 className="text-5xl md:text-7xl font-brizel drop-shadow-sm tracking-wide"
                             style={{ color: 'var(--card-title)' }}>
-                            TE CONTAMOS QUE TENEMOS EN STOCK :  ESCRIBINO
+                            TE CONTAMOS QUE TENEMOS EN STOCK :  ESCRIBINOS
                         </h1>
                         <div className="w-20 h-1 bg-primary/30 rounded-full mx-auto mt-4" />
                     </div>
@@ -170,13 +170,13 @@ export default function ContactForm() {
                                     Nuestras Redes
                                 </h3>
 
-                                <div className="grid grid-cols-2 gap-3">
-                                    <a href={siteConfig.socials.facebook} target="_blank" rel="noreferrer" className="flex items-center gap-3 p-3 rounded-2xl border transition-all group"
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                    <a href={siteConfig.socials.instagramInsumos} target="_blank" rel="noreferrer" className="flex items-center gap-3 p-3 rounded-2xl border transition-all group"
                                         style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-muted)' }}>
-                                        <Facebook size={18} className="text-primary group-hover:scale-110 transition-transform" />
+                                        <Instagram size={18} className="text-primary group-hover:scale-110 transition-transform" />
                                         <div>
-                                            <span className="text-[10px] font-bold block" style={{ color: 'var(--card-muted)' }}>Facebook</span>
-                                            <span className="text-xs font-semibold" style={{ color: 'var(--card-title)' }}>{siteConfig.socials.facebookHandle}</span>
+                                            <span className="text-[10px] font-bold block" style={{ color: 'var(--card-muted)' }}>Instagram Insumos</span>
+                                            <span className="text-xs font-semibold" style={{ color: 'var(--card-title)' }}>{siteConfig.socials.instagramInsumosHandle}</span>
                                         </div>
                                     </a>
 
@@ -184,8 +184,17 @@ export default function ContactForm() {
                                         style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-muted)' }}>
                                         <Instagram size={18} className="text-primary group-hover:scale-110 transition-transform" />
                                         <div>
-                                            <span className="text-[10px] font-bold block" style={{ color: 'var(--card-muted)' }}>Instagram</span>
+                                            <span className="text-[10px] font-bold block" style={{ color: 'var(--card-muted)' }}>Instagram General</span>
                                             <span className="text-xs font-semibold" style={{ color: 'var(--card-title)' }}>{siteConfig.socials.instagramHandle}</span>
+                                        </div>
+                                    </a>
+
+                                    <a href={siteConfig.socials.facebook} target="_blank" rel="noreferrer" className="flex items-center gap-3 p-3 rounded-2xl border transition-all group"
+                                        style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-muted)' }}>
+                                        <Facebook size={18} className="text-primary group-hover:scale-110 transition-transform" />
+                                        <div>
+                                            <span className="text-[10px] font-bold block" style={{ color: 'var(--card-muted)' }}>Facebook</span>
+                                            <span className="text-xs font-semibold" style={{ color: 'var(--card-title)' }}>{siteConfig.socials.facebookHandle}</span>
                                         </div>
                                     </a>
                                 </div>

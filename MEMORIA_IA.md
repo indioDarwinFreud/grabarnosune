@@ -228,6 +228,8 @@
   - **[CUBIERTOS PLÁSTICOS]**: Se actualizaron las fichas de Cuchillo, Tenedor y Cuchara asignando sus fotos de productos estampados (`CUCHILLO.png`, `tenedor.png`, `cuchara.png`) como imágenes principales, y agregando como variantes seleccionables las placas informativas BPA Free (`especificacion CUCHILLO.png`, `especificacion cubierto.png`, `especificacion cuchara.png`), la foto del set completo (`PLACA PRINCIPAL CUBIERTOS 2.png`) y la demostración de uso (`PLACA PRINCIPAL CUBIERTOS.png`).
   - **[WINKY PAPER]**: Se eliminó definitivamente el producto duplicado/separado `Llavero Winky Paper Personalizado` (id: 33) y se integró su imagen ([`/product/Llavero.jpeg`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/public/product/Llavero.jpeg)) como una variante de vista dentro del único producto `Winky Paper Termocontraíble` (id: 24).
   - **[CAMPERA FRISA INVISIBLE]**: Se actualizó el producto `id: 14` a `Campera Frisa Invisible` asignando su foto real ([`/product/Camperafrizainvisible.jpeg`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/public/product/Camperafrizainvisible.jpeg)) y precio `Consultar`.
+  - **[INSTAGRAM REDES]**: Se ordenó la sección de redes sociales para mostrar primero Instagram Insumos (`@grabarnosuneinsumos`) y luego Instagram General (`@grabarnosune`).
+  - **[ESTANDARIZACIÓN DE CATEGORÍAS DE MATERIALES]**: Se unificaron las 7 categorías principales de materiales en `MaterialsGrid.tsx` y en el filtro interactivo de productos de `ProductsContent.tsx`: *Textil, Polímero, Aluminio, Insumos para estampar, Cartón, Papeles especiales, Plástico*.
 
 - **17/07/2026 - Refactor General y Limpieza Profesional:**
   - **[DESCRIPCIÓN]**: Mejorada la description del sitio en `config.ts`: texto más limpio y profesional, eliminada mención a "vinilos".
@@ -242,5 +244,44 @@
   - **[MOBILE NAVBAR OVERLAP]**: Agregado `pb-24` al `<main>` de la Home y ajustado padding en Contacto y GuideModal para evitar que el Navbar fijo tape botones en mobile.
   - **[TIPS TAZAS]**: Mejorados los tips del tutorial de sublimación de tazas con información real de fuentes especializadas.
   - **[FIX NEXT CONFIG - image.png]**: Se documentó el error externo `Cannot read "image.png" (this model does not support image input)` proveniente de herramientas/IA que analizan el workspace. No existe `image.png` en el proyecto. Como prevención, se agregó la sección `images: { remotePatterns: [] }` en `next.config.ts` para evitar fallos de compilación por detección de imágenes.
-  - **[BUILD]**: Compilación exitosa (exit code 0) tras agregar configuración de imágenes en `next.config.ts`.
+- **21/07/2026 - Unificación de Papel de Sublimación Art-Jet:**
+  - **[UNIFICACIÓN DE FICHA DE PAPEL]**: Se unificaron los papeles A3 y A4 en una **única tarjeta de producto** (`id: 1`):
+    - **Portada principal**: Imagen de presentación `/product/AgregarEnPlacaDePapelSublimar.jpeg`.
+    - **Variantes interactivas**: Accesibles mediante botones de opción para visualizar la foto del formato A3 (`/product/PapelA3.jpeg`) y A4 (`/product/PapelA4.jpeg`).
+    - **Descripción**: Especifica que la resma Art-Jet de 100g está disponible en formatos A3 y A4 con secado rápido y 99% de transferencia.
+- **21/07/2026 - Mantenimiento de Iconografía en Footer y Contacto:**
+  - **[FOOTER & CONTACTO]**: Se conservaron los iconos vectoriales originales de Lucide (`Clock`, `MapPin`) en el Footer y en el Formulario de Contacto para mantener la pulcritud del diseño.
+
+---
+
+## CAMBIOS — SESIÓN 21/07/2026 (Segunda Parte)
+
+- **21/07/2026 - Eliminación de imagen placeholder en Tutorial Holofan:**
+  - **[DATA]**: Se eliminó la propiedad `infographicImage: "/product/SacarInfoParaInicio.jpeg"` del `blogPost id: 2` (Efecto Estrellita / Papel Holofan). Esa imagen era un placeholder con texto en blanco y negro que se mostraba incorrectamente en el modal del tutorial.
+
+- **21/07/2026 - Limpieza de infoGuides en ProductsContent:**
+  - **[PRODUCTOS]**: Se eliminó el item `id: 6` de `infoGuides` (Horarios y Ubicación de Retiro, imagen `horario.png`) de la sección "Guías de Talles & Medidas" porque no tenía relación con fichas técnicas de prendas.
+
+- **21/07/2026 - Corrección de variante errónea en Remera Manga Corta Adulto:**
+  - **[DATA]**: Se eliminó la variante "Detalle Cuello Estándar" (`colorCode: "#3b82f6"`, imagen `TipoRemeraSublimarCuelloEstandar.png`) del producto `id: 6`. El color celeste no corresponde a ningún color real de la prenda y la imagen era una ficha técnica, no una variante de color. La tarjeta quedó con solo dos variantes reales: **Blanco** y **Negro**.
+
+- **21/07/2026 - Eliminación de categoría Aluminio:**
+  - **[MATERIALSGRID]**: Se eliminó el card de "Aluminio" del componente `MaterialsGrid.tsx` (el usuario lo hizo manualmente).
+  - **[PRODUCTSCONTENT]**: Se eliminó "Aluminio" del array `categories` (filtros) y se limpió la rama `else if (catLower === "aluminio")` de la lógica de filtrado.
+
+- **21/07/2026 - Corrección de errores en ProductsContent.tsx:**
+  - Se corrigió `"use client"` sin punto y coma (error de parseo).
+  - Se eliminó el import de `useMemo` que no estaba siendo utilizado.
+
+- **21/07/2026 - MaterialsGrid con links a categorías de productos:**
+  - **[MATERIALSGRID → PRODUCTSCONTENT]**: Se agregó la propiedad `href` a cada item de `MaterialsGrid.tsx` y se envolvió cada tarjeta con `<Link>` de Next.js. Al hacer clic en un material en la home, se navega a `/products?category=X` con el filtro preseleccionado correspondiente:
+    - Textil → `/products?category=Textil`
+    - Polímero → `/products?category=Pol%C3%ADmero`
+    - Insumos para Estampar → `/products?category=Insumos+para+estampar`
+    - Cartón → `/products?category=Cart%C3%B3n`
+    - Papeles Especiales → `/products?category=Papeles+especiales`
+    - Plástico → `/products?category=Pl%C3%A1stico`
+  - Se agregó un indicador visual "Ver →" en hover para comunicar la interactividad.
+
+
 

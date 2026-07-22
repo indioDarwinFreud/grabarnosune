@@ -45,7 +45,7 @@ export const siteConfig = {
     },
 
     contact: {
-        email: "daianayamil7@hotmail.com",
+        email: "grabarnosuneinsumos@gmail.com",
         phone: "+5492616572658",
         whatsappText: "¡Hola Daiana! Vengo desde su página web y me gustaría consultar por insumos y personalizados.",
         location: "Chacabuco 99 - Ciudad - Mendoza (Esquina Rioja)",
@@ -53,14 +53,17 @@ export const siteConfig = {
     },
 
     socials: {
-        instagram: "https://www.instagram.com/grabarnosuneinsumos/",
+        instagramInsumos: "https://www.instagram.com/grabarnosuneinsumos/",
+        instagramInsumosHandle: "@grabarnosuneinsumos",
+        instagram: "https://www.instagram.com/grabarnosune/",
         instagramHandle: "@grabarnosune",
         facebook: "https://www.facebook.com/grabar.nos.une",
         facebookHandle: "/grabarnosune",
     },
 
     businessHours: [
-        { day: "Lunes a Viernes", hours: "8:30 - 12:00 / 15:00 - 18:00" },
-        { day: "Sábados", hours: "10:00 - 13:00" },
+        { day: "Lunes - Miércoles y Viernes", hours: "8:00 - 12:00 / 15:00 - 18:00" },
+        { day: "Martes y Jueves", hours: "08:00 - 13:00 / 15:00 - 18:00" },
+        { day: "Sábados", hours: "09:30 - 13:00" },
     ]
 };
