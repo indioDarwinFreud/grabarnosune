@@ -200,7 +200,7 @@
   - **[ESTANDARIZACIÓN]**: Arreglados 3 issues altos de auditoría: URL mapsLink rota, `font-gotham`→`font-alt` en Footer, `text-6.5xl` agregado a `tailwind.config.ts`.
   - **[LIMPIEZA]**: Eliminado `console.log` de ImperiaEditorProvider, borrado `lib/utils.ts` (código muerto), directorios vacíos e imágenes huérfanas eliminados.
   - **[SVG FILTERS]**: IDs de filtros SVG únicos via `useId()` para evitar colisiones globales.
-  - **[UNIFICACIÓN]**: Carpeta `public/assets/productos/` movida a `public/product/`. 
+  - **[UNIFICACIÓN]**: Carpeta `public/assets/productos/` movida a `public/product/`.
   - **[PRODUCTOS NUEVOS]**: Agregados "Remera Blanca Algodón Premium", "Remera Negra Algodón Premium" y "Buzo Negro Algodón Premium" al catálogo. Imagen de "Remeras de Spun Premium" actualizada a `RemeraBlancaSpun.png`.
   - **[BUILD]**: Build de producción exitoso (exit code 0) tras todos los cambios.
 
@@ -213,11 +213,11 @@
   - **[CAMPO PRICE]**: Se agregó la propiedad opcional `price?: number | string | null` a las interfaces `Product` y `ProductVariant` en `types/index.ts`. Permite mostrar precios numéricos (formateados como `$X.XXX`) o strings (ej: `"Consultar"`) directamente en la tarjeta.
   - **[PRODUCTCARD]**: Se actualizó `ProductCard.tsx` para mostrar el precio en la línea de subtítulo (junto a `location`), en color primario con tipografía negrita de alto impacto. El precio también se incluye en el texto del mensaje de WhatsApp generado dinámicamente.
   - **[CATÁLOGO COMPLETO — 29 productos]**: Se reemplazó el catálogo parcial por la lista real del cliente con precios:
-    - *Textiles:* Remeras algodón adulto ($8.200), niño ($5.400), talle especial ($9.650), spun adulto ($5.900), spun niño ($2.900), buzo cuello redondo ($21.000), buzo canguro ($23.000), campera ($24.490).
-    - *Gorras:* Trucker adulto ($3.750, variantes de color), trucker niño ($3.550), prelavada ($5.800).
-    - *Tazas:* Cerámica nacional ($3.100), cerámica color interior ($3.900), polímero ($1.650), mimo ($2.700).
-    - *Insumos:* Papel sublimación, tintas, Sublimate aerosol ($4.400), Papel Holofan Inkjet estrellita (Consultar), Winky Paper (Consultar).
-    - *Bazar y souvenirs:* Yerbera/azucarera Workat ($8.900), cubiertos —cuchillo/tenedor/cuchara ($365 c/u)—, vaso cristal glitter ($1.190 / $1.790 personalizado), vaso Argentina (Consultar), vasos milkshake 380cc ($890) y 330cc ($990), valijita plástica ($1.490).
+    - _Textiles:_ Remeras algodón adulto ($8.200), niño ($5.400), talle especial ($9.650), spun adulto ($5.900), spun niño ($2.900), buzo cuello redondo ($21.000), buzo canguro ($23.000), campera ($24.490).
+    - _Gorras:_ Trucker adulto ($3.750, variantes de color), trucker niño ($3.550), prelavada ($5.800).
+    - _Tazas:_ Cerámica nacional ($3.100), cerámica color interior ($3.900), polímero ($1.650), mimo ($2.700).
+    - _Insumos:_ Papel sublimación, tintas, Sublimate aerosol ($4.400), Papel Holofan Inkjet estrellita (Consultar), Winky Paper (Consultar).
+    - _Bazar y souvenirs:_ Yerbera/azucarera Workat ($8.900), cubiertos —cuchillo/tenedor/cuchara ($365 c/u)—, vaso cristal glitter ($1.190 / $1.790 personalizado), vaso Argentina (Consultar), vasos milkshake 380cc ($890) y 330cc ($990), valijita plástica ($1.490).
   - **[IMÁGENES]**: Todos los productos mapeados a imágenes reales existentes en `/public/product/`.
   - **[BUILD]**: Build de producción exitoso (exit code 0) tras limpieza de caché `.next/`.
 
@@ -229,7 +229,7 @@
   - **[WINKY PAPER]**: Se eliminó definitivamente el producto duplicado/separado `Llavero Winky Paper Personalizado` (id: 33) y se integró su imagen ([`/product/Llavero.jpeg`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/public/product/Llavero.jpeg)) como una variante de vista dentro del único producto `Winky Paper Termocontraíble` (id: 24).
   - **[CAMPERA FRISA INVISIBLE]**: Se actualizó el producto `id: 14` a `Campera Frisa Invisible` asignando su foto real ([`/product/Camperafrizainvisible.jpeg`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/public/product/Camperafrizainvisible.jpeg)) y precio `Consultar`.
   - **[INSTAGRAM REDES]**: Se ordenó la sección de redes sociales para mostrar primero Instagram Insumos (`@grabarnosuneinsumos`) y luego Instagram General (`@grabarnosune`).
-  - **[ESTANDARIZACIÓN DE CATEGORÍAS DE MATERIALES]**: Se unificaron las 7 categorías principales de materiales en `MaterialsGrid.tsx` y en el filtro interactivo de productos de `ProductsContent.tsx`: *Textil, Polímero, Aluminio, Insumos para estampar, Cartón, Papeles especiales, Plástico*.
+  - **[ESTANDARIZACIÓN DE CATEGORÍAS DE MATERIALES]**: Se unificaron las 7 categorías principales de materiales en `MaterialsGrid.tsx` y en el filtro interactivo de productos de `ProductsContent.tsx`: _Textil, Polímero, Aluminio, Insumos para estampar, Cartón, Papeles especiales, Plástico_.
 
 - **17/07/2026 - Refactor General y Limpieza Profesional:**
   - **[DESCRIPCIÓN]**: Mejorada la description del sitio en `config.ts`: texto más limpio y profesional, eliminada mención a "vinilos".
@@ -239,7 +239,7 @@
   - **[COMENTARIOS]**: Limpiados todos los JSDoc masivos de componentes, `config.ts`, `data.tsx`, `types/index.ts` y `globals.css`.
   - **[EXPORTS]**: Estandarizados todos los componentes a `export default function Component()`.
   - **[RUTA ROTA]**: Corregida ruta de imagen en `about/page.tsx` (`/assets/productos/taza_orca.png` → `/product/taza_orca.png`).
-  - **[SEPARADOR]`: Cambiado de color plateado hardcodeado a usar el color primario del tema activo.
+  - \*\*[SEPARADOR]`: Cambiado de color plateado hardcodeado a usar el color primario del tema activo.
   - **[SCROLL LOCK]**: Fixeado scroll del fondo al abrir tutoriales (GuideModal) con `position: fixed` + `overscroll-behavior: contain`.
   - **[MOBILE NAVBAR OVERLAP]**: Agregado `pb-24` al `<main>` de la Home y ajustado padding en Contacto y GuideModal para evitar que el Navbar fijo tape botones en mobile.
   - **[TIPS TAZAS]**: Mejorados los tips del tutorial de sublimación de tazas con información real de fuentes especializadas.
@@ -283,5 +283,21 @@
     - Plástico → `/products?category=Pl%C3%A1stico`
   - Se agregó un indicador visual "Ver →" en hover para comunicar la interactividad.
 
+- **22/07/2026 - Incorporación de Nuevos Productos y Fotografías Reales:**
+  - **[CATÁLOGO]**: Se agregaron 6 nuevos productos y se actualizaron variantes existentes en `data.tsx` en base a las especificaciones y precios enviados por Daiana:
+    - **Vaso de Café Térmico** (`id: 33`): $4.100 (`VASO CAFE.png`).
+    - **Jarro Térmico de Polímero** (`id: 34`): $4.400 (`JARRO TERMICO.png`).
+    - **Jarro Térmico con Pico** (`id: 35`): $4.600 (`JARRO CON PICO.png`) con variantes de tapa y vista de pico (`jarro con pico 2.png`, `jarro con pico 3.png`).
+    - **Jarro Osito con Asa** (`id: 36`): $4.900 (`jarro osito.png`) con variantes de color Celeste y Rosa (`jarro osito color celeste.png`, `jarro osito color rosa.png`).
+    - **Rompecabezas de Polímero 24 Piezas** (`id: 37`): $5.550 (`rompecabezas 24 piezas.png`).
+    - **Rompecabezas de Polímero 16 Piezas** (`id: 40`): $3.900 (`rompecabezas 16 piezas.png`).
+    - **Llavero de Polímero Rectangular** (`id: 38`): $390 (`llavero rectangular.png`).
+    - **Remera Niño Algodón Peinado 24.1** (`id: 7`): Actualizada la imagen principal a la foto real (`remera niño algodon peinado 24.1.png`) y agregadas variantes de color Blanco y Negro con sus respectivas imágenes.
+    - **Buzo Cuello Redondo Clásico** (`id: 12`): Conservado como producto estándar ($21.000, `BuzoNegro.png`).
+    - **Buzo Cuello Redondo Frisado Peinado Calidad Premium** (`id: 39`): Agregado como producto independiente ($21.000, `BuzoCuelloRedondoFrisadoPeinadoDeAlgodonCalidadPremium.jpeg`).
 
+- **22/07/2026 - Reestructuración Simétrica de MaterialsGrid a 8 Categorías:**
+  - **[MATERIALSGRID]**: Se agregaron las categorías **Cerámica** (`/Ceramica.jpeg`) y **Madera** (`/MADERA.png`), pasando de 6 a 8 ítems en total.
+  - **[DISEÑO SIMÉTRICO]**: Se ajustó la grilla a `lg:grid-cols-4` (4 columnas x 2 filas exactas en pantallas grandes/PC y 2 columnas x 4 filas en Tablet/Móvil), logrando un diseño 100% equilibrado y libre de tarjetas impares o huecos flotantes.
+  - **[PRODUCTSCONTENT]**: Se actualizaron las categorías y filtros en `/products` para dar soporte nativo a "Cerámica" y "Madera".
 

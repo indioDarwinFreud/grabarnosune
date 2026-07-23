@@ -15,6 +15,14 @@ interface MaterialItem {
 const materials: MaterialItem[] = [
     {
         id: 1,
+        title: "Cerámica",
+        description: "Tazas de cerámica extra blanca Orca AAA, tazones y productos de vajilla con recubrimiento polimérico de alto brillo.",
+        image: "/Ceramica.jpeg",
+        badge: "Vajilla & Tazas",
+        href: "/products?category=Cer%C3%A1mica"
+    },
+    {
+        id: 2,
         title: "Textil",
         description: "Remeras de algodón peinado, spun, modal, gorras trucker y prendas listas para sublimación, DTF o vinilo.",
         image: "/Textil.jpeg",
@@ -22,7 +30,7 @@ const materials: MaterialItem[] = [
         href: "/products?category=Textil"
     },
     {
-        id: 2,
+        id: 3,
         title: "Polímero",
         description: "Mates, tazas y artículos plásticos irrompibles con recubrimiento de polímero brillante de alta calidad para sublimar.",
         image: "/POLIMERO.png",
@@ -60,6 +68,14 @@ const materials: MaterialItem[] = [
         image: "/PLASTICO.png",
         badge: "Bazar & Souvenirs",
         href: "/products?category=Pl%C3%A1stico"
+    },
+    {
+        id: 8,
+        title: "Madera",
+        description: "Placas de madera MDF, posavasos, cuadros y objetos personalizables con acabado natural listos para estampar.",
+        image: "/MADERA.png",
+        badge: "MDF & Arte",
+        href: "/products?category=Madera"
     }
 ];
 
@@ -78,7 +94,7 @@ export default function MaterialsGrid() {
                 </div>
             </FadeIn>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {materials.map((mat, index) => (
                     <FadeIn key={mat.id} delay={index * 0.05} direction="up" className="h-full">
                         <Link href={mat.href} className="h-full block group">
@@ -88,10 +104,10 @@ export default function MaterialsGrid() {
                             >
                                 {/* Decorative Background Pattern */}
                                 <div className="absolute inset-0 opacity-[0.02] group-hover:opacity-[0.04] transition-opacity pointer-events-none"
-                                     style={{
-                                         backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)',
-                                         backgroundSize: '20px 20px'
-                                     }}
+                                    style={{
+                                        backgroundImage: 'radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)',
+                                        backgroundSize: '20px 20px'
+                                    }}
                                 />
 
                                 <div>
@@ -111,7 +127,7 @@ export default function MaterialsGrid() {
                                                 alt={mat.title}
                                                 fill
                                                 className="object-contain"
-                                                sizes="(max-width: 768px) 100vw, 33vw"
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                                             />
                                         </div>
                                     </div>

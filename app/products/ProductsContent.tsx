@@ -11,22 +11,24 @@ import ProductCard from "@/components/cards/ProductCard";
 import GuideModal from "@/components/ui/GuideModal";
 import type { BlogPost } from "@/types";
 
+const categories = [
+    "Todas",
+    "Cerámica",
+    "Textil",
+    "Polímero",
+    "Insumos para estampar",
+    "Cartón",
+    "Papeles especiales",
+    "Plástico",
+    "Madera"
+];
+
 function ProductsContent() {
     const searchParams = useSearchParams();
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [activeCategory, setActiveCategory] = useState<string>("Todas");
     const [activeGuide, setActiveGuide] = useState<BlogPost | null>(null);
-
-    const categories = [
-        "Todas",
-        "Textil",
-        "Polímero",
-        "Insumos para estampar",
-        "Cartón",
-        "Papeles especiales",
-        "Plástico"
-    ];
 
     const queryCategory = searchParams.get("category");
     const querySearch = searchParams.get("search");
@@ -54,7 +56,11 @@ function ProductsContent() {
         let matchesCategory = activeCategory === "Todas";
         if (!matchesCategory) {
             const catLower = activeCategory.toLowerCase();
-            if (catLower === "textil") {
+            if (catLower === "cerámica" || catLower === "ceramica") {
+                matchesCategory = product.category === "Sustratos" || fullText.includes("cerámica") || fullText.includes("ceramica") || fullText.includes("taza") || fullText.includes("orca");
+            } else if (catLower === "madera") {
+                matchesCategory = fullText.includes("madera") || fullText.includes("mdf") || fullText.includes("cuadro");
+            } else if (catLower === "textil") {
                 matchesCategory = product.category === "Textiles" || fullText.includes("textil") || fullText.includes("remera") || fullText.includes("gorra") || fullText.includes("buzo") || fullText.includes("campera");
             } else if (catLower === "polímero") {
                 matchesCategory = fullText.includes("polímero") || fullText.includes("polimero") || fullText.includes("mate");

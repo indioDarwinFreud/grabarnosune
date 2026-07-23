@@ -1,6 +1,6 @@
 # Documentación Técnica — Grabar Nos Une
 
-**Fecha de Última Actualización:** 21/07/2026
+**Fecha de Última Actualización:** 22/07/2026
 **Versión del Proyecto:** 3.0 (Rebranding Grabar Nos Une)
 
 ---
@@ -42,7 +42,7 @@ Este documento detalla la arquitectura técnica, estructura de carpetas y propó
 │   │   └── Footer.tsx            # Pie premium con glassmorphism + glow dorado
 │   ├── sections/
 │   │   ├── HeroStatic.tsx        # Hero estático con logo + botones CTA
-│   │   ├── MainCategories.tsx    # Grilla "Lo Más Buscado"
+│   │   ├── MaterialsGrid.tsx     # Grilla "Materiales & Insumos" (8 categorías simétricas)
 │   │   ├── AboutPreview.tsx      # Preview de Quiénes Somos
 │   │   ├── CategoryBanners.tsx   # Banners de líneas de trabajo
 │   │   ├── BestSellers.tsx       # Catálogo destacado (productos)
@@ -129,7 +129,7 @@ Los valores se inyectan como CSS variables en `<body>` desde `layout.tsx` y se c
 La landing page se compone de 8 secciones en este orden:
 
 1. **HeroStatic** → Logo grande + botones "Hace tu consulta" y "Ver productos"
-2. **MainCategories** → Grilla de "Lo Más Buscado" (4 tarjetas con íconos)
+2. **MaterialsGrid** → Grilla de "Materiales & Insumos" (8 categorías simétricas 4x2 en Desktop)
 3. **AboutPreview** → Tarjeta glassmorphism con imagen + descripción de la marca
 4. **CategoryBanners** → Dos banners grandes que enlazan a colecciones
 5. **BestSellers** → Grid de `ProductCard` con botón WhatsApp por producto
@@ -166,7 +166,7 @@ Página **WhatsApp-First**: el formulario redirige directamente a WhatsApp con e
 | Componente | Descripción | Usado en |
 |---|---|---|
 | `HeroStatic.tsx` | Hero estático con logo, descripción y botones CTA | Home |
-| `MainCategories.tsx` | Grilla de categorías populares | Home |
+| `MaterialsGrid.tsx` | Grilla de 8 categorías de materiales y acoplamiento simétrico (4x2 en Desktop) | Home |
 | `AboutPreview.tsx` | Preview de Quiénes Somos con imagen | Home |
 | `CategoryBanners.tsx` | Banners de líneas de trabajo | Home |
 | `BestSellers.tsx` | Grid de productos destacados con WhatsApp | Home |
