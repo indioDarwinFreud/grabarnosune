@@ -1,6 +1,5 @@
 export const siteConfig = {
     name: "Grabar Nos Une",
-    shortName: "GrabarNosUne",
     description: "Vendemos insumos para sublimación, grabado y personalización: tazas de cerámica y polímero, remeras, buzos, camperas, gorras trucker, artículos de bazar, regalos y mucho más. Todo listo para que personalices con tu estilo.",
 
     typography: {
@@ -21,8 +20,6 @@ export const siteConfig = {
         backgroundFooter: "#1A0A1D",
         radius: "1rem",
         textColors: {
-            primaryLight: "#FAF9FB",
-            secondaryLight: "#71007A",
             cardTitle: "#220025",
             cardBody: "#534255",
             cardMuted: "#88748C"

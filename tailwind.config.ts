@@ -22,7 +22,6 @@ export default {
       // ------------------------------------------------------------------
       // Colores del Sistema
       // El color `primary` y `primaryHover` se actualizan desde config.ts.
-      // Los colores `gold` se usan en el Footer y acentos premium.
       // ------------------------------------------------------------------
       colors: {
         primary: "var(--primary-color, #c0c0c0)",
@@ -34,22 +33,7 @@ export default {
           muted: "var(--card-muted, #88748C)",
         },
 
-        // Escala de dorados – usados en footer, separadores y efectos premium
-        gold: {
-          100: "#f9f1d8",
-          200: "#f0deaa",
-          300: "#e6c670",
-          400: "#deb23c",
-          500: "#d4a017", // Gold clásico
-          600: "#aa8012",
-          700: "#80600e",
-        },
 
-        // Fondo oscuro de emergencia (alternativa a backgroundMain de config.ts)
-        darkBg: "#0a0a0a",
-
-        // Glassmorphism base
-        glass: "rgba(255, 255, 255, 0.1)",
       },
       // ------------------------------------------------------------------
       // Gradientes predefinidos
@@ -57,9 +41,7 @@ export default {
       fontSize: {
         "6.5xl": ["4rem", { lineHeight: "1.1" }],
       },
-      backgroundImage: {
-        "gold-gradient": "linear-gradient(to right, #d4a017, #f9f1d8, #d4a017)",
-      },
+      backgroundImage: {},
     },
   },
   plugins: [],
