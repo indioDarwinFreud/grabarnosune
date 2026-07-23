@@ -84,10 +84,10 @@ export const productsData: Product[] = [
     },
     {
         id: 3,
-        title: "Kit de Tintas de Sublimación AQ x4",
+        title: "Tintas de Sublimación",
         location: "Tintas - Alta Densidad",
-        description: "Set de 4 tintas CMYK (100ml c/u). Colores intensos, negros puros y fórmula fluida que cuida y protege tus cabezales.",
-        image: "/product/tintas_sublimacion.png",
+        description: "Colores intensos, negros puros y fórmula fluida que cuida y protege tus cabezales.",
+        image: "/product/TintaSublimar.jpeg",
         category: "Insumos",
         stock: 12,
         website: "/contact",
