@@ -57,13 +57,16 @@ function ProductsContent() {
         if (!matchesCategory) {
             const catLower = activeCategory.toLowerCase();
             if (catLower === "cerámica" || catLower === "ceramica") {
-                matchesCategory = product.category === "Sustratos" || fullText.includes("cerámica") || fullText.includes("ceramica") || fullText.includes("taza") || fullText.includes("orca");
+                matchesCategory = product.category === "Cerámica" || (
+                    !fullText.includes("polímero") && !fullText.includes("polimero") && 
+                    (fullText.includes("cerámica") || fullText.includes("ceramica") || fullText.includes("orca"))
+                );
             } else if (catLower === "madera") {
-                matchesCategory = fullText.includes("madera") || fullText.includes("mdf") || fullText.includes("cuadro");
+                matchesCategory = product.category === "Madera" || fullText.includes("madera") || fullText.includes("mdf") || fullText.includes("cuadro");
             } else if (catLower === "textil") {
-                matchesCategory = product.category === "Textiles" || fullText.includes("textil") || fullText.includes("remera") || fullText.includes("gorra") || fullText.includes("buzo") || fullText.includes("campera");
-            } else if (catLower === "polímero") {
-                matchesCategory = fullText.includes("polímero") || fullText.includes("polimero") || fullText.includes("mate");
+                matchesCategory = product.category === "Textiles" || product.category === "Textil" || fullText.includes("textil") || fullText.includes("remera") || fullText.includes("gorra") || fullText.includes("buzo") || fullText.includes("campera");
+            } else if (catLower === "polímero" || catLower === "polimero") {
+                matchesCategory = product.category === "Polímero" || fullText.includes("polímero") || fullText.includes("polimero") || fullText.includes("mate");
             } else if (catLower === "insumos para estampar") {
                 matchesCategory = product.category === "Insumos" || fullText.includes("tinta") || fullText.includes("aerosol") || fullText.includes("sublimación");
             } else if (catLower === "cartón") {
@@ -71,7 +74,7 @@ function ProductsContent() {
             } else if (catLower === "papeles especiales") {
                 matchesCategory = fullText.includes("papel") || fullText.includes("holofan") || fullText.includes("winky");
             } else if (catLower === "plástico") {
-                matchesCategory = fullText.includes("plástico") || fullText.includes("plastico") || fullText.includes("bazar") || fullText.includes("vaso") || fullText.includes("cubierto");
+                matchesCategory = product.category === "Plástico" || fullText.includes("plástico") || fullText.includes("plastico") || fullText.includes("bazar") || fullText.includes("vaso") || fullText.includes("cubierto");
             } else {
                 matchesCategory = product.category?.toLowerCase() === catLower;
             }
@@ -147,56 +150,58 @@ function ProductsContent() {
                 </div>
 
                 {/* Section: Guías de Talles y Medidas */}
-                <div className="mt-24 border-t border-gray-200/60 pt-16">
-                    <FadeIn>
-                        <div className="flex flex-col items-center mb-12">
-                            <h2 className="text-3xl md:text-5xl font-brizel text-center mb-4 text-gray-900 drop-shadow-sm uppercase tracking-wide">
-                                Guías de <span className="text-primary">Talles & Medidas</span>
-                            </h2>
-                            <p className="text-gray-600 text-sm md:text-base font-medium text-center max-w-md">
-                                Hacé clic en cualquiera de nuestras fichas de medidas y telas para verlas en alta definición.
-                            </p>
-                            <div className="w-16 h-1 bg-primary rounded-full mt-4"></div>
-                        </div>
-                    </FadeIn>
+                {(activeCategory === "Todas" || activeCategory === "Textil") && (
+                    <div className="mt-24 border-t border-gray-200/60 pt-16">
+                        <FadeIn>
+                            <div className="flex flex-col items-center mb-12">
+                                <h2 className="text-3xl md:text-5xl font-brizel text-center mb-4 text-gray-900 drop-shadow-sm uppercase tracking-wide">
+                                    Guías de <span className="text-primary">Talles & Medidas</span>
+                                </h2>
+                                <p className="text-gray-600 text-sm md:text-base font-medium text-center max-w-md">
+                                    Hacé clic en cualquiera de nuestras fichas de medidas y telas para verlas en alta definición.
+                                </p>
+                                <div className="w-16 h-1 bg-primary rounded-full mt-4"></div>
+                            </div>
+                        </FadeIn>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {infoGuides.map((guide, idx) => (
-                            <FadeIn key={guide.id} delay={idx * 0.05} direction="up" className="h-full">
-                                <div 
-                                    className="p-5 rounded-2xl border shadow-sm hover:shadow-[0_10px_25px_rgba(113,0,122,0.04)] transition-all duration-300 flex flex-col justify-between group cursor-pointer backdrop-blur-md"
-                                    style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-muted)' }}
-                                    onClick={() => setSelectedImage(guide.image)}
-                                >
-                                    <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden mb-4 bg-neutral-50/50 border border-gray-100 flex items-center justify-center p-2">
-                                        <div className="relative w-full h-full transform group-hover:scale-[1.02] transition-transform duration-500">
-                                            <Image
-                                                src={guide.image}
-                                                alt={guide.title}
-                                                fill
-                                                className="object-contain"
-                                                sizes="(max-width: 768px) 100vw, 33vw"
-                                            />
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {infoGuides.map((guide, idx) => (
+                                <FadeIn key={guide.id} delay={idx * 0.05} direction="up" className="h-full">
+                                    <div 
+                                        className="p-5 rounded-2xl border shadow-sm hover:shadow-[0_10px_25px_rgba(113,0,122,0.04)] transition-all duration-300 flex flex-col justify-between group cursor-pointer backdrop-blur-md"
+                                        style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-muted)' }}
+                                        onClick={() => setSelectedImage(guide.image)}
+                                    >
+                                        <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden mb-4 bg-neutral-50/50 border border-gray-100 flex items-center justify-center p-2">
+                                            <div className="relative w-full h-full transform group-hover:scale-[1.02] transition-transform duration-500">
+                                                <Image
+                                                    src={guide.image}
+                                                    alt={guide.title}
+                                                    fill
+                                                    className="object-contain"
+                                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                                />
+                                            </div>
                                         </div>
-                                        <span className="absolute top-2 left-2 bg-primary/10 text-primary text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider">
-                                            {guide.category}
-                                        </span>
+                                        <div>
+                                            <span className="inline-block bg-primary/10 text-primary text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider mb-2">
+                                                {guide.category}
+                                            </span>
+                                            <h3 className="font-bold text-base group-hover:text-primary transition-colors mb-1"
+                                                style={{ color: 'var(--card-title)' }}>
+                                                {guide.title}
+                                            </h3>
+                                            <p className="text-xs leading-relaxed font-sans font-medium"
+                                                style={{ color: 'var(--card-muted)' }}>
+                                                {guide.description}
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h3 className="font-bold text-base group-hover:text-primary transition-colors mb-1"
-                                            style={{ color: 'var(--card-title)' }}>
-                                            {guide.title}
-                                        </h3>
-                                        <p className="text-xs leading-relaxed font-sans font-medium"
-                                            style={{ color: 'var(--card-muted)' }}>
-                                            {guide.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            </FadeIn>
-                        ))}
+                                </FadeIn>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                )}
             </div>
 
             {/* Image Modal */}

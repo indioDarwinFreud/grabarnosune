@@ -301,3 +301,20 @@
   - **[DISEÑO SIMÉTRICO]**: Se ajustó la grilla a `lg:grid-cols-4` (4 columnas x 2 filas exactas en pantallas grandes/PC y 2 columnas x 4 filas en Tablet/Móvil), logrando un diseño 100% equilibrado y libre de tarjetas impares o huecos flotantes.
   - **[PRODUCTSCONTENT]**: Se actualizaron las categorías y filtros en `/products` para dar soporte nativo a "Cerámica" y "Madera".
 
+- **27/07/2026 - Corrección de Catálogo y Recategorización Cerámica vs Polímero:**
+  - **[MATERIALSGRID]**: Se actualizó la descripción del card de Cerámica a `"Tazas de cerámica nacional, importada triple AAA y tazas Orca."` y la insignia a `"Piezas & Tazas"`.
+  - **[CATÁLOGO DE POLÍMERO]**: Se cambiaron de categoría a `"Polímero"` la Taza de Polímero (Plástica) (`id: 16`), la Taza Mimo (`id: 17`), la Taza Mimo Asa Corazón (`id: 15`), el Mate de Polímero Sublimate (`id: 18`), el Vaso de Café Térmico (`id: 33`) y los cubiertos Cuchillo/Tenedor/Cuchara (`id: 20`, `id: 21`, `id: 22`).
+  - **[ACTUALIZACIÓN DE PRECIOS]**: Se actualizaron los precios de la Taza de Cerámica Perlada (`id: 31`) y Taza de Cerámica Glitter (`id: 30`) de $4.200 a **$4.690**. Campera Frisa Invisible (`id: 14`) actualizada a **$24.490**.
+  - **[FILTRADO DINÁMICO & VISIBILIDAD]**: Se refactorizó la lógica en `ProductsContent.tsx` para separar Cerámica y Polímero. Se condicionó la sección "Guías de Talles & Medidas" a mostrarse solo en "Todas" y "Textil". Se reubicaron las insignias de las guías fuera de la imagen.
+  - **[NUEVOS PRODUCTOS DE POLÍMERO]**: Se incorporaron 5 artículos nuevos al catálogo:
+    - Llavero Hueso de Polímero (`id: 41`, $390, `hueso.png`)
+    - Taza de Polímero Colección Pasteles (`id: 42`, $1.650, `coleccion pasteles.png`)
+    - Termo Sublimable (`id: 43`, $12.100, `termo sublimable.png`)
+    - Burbujero (`id: 44`, $1.490, `burbujeros.png`)
+    - Vaso Acrílico Glitter 350cc (`id: 45`, $1.490, `vaso acrilico glitter 300 cc.png`) con descripción real completa de colores y medidas.
+  - **[IMAGEN BUZO CANGURO]**: Asignada la imagen real `buzo canguro con capucha frisa invisible.png` al producto `id: 13`.
+
+
+
+
+

@@ -16,9 +16,9 @@ const materials: MaterialItem[] = [
     {
         id: 1,
         title: "Cerámica",
-        description: "Tazas de cerámica extra blanca Orca AAA, tazones y productos de vajilla con recubrimiento polimérico de alto brillo.",
+        description: "Tazas de cerámica nacional, importada triple AAA y tazas Orca.",
         image: "/Ceramica.jpeg",
-        badge: "Vajilla & Tazas",
+        badge: "Piezas & Tazas",
         href: "/products?category=Cer%C3%A1mica"
     },
     {
