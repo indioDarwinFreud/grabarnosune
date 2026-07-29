@@ -314,6 +314,24 @@
     - Vaso Acrílico Glitter 350cc (`id: 45`, $1.490, `vaso acrilico glitter 300 cc.png`) con descripción real completa de colores y medidas.
   - **[IMAGEN BUZO CANGURO]**: Asignada la imagen real `buzo canguro con capucha frisa invisible.png` al producto `id: 13`.
 
+- **27/07/2026 - Auditoría de Código y Refactor Técnico:**
+  - **[CRÍTICO - DATA.TSX]**: Se detectó que `data.tsx` (964 líneas) contiene **JSX de Lucide icons** dentro de los arrays `itemsNavbar` y `contactData`, rompiendo la separación de responsabilidades. Los datos no deben contener JSX renderizable. Se recomienda mover los iconos a los componentes de layout. Además, el archivo es monolítico y debería dividirse en `data/products.ts`, `data/navigation.ts`, `data/testimonials.ts`, `data/blog.ts`.
+  - **[CRÍTICO - FOOTER]**: En `components/layout/Footer.tsx:12-13`, se filtran datos por strings mágicos (`"Ubicación"`, `"Facebook"`, `"Instagram"`). Si se cambian esos títulos en `contactData`, el footer se rompe silenciosamente. Se recomienda usar IDs fijos o una propiedad `type` en los datos.
+  - **[CRÍTICO - COLORES HARDCODEADOS]**: El color `#71007A` aparece hardcodeado en al menos 6 archivos fuera de `config.ts` (HeroStatic, Testimonials, button.tsx, etc.), debilitando el sistema Config-Driven. Deben reemplazarse por `var(--primary-color)`.
+  - **[ALTO - ARCHIVOS CON ESPACIOS]**: `public/` contiene 3 archivos con espacios (`logo con nombre.png`, `textura para fondo.png`, `grabar nos une palabra repetida textura.png`). Deben renombrarse a `logo-con-nombre.png`, `textura-fondo.png`, `grabar-nos-une-textura.png` y actualizar rutas en `config.ts` y componentes.
+  - **[ALTO - SEO]**: En `app/layout.tsx` faltan `metadataBase`, `twitter:cards`, OpenGraph completo (`type`, `locale`, `siteName`). Sin `metadataBase` las URLs canónicas y OG images no tienen base absoluta.
+  - **[ALTO - EVENT HANDLERS INLINE]**: En `ProductCard.tsx:171-178` se usan `onMouseOver`/`onMouseOut` inline para hover. Deben reemplazarse por clases CSS `group-hover:`.
+  - **[ALTO - CÓDIGO MUERTO]**: `cardImage` en `config.ts` es un SVG data URI vacío sin efecto. `.glass-panel` en `globals.css` no se usa en ningún componente. `backgroundImage: {}` en `tailwind.config.ts` está vacío.
+  - **[MEDIO - SCROLL DETECTION DUPLICADO]**: `Header.tsx` y `HeroStatic.tsx` tienen la misma lógica de scroll detection. Extraer a `hooks/useScrollPosition.ts`.
+  - **[MEDIO - CATEGORÍAS INCONSISTENTES]**: `data.tsx` mezcla `"Polímero"` (con tilde) y `"Polimero"` (sin tilde) en diferentes productos. Normalizar a `"Polímero"`.
+  - **[MEDIO - SITE CONFIG SIN TIPO]**: No existe una interfaz `SiteConfig` en `types/index.ts`. El objeto central del sistema Config-Driven no tiene validación TypeScript.
+  - **[MEDIO - NAVBAR FRÁGIL]**: En `Navbar.tsx` se usa `itemsNavbar.slice(0, 2)` y `slice(2, 4)` para posicionar items. Si se agrega un item al medio del array, el layout se rompe. Usar mapeo completo con índice.
+  - **[MEDIO - FALTA SHARP]**: `package.json` no incluye `sharp` como dependencia. Next.js lo recomienda para optimización de imágenes en producción.
+  - **[MEDIO - VARIABLE NOMBRE INCORRECTO]**: En `Navbar.tsx:8`: `const router = usePathname()` debería ser `const pathname = usePathname()`. `router` sugiere el objeto `useRouter()`.
+  - **[BAJO - IDS DESORDENADOS]**: Los IDs de productos saltan de `id: 18` a `id: 20` (falta `id: 19`) y `id: 40` aparece después de `id: 37`. Reordenar secuencialmente.
+  - **[BAJO - MAGIC NUMBER EN BESTSELLERS]**: `BestSellers.tsx:21` usa `productsData.slice(0, 6)` con 6 hardcodeado. Mover a `config.ts` como `featuredCount`.
+  - **[BAJO - ACCESSIBILITY]**: SVG filters decorativos sin `aria-hidden="true"`. Selectores de variantes en `ProductCard` sin `aria-label`. Mejorar accesibilidad general.
+
 
 
 
