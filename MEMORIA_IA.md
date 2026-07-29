@@ -332,7 +332,6 @@
   - **[BAJO - MAGIC NUMBER EN BESTSELLERS]**: `BestSellers.tsx:21` usa `productsData.slice(0, 6)` con 6 hardcodeado. Mover a `config.ts` como `featuredCount`.
   - **[BAJO - ACCESSIBILITY]**: SVG filters decorativos sin `aria-hidden="true"`. Selectores de variantes en `ProductCard` sin `aria-label`. Mejorar accesibilidad general.
 
-
-
-
-
+- **29/07/2026 - Correcciones de Layout en Formulario de Contacto (Mobile & Desktop):**
+  - **[NUESTRAS REDES]**: Se rediseñó la sección de redes sociales en `ContactForm.tsx`, pasando de un layout `grid-cols-3` (que provocaba overflow del handle `@grabarnosuneinsumos` en pantallas chicas) a una lista vertical (`flex flex-col gap-3`) idéntica a "Contacto Directo". Se implementaron contenedores de íconos con `shrink-0` y texto con `min-w-0 flex-1 truncate` garantizando un diseño responsivo robusto y estéticamente superior.
+  - **[CONTACTO DIRECTO (EMAIL)]**: Se solucionó el recorte del correo electrónico en la vista móvil. Se reemplazó la clase `truncate` por `break-all` junto con tipografía adaptable (`text-xs sm:text-sm`). Esto permite que la dirección de email se ajuste a múltiples líneas si es necesario, mientras su ícono lateral mantiene el tamaño correcto gracias a la directiva `shrink-0`.
