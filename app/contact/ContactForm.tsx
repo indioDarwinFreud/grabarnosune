@@ -129,32 +129,32 @@ export default function ContactForm() {
 
                                 <div className="flex flex-col gap-4">
                                     <a href={`mailto:${siteConfig.contact.email}`} className="flex items-center gap-4 p-3 rounded-2xl hover:bg-primary/5 transition-colors group">
-                                        <div className="p-3 bg-primary/5 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                                        <div className="p-3 bg-primary/5 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
                                             <Mail size={18} />
                                         </div>
-                                        <div className="overflow-hidden">
+                                        <div className="min-w-0 flex-1">
                                             <span className="text-[10px] uppercase font-bold block" style={{ color: 'var(--card-muted)' }}>Email</span>
-                                            <span className="text-sm font-semibold truncate block" style={{ color: 'var(--card-title)' }}>{siteConfig.contact.email}</span>
+                                            <span className="text-xs sm:text-sm font-semibold block break-all" style={{ color: 'var(--card-title)' }}>{siteConfig.contact.email}</span>
                                         </div>
                                     </a>
 
                                     <a href={`https://wa.me/${siteConfig.contact.phone.replace("+", "")}`} target="_blank" rel="noreferrer" className="flex items-center gap-4 p-3 rounded-2xl hover:bg-primary/5 transition-colors group">
-                                        <div className="p-3 bg-primary/5 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                                        <div className="p-3 bg-primary/5 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
                                             <Phone size={18} />
                                         </div>
-                                        <div>
+                                        <div className="min-w-0 flex-1">
                                             <span className="text-[10px] uppercase font-bold block" style={{ color: 'var(--card-muted)' }}>Teléfono / WhatsApp</span>
-                                            <span className="text-sm font-semibold block" style={{ color: 'var(--card-title)' }}>{siteConfig.contact.phone}</span>
+                                            <span className="text-xs sm:text-sm font-semibold block" style={{ color: 'var(--card-title)' }}>{siteConfig.contact.phone}</span>
                                         </div>
                                     </a>
 
                                     <a href={siteConfig.contact.mapsLink} target="_blank" rel="noreferrer" className="flex items-center gap-4 p-3 rounded-2xl hover:bg-primary/5 transition-colors group">
-                                        <div className="p-3 bg-primary/5 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-colors">
+                                        <div className="p-3 bg-primary/5 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
                                             <MapPin size={18} />
                                         </div>
-                                        <div>
+                                        <div className="min-w-0 flex-1">
                                             <span className="text-[10px] uppercase font-bold block" style={{ color: 'var(--card-muted)' }}>Ubicación</span>
-                                            <span className="text-sm font-semibold block leading-tight" style={{ color: 'var(--card-title)' }}>{siteConfig.contact.location}</span>
+                                            <span className="text-xs sm:text-sm font-semibold block leading-tight" style={{ color: 'var(--card-title)' }}>{siteConfig.contact.location}</span>
                                         </div>
                                     </a>
                                 </div>
@@ -170,31 +170,37 @@ export default function ContactForm() {
                                     Nuestras Redes
                                 </h3>
 
-                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                                    <a href={siteConfig.socials.instagramInsumos} target="_blank" rel="noreferrer" className="flex items-center gap-3 p-3 rounded-2xl border transition-all group"
+                                <div className="flex flex-col gap-3">
+                                    <a href={siteConfig.socials.instagramInsumos} target="_blank" rel="noreferrer" className="flex items-center gap-4 p-3 rounded-2xl border hover:bg-primary/5 transition-all group"
                                         style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-muted)' }}>
-                                        <Instagram size={18} className="text-primary group-hover:scale-110 transition-transform" />
-                                        <div>
-                                            <span className="text-[10px] font-bold block" style={{ color: 'var(--card-muted)' }}>Instagram Insumos</span>
-                                            <span className="text-xs font-semibold" style={{ color: 'var(--card-title)' }}>{siteConfig.socials.instagramInsumosHandle}</span>
+                                        <div className="p-3 bg-primary/5 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
+                                            <Instagram size={18} />
+                                        </div>
+                                        <div className="min-w-0 flex-1">
+                                            <span className="text-[10px] uppercase font-bold block" style={{ color: 'var(--card-muted)' }}>Instagram Insumos</span>
+                                            <span className="text-sm font-semibold block truncate" style={{ color: 'var(--card-title)' }}>{siteConfig.socials.instagramInsumosHandle}</span>
                                         </div>
                                     </a>
 
-                                    <a href={siteConfig.socials.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-3 p-3 rounded-2xl border transition-all group"
+                                    <a href={siteConfig.socials.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-4 p-3 rounded-2xl border hover:bg-primary/5 transition-all group"
                                         style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-muted)' }}>
-                                        <Instagram size={18} className="text-primary group-hover:scale-110 transition-transform" />
-                                        <div>
-                                            <span className="text-[10px] font-bold block" style={{ color: 'var(--card-muted)' }}>Instagram General</span>
-                                            <span className="text-xs font-semibold" style={{ color: 'var(--card-title)' }}>{siteConfig.socials.instagramHandle}</span>
+                                        <div className="p-3 bg-primary/5 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
+                                            <Instagram size={18} />
+                                        </div>
+                                        <div className="min-w-0 flex-1">
+                                            <span className="text-[10px] uppercase font-bold block" style={{ color: 'var(--card-muted)' }}>Instagram General</span>
+                                            <span className="text-sm font-semibold block truncate" style={{ color: 'var(--card-title)' }}>{siteConfig.socials.instagramHandle}</span>
                                         </div>
                                     </a>
 
-                                    <a href={siteConfig.socials.facebook} target="_blank" rel="noreferrer" className="flex items-center gap-3 p-3 rounded-2xl border transition-all group"
+                                    <a href={siteConfig.socials.facebook} target="_blank" rel="noreferrer" className="flex items-center gap-4 p-3 rounded-2xl border hover:bg-primary/5 transition-all group"
                                         style={{ backgroundColor: 'var(--card-bg)', borderColor: 'var(--card-muted)' }}>
-                                        <Facebook size={18} className="text-primary group-hover:scale-110 transition-transform" />
-                                        <div>
-                                            <span className="text-[10px] font-bold block" style={{ color: 'var(--card-muted)' }}>Facebook</span>
-                                            <span className="text-xs font-semibold" style={{ color: 'var(--card-title)' }}>{siteConfig.socials.facebookHandle}</span>
+                                        <div className="p-3 bg-primary/5 text-primary rounded-xl group-hover:bg-primary group-hover:text-white transition-colors shrink-0">
+                                            <Facebook size={18} />
+                                        </div>
+                                        <div className="min-w-0 flex-1">
+                                            <span className="text-[10px] uppercase font-bold block" style={{ color: 'var(--card-muted)' }}>Facebook</span>
+                                            <span className="text-sm font-semibold block truncate" style={{ color: 'var(--card-title)' }}>{siteConfig.socials.facebookHandle}</span>
                                         </div>
                                     </a>
                                 </div>
