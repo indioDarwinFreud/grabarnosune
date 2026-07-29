@@ -274,7 +274,7 @@ export const productsData: Product[] = [
         website: "/contact",
         price: 24490,
     },
-   
+
     {
         id: 16,
         title: "Taza de Polímero (Plástica)",
