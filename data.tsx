@@ -274,18 +274,7 @@ export const productsData: Product[] = [
         website: "/contact",
         price: 24490,
     },
-    {
-        id: 15,
-        title: "Taza Mimo con Asa Corazón (Polímero)",
-        location: "Polímero - Tazas Especiales",
-        description: "Taza plástica de polímero importada en color rosa con asa doble en forma de corazón. Estilo romántico y tierno, ideal para sublimar frases y diseños especiales. Recubrimiento de alto brillo.",
-        image: "/product/",
-        category: "Polímero",
-        stock: 20,
-        website: "/contact",
-        
-        guideSlug: "guia-sublimar-tazas-ceramica",
-    },
+   
     {
         id: 16,
         title: "Taza de Polímero (Plástica)",
