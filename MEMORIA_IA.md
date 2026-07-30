@@ -335,3 +335,11 @@
 - **29/07/2026 - Correcciones de Layout en Formulario de Contacto (Mobile & Desktop):**
   - **[NUESTRAS REDES]**: Se rediseñó la sección de redes sociales en `ContactForm.tsx`, pasando de un layout `grid-cols-3` (que provocaba overflow del handle `@grabarnosuneinsumos` en pantallas chicas) a una lista vertical (`flex flex-col gap-3`) idéntica a "Contacto Directo". Se implementaron contenedores de íconos con `shrink-0` y texto con `min-w-0 flex-1 truncate` garantizando un diseño responsivo robusto y estéticamente superior.
   - **[CONTACTO DIRECTO (EMAIL)]**: Se solucionó el recorte del correo electrónico en la vista móvil. Se reemplazó la clase `truncate` por `break-all` junto con tipografía adaptable (`text-xs sm:text-sm`). Esto permite que la dirección de email se ajuste a múltiples líneas si es necesario, mientras su ícono lateral mantiene el tamaño correcto gracias a la directiva `shrink-0`.
+
+- **30/07/2026 - Incorporación de Productos y Rediseño de ProductCard:**
+  - **[NUEVO PRODUCTO - VASO DE FIESTA]**: Se agregó el producto **Vaso de Fiesta** (`id: 46`, `VasoFiesta1.jpeg` portada, `VasoFiesta2.jpeg` vista 2).
+  - **[NUEVO PRODUCTO - LUNCHERA ORGANIZADOR]**: Se agregó al catálogo en `data.tsx` el producto **Lunchera Organizador Transparente** (`id: 47`, $2.490), usando `LUNCHERA1.png` como foto principal y `LUNCHERA2.png` como variante de vista.
+  - **[REDISEÑO CARDS]**: Se renovó por completo `ProductCard.tsx` con navegación por flechas (`ChevronLeft`/`ChevronRight`), indicador de puntos y botones de opciones sobrios tipo pastilla.
+
+
+

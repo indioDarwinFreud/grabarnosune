@@ -802,6 +802,52 @@ export const productsData: Product[] = [
             },
         ],
     },
+    {
+        id: 46,
+        title: "Vaso de Fiesta",
+        location: "Plástico - Eventos",
+        description: "Vaso de fiesta ideal para eventos, cumpleaños y souvenirs. Disponible en dos medidas: 750 ml a $1.800 y 500 ml a $1.400.",
+        image: "/product/VasoFiesta1.jpeg",
+        category: "Plástico",
+        stock: 50,
+        website: "/contact",
+        price: "$1.400 / $1.800",
+        variants: [
+            {
+                colorName: "Vista 1",
+                colorCode: "transparent",
+                image: "/product/VasoFiesta1.jpeg",
+            },
+            {
+                colorName: "Vista 2",
+                colorCode: "transparent",
+                image: "/product/VasoFiesta2.jpeg",
+            },
+        ],
+    },
+    {
+        id: 47,
+        title: "Lunchera Organizador Transparente",
+        location: "Plástico - Organizadores",
+        description: "Lunchera organizador transparente y más colores. Ideal para viandas, organización personal y souvenirs.",
+        image: "/product/LUNCHERA1.png",
+        category: "Plástico",
+        stock: 40,
+        website: "/contact",
+        price: 2490,
+        variants: [
+            {
+                colorName: "Vista 1",
+                colorCode: "transparent",
+                image: "/product/LUNCHERA1.png",
+            },
+            {
+                colorName: "Vista 2",
+                colorCode: "transparent",
+                image: "/product/LUNCHERA2.png",
+            },
+        ],
+    },
 ];
 
 export const testimonialsData: Testimonial[] = [

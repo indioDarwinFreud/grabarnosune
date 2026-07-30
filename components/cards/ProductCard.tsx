@@ -5,9 +5,9 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { MessageCircle, Ruler, BookOpen } from "lucide-react";
+import { MessageCircle, Ruler, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import { siteConfig } from "@/config";
-import type { Product, ProductVariant } from "@/types";
+import type { Product } from "@/types";
 
 interface ProductCardProps {
     product: Product;
@@ -16,10 +16,31 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, onImageClick, onGuideClick }: ProductCardProps) {
-    const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(null);
+    const [selectedVariantIndex, setSelectedVariantIndex] = useState<number | null>(null);
 
-    // Propiedades dinámicas basadas en la variante seleccionada
-    const displayImage = selectedVariant ? selectedVariant.image : product.image;
+    // Construir galería de imágenes (Imagen principal + Imágenes de variantes sin duplicados)
+    const galleryImages = [
+        product.image,
+        ...(product.variants?.map((v) => v.image).filter((img) => img !== product.image) || []),
+    ];
+
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const handlePrevImage = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        setCurrentImageIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1));
+        setSelectedVariantIndex(null);
+    };
+
+    const handleNextImage = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        setCurrentImageIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
+        setSelectedVariantIndex(null);
+    };
+
+    const selectedVariant = selectedVariantIndex !== null && product.variants ? product.variants[selectedVariantIndex] : null;
+
+    const displayImage = selectedVariant ? selectedVariant.image : galleryImages[currentImageIndex];
     const displayTitle = selectedVariant ? `${product.title} (${selectedVariant.colorName})` : product.title;
     const displayPrice = selectedVariant && selectedVariant.price !== undefined && selectedVariant.price !== null ? selectedVariant.price : product.price;
 
@@ -40,7 +61,7 @@ export default function ProductCard({ product, onImageClick, onGuideClick }: Pro
                 backgroundBlendMode: 'overlay'
             }}
         >
-            {/* Contenedor de Imagen */}
+            {/* Contenedor de Imagen con Flechas de Navegación */}
             <div
                 className="h-64 relative overflow-hidden bg-neutral-200 group/img"
                 onClick={() => onImageClick?.(displayImage)}
@@ -52,19 +73,55 @@ export default function ProductCard({ product, onImageClick, onGuideClick }: Pro
                     src={displayImage}
                     alt={displayTitle}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-95 group-hover:opacity-100"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
 
-                {/* Overlay de Zoom (solo visible si hay onImageClick) */}
+                {/* Flechas de navegación (si hay más de 1 imagen) */}
+                {galleryImages.length > 1 && (
+                    <>
+                        <button
+                            onClick={handlePrevImage}
+                            className="absolute left-2 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur-md transition-all duration-200 shadow-md border border-white/20 hover:scale-110"
+                            title="Imagen anterior"
+                            type="button"
+                        >
+                            <ChevronLeft size={20} />
+                        </button>
+                        <button
+                            onClick={handleNextImage}
+                            className="absolute right-2 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-black/40 hover:bg-black/70 text-white backdrop-blur-md transition-all duration-200 shadow-md border border-white/20 hover:scale-110"
+                            title="Siguiente imagen"
+                            type="button"
+                        >
+                            <ChevronRight size={20} />
+                        </button>
+
+                        {/* Indicador de fotos (Puntos/Dots) */}
+                        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">
+                            {galleryImages.map((_, idx) => (
+                                <span
+                                    key={idx}
+                                    className={`block rounded-full transition-all duration-300 ${
+                                        (selectedVariantIndex === null && currentImageIndex === idx) ||
+                                        (selectedVariantIndex !== null && product.variants?.[selectedVariantIndex]?.image === galleryImages[idx])
+                                            ? "w-4 h-1.5 bg-white"
+                                            : "w-1.5 h-1.5 bg-white/50"
+                                    }`}
+                                />
+                            ))}
+                        </div>
+                    </>
+                )}
+
+                {/* Overlay de Zoom (solo visible si hay onImageClick y en hover sobre la foto) */}
                 {onImageClick && (
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
-                        <div className="flex items-center gap-2 text-white font-bold text-sm bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
-                            <Ruler size={16} /> Ver Detalle
+                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20 pointer-events-none">
+                        <div className="flex items-center gap-2 text-white font-bold text-xs bg-black/40 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 shadow-lg">
+                            <Ruler size={14} /> Ampliar Imagen
                         </div>
                     </div>
                 )}
-
             </div>
 
             {/* Contenido */}
@@ -99,61 +156,73 @@ export default function ProductCard({ product, onImageClick, onGuideClick }: Pro
                 </div>
 
                 <p
-                    className="text-sm mb-6 mt-2 flex-grow leading-relaxed font-medium"
+                    className="text-sm mb-5 mt-2 flex-grow leading-relaxed font-medium"
                     style={{ color: siteConfig.theme.textColors.cardBody }}
                 >
                     {product.description}
                 </p>
 
-                {/* Variaciones de color */}
+                {/* Selección de Variantes elegante / limpia */}
                 {product.variants && product.variants.length > 0 && (
-                    <div className="mb-6" onClick={(e) => e.stopPropagation()}>
+                    <div className="mb-5 pt-3 border-t border-gray-100/80" onClick={(e) => e.stopPropagation()}>
                         <span
-                            className="text-xs font-bold uppercase tracking-wider block mb-2"
+                            className="text-xs font-bold uppercase tracking-wider block mb-2.5"
                             style={{ color: siteConfig.theme.textColors.cardMuted }}
                         >
-                            Opción: <span className="font-black" style={{ color: siteConfig.theme.primaryColor }}>{selectedVariant ? selectedVariant.colorName : "Principal"}</span>
+                            Opción / Variante:
                         </span>
-                        <div className="flex flex-wrap gap-2.5">
-                            {/* Opción por defecto (Todos) */}
+                        <div className="flex flex-wrap gap-2">
+                            {/* Botón Principal (Todas/Ver todo) */}
                             <button
-                                onClick={() => setSelectedVariant(null)}
-                                className={`w-7 h-7 rounded-full transition-all duration-300 relative ${
-                                    selectedVariant === null
-                                        ? "ring-2 ring-primary ring-offset-2 scale-110"
-                                        : "hover:scale-105 opacity-80 hover:opacity-100"
-                                }`}
-                                style={{
-                                    background: "conic-gradient(from 0deg, #ef4444, #eab308, #22c55e, #3b82f6, #a855f7, #ef4444)",
-                                    outline: "none"
+                                onClick={() => {
+                                    setSelectedVariantIndex(null);
+                                    setCurrentImageIndex(0);
                                 }}
-                                title="Ver todos los colores"
+                                className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all duration-200 border ${
+                                    selectedVariantIndex === null
+                                        ? "bg-primary text-white border-primary shadow-sm"
+                                        : "bg-gray-100 text-gray-700 border-gray-200 hover:bg-gray-200"
+                                }`}
                                 type="button"
-                            />
+                            >
+                                Principal
+                            </button>
 
-                            {/* Variantes individuales */}
-                            {product.variants.map((variant, idx) => (
-                                <button
-                                    key={idx}
-                                    onClick={() => setSelectedVariant(variant)}
-                                    className={`w-7 h-7 rounded-full transition-all duration-300 border border-gray-300/50 relative ${
-                                        selectedVariant === variant
-                                            ? "ring-2 ring-primary ring-offset-2 scale-110"
-                                            : "hover:scale-105 opacity-80 hover:opacity-100"
-                                    }`}
-                                    style={{
-                                        background: variant.colorCode,
-                                        outline: "none"
-                                    }}
-                                    title={variant.colorName}
-                                    type="button"
-                                />
-                            ))}
+                            {/* Opciones por variantes */}
+                            {product.variants.map((variant, idx) => {
+                                const isSelected = selectedVariantIndex === idx;
+                                const isColorCode = variant.colorCode?.startsWith('#');
+
+                                return (
+                                    <button
+                                        key={idx}
+                                        onClick={() => {
+                                            setSelectedVariantIndex(idx);
+                                            const imgIdx = galleryImages.indexOf(variant.image);
+                                            if (imgIdx !== -1) setCurrentImageIndex(imgIdx);
+                                        }}
+                                        className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-all duration-200 flex items-center gap-2 border ${
+                                            isSelected
+                                                ? "bg-primary text-white border-primary shadow-sm"
+                                                : "bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100"
+                                        }`}
+                                        type="button"
+                                    >
+                                        {isColorCode && (
+                                            <span
+                                                className="w-3 h-3 rounded-full border border-black/20 shrink-0"
+                                                style={{ backgroundColor: variant.colorCode }}
+                                            />
+                                        )}
+                                        <span>{variant.colorName}</span>
+                                    </button>
+                                );
+                            })}
                         </div>
                     </div>
                 )}
 
-                {/* Footer de Tarjeta / Botón */}
+                {/* Footer de Tarjeta / Botón WhatsApp */}
                 <div className="mt-auto pt-4 border-t border-gray-100 space-y-2">
                     <Link
                         href={whatsappUrl}
@@ -170,7 +239,7 @@ export default function ProductCard({ product, onImageClick, onGuideClick }: Pro
                             }}
                             onMouseOver={(e) => {
                                 e.currentTarget.style.background = siteConfig.theme.primaryColor;
-                                e.currentTarget.style.color = '#ffffff'; // Blanco para contraste sobre el primario oscuro
+                                e.currentTarget.style.color = '#ffffff';
                             }}
                             onMouseOut={(e) => {
                                 e.currentTarget.style.background = siteConfig.theme.backgroundMain;
