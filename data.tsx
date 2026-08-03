@@ -496,7 +496,7 @@ export const productsData: Product[] = [
         category: "Regalos",
         stock: 40,
         website: "/contact",
-        price: 1190,
+        price: 1390,
         variants: [
             {
                 colorName: "Sin Personalizar",
@@ -601,6 +601,17 @@ export const productsData: Product[] = [
                 image: "/product/TazaPerladaColoresDisponibles.png",
             }
         ]
+    },
+    {
+        id: 48,
+        title: "Taza Mágica de Cerámica",
+        location: "Cerámica - Tazas Especiales",
+        description: "Taza mágica de cerámica que revela tu diseño al agregar una bebida caliente. Ideal para regalos personalizados y sorpresas únicas. Apta para sublimación de alta calidad.",
+        image: "/product/TazaMagicaCeramica.jpeg",
+        category: "Cerámica",
+        stock: 20,
+        website: "/contact",
+        price: 5100,
     },
     {
         id: 32,

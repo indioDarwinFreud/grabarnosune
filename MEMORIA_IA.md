@@ -340,6 +340,8 @@
   - **[NUEVO PRODUCTO - VASO DE FIESTA]**: Se agregó el producto **Vaso de Fiesta** (`id: 46`, `VasoFiesta1.jpeg` portada, `VasoFiesta2.jpeg` vista 2).
   - **[NUEVO PRODUCTO - LUNCHERA ORGANIZADOR]**: Se agregó al catálogo en `data.tsx` el producto **Lunchera Organizador Transparente** (`id: 47`, $2.490), usando `LUNCHERA1.png` como foto principal y `LUNCHERA2.png` como variante de vista.
   - **[REDISEÑO CARDS]**: Se renovó por completo `ProductCard.tsx` con navegación por flechas (`ChevronLeft`/`ChevronRight`), indicador de puntos y botones de opciones sobrios tipo pastilla.
-
+- **03/08/2026 - Nuevo Producto: Taza Mágica de Cerámica:**
+  - **[NUEVO PRODUCTO]**: Se agregó **Taza Mágica de Cerámica** (`id: 48`, $5.100) al catálogo en `data.tsx`. Imagen real: `/product/TazaMagicaCeramica.jpeg`. Categoría: `Cerámica`. Stock: 20. Ubicada junto a las demás tazas de cerámica (Taza Glitter id:30 y Taza Perlada id:31).
+  - **[CORRECCIÓN PRECIO]**: Se actualizó el precio del **Vaso Cristal con Glitter 450ml** (`id: 25`) de $1.190 a $1.390 como precio base del producto.
 
 
