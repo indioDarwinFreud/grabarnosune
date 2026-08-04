@@ -577,7 +577,7 @@ export const productsData: Product[] = [
         category: "Cerámica",
         stock: 15,
         website: "/contact",
-        price: 4690,
+        price: 5100,
     },
     {
         id: 31,
@@ -588,7 +588,7 @@ export const productsData: Product[] = [
         category: "Cerámica",
         stock: 20,
         website: "/contact",
-        price: 4690,
+        price: 5100,
         variants: [
             {
                 colorName: "Perla Rosa",
