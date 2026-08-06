@@ -344,4 +344,14 @@
   - **[NUEVO PRODUCTO]**: Se agregó **Taza Mágica de Cerámica** (`id: 48`, $5.100) al catálogo en `data.tsx`. Imagen real: `/product/TazaMagicaCeramica.jpeg`. Categoría: `Cerámica`. Stock: 20. Ubicada junto a las demás tazas de cerámica (Taza Glitter id:30 y Taza Perlada id:31).
   - **[CORRECCIÓN PRECIO]**: Se actualizó el precio del **Vaso Cristal con Glitter 450ml** (`id: 25`) de $1.190 a $1.390 como precio base del producto.
 
+- **05/08/2026 - Incorporación de Medias Sublimables y Auditoría de Categorías:**
+  - **[NUEVO PRODUCTO]**: Se incorporó **Medias Sublimables** (`id: 49`, $3.500) como una única tarjeta de producto en `data.tsx` con tres variantes de muestra de diseños sublimados: `Selección / Messi` (`MediasArgMessi.jpeg`), `Blanco y Negro` (`MediasBlancoNegro.jpeg`) y `Homero Simpson` (`MediasHomero.jpeg`). Las fotos son ejemplos de diseños sublimables, no colores de producto.
+  - **[CORRECCIÓN DE CATEGORÍAS]**: Se auditaron y corrigieron las categorías de todos los productos de bazar y souvenirs. Los siguientes productos estaban con `category: "Regalos"` y se migraron a `category: "Plástico"` para aparecer correctamente en el filtro de Plásticos:
+    - **Vaso Cristal con Glitter 450ml** (`id: 25`)
+    - **Vaso Argentina Tapa Pelota** (`id: 26`)
+    - **Vaso Milkshake 380cc** (`id: 27`)
+    - **Vaso Milkshake 330cc** (`id: 28`)
+    - **Valijita Plástica Mediana Souvenir** (`id: 29`)
+    - **Botellita Souvenir con Sorbete** (`id: 32`)
+  - **[FILTRADO ESTRICTO]**: Se refactorizó la lógica de `ProductsContent.tsx` para que los filtros de categoría realicen coincidencias **estrictas** por `product.category` (en lugar de búsquedas por fullText). Esto evita la filtración cruzada de productos entre categorías no relacionadas.
 

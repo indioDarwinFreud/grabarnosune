@@ -57,24 +57,21 @@ function ProductsContent() {
         if (!matchesCategory) {
             const catLower = activeCategory.toLowerCase();
             if (catLower === "cerámica" || catLower === "ceramica") {
-                matchesCategory = product.category === "Cerámica" || (
-                    !fullText.includes("polímero") && !fullText.includes("polimero") && 
-                    (fullText.includes("cerámica") || fullText.includes("ceramica") || fullText.includes("orca"))
-                );
+                matchesCategory = product.category === "Cerámica" || product.category === "Ceramica";
             } else if (catLower === "madera") {
-                matchesCategory = product.category === "Madera" || fullText.includes("madera") || fullText.includes("mdf") || fullText.includes("cuadro");
+                matchesCategory = product.category === "Madera";
             } else if (catLower === "textil") {
-                matchesCategory = product.category === "Textiles" || product.category === "Textil" || fullText.includes("textil") || fullText.includes("remera") || fullText.includes("gorra") || fullText.includes("buzo") || fullText.includes("campera");
+                matchesCategory = product.category === "Textiles" || product.category === "Textil";
             } else if (catLower === "polímero" || catLower === "polimero") {
-                matchesCategory = product.category === "Polímero" || fullText.includes("polímero") || fullText.includes("polimero") || fullText.includes("mate");
+                matchesCategory = product.category === "Polímero" || product.category === "Polimero";
             } else if (catLower === "insumos para estampar") {
-                matchesCategory = product.category === "Insumos" || fullText.includes("tinta") || fullText.includes("aerosol") || fullText.includes("sublimación");
-            } else if (catLower === "cartón") {
-                matchesCategory = fullText.includes("cartón") || fullText.includes("carton") || fullText.includes("caja");
+                matchesCategory = product.category === "Insumos";
+            } else if (catLower === "cartón" || catLower === "carton") {
+                matchesCategory = product.category === "Cartón" || product.category === "Carton" || fullText.includes("rompecabezas") || fullText.includes("caja");
             } else if (catLower === "papeles especiales") {
-                matchesCategory = fullText.includes("papel") || fullText.includes("holofan") || fullText.includes("winky");
-            } else if (catLower === "plástico") {
-                matchesCategory = product.category === "Plástico" || fullText.includes("plástico") || fullText.includes("plastico") || fullText.includes("bazar") || fullText.includes("vaso") || fullText.includes("cubierto");
+                matchesCategory = product.category === "Papeles especiales" || fullText.includes("papel") || fullText.includes("holofan") || fullText.includes("winky");
+            } else if (catLower === "plástico" || catLower === "plastico") {
+                matchesCategory = product.category === "Plástico" || product.category === "Plastico";
             } else {
                 matchesCategory = product.category?.toLowerCase() === catLower;
             }

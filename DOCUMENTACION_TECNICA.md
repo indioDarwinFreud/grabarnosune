@@ -1,7 +1,8 @@
 # Documentación Técnica — Grabar Nos Une
 
-**Fecha de Última Actualización:** 29/07/2026
-**Versión del Proyecto:** 3.0 (Rebranding Grabar Nos Une)
+**Fecha de Última Actualización:** 05/08/2026
+**Versión del Proyecto:** 3.1 (Rebranding Grabar Nos Une)
+
 
 ---
 
@@ -60,7 +61,7 @@ Este documento detalla la arquitectura técnica, estructura de carpetas y propó
 │   ├── textura para fondo.png    # Textura de rodillo (fondo del tema activo)
 │   ├── grabar nos une palabra repetida textura.png  # Textura para tarjetas (Hero)
 │   ├── fonts/Brizel.ttf          # Tipografía de marca artesanal
-│   ├── product/                  # 9 imágenes de productos (unificado)
+│   ├── product/                  # ~81 imágenes reales de productos (carpeta unificada)
 │   └── assets/
 │       ├── grabar_about.png
 │       ├── banner_papeles.png
@@ -243,6 +244,24 @@ El proyecto está configurado para desplegarse en **Vercel** o **Render** desde 
 
 ---
 
+## Catálogo de Productos — Categorías Activas
+
+El catálogo en `data.tsx` usa el campo `category` para el filtrado estricto por `product.category` en `ProductsContent.tsx`. Las categorías válidas son:
+
+| Categoría (`category`) | Descripción | Ejemplos de productos |
+|---|---|---|
+| `"Textiles"` | Prendas sublimables o estampables | Remeras, gorras, buzos, camperas, medias |
+| `"Polímero"` | Artículos plásticos con recubrimiento polimérico | Mates, tazas plásticas, jarros, termos |
+| `"Cerámica"` | Tazas de cerámica nacional e importada | Tazas Orca, Glitter, Perlada, Mágica |
+| `"Insumos"` | Consumibles para el proceso de sublimación | Papel Art-Jet, tintas, Holofan, Winky Paper |
+| `"Plástico"` | Artículos plásticos de bazar y souvenirs | Vasos, valijita, botellitas, luncheras |
+| `"Madera"` | Artículos de MDF y madera | *(sin productos activos aún)* |
+
+> **Regla de oro:** Si se agrega un producto nuevo, su campo `category` DEBE coincidir exactamente con uno de los valores de la tabla anterior (respetando mayúsculas, tildes y espacios). El filtrado es estricto.
+
+---
+
 ## Issues Conocidos
 
 - **Nombres de archivos con espacios**: Varios PNGs en `public/` tienen espacios en sus nombres (ej: `logo con nombre.png`). Funciona pero puede causar issues en algunos servidores web o herramientas de build.
+- **`metadataBase` no configurada**: El build de Next.js genera un warning por falta de `metadataBase` en `layout.tsx`. Las URLs de Open Graph se resuelven con `http://localhost:3000`. Pendiente configurar con la URL de producción real.
