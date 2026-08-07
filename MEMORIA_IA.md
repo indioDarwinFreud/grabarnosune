@@ -355,3 +355,7 @@
     - **Botellita Souvenir con Sorbete** (`id: 32`)
   - **[FILTRADO ESTRICTO]**: Se refactorizó la lógica de `ProductsContent.tsx` para que los filtros de categoría realicen coincidencias **estrictas** por `product.category` (en lugar de búsquedas por fullText). Esto evita la filtración cruzada de productos entre categorías no relacionadas.
 
+- **07/08/2026 - Corrección de Categoría Taza de Cerámica Nacional:**
+  - **[CORRECCIÓN CATEGORÍA]**: Se corrigió la categoría del producto **Taza de Cerámica Nacional** (`id: 2`) en [data.tsx](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/data.tsx) cambiando `category: "Sustratos"` por `category: "Cerámica"`. Con este cambio, la taza ahora aparece correctamente filtrada en la sección de Cerámicas del catálogo.
+
+
