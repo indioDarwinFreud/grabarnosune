@@ -60,7 +60,7 @@ export const productsData: Product[] = [
     },
     {
         id: 2,
-        title: "Taza de Cerámica Nacional/ Taza de Céramica AAA",
+        title: "Taza de Cerámica Nacional / Taza Orca AAA",
         location: "Cerámica - Tazas Clásicas",
         description: "Taza de cerámica extra blanca con el recubrimiento polimérico original. Brillo duradero y resistente al microondas.",
         image: "/product/taza_orca.png",
@@ -71,9 +71,16 @@ export const productsData: Product[] = [
         guideSlug: "guia-sublimar-tazas-ceramica",
         variants: [
             {
+                colorName: "Cerámica Nacional",
+                colorCode: "#e2e8f0",
+                image: "/product/taza_orca.png",
+                price: 3100,
+            },
+            {
                 colorName: "Taza Orca AAA",
                 colorCode: "#ffffff",
                 image: "/product/taza_orca.png",
+                price: 3900,
             },
             {
                 colorName: "Muestra de Grabado y Sublimación",
