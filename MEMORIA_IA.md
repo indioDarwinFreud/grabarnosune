@@ -358,3 +358,15 @@
 - **07/08/2026 - Corrección de Categoría y Precios por Variante para Tazas de Cerámica:**
   - **[CORRECCIÓN CATEGORÍA]**: Se corrigió la categoría del producto **Taza de Cerámica Nacional / Taza Orca AAA** (`id: 2`) en [data.tsx](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/data.tsx) cambiando `category: "Sustratos"` por `category: "Cerámica"`.
   - **[PRECIOS DINÁMICOS POR VARIANTE]**: Se configuraron las variantes del producto para que el precio cambie dinámicamente: la opción **Cerámica Nacional** muestra el precio base de **$3.100**, mientras que al seleccionar la variante **Taza Orca AAA** el precio cambia automáticamente a **$3.900** (y se actualiza el mensaje de WhatsApp).
+
+- **10/08/2026 - Placa "Liquidación Invierno -20%" para Prendas de Abrigo:**
+  - **[TYPES]**: Se agregó la propiedad opcional `badge?: string;` a la interfaz `Product` en `types/index.ts`.
+  - **[PRODUCTCARD]**: Se actualizó `ProductCard.tsx` para renderizar un distintivo/placa flotante (`Liquidación Invierno -20%`) con gradiente de marca púrpura, desenfoque de fondo y borde sutil en la esquina superior izquierda de la tarjeta de producto.
+  - **[PRODUCTOS]**: Se asignó la placa a los 4 productos de abrigo/invierno en `data.tsx`: **Buzo Cuello Redondo** (`id: 12`), **Buzo Canguro con Capucha** (`id: 13`), **Campera Frisa Invisible** (`id: 14`) y **Buzo Cuello Redondo Frisado Peinado Calidad Premium** (`id: 39`).
+
+- **10/08/2026 - Incorporación de nuevos productos y nueva categoría Acero / Aluminio:**
+  - **[NUEVO PRODUCTO - TAZA INTERIOR COLOR IMPORTADA]**: Se incorporó **Taza de Cerámica Interior Color Importada** (`id: 50`, $3.900, `/product/TazaInterirorColorImportada.jpeg`). Categoría: `Cerámica`.
+  - **[NUEVO PRODUCTO - BOTELLA TÉRMICA LECHERA]**: Se incorporó **Botella Térmica Lechera** (`id: 51`, $13.500, `/product/BotellaTermicaLechera.png`). Categoría: `Acero`.
+  - **[NUEVA CATEGORÍA - ACERO / ALUMINIO]**: Se creó la nueva tarjeta de categoría **Acero / Aluminio** (`id: 9`) en `MaterialsGrid.tsx` utilizando el icono vectorial enviado por la clienta (`/product/acero aluminio.png`).
+  - **[CORRECCIÓN ENLACE DE CATEGORÍA]**: Se solucionó el emparejamiento de la URL (`/products?category=Acero`) en `ProductsContent.tsx` para que reconozca la pastilla **"Acero / Aluminio"** como activa y filtre correctamente la Botella Térmica Lechera y el Termo Sublimable al hacer clic desde el inicio.
+

@@ -76,6 +76,14 @@ const materials: MaterialItem[] = [
         image: "/MADERA.png",
         badge: "MDF & Arte",
         href: "/products?category=Madera"
+    },
+    {
+        id: 9,
+        title: "Acero / Aluminio",
+        description: "Termos, botellas, jarras y artículos de acero inoxidable o aluminio sublimables. Alta durabilidad y acabado metálico premium.",
+        image: "/product/acero aluminio.png",
+        badge: "Premium Metálico",
+        href: "/products?category=Acero"
     }
 ];
 
@@ -94,7 +102,7 @@ export default function MaterialsGrid() {
                 </div>
             </FadeIn>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {materials.map((mat, index) => (
                     <FadeIn key={mat.id} delay={index * 0.05} direction="up" className="h-full">
                         <Link href={mat.href} className="h-full block group">

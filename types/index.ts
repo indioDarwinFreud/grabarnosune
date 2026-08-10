@@ -19,6 +19,7 @@ export interface Product {
     stock?: number | null;
     variants?: ProductVariant[];
     price?: number | string | null;
+    badge?: string;
     guideSlug?: string;
 }
 

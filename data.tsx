@@ -166,7 +166,7 @@ export const productsData: Product[] = [
         category: "Textiles",
         stock: null,
         website: "/contact",
-        price: 5400,
+        price: 6000,
         variants: [
             {
                 colorName: "Blanco",
@@ -258,6 +258,7 @@ export const productsData: Product[] = [
         stock: null,
         website: "/contact",
         price: 21000,
+        badge: "Liquidación Invierno -20%",
     },
     {
         id: 13,
@@ -269,6 +270,7 @@ export const productsData: Product[] = [
         stock: null,
         website: "/contact",
         price: 23000,
+        badge: "Liquidación Invierno -20%",
     },
     {
         id: 14,
@@ -280,6 +282,7 @@ export const productsData: Product[] = [
         stock: null,
         website: "/contact",
         price: 24490,
+        badge: "Liquidación Invierno -20%",
     },
 
     {
@@ -621,6 +624,17 @@ export const productsData: Product[] = [
         price: 5100,
     },
     {
+        id: 50,
+        title: "Taza de Cerámica Interior Color Importada",
+        location: "Cerámica - Tazas Importadas",
+        description: "Taza de cerámica importada con interior y asa de color de alta intensidad. Acabado brillante de superficie lisa extra blanca, apta para sublimación en alta definición y microondas.",
+        image: "/product/TazaInterirorColorImportada.jpeg",
+        category: "Cerámica",
+        stock: 30,
+        website: "/contact",
+        price: 3900,
+    },
+    {
         id: 32,
         title: "Botellita Souvenir con Sorbete",
         location: "Bazar - Infantil",
@@ -752,6 +766,7 @@ export const productsData: Product[] = [
         stock: null,
         website: "/contact",
         price: 21000,
+        badge: "Liquidación Invierno -20%",
     },
     {
         id: 41,
@@ -778,10 +793,10 @@ export const productsData: Product[] = [
     {
         id: 43,
         title: "Termo Sublimable",
-        location: "Polímero - Bazar",
-        description: "Termo de polímero de alta resistencia listo para sublimar. Conserva la temperatura de tus bebidas y es resistente a golpes.",
+        location: "Acero / Aluminio - Termos",
+        description: "Termo de acero inoxidable con recubrimiento sublimable de alta resistencia. Conserva la temperatura de tus bebidas por horas y es resistente a golpes. Ideal para regalos personalizados.",
         image: "/product/termo sublimable.png",
-        category: "Polímero",
+        category: "Acero",
         stock: 15,
         website: "/contact",
         price: 12100,
@@ -893,6 +908,17 @@ export const productsData: Product[] = [
                 image: "/product/MediasHomero.jpeg",
             },
         ],
+    },
+    {
+        id: 51,
+        title: "Botella Térmica Lechera",
+        location: "Acero / Aluminio - Botellas",
+        description: "Botella térmica en forma de botella de leche con recubrimiento sublimable. Mantiene temperatura por horas, acabado metálico premium. Ideal para regalos personalizados únicos.",
+        image: "/product/BotellaTermicaLechera.png",
+        category: "Acero",
+        stock: null,
+        website: "/contact",
+        price: 13500,
     },
 ];
 

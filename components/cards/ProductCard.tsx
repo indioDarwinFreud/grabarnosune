@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { MessageCircle, Ruler, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
+import { MessageCircle, Ruler, BookOpen, ChevronLeft, ChevronRight, Tag } from "lucide-react";
 import { siteConfig } from "@/config";
 import type { Product } from "@/types";
 
@@ -50,6 +50,10 @@ export default function ProductCard({ product, onImageClick, onGuideClick }: Pro
 
     const whatsappUrl = `https://wa.me/${siteConfig.contact.phone.replace("+", "")}?text=Hola, me interesa el producto: ${encodeURIComponent(displayTitle + displayPriceText)}`;
 
+    const isDiagram = displayImage.toLowerCase().includes('acero') || 
+                      displayImage.toLowerCase().includes('especificacion') || 
+                      displayImage.toLowerCase().includes('placa');
+
     return (
         <Card
             className="overflow-hidden border border-primary/10 hover:border-primary/30 transition-all duration-500 group shadow-sm hover:shadow-[0_20px_45px_rgba(113,0,122,0.08)] flex flex-col h-full hover:-translate-y-2 cursor-pointer relative backdrop-blur-md rounded-2xl"
@@ -63,17 +67,31 @@ export default function ProductCard({ product, onImageClick, onGuideClick }: Pro
         >
             {/* Contenedor de Imagen con Flechas de Navegación */}
             <div
-                className="h-64 relative overflow-hidden bg-neutral-200 group/img"
+                className={`h-64 relative overflow-hidden group/img ${isDiagram ? 'bg-white' : 'bg-neutral-200'}`}
                 onClick={() => onImageClick?.(displayImage)}
             >
                 {/* Sombra interna suave */}
                 <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.1)] z-10 pointer-events-none" />
 
+                {/* Placa / Badge de Liquidación / Oferta */}
+                {product.badge && (
+                    <div className="absolute top-3 left-3 z-30 pointer-events-none">
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-black text-white bg-white/10 bg-gradient-to-r from-[#71007A] via-purple-700 to-indigo-900 bg-clip-padding backdrop-blur-md border border-white/20 shadow-md uppercase tracking-wider">
+                             <Tag size={12} className="text-purple-200 shrink-0" />
+                             {product.badge}
+                         </span>
+                    </div>
+                )}
+
                 <Image
                     src={displayImage}
                     alt={displayTitle}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-95 group-hover:opacity-100"
+                    className={`transition-all duration-700 ${
+                        isDiagram 
+                            ? "object-contain p-3 group-hover:scale-[1.02]" 
+                            : "object-cover opacity-95 group-hover:opacity-100 group-hover:scale-105"
+                    }`}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
 

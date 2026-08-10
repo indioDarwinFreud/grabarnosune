@@ -20,7 +20,8 @@ const categories = [
     "Cartón",
     "Papeles especiales",
     "Plástico",
-    "Madera"
+    "Madera",
+    "Acero / Aluminio"
 ];
 
 function ProductsContent() {
@@ -35,7 +36,11 @@ function ProductsContent() {
 
     useEffect(() => {
         if (queryCategory) {
-            const matchedCat = categories.find(c => c.toLowerCase() === queryCategory.toLowerCase());
+            const qLower = queryCategory.toLowerCase();
+            const matchedCat = categories.find(c => {
+                const cLower = c.toLowerCase();
+                return cLower === qLower || (qLower === "acero" && cLower.includes("acero"));
+            });
             if (matchedCat) {
                 setActiveCategory(matchedCat);
             }
@@ -72,6 +77,8 @@ function ProductsContent() {
                 matchesCategory = product.category === "Papeles especiales" || fullText.includes("papel") || fullText.includes("holofan") || fullText.includes("winky");
             } else if (catLower === "plástico" || catLower === "plastico") {
                 matchesCategory = product.category === "Plástico" || product.category === "Plastico";
+            } else if (catLower.includes("acero")) {
+                matchesCategory = product.category === "Acero" || product.category === "Aluminio" || product.category === "Acero / Aluminio";
             } else {
                 matchesCategory = product.category?.toLowerCase() === catLower;
             }
