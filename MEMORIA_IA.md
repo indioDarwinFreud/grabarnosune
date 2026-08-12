@@ -370,3 +370,15 @@
   - **[NUEVA CATEGORÍA - ACERO / ALUMINIO]**: Se creó la nueva tarjeta de categoría **Acero / Aluminio** (`id: 9`) en `MaterialsGrid.tsx` utilizando el icono vectorial enviado por la clienta (`/product/acero aluminio.png`).
   - **[CORRECCIÓN ENLACE DE CATEGORÍA]**: Se solucionó el emparejamiento de la URL (`/products?category=Acero`) en `ProductsContent.tsx` para que reconozca la pastilla **"Acero / Aluminio"** como activa y filtre correctamente la Botella Térmica Lechera y el Termo Sublimable al hacer clic desde el inicio.
 
+- **11/08/2026 - Corrección de Precio y Recategorización de Productos Plásticos:**
+  - **[PRECIO - VASO ARGENTINA TAPA PELOTA]**: Se corrigió el precio del producto `id: 26` (**Vaso Argentina Tapa Pelota**) en `data.tsx` a **$1.090** según indicación de la clienta.
+  - **[RECATEGORIZACIÓN PLÁSTICO]**: La clienta reportó que había artículos de plástico/bazar ubicados erróneamente en la categoría `"Polímero"`. Se revisó y se reubicaron los siguientes 5 productos a la categoría `"Plástico"`:
+    - **Cuchillo Personalizable** (`id: 20`) — de `"Polímero"` → `"Plástico"`
+    - **Tenedor Personalizable** (`id: 21`) — de `"Polímero"` → `"Plástico"`
+    - **Cuchara Personalizable** (`id: 22`) — de `"Polímero"` → `"Plástico"`
+    - **Burbujero** (`id: 44`) — de `"Polímero"` → `"Plástico"`
+    - **Vaso Acrílico Glitter 350cc** (`id: 45`) — de `"Polímero"` → `"Plástico"`
+- **12/08/2026 - Nuevo Producto: Vaso Térmico de Silicona:**
+  - **[NUEVO PRODUCTO]**: Se incorporó **Vaso Térmico de Silicona** (`id: 52`, $5.090) al catálogo en `data.tsx`. Imagen real: `/product/VasoTernicoSilicona.jpeg`. Categoría: `Polímero`.
+
+

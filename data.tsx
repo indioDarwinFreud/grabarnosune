@@ -920,6 +920,17 @@ export const productsData: Product[] = [
         website: "/contact",
         price: 13500,
     },
+    {
+        id: 52,
+        title: "Vaso Térmico de Silicona",
+        location: "Polímero - Vasos Térmicos",
+        description: "Vaso térmico de polímero con tapa de silicona personalizable. Ideal para mantener tus bebidas frías o calientes.",
+        image: "/product/VasoTernicoSilicona.jpeg",
+        category: "Polímero",
+        stock: null,
+        website: "/contact",
+        price: 5090,
+    },
 ];
 
 export const testimonialsData: Testimonial[] = [
