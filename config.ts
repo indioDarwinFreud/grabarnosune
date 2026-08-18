@@ -59,8 +59,7 @@ export const siteConfig = {
     },
 
     businessHours: [
-        { day: "Lunes - Miércoles y Viernes", hours: "8:00 - 12:00 / 15:00 - 18:00" },
-        { day: "Martes y Jueves", hours: "08:00 - 13:00 / 15:00 - 18:00" },
+        { day: "Lunes a Viernes", hours: "10:00 - 14:00 / 15:00 - 18:00" },
         { day: "Sábados", hours: "09:30 - 13:00" },
     ]
 };
