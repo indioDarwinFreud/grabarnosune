@@ -393,4 +393,10 @@
     - **Vaso de Plástico 300cc con Tapa Plana y Sorbete** (`id: 57`, $1.100, `/product/VasoPlasticoTapaPlanaSorbete.jpeg`): disponible en colores pasteles.
     - **Vaso de Plástico con Pico Antiderrame 300cc** (`id: 58`, $1.100, `/product/VasoPlasticoPicoAntiaderente.jpeg`): colores pasteles y fuertes (8x13cm).
 
+- **26/08/2026 - Incorporación de Variantes de Colores para Remera de Algodón Peinado Adulto:**
+  - **[REMERAS ALGODÓN PEINADO ADULTO]**: Se actualizaron las opciones del producto `id: 6` (**Remera Manga Corta Adulto Algodón**, $8.400) en `data.tsx`:
+    - **Foto Principal**: `PeinadoTotoColores.jpeg` (muestra la gama completa de colores).
+    - **Variantes de Color**: Blanco (`RemeraBlanca.png`), Negro (`RemeraNegra.png`), Azul (`PeinadoAzul.jpeg`), Celeste (`PeinadoCeleste.jpeg`), Lila Claro (`PeinadoLilaClaro.jpeg`) y Lila Oscuro (`PeinadoLilaOscuro.jpeg`).
+  - **[INFANTILES]**: Las remeras de niños se mantuvieron sin cambios según la directiva.
+
 

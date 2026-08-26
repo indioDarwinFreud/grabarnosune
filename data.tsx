@@ -139,11 +139,11 @@ export const productsData: Product[] = [
         title: "Remera Manga Corta Adulto Algodón",
         location: "Textiles - Algodón Peinado",
         description: "Remera de algodón 100% peinado premium, de tacto extra suave. Ideal para vinilo textil, bordado o estampado directo.",
-        image: "/product/RemeraBlanca.png",
+        image: "/product/PeinadoTotoColores.jpeg",
         category: "Textiles",
         stock: null,
         website: "/contact",
-        price: 8200,
+        price: 8400,
         variants: [
             {
                 colorName: "Blanco",
@@ -154,6 +154,26 @@ export const productsData: Product[] = [
                 colorName: "Negro",
                 colorCode: "#000000",
                 image: "/product/RemeraNegra.png",
+            },
+            {
+                colorName: "Azul",
+                colorCode: "#1d4ed8",
+                image: "/product/PeinadoAzul.jpeg",
+            },
+            {
+                colorName: "Celeste",
+                colorCode: "#38bdf8",
+                image: "/product/PeinadoCeleste.jpeg",
+            },
+            {
+                colorName: "Lila Claro",
+                colorCode: "#c084fc",
+                image: "/product/PeinadoLilaClaro.jpeg",
+            },
+            {
+                colorName: "Lila Oscuro",
+                colorCode: "#7e22ce",
+                image: "/product/PeinadoLilaOscuro.jpeg",
             }
         ]
     },
