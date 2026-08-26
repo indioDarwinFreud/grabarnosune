@@ -1,6 +1,6 @@
 # Documentación Técnica — Grabar Nos Une
 
-**Fecha de Última Actualización:** 05/08/2026
+**Fecha de Última Actualización:** 25/08/2026
 **Versión del Proyecto:** 3.1 (Rebranding Grabar Nos Une)
 
 
@@ -251,10 +251,10 @@ El catálogo en `data.tsx` usa el campo `category` para el filtrado estricto por
 | Categoría (`category`) | Descripción | Ejemplos de productos |
 |---|---|---|
 | `"Textiles"` | Prendas sublimables o estampables | Remeras, gorras, buzos, camperas, medias |
-| `"Polímero"` | Artículos plásticos con recubrimiento polimérico | Mates, tazas plásticas, jarros, termos |
+| `"Polímero"` | Artículos plásticos con recubrimiento polimérico | Mates, tazas plásticas, jarros, termos, cubiertos |
 | `"Cerámica"` | Tazas de cerámica nacional e importada | Tazas Orca, Glitter, Perlada, Mágica |
 | `"Insumos"` | Consumibles para el proceso de sublimación | Papel Art-Jet, tintas, Holofan, Winky Paper |
-| `"Plástico"` | Artículos plásticos de bazar y souvenirs | Vasos, valijita, botellitas, luncheras |
+| `"Plástico"` | Artículos plásticos de bazar y souvenirs | Vasos, botellas, luncheras, kit de masas |
 | `"Madera"` | Artículos de MDF y madera | *(sin productos activos aún)* |
 
 > **Regla de oro:** Si se agrega un producto nuevo, su campo `category` DEBE coincidir exactamente con uno de los valores de la tabla anterior (respetando mayúsculas, tildes y espacios). El filtrado es estricto.
