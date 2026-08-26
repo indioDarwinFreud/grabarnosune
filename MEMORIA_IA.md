@@ -381,4 +381,16 @@
 - **12/08/2026 - Nuevo Producto: Vaso Térmico de Silicona:**
   - **[NUEVO PRODUCTO]**: Se incorporó **Vaso Térmico de Silicona** (`id: 52`, $5.090) al catálogo en `data.tsx`. Imagen real: `/product/VasoTernicoSilicona.jpeg`. Categoría: `Polímero`.
 
+- **25/08/2026 - Incorporación de Nuevos Productos de Plástico y Correcciones del Catálogo:**
+  - **[RECATEGORIZACIÓN Y RENOMBRE CUBIERTOS A POLÍMERO]**: Según solicitud explícita de la clienta ("ESTO NO IRIA EN LA SECCION PLASTICO VA EN POLIMERO"), se migraron y renombraron a **Cuchillo de Polímero Personalizable** (`id: 20`), **Tenedor de Polímero Personalizable** (`id: 21`) y **Cuchara de Polímero Personalizable** (`id: 22`) con `category: "Polímero"` y descripciones coherentes con el material polimérico.
+  - **[ELIMINACIÓN DUPLICADO VASO GLITTER 450ML]**: Se eliminó el producto duplicado **Vaso Cristal con Glitter 450ml** (`id: 25`, $1.390) que generaba confusión de precios con el de 350cc.
+  - **[VARIANTE DE TAPAS VASO GLITTER 350CC]**: Se agregó la variante interactiva **"Colores de Tapa Disponibles"** al **Vaso Acrílico Glitter 350cc** (`id: 45`) vinculada a la imagen `/product/COLORES DE TAPA DISPONIBLES VASOS GLITTER.jpeg`.
+  - **[6 NUEVOS PRODUCTOS EN PLÁSTICO]**:
+    - **Kit de Juego para Masas** (`id: 53`, $1.590, `/product/Kit de juego para Masas.jpeg`): 3 accesorios surtidos + 6 cortantes 4.5cm + 1 palo de amasar 11cm.
+    - **Botella Plástica Caramañola 750cc** (`id: 54`, $1.549, `/product/Botella plástica caramañola.jpeg`): estilo deportiva en colores fuertes y pasteles.
+    - **Vaso con Tapa Rígida y Sorbete Color 473ml** (`id: 55`, $1.400, `/product/VasoTapaRigida.jpeg`): variantes Negro, Blanco y Natural traslúcido.
+    - **Vaso Glitter con Tapa Plana y Sorbete 330cc** (`id: 56`, $1.290, `/product/VasoGliter.jpeg`): sorbete descartable transparente incluido (8x13cm).
+    - **Vaso de Plástico 300cc con Tapa Plana y Sorbete** (`id: 57`, $1.100, `/product/VasoPlasticoTapaPlanaSorbete.jpeg`): disponible en colores pasteles.
+    - **Vaso de Plástico con Pico Antiderrame 300cc** (`id: 58`, $1.100, `/product/VasoPlasticoPicoAntiaderente.jpeg`): colores pasteles y fuertes (8x13cm).
+
 
