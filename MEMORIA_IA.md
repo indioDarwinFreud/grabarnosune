@@ -399,4 +399,18 @@
     - **Variantes de Color**: Blanco (`RemeraBlanca.png`), Negro (`RemeraNegra.png`), Azul (`PeinadoAzul.jpeg`), Celeste (`PeinadoCeleste.jpeg`), Lila Claro (`PeinadoLilaClaro.jpeg`) y Lila Oscuro (`PeinadoLilaOscuro.jpeg`).
   - **[INFANTILES]**: Las remeras de niños se mantuvieron sin cambios según la directiva.
 
+- **27/08/2026 - Actualización Integral de Remeras de Algodón Peinado y Modal de Ficha Técnica:**
+  - **[DESCRIPCIÓN Y DETALLES SEPARADOS]**: Se separó la información de los productos en un resumen conciso para las tarjetas del catálogo (`description`) y una ficha técnica exhaustiva (`details`) con características, toma de medidas e instrucciones de lavado.
+  - **[REEMPLAZO DE FOTOS Y VARIANTES DE COLOR]**: Se incorporaron las imágenes oficiales en alta resolución (`remera algodon peinado [color].png`):
+    - Blanco, Negro, Azul Francia, Lavanda (reemplazando Lila), Amarillo, Bordó, Chocolate, Naranja, Natural, Rojo, Rosado, Verde Benetton, Verde Inglés, Verde Militar.
+    - Se agregó como variante la **Tabla de Talles Adultos** (`/product/TABLA DE TALLES ADULTOS UNISEX.png`).
+  - **[MODAL DE PRODUCTO PREMIUM (2 COLUMNAS)]**: Se creó el componente `components/ui/ProductModal.tsx`:
+    - **Columna Izquierda:** Visor principal con selector de variantes, navegación por fotos y carrusel de miniaturas en alta definición.
+    - **Columna Derecha:** Título, categoría, precio destacado, selector interactivo de colores, ficha técnica completa estructurada y botón de pedido por WhatsApp dinámico.
+  - **[INTERACCIÓN EN TARJETAS]**: Al cliquear la imagen o el botón "Ver ficha técnica y cuidados completos" en `ProductCard.tsx`, se abre el modal sin sobrecargar la grilla principal del sitio.
+  - **[VARIANTE CELESTE]**: Se añadió la variante **Celeste** (`/product/PeinadoCeleste.jpeg`) al catálogo de remeras de algodón peinado (`id: 6`).
+  - **[PORTAL OVERLAY & COLOR DE BOTÓN]**: Se migró `ProductModal` y `GuideModal` a `createPortal(..., document.body)` con `z-[9999]` para garantizar que el modal y su fondo oscuro cubran completamente la pantalla y queden por encima del navbar inferior en dispositivos móviles. Se corrigió el estilo base de `button.tsx` eliminando el gradiente gris heredado y aplicando el color lila/púrpura de marca (`#71007A`) con texto blanco en el botón de WhatsApp del modal.
+
+
+
 

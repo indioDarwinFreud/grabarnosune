@@ -1,12 +1,18 @@
+"use client";
+
+import { useState } from "react";
 import FadeIn from "@/components/ui/FadeIn";
 import { productsData } from "@/data";
 import ProductCard from "@/components/cards/ProductCard";
+import ProductModal from "@/components/ui/ProductModal";
+import type { Product } from "@/types";
 
 export default function BestSellers() {
+    const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
     return (
         <section 
             className="mt-32 w-full max-w-7xl mx-auto px-4 pb-24"
-
         >
             <FadeIn>
                 <div className="flex flex-col items-center mb-16">
@@ -20,10 +26,20 @@ export default function BestSellers() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {productsData.slice(0, 6).map((product, index) => (
                     <FadeIn key={product.id} delay={index * 0.15} direction="up" className="h-full">
-                        <ProductCard product={product} />
+                        <ProductCard
+                            product={product}
+                            onProductClick={setSelectedProduct}
+                        />
                     </FadeIn>
                 ))}
             </div>
+
+            {selectedProduct && (
+                <ProductModal
+                    product={selectedProduct}
+                    onClose={() => setSelectedProduct(null)}
+                />
+            )}
         </section>
     );
 }

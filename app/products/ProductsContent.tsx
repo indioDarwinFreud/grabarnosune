@@ -9,7 +9,8 @@ import { useSearchParams } from "next/navigation";
 import FadeIn from "@/components/ui/FadeIn";
 import ProductCard from "@/components/cards/ProductCard";
 import GuideModal from "@/components/ui/GuideModal";
-import type { BlogPost } from "@/types";
+import ProductModal from "@/components/ui/ProductModal";
+import type { BlogPost, Product } from "@/types";
 
 const categories = [
     "Todas",
@@ -28,6 +29,7 @@ function ProductsContent() {
     const searchParams = useSearchParams();
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
     const [activeCategory, setActiveCategory] = useState<string>("Todas");
     const [activeGuide, setActiveGuide] = useState<BlogPost | null>(null);
 
@@ -147,6 +149,7 @@ function ProductsContent() {
                             <ProductCard
                                 product={product}
                                 onImageClick={setSelectedImage}
+                                onProductClick={setSelectedProduct}
                                 onGuideClick={handleGuideClick}
                             />
                         </FadeIn>
@@ -233,6 +236,14 @@ function ProductsContent() {
                 </div>
             )}
 
+            {/* Product Detail Modal (2 Columnas: Foto + Ficha Técnica) */}
+            {selectedProduct && (
+                <ProductModal
+                    product={selectedProduct}
+                    onClose={() => setSelectedProduct(null)}
+                />
+            )}
+
             {/* Guide Modal */}
             {activeGuide && (
                 <GuideModal
@@ -287,6 +298,13 @@ const infoGuides: InfoGuide[] = [
         description: "Especificaciones de peso y composición de nuestras telas de remera.",
         image: "/TipoRemeraParaSublimar.png",
         category: "Materiales"
+    },
+    {
+        id: 6,
+        title: "Tabla de Talles Adultos Unisex",
+        description: "Medidas exactas de ancho y largo de axila a axila para remeras de adulto.",
+        image: "/product/TABLA DE TALLES ADULTOS UNISEX.png",
+        category: "Talles"
     }
 ];
 

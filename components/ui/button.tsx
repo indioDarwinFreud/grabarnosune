@@ -9,7 +9,7 @@ export function Button({ variant = "primary", children, className = "", ...props
     const baseStyles = "px-6 py-2 rounded-full font-medium transition-all duration-300 flex items-center justify-center gap-2";
 
     const variants = {
-        primary: "bg-gradient-to-r from-neutral-200 to-neutral-400 text-black font-bold hover:scale-105 hover:shadow-[0_0_20px_rgba(192,192,192,0.4)]",
+        primary: "bg-primary text-white font-bold hover:opacity-95 hover:shadow-[0_4px_20px_rgba(113,0,122,0.3)]",
         secondary: "bg-neutral-800 text-white hover:bg-neutral-700",
         outline: "border border-primary text-primary hover:bg-primary/10",
         ghost: "bg-transparent text-primary hover:bg-primary/10",

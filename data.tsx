@@ -138,7 +138,32 @@ export const productsData: Product[] = [
         id: 6,
         title: "Remera Manga Corta Adulto Algodón",
         location: "Textiles - Algodón Peinado",
-        description: "Remera de algodón 100% peinado premium, de tacto extra suave. Ideal para vinilo textil, bordado o estampado directo.",
+        description: "Remera de algodón 100% peinado premium con limpieza de cuello. Ideal para serigrafía, vinilo textil, DTG, DTF e impresión digital.",
+        details: `Características:
+
+100% Algodón
+
+Con Limpieza De Cuello
+
+Superficie fácil de trabajar y fibra media.
+
+Mayor durabilidad y resistencia.
+
+Tacto rústico, fuerte y un brillo que destaca.
+
+Ideal para Serigrafía, Vinilo Textil, DTG, DTF e Impresión Digital.
+
+Las medidas corresponden A LA PRENDA, están tomadas de frente, de lado a lado. No corresponde al contorno. 
+
+Recuerde que todas las medidas pueden tener una variación de 2/3 centímetros debido a las máquinas de corte.
+
+El ancho se mide de axila a axila. Justo de la costura de debajo de una manga a la otra. El largo se toma desde el borde del cuello hasta el bajo de la camiseta, intentando mantener la regla/metro lo más recta posible.
+
+INSTRUCCIONES DE LAVADO:
+
+Lavar a 30° máximo | No usar Lavandina | No centrifugar | Plancha a temp. Máx. 150° | Secar colgado | Lavar con colores similares | Lavar del revés.
+
+Cuida tus prendas. Lávalas con agua fría o tibia utilizando el ciclo suave del lavarropas con un detergente para todo tipo de ropas. Utiliza un suavizante. Este paso es indispensable ya que acondiciona las fibras de las telas, suaviza al tacto y disminuye la estática. Además, alarga la vida útil de tus prendas.`,
         image: "/product/PeinadoTotoColores.jpeg",
         category: "Textiles",
         stock: null,
@@ -148,17 +173,17 @@ export const productsData: Product[] = [
             {
                 colorName: "Blanco",
                 colorCode: "#ffffff",
-                image: "/product/RemeraBlanca.png",
+                image: "/product/remera algodon peinado blanco.png",
             },
             {
                 colorName: "Negro",
                 colorCode: "#000000",
-                image: "/product/RemeraNegra.png",
+                image: "/product/remera algodon peinado negro.png",
             },
             {
-                colorName: "Azul",
-                colorCode: "#1d4ed8",
-                image: "/product/PeinadoAzul.jpeg",
+                colorName: "Azul Francia",
+                colorCode: "#0047ab",
+                image: "/product/remera algodon peinado azul francia.png",
             },
             {
                 colorName: "Celeste",
@@ -166,14 +191,64 @@ export const productsData: Product[] = [
                 image: "/product/PeinadoCeleste.jpeg",
             },
             {
-                colorName: "Lila Claro",
-                colorCode: "#c084fc",
-                image: "/product/PeinadoLilaClaro.jpeg",
+                colorName: "Lavanda",
+                colorCode: "#b57edc",
+                image: "/product/remera algodon peinado lavanda.png",
             },
             {
-                colorName: "Lila Oscuro",
-                colorCode: "#7e22ce",
-                image: "/product/PeinadoLilaOscuro.jpeg",
+                colorName: "Amarillo",
+                colorCode: "#facc15",
+                image: "/product/remera algodon peinado amarillo.png",
+            },
+            {
+                colorName: "Bordó",
+                colorCode: "#800020",
+                image: "/product/remera algodon peinado bordo.png",
+            },
+            {
+                colorName: "Chocolate",
+                colorCode: "#5c3a21",
+                image: "/product/remera algodon peinado chocolate.png",
+            },
+            {
+                colorName: "Naranja",
+                colorCode: "#f97316",
+                image: "/product/remera algodon peinado naranja.png",
+            },
+            {
+                colorName: "Natural",
+                colorCode: "#f5f5dc",
+                image: "/product/remera algodon peinado natural.png",
+            },
+            {
+                colorName: "Rojo",
+                colorCode: "#dc2626",
+                image: "/product/remera algodon peinado rojo.png",
+            },
+            {
+                colorName: "Rosado",
+                colorCode: "#f472b6",
+                image: "/product/remera algodon peinado rosado.png",
+            },
+            {
+                colorName: "Verde Benetton",
+                colorCode: "#008f39",
+                image: "/product/remera algodon peinado verde benetton.png",
+            },
+            {
+                colorName: "Verde Inglés",
+                colorCode: "#1e4620",
+                image: "/product/remera algodon peinado verde ingles.png",
+            },
+            {
+                colorName: "Verde Militar",
+                colorCode: "#4b5320",
+                image: "/product/remera algodon peinado verde militar.png",
+            },
+            {
+                colorName: "Tabla de Talles Adultos",
+                colorCode: "#71007A",
+                image: "/product/TABLA DE TALLES ADULTOS UNISEX.png",
             }
         ]
     },

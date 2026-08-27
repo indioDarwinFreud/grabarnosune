@@ -1,6 +1,7 @@
 "use client"
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { X, Check, HelpCircle, FileText } from "lucide-react";
 import { siteConfig } from "@/config";
@@ -12,7 +13,10 @@ interface GuideModalProps {
 }
 
 export default function GuideModal({ guide, onClose }: GuideModalProps) {
+    const [mounted, setMounted] = useState(false);
+
     useEffect(() => {
+        setMounted(true);
         const scrollY = window.scrollY;
         const body = document.body;
         const originalOverflow = body.style.overflow;
@@ -37,9 +41,11 @@ export default function GuideModal({ guide, onClose }: GuideModalProps) {
         };
     }, []);
 
-    return (
+    if (!mounted) return null;
+
+    return createPortal(
         <div
-            className="fixed inset-0 z-[60] flex items-center justify-center bg-black/75 backdrop-blur-md p-4 md:p-6 transition-all duration-300 animate-in fade-in"
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/75 backdrop-blur-md p-4 md:p-6 transition-all duration-300 animate-in fade-in"
             onClick={onClose}
         >
             <div
@@ -177,6 +183,7 @@ export default function GuideModal({ guide, onClose }: GuideModalProps) {
                     </a>
                 </div>
             </div>
-        </div>
+        </div>,
+        document.body
     );
 }

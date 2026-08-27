@@ -21,6 +21,7 @@ export interface Product {
     price?: number | string | null;
     badge?: string;
     guideSlug?: string;
+    details?: string;
 }
 
 export interface BlogPost {

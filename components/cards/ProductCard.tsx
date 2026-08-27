@@ -12,10 +12,11 @@ import type { Product } from "@/types";
 interface ProductCardProps {
     product: Product;
     onImageClick?: (image: string) => void;
+    onProductClick?: (product: Product) => void;
     onGuideClick?: (slug: string) => void;
 }
 
-export default function ProductCard({ product, onImageClick, onGuideClick }: ProductCardProps) {
+export default function ProductCard({ product, onImageClick, onProductClick, onGuideClick }: ProductCardProps) {
     const [selectedVariantIndex, setSelectedVariantIndex] = useState<number | null>(null);
 
     // Construir galería de imágenes (Imagen principal + Imágenes de variantes sin duplicados)
@@ -68,7 +69,7 @@ export default function ProductCard({ product, onImageClick, onGuideClick }: Pro
             {/* Contenedor de Imagen con Flechas de Navegación */}
             <div
                 className={`h-64 relative overflow-hidden group/img ${isDiagram ? 'bg-white' : 'bg-neutral-200'}`}
-                onClick={() => onImageClick?.(displayImage)}
+                onClick={() => onProductClick ? onProductClick(product) : onImageClick?.(displayImage)}
             >
                 {/* Sombra interna suave */}
                 <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.1)] z-10 pointer-events-none" />
@@ -132,11 +133,11 @@ export default function ProductCard({ product, onImageClick, onGuideClick }: Pro
                     </>
                 )}
 
-                {/* Overlay de Zoom (solo visible si hay onImageClick y en hover sobre la foto) */}
-                {onImageClick && (
+                {/* Overlay de Zoom */}
+                {(onProductClick || onImageClick) && (
                     <div className="absolute inset-0 bg-black/30 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20 pointer-events-none">
                         <div className="flex items-center gap-2 text-white font-bold text-xs bg-black/40 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 shadow-lg">
-                            <Ruler size={14} /> Ampliar Imagen
+                            <Ruler size={14} /> Ver Ficha y Medidas
                         </div>
                     </div>
                 )}
@@ -146,8 +147,9 @@ export default function ProductCard({ product, onImageClick, onGuideClick }: Pro
             <div className="p-6 flex flex-col flex-grow relative z-20">
                 <div className="mb-2">
                     <h3
-                        className="text-xl font-bold transition-colors"
+                        className="text-xl font-bold transition-colors cursor-pointer hover:text-primary"
                         style={{ color: siteConfig.theme.textColors.cardTitle }}
+                        onClick={() => onProductClick ? onProductClick(product) : onImageClick?.(displayImage)}
                     >
                         {product.title}
                     </h3>
@@ -174,11 +176,21 @@ export default function ProductCard({ product, onImageClick, onGuideClick }: Pro
                 </div>
 
                 <p
-                    className="text-sm mb-5 mt-2 flex-grow leading-relaxed font-medium"
+                    className="text-sm mb-2 mt-2 flex-grow leading-relaxed font-medium"
                     style={{ color: siteConfig.theme.textColors.cardBody }}
                 >
                     {product.description}
                 </p>
+
+                {product.details && (
+                    <button
+                        type="button"
+                        onClick={() => onProductClick ? onProductClick(product) : onImageClick?.(displayImage)}
+                        className="text-xs font-bold text-primary hover:underline flex items-center gap-1 mb-4 mt-1 text-left"
+                    >
+                        Ver ficha técnica y cuidados completos →
+                    </button>
+                )}
 
                 {/* Selección de Variantes elegante / limpia */}
                 {product.variants && product.variants.length > 0 && (

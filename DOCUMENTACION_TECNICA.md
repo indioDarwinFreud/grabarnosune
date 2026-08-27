@@ -1,6 +1,6 @@
 # Documentación Técnica — Grabar Nos Une
 
-**Fecha de Última Actualización:** 25/08/2026
+**Fecha de Última Actualización:** 26/08/2026
 **Versión del Proyecto:** 3.1 (Rebranding Grabar Nos Une)
 
 
@@ -106,12 +106,16 @@ Los valores se inyectan como CSS variables en `<body>` desde `layout.tsx` y se c
     <div class="fixed inset-0 -z-40" />
 
     <Header />       ← Logo superior flotante
-    <Navbar />       ← Barra inferior "Nucleus" flotante
-    {children}       ← Contenido de cada ruta
+    <Navbar />       ← Barra inferior "Nucleus" flotante (fixed z-50)
+    {children}       ← Contenido de cada ruta (usa animaciones Framer Motion)
     <Footer />       ← Pie premium con glassmorphism
   </body>
 </html>
 ```
+
+### Contextos de Apilamiento (Stacking Context) y Modales (Portals)
+Dado que `{children}` usa componentes `FadeIn` (framer-motion) que inyectan transformaciones CSS (`transform`, `opacity`), se crea un **contexto de apilamiento local**. Si un modal con `fixed z-[999]` se renderiza dentro de este árbol, el `<Navbar />` (hermano de `{children}` pero fuera de su contexto) podría solaparse si está fijo abajo. 
+Por eso, todos los modales (`ProductModal`, `GuideModal`) **DEBEN renderizarse usando `createPortal(..., document.body)`**. Esto ancla el modal directamente a la raíz del DOM, evitando recortes o solapamientos con el navbar y header.
 
 ### Data Flow
 
@@ -183,10 +187,12 @@ Página **WhatsApp-First**: el formulario redirige directamente a WhatsApp con e
 ### `components/ui/` (Atómicos)
 | Componente | Descripción |
 |---|---|
-| `button.tsx` | Botón reutilizable con 4 variantes (primary, secondary, outline, ghost) |
+| `button.tsx` | Botón reutilizable con variantes (primary modificado para usar bg-primary y hover effect). |
 | `card.tsx` | Card base reutilizable con estilo consistente |
 | `FadeIn.tsx` | Wrapper de animación fade-in con framer-motion |
 | `separador.tsx` | Línea decorativa con gradiente entre secciones |
+| `ProductModal.tsx` | (NUEVO) Modal Premium de 2 columnas renderizado vía `createPortal` en `document.body` (z-[9999]). Maneja selección de variantes y muestra `product.details`. |
+| `GuideModal.tsx` | (NUEVO) Modal para artículos y tutoriales, renderizado vía `createPortal` para evitar conflictos de z-index con Navbars fijos. |
 
 ---
 
