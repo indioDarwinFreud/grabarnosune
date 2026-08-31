@@ -1,6 +1,6 @@
 # Documentación Técnica — Grabar Nos Une
 
-**Fecha de Última Actualización:** 26/08/2026
+**Fecha de Última Actualización:** 31/08/2026
 **Versión del Proyecto:** 3.1 (Rebranding Grabar Nos Une)
 
 
@@ -61,7 +61,7 @@ Este documento detalla la arquitectura técnica, estructura de carpetas y propó
 │   ├── textura para fondo.png    # Textura de rodillo (fondo del tema activo)
 │   ├── grabar nos une palabra repetida textura.png  # Textura para tarjetas (Hero)
 │   ├── fonts/Brizel.ttf          # Tipografía de marca artesanal
-│   ├── product/                  # ~81 imágenes reales de productos (carpeta unificada)
+│   ├── product/                  # ~88 imágenes reales de productos (carpeta unificada)
 │   └── assets/
 │       ├── grabar_about.png
 │       ├── banner_papeles.png

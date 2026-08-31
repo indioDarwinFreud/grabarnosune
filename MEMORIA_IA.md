@@ -409,8 +409,13 @@
     - **Columna Derecha:** Título, categoría, precio destacado, selector interactivo de colores, ficha técnica completa estructurada y botón de pedido por WhatsApp dinámico.
   - **[INTERACCIÓN EN TARJETAS]**: Al cliquear la imagen o el botón "Ver ficha técnica y cuidados completos" en `ProductCard.tsx`, se abre el modal sin sobrecargar la grilla principal del sitio.
   - **[VARIANTE CELESTE]**: Se añadió la variante **Celeste** (`/product/PeinadoCeleste.jpeg`) al catálogo de remeras de algodón peinado (`id: 6`).
-  - **[PORTAL OVERLAY & COLOR DE BOTÓN]**: Se migró `ProductModal` y `GuideModal` a `createPortal(..., document.body)` con `z-[9999]` para garantizar que el modal y su fondo oscuro cubran completamente la pantalla y queden por encima del navbar inferior en dispositivos móviles. Se corrigió el estilo base de `button.tsx` eliminando el gradiente gris heredado y aplicando el color lila/púrpura de marca (`#71007A`) con texto blanco en el botón de WhatsApp del modal.
-
-
-
-
+- **31/08/2026 - Incorporación de Artículos de Acero Inoxidable y Gorra de Gabardina:**
+  - **[6 NUEVOS PRODUCTOS EN ACERO INOXIDABLE (`category: "Acero"`) - Solicitud Clienta]**:
+    - **Termo Botella Cordón 500ml** (`id: 59`, $13.900, `/product/Termo Botella Cordon 500ml-1.jpeg`): Con tapa a rosca y cordón de agarre. Incluye variante interactiva con ficha de medidas y capacidad (`/product/Termo Botella Cordon 500ml-2.jpeg`).
+    - **Vaso Térmico con Tapa de Acrílico 500ml** (`id: 60`, $13.100, `/product/VASO TERMICO TAPA ACRILICO 500ML.jpeg`): Vaso térmico sublimable con tapa de acrílico transparente, sorbete de acero y cepillo limpiador.
+    - **Termo Botella con Tapa de Bambú 500ml** (`id: 61`, $13.900, `/product/Termo Botella 500ml.jpeg`): Botella térmica de acero inoxidable sublimable con detalle de madera/bambú y manija abatible.
+    - **Termo Taza Térmico** (`id: 62`, $12.900, `/product/Termo Taza Termico.jpeg`): Termo de acero inoxidable con tapa multifunción tipo taza con asa ergonómica.
+    - **Termo Botella Digital Inteligente** (`id: 63`, $11.900, `/product/Termo Botella Digital Inteligente.jpeg`): Termo con pantalla LED táctil indicadora de temperatura en la tapa y filtro infusor de acero.
+    - **Botella Térmica Sublimable 500ml** (`id: 64`, $13.500, `/product/Botella Termica Sublimable 500ml.jpeg`): Botella térmica de doble pared lista para sublimar.
+  - **[NUEVO PRODUCTO EN TEXTILES]**:
+    - **Gorra de Gabardina** (`id: 65`, $4.800, `/product/GORRA GABARDINA.jpeg`): Gorra lisa 100% algodón de excelente calidad con visera curva y cierre metálico regulable.
