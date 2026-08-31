@@ -60,30 +60,57 @@ export const productsData: Product[] = [
     },
     {
         id: 2,
-        title: "Taza de Cerámica Nacional / Taza Orca AAA",
-        location: "Cerámica - Tazas Clásicas",
-        description: "Taza de cerámica extra blanca con el recubrimiento polimérico original. Brillo duradero y resistente al microondas.",
+        title: "Taza de Cerámica Nacional",
+        location: "Cerámica - Nacional",
+        description: "Taza de cerámica nacional extra blanca con recubrimiento polimérico. Brillo duradero y resistente al microondas. Ideal para sublimación de alta definición.",
+        image: "/product/taza_orca.png",
+        category: "Cerámica",
+        stock: null,
+        website: "/contact",
+        price: 3100,
+        guideSlug: "guia-sublimar-tazas-ceramica",
+        variants: [
+            {
+                colorName: "Muestra Sublimada",
+                colorCode: "#71007A",
+                image: "/GrabarTaza.jpeg",
+            }
+        ]
+    },
+    {
+        id: 66,
+        title: "Taza Orca",
+        location: "Cerámica - Taza Orca",
+        description: "Taza Orca de cerámica extra blanca de alta calidad. Recubrimiento polimérico original de máxima nitidez, resistente al microondas y al lavavajillas.",
+        image: "/product/taza_orca.png",
+        category: "Cerámica",
+        stock: 30,
+        website: "/contact",
+        price: 3500,
+        guideSlug: "guia-sublimar-tazas-ceramica",
+        variants: [
+            {
+                colorName: "Muestra Sublimada",
+                colorCode: "#71007A",
+                image: "/GrabarTaza.jpeg",
+            }
+        ]
+    },
+    {
+        id: 67,
+        title: "Taza AAA Premium",
+        location: "Cerámica - Premium Importada",
+        description: "Taza de cerámica importada triple AAA. La más alta calidad del mercado: superficie extra blanca y lisa, recubrimiento polimérico de máxima densidad y resultado de sublimación sin igual.",
         image: "/product/taza_orca.png",
         category: "Cerámica",
         stock: 30,
         website: "/contact",
         price: 3100,
         guideSlug: "guia-sublimar-tazas-ceramica",
+        badge: "Triple AAA",
         variants: [
             {
-                colorName: "Cerámica Nacional",
-                colorCode: "#e2e8f0",
-                image: "/product/taza_orca.png",
-                price: 3100,
-            },
-            {
-                colorName: "Taza Orca AAA",
-                colorCode: "#ffffff",
-                image: "/product/taza_orca.png",
-                price: 3900,
-            },
-            {
-                colorName: "Muestra de Grabado y Sublimación",
+                colorName: "Muestra Sublimada",
                 colorCode: "#71007A",
                 image: "/GrabarTaza.jpeg",
             }

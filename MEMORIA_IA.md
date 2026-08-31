@@ -409,7 +409,15 @@
     - **Columna Derecha:** Título, categoría, precio destacado, selector interactivo de colores, ficha técnica completa estructurada y botón de pedido por WhatsApp dinámico.
   - **[INTERACCIÓN EN TARJETAS]**: Al cliquear la imagen o el botón "Ver ficha técnica y cuidados completos" en `ProductCard.tsx`, se abre el modal sin sobrecargar la grilla principal del sitio.
   - **[VARIANTE CELESTE]**: Se añadió la variante **Celeste** (`/product/PeinadoCeleste.jpeg`) al catálogo de remeras de algodón peinado (`id: 6`).
-- **31/08/2026 - Incorporación de Artículos de Acero Inoxidable y Gorra de Gabardina:**
+- **31/08/2026 (Tarde) - Separación de Tazas de Cerámica en 3 Tarjetas Independientes:**
+  - **[MOTIVO]**: La clienta confirmó que son tres productos distintos y quiere que cada uno tenga su propia tarjeta de catálogo.
+  - **[ANTES]**: Un único producto (`id: 2`, "Taza de Cerámica Nacional / Taza Orca AAA") con variantes internas de precio.
+  - **[DESPUÉS]**: Tres tarjetas independientes:
+    - **Taza de Cerámica Nacional** (`id: 2`, $3.100, `stock: null` — **sin stock**).
+    - **Taza Orca** (`id: 66`, $3.500, stock: 30).
+    - **Taza AAA Premium** (`id: 67`, $3.900, stock: 30, badge: "Triple AAA").
+  - Todas conservan `guideSlug: "guia-sublimar-tazas-ceramica"` y la variante de "Muestra Sublimada" con imagen real de taza grabada.
+
   - **[6 NUEVOS PRODUCTOS EN ACERO INOXIDABLE (`category: "Acero"`) - Solicitud Clienta]**:
     - **Termo Botella Cordón 500ml** (`id: 59`, $13.900, `/product/Termo Botella Cordon 500ml-1.jpeg`): Con tapa a rosca y cordón de agarre. Incluye variante interactiva con ficha de medidas y capacidad (`/product/Termo Botella Cordon 500ml-2.jpeg`).
     - **Vaso Térmico con Tapa de Acrílico 500ml** (`id: 60`, $13.100, `/product/VASO TERMICO TAPA ACRILICO 500ML.jpeg`): Vaso térmico sublimable con tapa de acrílico transparente, sorbete de acero y cepillo limpiador.
