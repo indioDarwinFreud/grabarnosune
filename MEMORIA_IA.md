@@ -415,7 +415,7 @@
   - **[DESPUÉS]**: Tres tarjetas independientes:
     - **Taza de Cerámica Nacional** (`id: 2`, $3.100, `stock: null` — **sin stock**).
     - **Taza Orca** (`id: 66`, $3.500, stock: 30).
-    - **Taza AAA Premium** (`id: 67`, $3.900, stock: 30, badge: "Triple AAA").
+    - **Taza AAA Premium** (`id: 67`, $3.100, stock: 30, badge: "Triple AAA"). ← Precio corregido manualmente por la clienta (era $3.900).
   - Todas conservan `guideSlug: "guia-sublimar-tazas-ceramica"` y la variante de "Muestra Sublimada" con imagen real de taza grabada.
 
   - **[6 NUEVOS PRODUCTOS EN ACERO INOXIDABLE (`category: "Acero"`) - Solicitud Clienta]**:
@@ -427,3 +427,10 @@
     - **Botella Térmica Sublimable 500ml** (`id: 64`, $13.500, `/product/Botella Termica Sublimable 500ml.jpeg`): Botella térmica de doble pared lista para sublimar.
   - **[NUEVO PRODUCTO EN TEXTILES]**:
     - **Gorra de Gabardina** (`id: 65`, $4.800, `/product/GORRA GABARDINA.jpeg`): Gorra lisa 100% algodón de excelente calidad con visera curva y cierre metálico regulable.
+
+- **31/08/2026 (Noche) - Corrección de Precios de Tazas de Cerámica:**
+  - **[CORRECCIÓN MANUAL - CLIENTA]**: La clienta editó directamente en `data.tsx` el precio de la **Taza AAA Premium** (`id: 67`) de $3.900 → **$3.100**.
+  - **Estado final de precios de cerámica:**
+    - Taza Cerámica Nacional (`id: 2`): $3.100 — sin stock.
+    - Taza Orca (`id: 66`): $3.500.
+    - Taza AAA Premium (`id: 67`): $3.100, badge "Triple AAA".
