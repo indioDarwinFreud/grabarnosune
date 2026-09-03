@@ -256,11 +256,12 @@ El catálogo en `data.tsx` usa el campo `category` para el filtrado estricto por
 
 | Categoría (`category`) | Descripción | Ejemplos de productos |
 |---|---|---|
-| `"Textiles"` | Prendas sublimables o estampables | Remeras, gorras, buzos, camperas, medias |
-| `"Polímero"` | Artículos plásticos con recubrimiento polimérico | Mates, tazas plásticas, jarros, termos, cubiertos |
-| `"Cerámica"` | Tazas de cerámica nacional e importada | Tazas Orca, Glitter, Perlada, Mágica |
+| `"Textiles"` | Prendas sublimables o estampables | Remeras, gorras (trucker, gabardina, prelavada), buzos, camperas, medias |
+| `"Polímero"` | Artículos plásticos con recubrimiento polimérico | Mates, tazas plásticas, jarros, cubiertos, rompecabezas, llaveros |
+| `"Cerámica"` | Tazas de cerámica — **3 productos separados** | **Cerámica Nacional** (id: 2, $3.100, sin stock) \| **Taza Orca** (id: 66, $3.500) \| **Taza AAA Premium** (id: 67, $3.100, badge Triple AAA) \| Glitter \| Perlada \| Mágica \| Interior Color |
 | `"Insumos"` | Consumibles para el proceso de sublimación | Papel Art-Jet, tintas, Holofan, Winky Paper |
 | `"Plástico"` | Artículos plásticos de bazar y souvenirs | Vasos, botellas, luncheras, kit de masas |
+| `"Acero"` | Artículos de acero inoxidable sublimables | Termos, botellas térmicas, vaso térmico con tapa acrílico |
 | `"Madera"` | Artículos de MDF y madera | *(sin productos activos aún)* |
 
 > **Regla de oro:** Si se agrega un producto nuevo, su campo `category` DEBE coincidir exactamente con uno de los valores de la tabla anterior (respetando mayúsculas, tildes y espacios). El filtrado es estricto.

@@ -59,6 +59,31 @@ export const productsData: Product[] = [
         ]
     },
     {
+        id: 68,
+        title: "Papel Tricapa Art-Jet",
+        location: "Insumos - Papel Tricapa (A4 / A3)",
+        description: "Papel Tricapa Art-Jet x 100 hojas de secado rápido y alta transferencia para sublimación. Disponible en formatos A4 y A3. Su tecnología de tres capas brinda colores más vivos, negros profundos y excelente nitidez.",
+        image: "/product/PapelTricapa.jpeg",
+        category: "Insumos",
+        stock: 30,
+        website: "/contact",
+        price: "Consultar",
+        variants: [
+            {
+                colorName: "Formato A4 x 100 Hojas",
+                colorCode: "#71007A",
+                image: "/product/PapelTricapa.jpeg",
+                price: "Consultar",
+            },
+            {
+                colorName: "Formato A3 x 100 Hojas",
+                colorCode: "#a855f7",
+                image: "/product/PapelTricapa.jpeg",
+                price: "Consultar",
+            }
+        ]
+    },
+    {
         id: 2,
         title: "Taza de Cerámica Nacional",
         location: "Cerámica - Nacional",
@@ -299,6 +324,46 @@ Cuida tus prendas. Lávalas con agua fría o tibia utilizando el ciclo suave del
                 colorName: "Negro",
                 colorCode: "#000000",
                 image: "/product/remera niño algodon peinado 24.1 negro.png",
+            }
+        ]
+    },
+    {
+        id: 69,
+        title: "Body Bebé Algodón 24.1",
+        location: "Textiles - Bebé (Algodón 24.1)",
+        description: "Body para bebé manga corta confeccionado en 100% algodón peinado 24.1 de máxima suavidad y confort. Cuello americano y broches metálicos reforzados en entrepierna. Ideal para estampado, vinilo textil, DTF o bordado.",
+        details: `Características:
+• 100% Algodón Peinado 24.1 (Tacto extra suave e hipoalergénico)
+• Confección reforzada y broches metálicos
+• Ideal para Estampado, Vinilo Textil, DTF, DTG y Bordado
+
+TABLA DE TALLES (ANCHO x LARGO):
+• Talle 0 (Recién nacido)
+• Talle 1 (0 a 3 meses): 19 cm Ancho | 31 cm Largo
+• Talle 2 (3 a 6 meses): 21 cm Ancho | 34 cm Largo
+• Talle 3 (6 a 9 meses): 23 cm Ancho | 36 cm Largo
+• Talle 4 (9 a 12 meses): 25 cm Ancho | 38 cm Largo
+• Talle 5 (12 a 18 meses): 26 cm Ancho | 40 cm Largo
+• Talle 6 (18 a 24 meses): 28 cm Ancho | 43 cm Largo
+
+* Las medidas corresponden a la prenda tomada de frente (ancho de axila a axila y largo total).`,
+        image: "/product/BodyBlancoNegro.jpeg",
+        category: "Textiles",
+        stock: 40,
+        website: "/contact",
+        price: 5500,
+        variants: [
+            {
+                colorName: "Blanco",
+                colorCode: "#ffffff",
+                image: "/product/BodyBlancoNegro.jpeg",
+                price: 5500,
+            },
+            {
+                colorName: "Negro",
+                colorCode: "#000000",
+                image: "/product/BodyBlancoNegro.jpeg",
+                price: 5500,
             }
         ]
     },

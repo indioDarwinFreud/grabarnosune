@@ -434,3 +434,18 @@
     - Taza Cerámica Nacional (`id: 2`): $3.100 — sin stock.
     - Taza Orca (`id: 66`): $3.500.
     - Taza AAA Premium (`id: 67`): $3.100, badge "Triple AAA".
+
+- **03/09/2026 - Incorporación de Papel Tricapa y Body Bebé Algodón 24.1:**
+  - **[NUEVO PRODUCTO - INSUMOS]**:
+    - **Papel Tricapa Art-Jet** (`id: 68`, precio: `"Consultar"`, `/product/PapelTricapa.jpeg`): Papel de sublimación Art-Jet x 100 hojas con opciones en variantes para **Formato A4 x 100 Hojas** y **Formato A3 x 100 Hojas**.
+  - **[NUEVO PRODUCTO - TEXTILES]**:
+    - **Body Bebé Algodón 24.1** (`id: 69`, $5.500, `/product/BodyBlancoNegro.jpeg`): Confeccionado en 100% algodón peinado 24.1 con variantes de color Blanco y Negro.
+    - **Ficha Técnica & Tabla de Talles (`details`)**: Se integró la tabla de medidas completa en el modal:
+      - Talle 0 (Recién nacido)
+      - Talle 1 (0 a 3 meses): 19 cm Ancho x 31 cm Largo
+      - Talle 2 (3 a 6 meses): 21 cm Ancho x 34 cm Largo
+      - Talle 3 (6 a 9 meses): 23 cm Ancho x 36 cm Largo
+      - Talle 4 (9 a 12 meses): 25 cm Ancho x 38 cm Largo
+      - Talle 5 (12 a 18 meses): 26 cm Ancho x 40 cm Largo
+      - Talle 6 (18 a 24 meses): 28 cm Ancho x 43 cm Largo
+
