@@ -466,5 +466,5 @@
       - *Diseño 2 - Corazones* (`/product/DiseñoCorazonesMuchi.pdf`)
       - *Diseño 3 - Conejo* (`/product/DiseñoConejoMuchi.pdf`)
       - *Diseño 4 - Corazones Líneas* (`/product/DiseñoCorazonesMuchi_2.pdf`)
-    - En `ProductCard.tsx` se integró un badge interactivo con el indicador `"Incluye plantillas descargables (4) →"` que abre la ficha técnica y la lista de descargas.
+  - **[CI/GITHUB FIX]**: Se corrigió parámetro `img` sin utilizar en `ProductsContent.tsx:167` que disparaba error en `next lint` durante los checks automáticos de GitHub Actions / Vercel. `npm run lint` pasa ahora con éxito (0 errores).
 
