@@ -164,7 +164,7 @@ function ProductsContent() {
                         <FadeIn key={`product-${product.id}`} delay={index * 0.05} direction="up" className="h-full">
                             <ProductCard
                                 product={product}
-                                onImageClick={(img) => setSelectedProduct(product)}
+                                onImageClick={() => setSelectedProduct(product)}
                                 onProductClick={(prod) => setSelectedProduct(prod)}
                                 onGuideClick={handleGuideClick}
                             />
