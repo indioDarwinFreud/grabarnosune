@@ -27,14 +27,24 @@ const categories = [
 
 function ProductsContent() {
     const searchParams = useSearchParams();
-    const [searchTerm, setSearchTerm] = useState("");
-    const [selectedImage, setSelectedImage] = useState<string | null>(null);
-    const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-    const [activeCategory, setActiveCategory] = useState<string>("Todas");
-    const [activeGuide, setActiveGuide] = useState<BlogPost | null>(null);
-
     const queryCategory = searchParams.get("category");
     const querySearch = searchParams.get("search");
+
+    const getInitialCategory = () => {
+        if (!queryCategory) return "Todas";
+        const qLower = queryCategory.toLowerCase();
+        const matched = categories.find(c => {
+            const cLower = c.toLowerCase();
+            return cLower === qLower || (qLower === "acero" && cLower.includes("acero"));
+        });
+        return matched || "Todas";
+    };
+
+    const [activeCategory, setActiveCategory] = useState<string>(getInitialCategory);
+    const [searchTerm, setSearchTerm] = useState<string>(() => querySearch || "");
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+    const [activeGuide, setActiveGuide] = useState<BlogPost | null>(null);
 
     useEffect(() => {
         if (queryCategory) {
@@ -74,9 +84,15 @@ function ProductsContent() {
             } else if (catLower === "insumos para estampar") {
                 matchesCategory = product.category === "Insumos";
             } else if (catLower === "cartón" || catLower === "carton") {
-                matchesCategory = product.category === "Cartón" || product.category === "Carton" || fullText.includes("rompecabezas") || fullText.includes("caja");
+                matchesCategory = product.category === "Cartón" || product.category === "Carton";
             } else if (catLower === "papeles especiales") {
-                matchesCategory = product.category === "Papeles especiales" || fullText.includes("papel") || fullText.includes("holofan") || fullText.includes("winky");
+                matchesCategory = product.category === "Papeles especiales" || 
+                    (product.category === "Insumos" && (
+                        product.title.toLowerCase().includes("papel") || 
+                        product.title.toLowerCase().includes("winky") || 
+                        product.title.toLowerCase().includes("holofan") ||
+                        product.title.toLowerCase().includes("sublistick")
+                    ));
             } else if (catLower === "plástico" || catLower === "plastico") {
                 matchesCategory = product.category === "Plástico" || product.category === "Plastico";
             } else if (catLower.includes("acero")) {
@@ -145,11 +161,11 @@ function ProductsContent() {
                 {/* Results Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filteredProducts.map((product, index) => (
-                        <FadeIn key={product.id} delay={index * 0.1} direction="up" className="h-full">
+                        <FadeIn key={`product-${product.id}`} delay={index * 0.05} direction="up" className="h-full">
                             <ProductCard
                                 product={product}
-                                onImageClick={setSelectedImage}
-                                onProductClick={setSelectedProduct}
+                                onImageClick={(img) => setSelectedProduct(product)}
+                                onProductClick={(prod) => setSelectedProduct(prod)}
                                 onGuideClick={handleGuideClick}
                             />
                         </FadeIn>

@@ -47,16 +47,16 @@ export const productsData: Product[] = [
                 image: "/product/AgregarEnPlacaDePapelSublimar.jpeg",
             },
             {
+                colorName: "Formato A4",
+                colorCode: "#ec4899",
+                image: "/product/PapelA4.jpeg",
+            },
+            {
                 colorName: "Formato A3",
                 colorCode: "#a855f7",
                 image: "/product/PapelA3.jpeg",
             },
-            {
-                colorName: "Formato A4",
-                colorCode: "#ec4899",
-                image: "/product/PapelA4.jpeg",
-            }
-        ]
+        ],
     },
     {
         id: 68,
@@ -67,21 +67,21 @@ export const productsData: Product[] = [
         category: "Insumos",
         stock: 30,
         website: "/contact",
-        price: "Consultar",
+        price: "$14.000 / $28.000",
         variants: [
             {
                 colorName: "Formato A4 x 100 Hojas",
                 colorCode: "#71007A",
-                image: "/product/PapelTricapa.jpeg",
-                price: "Consultar",
+                image: "/product/Art-JetA4100Hojas.jpeg",
+                price: 14000,
             },
             {
                 colorName: "Formato A3 x 100 Hojas",
                 colorCode: "#a855f7",
-                image: "/product/PapelTricapa.jpeg",
-                price: "Consultar",
-            }
-        ]
+                image: "/product/Art-JetA3100Hojas.jpeg",
+                price: 28000,
+            },
+        ],
     },
     {
         id: 2,
@@ -955,10 +955,10 @@ TABLA DE TALLES (ANCHO x LARGO):
     {
         id: 43,
         title: "Termo Sublimable",
-        location: "Acero / Aluminio - Termos",
+        location: "Plástico - Termos",
         description: "Termo de acero inoxidable con recubrimiento sublimable de alta resistencia. Conserva la temperatura de tus bebidas por horas y es resistente a golpes. Ideal para regalos personalizados.",
         image: "/product/termo sublimable.png",
-        category: "Acero",
+        category: "Plástico",
         stock: 15,
         website: "/contact",
         price: 12100,
@@ -1269,6 +1269,131 @@ TABLA DE TALLES (ANCHO x LARGO):
         stock: 30,
         website: "/contact",
         price: 4800,
+    },
+    {
+        id: 72,
+        title: "Taza Muchi",
+        location: "Polímero - Tazas & Mugs",
+        description: "Taza de polímero ergonómica de 440 ml con mayor capacidad, asa sublimable y base sublimable. Apta para microondas y lavavajillas. Ideal para personalización integral con diseños envolventes.",
+        image: "/product/TazaMuchi.jpeg",
+        category: "Polímero",
+        stock: 50,
+        website: "/contact",
+        price: 2700,
+        details: `Especificaciones Técnicas Taza Muchi:
+• Capacidad: 440 ml (mayor capacidad que una taza convencional).
+• Asa ergonómica y sublimable para diseños integrales.
+• Base sublimable: podés estampar la superficie completa de la base.
+• Material: Polímero virgen ultra resistente a golpes y caídas.
+• Apta para microondas y lavavajillas.
+• Diseños listos para usar: descargá abajo las plantillas en formato PDF a medida.`,
+        variants: [
+            {
+                colorName: "Diseño Flores",
+                colorCode: "#71007A",
+                image: "/product/TazaMuchi.jpeg",
+            },
+            {
+                colorName: "Vista Lateral Asa",
+                colorCode: "#ec4899",
+                image: "/product/TazaMuchi_2.jpeg",
+            },
+            {
+                colorName: "Especificación Técnica (440ml)",
+                colorCode: "#f43f5e",
+                image: "/product/TazaMuchi_3.jpeg",
+            },
+            {
+                colorName: "Muestra en Conjunto",
+                colorCode: "#a855f7",
+                image: "/product/TazaMuchi_4.jpeg",
+            },
+        ],
+        downloadableTemplates: [
+            {
+                title: "Diseño 1 - Flores (PDF)",
+                fileUrl: "/product/DiseñoFloresMuchi.pdf",
+            },
+            {
+                title: "Diseño 2 - Corazones (PDF)",
+                fileUrl: "/product/DiseñoCorazonesMuchi.pdf",
+            },
+            {
+                title: "Diseño 3 - Conejo (PDF)",
+                fileUrl: "/product/DiseñoConejoMuchi.pdf",
+            },
+            {
+                title: "Diseño 4 - Corazones Líneas (PDF)",
+                fileUrl: "/product/DiseñoCorazonesMuchi_2.pdf",
+            },
+        ],
+    },
+    {
+        id: 70,
+        title: "Papel Sublistick",
+        location: "Insumos - Stickers Sublimables",
+        description: "Sublistick es un papel plástico sublimable que te permite crear stickers personalizados de alta calidad. No se imprime directamente, sino que se personaliza mediante el proceso de sublimación, logrando colores vibrantes, detalles nítidos y una excelente resistencia al desgaste y la decoloración, para que tus diseños se mantengan como el primer día.",
+        image: "/product/PapelSublistick_2.jpeg",
+        category: "Insumos",
+        stock: 100,
+        website: "/contact",
+        price: 1650,
+        details: `Instrucciones de Uso y Aplicación:
+• Precio por hoja individual: $1.650.
+• Método de estampado: no se imprime directamente. Se imprime el diseño en modo espejo sobre papel de sublimación tradicional con tintas de sublimación y luego se transfiere al Sublistick con prensa térmica o calor parejo.
+• Terminaciones disponibles:
+  - Base Transparente: ideal para vasos, botellas plásticas, frascos de vidrio y superficies traslúcidas.
+  - Base Blanco: ideal para tuppers, loncheras, cajas, plásticos oscuros o con fondo de color para resaltar la máxima viveza cromática.
+• Alta durabilidad: impermeable, súper resistente al lavado y a la fricción diaria.`,
+        variants: [
+            {
+                colorName: "Base Transparente",
+                colorCode: "#cbd5e1",
+                image: "/product/PapelSublistickBaseTransparente.jpeg",
+                price: 1650,
+            },
+            {
+                colorName: "Base Blanca",
+                colorCode: "#ffffff",
+                image: "/product/PapelSublistickBaseBlanco.jpeg",
+                price: 1650,
+            },
+            {
+                colorName: "Aplicado en Vaso",
+                colorCode: "#f472b6",
+                image: "/product/PapelSublistick_2.jpeg",
+                price: 1650,
+            },
+            {
+                colorName: "Aplicado en Tupper",
+                colorCode: "#f59e0b",
+                image: "/product/PapelSublistickBaseBlanco_2.jpeg",
+                price: 1650,
+            },
+        ],
+    },
+    {
+        id: 71,
+        title: "Vaso Fiesta con Glitter",
+        location: "Plástico - Vasos & Souvenirs",
+        description: "Vaso fiesta con efecto glitter brillante, tapa de color y sorbete. Su llamativo acabado tornasolado y variedad de colores de tapas lo convierten en la opción perfecta para cumpleaños, eventos y souvenirs.",
+        image: "/product/VasoFiestaConGlitter.jpeg",
+        category: "Plástico",
+        stock: 60,
+        website: "/contact",
+        price: 1400,
+        variants: [
+            {
+                colorName: "Vasos Glitter",
+                colorCode: "#f3e8ff",
+                image: "/product/VasoFiestaConGlitter.jpeg",
+            },
+            {
+                colorName: "Tapas de Colores",
+                colorCode: "linear-gradient(135deg, #06b6d4, #eab308, #ef4444, #3b82f6)",
+                image: "/product/vasoFiestaConGlitterTapaColores.jpeg",
+            },
+        ],
     },
 ];
 

@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { MessageCircle, Ruler, BookOpen, ChevronLeft, ChevronRight, Tag } from "lucide-react";
+import { MessageCircle, Ruler, BookOpen, ChevronLeft, ChevronRight, Tag, FileDown } from "lucide-react";
 import { siteConfig } from "@/config";
 import type { Product } from "@/types";
 
@@ -182,13 +182,19 @@ export default function ProductCard({ product, onImageClick, onProductClick, onG
                     {product.description}
                 </p>
 
-                {product.details && (
+                {(product.details || (product.downloadableTemplates && product.downloadableTemplates.length > 0)) && (
                     <button
                         type="button"
                         onClick={() => onProductClick ? onProductClick(product) : onImageClick?.(displayImage)}
-                        className="text-xs font-bold text-primary hover:underline flex items-center gap-1 mb-4 mt-1 text-left"
+                        className="text-xs font-bold text-primary hover:underline flex items-center gap-1.5 mb-4 mt-1 text-left"
                     >
-                        Ver ficha técnica y cuidados completos →
+                        {product.downloadableTemplates && product.downloadableTemplates.length > 0 ? (
+                            <span className="inline-flex items-center gap-1 text-purple-700 font-extrabold bg-purple-100/70 px-2.5 py-1 rounded-lg border border-purple-200 hover:bg-purple-200/70 transition-colors">
+                                <FileDown size={14} /> Incluye plantillas descargables ({product.downloadableTemplates.length}) →
+                            </span>
+                        ) : (
+                            <span>Ver ficha técnica y cuidados completos →</span>
+                        )}
                     </button>
                 )}
 

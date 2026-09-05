@@ -447,5 +447,24 @@
       - Talle 3 (6 a 9 meses): 23 cm Ancho x 36 cm Largo
       - Talle 4 (9 a 12 meses): 25 cm Ancho x 38 cm Largo
       - Talle 5 (12 a 18 meses): 26 cm Ancho x 40 cm Largo
-      - Talle 6 (18 a 24 meses): 28 cm Ancho x 43 cm Largo
+- **05/09/2026 - Actualización de Catálogo, Precios Insumos e Integración de Plantillas Descargables:**
+  - **[REUBICACIÓN PLÁSTICO]**:
+    - **Termo Sublimable** (`id: 43`, $12.100): Se cambió de categoría `Acero` a **`Plástico`** y su ubicación a `Plástico - Termos` según instrucción explícita de Daiana.
+  - **[PAPEL TRICAPA ART-JET]**:
+    - **Papel Tricapa Art-Jet** (`id: 68`, categoría `Insumos`): Tarjeta con portada `/product/PapelTricapa.jpeg` y precio dinámico `$14.000 / $28.000`. En su selector de opciones y modal incluye los paquetes reales:
+      - **Formato A4 x 100 Hojas:** `$14.000` (`/product/Art-JetA4100Hojas.jpeg`)
+      - **Formato A3 x 100 Hojas:** `$28.000` (`/product/Art-JetA3100Hojas.jpeg`)
+    - **Papel de Sublimación Art-Jet** (`id: 1`): Mantiene su identidad tradicional de papel secado rápido (`/product/AgregarEnPlacaDePapelSublimar.jpeg`, `/product/PapelA4.jpeg`, `/product/PapelA3.jpeg`).
+  - **[NUEVOS PRODUCTOS]**:
+    - **Papel Sublistick** (`id: 70`, $1.650 c/hoja, categoría `Insumos`): Papel plástico sublimable para stickers resistentes al agua y a los rayos UV. Incluye variantes para **Base Transparente** (`/product/PapelSublistickBaseTransparente.jpeg`) y **Base Blanca** (`/product/PapelSublistickBaseBlanco.jpeg`), además de fotos de aplicación en vaso y tupper.
+    - **Vaso Fiesta con Glitter** (`id: 71`, $1.400, categoría `Plástico`): Vaso de fiesta con efecto glitter, tapa de color y sorbete (`/product/VasoFiestaConGlitter.jpeg` y `/product/vasoFiestaConGlitterTapaColores.jpeg`).
+    - **Taza Muchi** (`id: 69`, $2.700, categoría `Polímero`): Taza ergonómica de 440 ml con asa y base sublimables (`/product/TazaMuchi.jpeg`).
+  - **[SISTEMA DE PLANTILLAS DESCARGABLES (PDF)]**:
+    - Se agregó el campo `downloadableTemplates?: ProductTemplate[]` a `types/index.ts`.
+    - Se implementó en `ProductModal.tsx` una sección visual premium con iconos `FileDown` que permite descargar directamente los 4 PDFs de estampa para la Taza Muchi:
+      - *Diseño 1 - Flores* (`/product/DiseñoFloresMuchi.pdf`)
+      - *Diseño 2 - Corazones* (`/product/DiseñoCorazonesMuchi.pdf`)
+      - *Diseño 3 - Conejo* (`/product/DiseñoConejoMuchi.pdf`)
+      - *Diseño 4 - Corazones Líneas* (`/product/DiseñoCorazonesMuchi_2.pdf`)
+    - En `ProductCard.tsx` se integró un badge interactivo con el indicador `"Incluye plantillas descargables (4) →"` que abre la ficha técnica y la lista de descargas.
 

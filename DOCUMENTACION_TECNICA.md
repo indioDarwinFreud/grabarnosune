@@ -1,7 +1,7 @@
 # Documentación Técnica — Grabar Nos Une
 
-**Fecha de Última Actualización:** 31/08/2026
-**Versión del Proyecto:** 3.1 (Rebranding Grabar Nos Une)
+**Fecha de Última Actualización:** 05/09/2026
+**Versión del Proyecto:** 3.2 (Actualización Catálogo & Plantillas Descargables)
 
 
 ---
@@ -191,7 +191,7 @@ Página **WhatsApp-First**: el formulario redirige directamente a WhatsApp con e
 | `card.tsx` | Card base reutilizable con estilo consistente |
 | `FadeIn.tsx` | Wrapper de animación fade-in con framer-motion |
 | `separador.tsx` | Línea decorativa con gradiente entre secciones |
-| `ProductModal.tsx` | (NUEVO) Modal Premium de 2 columnas renderizado vía `createPortal` en `document.body` (z-[9999]). Maneja selección de variantes y muestra `product.details`. |
+| `ProductModal.tsx` | Modal Premium de 2 columnas renderizado vía `createPortal` en `document.body` (z-[9999]). Maneja selección de variantes, visualización de `product.details` y descarga directa de plantillas en PDF (`downloadableTemplates`). |
 | `GuideModal.tsx` | (NUEVO) Modal para artículos y tutoriales, renderizado vía `createPortal` para evitar conflictos de z-index con Navbars fijos. |
 
 ---

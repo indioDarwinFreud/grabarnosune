@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
-import { X, ChevronLeft, ChevronRight, MessageCircle, Tag } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, MessageCircle, Tag, FileDown } from "lucide-react";
 import { siteConfig } from "@/config";
 import { Button } from "@/components/ui/button";
 import type { Product } from "@/types";
@@ -319,6 +319,49 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                 className="p-4 rounded-2xl border text-xs sm:text-sm leading-relaxed whitespace-pre-line font-medium bg-neutral-50/80 border-gray-200/70 text-gray-700 shadow-sm"
                             >
                                 {product.details}
+                            </div>
+                        )}
+
+                        {/* Plantillas y Archivos Descargables */}
+                        {product.downloadableTemplates && product.downloadableTemplates.length > 0 && (
+                            <div className="p-4 rounded-2xl border bg-purple-50/60 border-purple-200/80 shadow-sm">
+                                <div className="flex items-center gap-2.5 mb-3">
+                                    <div 
+                                        className="w-8 h-8 rounded-xl flex items-center justify-center text-white shrink-0 shadow-xs"
+                                        style={{ backgroundColor: siteConfig.theme.primaryColor }}
+                                    >
+                                        <FileDown size={17} />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-xs sm:text-sm font-extrabold text-gray-900">
+                                            Plantillas de Diseño Descargables
+                                        </h4>
+                                        <p className="text-[11px] text-gray-500 font-medium">
+                                            Descargá los archivos PDF listos para imprimir y estampar
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                    {product.downloadableTemplates.map((template, idx) => (
+                                        <a
+                                            key={idx}
+                                            href={template.fileUrl}
+                                            download
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-white hover:bg-purple-100/50 border border-purple-200/70 text-xs font-bold text-gray-800 transition-all duration-200 group shadow-2xs hover:border-purple-300"
+                                        >
+                                            <span className="truncate group-hover:text-purple-900">{template.title}</span>
+                                            <span
+                                                className="p-1.5 rounded-lg bg-purple-50 text-purple-700 group-hover:bg-purple-700 group-hover:text-white transition-colors shrink-0"
+                                                title="Descargar PDF"
+                                            >
+                                                <FileDown size={14} />
+                                            </span>
+                                        </a>
+                                    ))}
+                                </div>
                             </div>
                         )}
                     </div>

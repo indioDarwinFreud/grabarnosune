@@ -8,6 +8,11 @@ export interface ProductVariant {
     price?: number | string | null;
 }
 
+export interface ProductTemplate {
+    title: string;
+    fileUrl: string;
+}
+
 export interface Product {
     id: number;
     title: string;
@@ -22,6 +27,7 @@ export interface Product {
     badge?: string;
     guideSlug?: string;
     details?: string;
+    downloadableTemplates?: ProductTemplate[];
 }
 
 export interface BlogPost {
