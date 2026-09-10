@@ -184,7 +184,7 @@ export const productsData: Product[] = [
         category: "Textiles",
         stock: null,
         website: "/contact",
-        price: 2900,
+        price: 3200,
     },
     {
         id: 6,
