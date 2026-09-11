@@ -180,11 +180,36 @@ export const productsData: Product[] = [
         title: "Remera Spun Niño",
         location: "Textiles - Spun Premium",
         description: "Remera infantil blanca de spun. Suave al tacto y lista para sublimar con colores vivos y duraderos.",
+        details: `Características:
+• Confeccionada en Spun 100% Poliéster (Tacto extra suave imitación algodón)
+• Especialmente diseñada para sublimación de alta definición (colores vívidos y duraderos)
+• Costuras reforzadas e hilo de alta resistencia
+
+TABLA DE TALLES NIÑOS (ANCHO x LARGO):
+• Talle 4: 30 cm Ancho | 42 cm Largo
+• Talle 6: 34 cm Ancho | 44 cm Largo
+• Talle 8: 36 cm Ancho | 49 cm Largo
+• Talle 10: 38 cm Ancho | 52 cm Largo
+• Talle 12: 40 cm Ancho | 54 cm Largo
+
+* Las medidas corresponden a la prenda tomada de frente (ancho de axila a axila y largo desde el cuello/hombro al bajo).`,
         image: "/product/RemeraSpunNiño.png",
         category: "Textiles",
         stock: null,
         website: "/contact",
         price: 3200,
+        variants: [
+            {
+                colorName: "Remera Blanca Spun Niño",
+                colorCode: "#ffffff",
+                image: "/product/RemeraSpunNiño.png",
+            },
+            {
+                colorName: "Tabla de Talles Niños",
+                colorCode: "#71007A",
+                image: "/TallesNiños.jpeg",
+            }
+        ]
     },
     {
         id: 6,
@@ -309,6 +334,19 @@ Cuida tus prendas. Lávalas con agua fría o tibia utilizando el ciclo suave del
         title: "Remera Manga Corta Niño Algodón",
         location: "Textiles - Algodón Peinado 24.1",
         description: "Remera infantil de algodón 100% peinado 24.1 premium. Confección reinforced y cuello resistente para resistir el uso diario.",
+        details: `Características:
+• Confeccionada en 100% Algodón Peinado 24.1 de máxima calidad
+• Cuello reforzado y confección ideal para uso infantil diario
+• Excelente superficie para Estampado, Vinilo Textil, DTF, DTG y Serigrafía
+
+TABLA DE TALLES NIÑOS (ANCHO x LARGO):
+• Talle 4: 30 cm Ancho | 42 cm Largo
+• Talle 6: 34 cm Ancho | 44 cm Largo
+• Talle 8: 36 cm Ancho | 49 cm Largo
+• Talle 10: 38 cm Ancho | 52 cm Largo
+• Talle 12: 40 cm Ancho | 54 cm Largo
+
+* Medidas tomadas de frente sobre la prenda plana (ancho de axila a axila y largo desde el hombro).`,
         image: "/product/remera niño algodon peinado 24.1.png",
         category: "Textiles",
         stock: null,
@@ -324,6 +362,11 @@ Cuida tus prendas. Lávalas con agua fría o tibia utilizando el ciclo suave del
                 colorName: "Negro",
                 colorCode: "#000000",
                 image: "/product/remera niño algodon peinado 24.1 negro.png",
+            },
+            {
+                colorName: "Tabla de Talles Niños",
+                colorCode: "#71007A",
+                image: "/TallesNiños.jpeg",
             }
         ]
     },

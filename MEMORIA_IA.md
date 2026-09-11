@@ -468,3 +468,9 @@
       - *Diseño 4 - Corazones Líneas* (`/product/DiseñoCorazonesMuchi_2.pdf`)
   - **[CI/GITHUB FIX]**: Se corrigió parámetro `img` sin utilizar en `ProductsContent.tsx:167` que disparaba error en `next lint` durante los checks automáticos de GitHub Actions / Vercel. `npm run lint` pasa ahora con éxito (0 errores).
 
+- **11/09/2026 - Integración de Tabla de Talles para Remeras de Niños:**
+  - **[TABLA DE TALLES NIÑOS EN PRODUCTOS]**: Se integró la foto oficial de la tabla de talles de remeras infantiles ([`public/TallesNiños.jpeg`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/public/TallesNiños.jpeg)) como variante visual interactiva y dentro de la descripción detallada (`details`) en [`data.tsx`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/data.tsx) para los productos **Remera Spun Niño** (`id: 5`) y **Remera Manga Corta Niño Algodón** (`id: 7`).
+  - **[SECCIÓN GUÍAS DE TALLES & MEDIDAS]**: Se añadió la tarjeta **"Tabla de Talles Niños"** (`/TallesNiños.jpeg`) al listado de `infoGuides` en [`app/products/ProductsContent.tsx`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/app/products/ProductsContent.tsx), ordenándola junto a la tabla de adultos y guía de medidas para una visualización simétrica, ordenada y en alta resolución.
+  - **[PORTAL PREVIEW & ISDIAGRAM FIT]**: Se optimizó la previsualización de imágenes (`selectedImage`) mediante `createPortal` en `document.body` y se actualizaron [`ProductCard.tsx`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/components/cards/ProductCard.tsx) y [`ProductModal.tsx`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/components/ui/ProductModal.tsx) añadiendo la detección `'talles'` a `isDiagram` para asegurar que las tablas de medidas se muestren completas con `object-contain` sin recortes.
+
+

@@ -86,6 +86,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
         displayImage.toLowerCase().includes("especificacion") ||
         displayImage.toLowerCase().includes("placa") ||
         displayImage.toLowerCase().includes("tabla") ||
+        displayImage.toLowerCase().includes("talles") ||
         displayImage.toLowerCase().includes("medidas");
 
     if (!mounted) return null;
@@ -118,7 +119,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                     {/* Badge */}
                     {product.badge && (
                         <div className="absolute top-4 left-4 z-20 pointer-events-none">
-                            <span 
+                            <span
                                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-black text-white shadow-md uppercase tracking-wider"
                                 style={{ backgroundColor: siteConfig.theme.primaryColor }}
                             >
@@ -134,9 +135,8 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                             src={displayImage}
                             alt={displayTitle}
                             fill
-                            className={`transition-all duration-500 ${
-                                isDiagram ? "object-contain p-2" : "object-contain p-4"
-                            }`}
+                            className={`transition-all duration-500 ${isDiagram ? "object-contain p-2" : "object-contain p-4"
+                                }`}
                             sizes="(max-width: 768px) 100vw, 50vw"
                             priority
                         />
@@ -181,11 +181,10 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                                 setCurrentImageIndex(idx);
                                             }
                                         }}
-                                        className={`relative w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden shrink-0 border-2 transition-all duration-200 bg-white ${
-                                            isCurrent
+                                        className={`relative w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden shrink-0 border-2 transition-all duration-200 bg-white ${isCurrent
                                                 ? "border-primary shadow-md scale-105"
                                                 : "border-gray-200 opacity-70 hover:opacity-100"
-                                        }`}
+                                            }`}
                                         style={isCurrent ? { borderColor: siteConfig.theme.primaryColor } : undefined}
                                         type="button"
                                     >
@@ -207,7 +206,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                 <div className="w-full md:w-1/2 p-5 sm:p-6 md:p-8 flex flex-col overflow-y-auto max-h-[50vh] md:max-h-[92vh] custom-scrollbar pb-6">
                     {/* Categoría / Subtítulo */}
                     {product.location && (
-                        <span 
+                        <span
                             className="text-xs font-bold uppercase tracking-widest mb-1"
                             style={{ color: siteConfig.theme.primaryColor }}
                         >
@@ -226,7 +225,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                     {/* Precio */}
                     {displayPrice && (
                         <div className="flex items-baseline gap-2 mb-4">
-                            <span 
+                            <span
                                 className="text-3xl font-black"
                                 style={{ color: siteConfig.theme.primaryColor }}
                             >
@@ -253,11 +252,10 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                         setSelectedVariantIndex(null);
                                         setCurrentImageIndex(0);
                                     }}
-                                    className={`px-3 py-1.5 text-xs font-bold rounded-xl transition-all duration-200 border ${
-                                        selectedVariantIndex === null
+                                    className={`px-3 py-1.5 text-xs font-bold rounded-xl transition-all duration-200 border ${selectedVariantIndex === null
                                             ? "text-white shadow-sm"
                                             : "bg-gray-100 text-gray-700 border-gray-200 hover:bg-gray-200"
-                                    }`}
+                                        }`}
                                     style={
                                         selectedVariantIndex === null
                                             ? { backgroundColor: siteConfig.theme.primaryColor, borderColor: siteConfig.theme.primaryColor }
@@ -275,11 +273,10 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                                         <button
                                             key={idx}
                                             onClick={() => setSelectedVariantIndex(idx)}
-                                            className={`px-3 py-1.5 text-xs font-semibold rounded-xl transition-all duration-200 flex items-center gap-2 border ${
-                                                isSelected
+                                            className={`px-3 py-1.5 text-xs font-semibold rounded-xl transition-all duration-200 flex items-center gap-2 border ${isSelected
                                                     ? "text-white shadow-sm scale-105"
                                                     : "bg-white text-gray-800 border-gray-200 hover:bg-gray-50"
-                                            }`}
+                                                }`}
                                             style={
                                                 isSelected
                                                     ? { backgroundColor: siteConfig.theme.primaryColor, borderColor: siteConfig.theme.primaryColor }
@@ -326,7 +323,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                         {product.downloadableTemplates && product.downloadableTemplates.length > 0 && (
                             <div className="p-4 rounded-2xl border bg-purple-50/60 border-purple-200/80 shadow-sm">
                                 <div className="flex items-center gap-2.5 mb-3">
-                                    <div 
+                                    <div
                                         className="w-8 h-8 rounded-xl flex items-center justify-center text-white shrink-0 shadow-xs"
                                         style={{ backgroundColor: siteConfig.theme.primaryColor }}
                                     >

@@ -53,7 +53,9 @@ export default function ProductCard({ product, onImageClick, onProductClick, onG
 
     const isDiagram = displayImage.toLowerCase().includes('acero') || 
                       displayImage.toLowerCase().includes('especificacion') || 
-                      displayImage.toLowerCase().includes('placa');
+                      displayImage.toLowerCase().includes('placa') ||
+                      displayImage.toLowerCase().includes('talles') ||
+                      displayImage.toLowerCase().includes('tabla');
 
     return (
         <Card

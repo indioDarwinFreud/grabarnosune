@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, Suspense, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { productsData, blogPosts } from "@/data";
 import { Search as SearchIcon, X } from "lucide-react";
 import Image from "next/image";
@@ -45,6 +46,11 @@ function ProductsContent() {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
     const [activeGuide, setActiveGuide] = useState<BlogPost | null>(null);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     useEffect(() => {
         if (queryCategory) {
@@ -228,15 +234,16 @@ function ProductsContent() {
             </div>
 
             {/* Image Modal */}
-            {selectedImage && (
+            {mounted && selectedImage && createPortal(
                 <div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-lg p-4 transition-all duration-300 animate-in fade-in"
+                    className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-lg p-4 transition-all duration-300 animate-in fade-in"
                     onClick={() => setSelectedImage(null)}
                 >
                     <div className="relative max-w-5xl w-full h-full max-h-[90vh] flex items-center justify-center">
                         <button
-                            className="absolute top-2 right-2 md:-top-12 md:right-0 z-50 p-2 bg-black/50 md:bg-transparent rounded-full md:rounded-none text-white md:text-white/50 hover:text-white hover:bg-black/70 md:hover:bg-transparent transition-all backdrop-blur-sm md:backdrop-blur-none"
+                            className="absolute top-2 right-2 md:-top-12 md:right-0 z-50 p-2 bg-black/50 md:bg-transparent rounded-full md:rounded-none text-white md:text-white/50 hover:text-white hover:bg-black/70 md:hover:bg-transparent transition-all backdrop-blur-sm md:backdrop-blur-none cursor-pointer"
                             onClick={() => setSelectedImage(null)}
+                            aria-label="Cerrar vista previa"
                         >
                             <X size={32} />
                         </button>
@@ -249,7 +256,8 @@ function ProductsContent() {
                             sizes="100vw"
                         />
                     </div>
-                </div>
+                </div>,
+                document.body
             )}
 
             {/* Product Detail Modal (2 Columnas: Foto + Ficha Técnica) */}
@@ -289,24 +297,24 @@ const infoGuides: InfoGuide[] = [
     },
     {
         id: 2,
+        title: "Tabla de Talles Adultos Unisex",
+        description: "Medidas exactas de ancho y largo de axila a axila para remeras de adulto.",
+        image: "/product/TABLA DE TALLES ADULTOS UNISEX.png",
+        category: "Talles"
+    },
+    {
+        id: 3,
+        title: "Tabla de Talles Niños",
+        description: "Medidas de ancho y largo por talle (4 al 12) para remeras infantiles.",
+        image: "/TallesNiños.jpeg",
+        category: "Talles"
+    },
+    {
+        id: 4,
         title: "Tipos de Telas y Estampado",
         description: "Diferencias entre Spun y Modal para sublimar y personalizar.",
         image: "/TiposDeRemeras.png",
         category: "Telas"
-    },
-    {
-        id: 3,
-        title: "Catálogo e Hilados Textil",
-        description: "Detalles y opciones de remeras listas para personalizar.",
-        image: "/CatalogoRemeras.png",
-        category: "Confección"
-    },
-    {
-        id: 4,
-        title: "Detalles de Cuello Estándar",
-        description: "Información de costuras, hilados y tapacosturas de remeras.",
-        image: "/TipoRemeraSublimarCuelloEstandar.png",
-        category: "Calidad"
     },
     {
         id: 5,
@@ -317,10 +325,17 @@ const infoGuides: InfoGuide[] = [
     },
     {
         id: 6,
-        title: "Tabla de Talles Adultos Unisex",
-        description: "Medidas exactas de ancho y largo de axila a axila para remeras de adulto.",
-        image: "/product/TABLA DE TALLES ADULTOS UNISEX.png",
-        category: "Talles"
+        title: "Detalles de Cuello Estándar",
+        description: "Información de costuras, hilados y tapacosturas de remeras.",
+        image: "/TipoRemeraSublimarCuelloEstandar.png",
+        category: "Calidad"
+    },
+    {
+        id: 7,
+        title: "Catálogo e Hilados Textil",
+        description: "Detalles y opciones de remeras listas para personalizar.",
+        image: "/CatalogoRemeras.png",
+        category: "Confección"
     }
 ];
 
