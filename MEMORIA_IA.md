@@ -473,4 +473,9 @@
   - **[SECCIÓN GUÍAS DE TALLES & MEDIDAS]**: Se añadió la tarjeta **"Tabla de Talles Niños"** (`/TallesNiños.jpeg`) al listado de `infoGuides` en [`app/products/ProductsContent.tsx`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/app/products/ProductsContent.tsx), ordenándola junto a la tabla de adultos y guía de medidas para una visualización simétrica, ordenada y en alta resolución.
   - **[PORTAL PREVIEW & ISDIAGRAM FIT]**: Se optimizó la previsualización de imágenes (`selectedImage`) mediante `createPortal` en `document.body` y se actualizaron [`ProductCard.tsx`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/components/cards/ProductCard.tsx) y [`ProductModal.tsx`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/components/ui/ProductModal.tsx) añadiendo la detección `'talles'` a `isDiagram` para asegurar que las tablas de medidas se muestren completas con `object-contain` sin recortes.
 
-
+- **14/09/2026 - Nuevo Producto: Yerbera y Azucarera Workat:**
+  - **[NUEVO PRODUCTO - POLÍMERO]**: Se incorporó el set **Yerbera y Azucarera Workat** (`id: 73`, $8.900) al catálogo en `data.tsx`, categoría `"Polímero"`.
+    - **Imagen principal**: `/product/Yerbera y azucarera workat_1.jpeg`.
+    - **6 variantes interactivas**: Cierre Seguro, Yerbera, Azucarera, Set Completo, Set Rosa, Set Celeste (imágenes `_1` a `_6`).
+    - **Ficha técnica (`details`)**: Capacidad yerbera ~400g, azucarera ~200g, material polímero virgen de alto impacto brillo espejo, tapa a rosca con cierre seguro, pico vertedor giratorio, 100% sublimables.
+  - **[FIX SINTAXIS]**: Se corrigió un error de llave de cierre `}` y coma faltante en `data.tsx` (línea 1439) que quedó al insertar el producto (el objeto `Vaso Fiesta con Glitter` no estaba correctamente cerrado antes del nuevo objeto). Error `ts(1136)` resuelto.

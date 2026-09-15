@@ -1438,6 +1438,56 @@ TABLA DE TALLES (ANCHO x LARGO):
             },
         ],
     },
+    {
+        id: 73,
+        title: "Yerbera y Azucarera Workat",
+        location: "Polímero - Set Matero",
+        description: "Set de yerbera y azucarera de polímero marca Workat, ideales para sublimar. Cuenta con un diseño práctico, tapa a presión con cierre seguro y pico vertedor giratorio. Excelente calidad, resistencia y listas para personalizar.",
+        image: "/product/Yerbera y azucarera workat_1.jpeg",
+        category: "Polímero",
+        stock: 20,
+        website: "/contact",
+        price: 8900,
+        details: `Características principales del set:
+• Yerbera con amplia capacidad (hasta 400g de yerba aprox.).
+• Azucarera con capacidad hasta 200g de azúcar.
+• Material: Polímero virgen de alto impacto, acabado brillo espejo.
+• Tapa con cierre seguro: sistema giratorio con trabas que evita aperturas accidentales.
+• Pico vertedor de fácil uso.
+• 100% sublimables en toda su circunferencia.`,
+        variants: [
+            {
+                colorName: "Cierre Seguro",
+                colorCode: "#bae6fd",
+                image: "/product/Yerbera y azucarera workat_1.jpeg",
+            },
+            {
+                colorName: "Yerbera",
+                colorCode: "#fef08a",
+                image: "/product/Yerbera y azucarera workat_2.jpeg",
+            },
+            {
+                colorName: "Azucarera",
+                colorCode: "#f472b6",
+                image: "/product/Yerbera y azucarera workat_3.jpeg",
+            },
+            {
+                colorName: "Set Completo",
+                colorCode: "#c084fc",
+                image: "/product/Yerbera y azucarera workat_4.jpeg",
+            },
+            {
+                colorName: "Set Rosa",
+                colorCode: "#fbcfe8",
+                image: "/product/Yerbera y azucarera workat_5.jpeg",
+            },
+            {
+                colorName: "Set Celeste",
+                colorCode: "#bfdbfe",
+                image: "/product/Yerbera y azucarera workat_6.jpeg",
+            },
+        ],
+    },
 ];
 
 export const testimonialsData: Testimonial[] = [
