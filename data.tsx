@@ -245,7 +245,7 @@ Cuida tus prendas. Lávalas con agua fría o tibia utilizando el ciclo suave del
         category: "Textiles",
         stock: null,
         website: "/contact",
-        price: 8400,
+        price: 8700,
         variants: [
             {
                 colorName: "Blanco",
@@ -700,7 +700,7 @@ TABLA DE TALLES (ANCHO x LARGO):
         category: "Insumos",
         stock: 20,
         website: "/contact",
-        price: "Consultar",
+        price: 2200,
         guideSlug: "efectos-brillantes-papel-holofan",
     },
     {
