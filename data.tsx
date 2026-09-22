@@ -1488,6 +1488,35 @@ TABLA DE TALLES (ANCHO x LARGO):
             },
         ],
     },
+    {
+        id: 74,
+        title: "Copa de Polímero",
+        location: "Polímero - Copas & Bazar",
+        description: "Copa plástica de polímero apilable con acabado brillo espejo. 100% sublimable de borde a borde (full print). Diseño exclusivo en el mercado, ideal para eventos, fiestas y regalos personalizados.",
+        image: "/product/CopaPolimero_1.jpeg",
+        category: "Polímero",
+        stock: 30,
+        website: "/contact",
+        price: 3500,
+        details: `Especificaciones Técnicas Copa de Polímero:
+• 100% Sublimable de borde a borde (Full Print).
+• Acabado Brillo Espejo deslumbrante.
+• Diseñadas especialmente, únicas en el mercado.
+• Apilables: podés apilarlas entre ellas o con tazas.
+• Material: Polímero virgen de alta resistencia.`,
+        variants: [
+            {
+                colorName: "Especificaciones Técnicas",
+                colorCode: "#71007A",
+                image: "/product/CopaPolimero_1.jpeg",
+            },
+            {
+                colorName: "Muestra y Apilado",
+                colorCode: "#06b6d4",
+                image: "/product/CopaPolimero_2.jpeg",
+            },
+        ],
+    },
 ];
 
 export const testimonialsData: Testimonial[] = [

@@ -479,3 +479,10 @@
     - **6 variantes interactivas**: Cierre Seguro, Yerbera, Azucarera, Set Completo, Set Rosa, Set Celeste (imágenes `_1` a `_6`).
     - **Ficha técnica (`details`)**: Capacidad yerbera ~400g, azucarera ~200g, material polímero virgen de alto impacto brillo espejo, tapa a rosca con cierre seguro, pico vertedor giratorio, 100% sublimables.
   - **[FIX SINTAXIS]**: Se corrigió un error de llave de cierre `}` y coma faltante en `data.tsx` (línea 1439) que quedó al insertar el producto (el objeto `Vaso Fiesta con Glitter` no estaba correctamente cerrado antes del nuevo objeto). Error `ts(1136)` resuelto.
+
+- **21/09/2026 - Nuevo Producto: Copa de Polímero:**
+  - **[NUEVO PRODUCTO - POLÍMERO]**: Se agregó la **Copa de Polímero** (`id: 74`, $3.500) al catálogo en `data.tsx` en la categoría `"Polímero"`.
+    - **Imagen principal**: `/product/CopaPolimero_1.jpeg`.
+    - **Variantes**: Especificaciones Técnicas (`/product/CopaPolimero_1.jpeg`) y Muestra / Apilado (`/product/CopaPolimero_2.jpeg`).
+    - **Ficha técnica (`details`)**: 100% sublimable de borde a borde (full print), acabado brillo espejo deslumbrante, diseño único en el mercado, apilables entre sí o con tazas, polímero virgen de alta resistencia a impactos.
+
