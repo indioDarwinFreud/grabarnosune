@@ -1517,6 +1517,22 @@ TABLA DE TALLES (ANCHO x LARGO):
             },
         ],
     },
+    {
+        id: 75,
+        title: "Vaso Halloween",
+        location: "Plástico - Vasos & Souvenirs",
+        description: "Vaso temático de Halloween con capacidad de 400ml, disponible en varios modelos. Ideal para fiestas, eventos y souvenirs.",
+        image: "/product/VasoHalloween.jpeg",
+        category: "Plástico",
+        stock: 50,
+        website: "/contact",
+        price: 1290,
+        details: `Especificaciones Técnicas Vaso Halloween:
+• Capacidad: 400ml.
+• Varios modelos y diseños temáticos disponibles.
+• Material: Plástico resistente libre de BPA.
+• Excelente calidad para fiestas, eventos y souvenirs.`,
+    },
 ];
 
 export const testimonialsData: Testimonial[] = [

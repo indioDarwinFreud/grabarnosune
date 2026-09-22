@@ -486,3 +486,9 @@
     - **Variantes**: Especificaciones Técnicas (`/product/CopaPolimero_1.jpeg`) y Muestra / Apilado (`/product/CopaPolimero_2.jpeg`).
     - **Ficha técnica (`details`)**: 100% sublimable de borde a borde (full print), acabado brillo espejo deslumbrante, diseño único en el mercado, apilables entre sí o con tazas, polímero virgen de alta resistencia a impactos.
 
+- **21/09/2026 - Nuevo Producto: Vaso Halloween:**
+  - **[NUEVO PRODUCTO - PLÁSTICO]**: Se incorporó el **Vaso Halloween** (`id: 75`, $1.290) al catálogo en `data.tsx` en la categoría `"Plástico"`.
+    - **Imagen principal**: `/product/VasoHalloween.jpeg`.
+    - **Ficha técnica (`details`)**: Capacidad de 400ml, varios modelos y diseños temáticos disponibles, plástico resistente libre de BPA, ideal para eventos, fiestas y souvenirs.
+
+
