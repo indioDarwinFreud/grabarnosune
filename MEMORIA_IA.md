@@ -491,4 +491,6 @@
     - **Imagen principal**: `/product/VasoHalloween.jpeg`.
     - **Ficha técnica (`details`)**: Capacidad de 400ml, varios modelos y diseños temáticos disponibles, plástico resistente libre de BPA, ideal para eventos, fiestas y souvenirs.
 
-
+- **23/09/2026 - Corrección y Agregado de Remeras Infantiles:**
+  - **[CORRECCIÓN DE CATÁLOGO]**: Se corrigió el malentendido de edición donde se había reemplazado la `Remera Spun Niño`. Se restauró la **Remera Spun Niño** (`id: 5`) con su precio original de `$3.200` y su foto `/product/RemeraSpunNiñoBlanca.jpeg`.
+  - **[NUEVO PRODUCTO]**: Se incorporó correctamente de forma independiente la **Remera Modal Premium Niño** (`id: 69`) con su precio de `$4.200` y la foto `/product/RemeraModalPremiumNiño.png` solicitada por el cliente. Ambos productos coexisten ahora en el catálogo dentro de la categoría `Textiles`.

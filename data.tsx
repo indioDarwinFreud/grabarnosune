@@ -193,7 +193,7 @@ TABLA DE TALLES NIÑOS (ANCHO x LARGO):
 • Talle 12: 40 cm Ancho | 54 cm Largo
 
 * Las medidas corresponden a la prenda tomada de frente (ancho de axila a axila y largo desde el cuello/hombro al bajo).`,
-        image: "/product/RemeraSpunNiño.png",
+        image: "/product/RemeraSpunNiñoBlanca.jpeg",
         category: "Textiles",
         stock: null,
         website: "/contact",
@@ -202,7 +202,43 @@ TABLA DE TALLES NIÑOS (ANCHO x LARGO):
             {
                 colorName: "Remera Blanca Spun Niño",
                 colorCode: "#ffffff",
-                image: "/product/RemeraSpunNiño.png",
+                image: "/product/RemeraSpunNiñoBlanca.jpeg",
+            },
+            {
+                colorName: "Tabla de Talles Niños",
+                colorCode: "#71007A",
+                image: "/TallesNiños.jpeg",
+            }
+        ]
+    },
+    {
+        id: 69,
+        title: "Remera Modal Premium Niño",
+        location: "Textiles - Modal Premium",
+        description: "Remera infantil blanca de modal premium. Suave al tacto y lista para sublimar con colores vivos y duraderos.",
+        details: `Características:
+• Confeccionada en Modal Premium (Tacto extra suave imitación algodón)
+• Especialmente diseñada para sublimación de alta definición (colores vívidos y duraderos)
+• Costuras reforzadas e hilo de alta resistencia
+
+TABLA DE TALLES NIÑOS (ANCHO x LARGO):
+• Talle 4: 30 cm Ancho | 42 cm Largo
+• Talle 6: 34 cm Ancho | 44 cm Largo
+• Talle 8: 36 cm Ancho | 49 cm Largo
+• Talle 10: 38 cm Ancho | 52 cm Largo
+• Talle 12: 40 cm Ancho | 54 cm Largo
+
+* Las medidas corresponden a la prenda tomada de frente (ancho de axila a axila y largo desde el cuello/hombro al bajo).`,
+        image: "/product/RemeraModalPremiumNiño.png",
+        category: "Textiles",
+        stock: null,
+        website: "/contact",
+        price: 4200,
+        variants: [
+            {
+                colorName: "Remera Blanca Modal Premium Niño",
+                colorCode: "#ffffff",
+                image: "/product/RemeraModalPremiumNiño.png",
             },
             {
                 colorName: "Tabla de Talles Niños",

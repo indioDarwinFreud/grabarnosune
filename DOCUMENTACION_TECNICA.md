@@ -1,7 +1,7 @@
 # Documentación Técnica — Grabar Nos Une
 
-**Fecha de Última Actualización:** 05/09/2026
-**Versión del Proyecto:** 3.2 (Actualización Catálogo & Plantillas Descargables)
+**Fecha de Última Actualización:** 23/09/2026
+**Versión del Proyecto:** 3.3 (Actualización de Catálogo - Textiles)
 
 
 ---
