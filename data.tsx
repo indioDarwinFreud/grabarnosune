@@ -212,7 +212,7 @@ TABLA DE TALLES NIÑOS (ANCHO x LARGO):
         ]
     },
     {
-        id: 69,
+        id: 76,
         title: "Remera Modal Premium Niño",
         location: "Textiles - Modal Premium",
         description: "Remera infantil blanca de modal premium. Suave al tacto y lista para sublimar con colores vivos y duraderos.",
