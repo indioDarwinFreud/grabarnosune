@@ -495,3 +495,9 @@
   - **[CORRECCIÓN DE CATÁLOGO]**: Se corrigió el malentendido de edición donde se había reemplazado la `Remera Spun Niño`. Se restauró la **Remera Spun Niño** (`id: 5`) con su precio original de `$3.200` y su foto `/product/RemeraSpunNiñoBlanca.jpeg`.
   - **[NUEVO PRODUCTO]**: Se incorporó correctamente de forma independiente la **Remera Modal Premium Niño** (`id: 76`) con su precio de `$4.200` y la foto `/product/RemeraModalPremiumNiño.png`. Ambos productos coexisten en el catálogo dentro de la categoría `Textiles`.
   - **[VERIFICACIÓN CATEGORÍA TEXTIL & ID ÚNICO]**: Se validó que la Remera Modal Premium Niño pertenece a `category: "Textiles"`. Se corrigió el ID a `id: 76` para evitar colisión con el Body Bebé (`id: 69`). Se verificó que el filtro en `ProductsContent.tsx` aísla perfectamente las categorías y el linter corre limpio (0 errores).
+
+- **29/09/2026 - Desacoplamiento de Imágenes en Remeras de Niños (Spun vs Modal):**
+  - **[CORRECCIÓN DE IMÁGENES CRUZADAS]**: Se detectó que las variantes de **Remera Spun Niño** (`id: 5`) y **Remera Modal Premium Niño** (`id: 76`) tenían cruzadas las rutas de imágenes en sus selectores de variantes, provocando que la galería y el carrusel mostraran la foto del nene ("Mundo Spun") en Modal y la remera blanca lisa en Spun al cambiar de imagen.
+  - **Remera Spun Niño (`id: 5`, $3.200)**: Imagen principal y variante fijadas a `/product/RemeraSpunPremiumNiño.png` (foto del niño con "Mundo Spun") + `/TallesNiños.jpeg`.
+  - **Remera Modal Premium Niño (`id: 76`, $4.200)**: Imagen principal y variante fijadas a `/product/RemeraModalNiñoBlanca.jpeg` (foto de remera blanca lisa sobre madera) + `/TallesNiños.jpeg`.
+

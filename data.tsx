@@ -111,7 +111,7 @@ export const productsData: Product[] = [
         category: "Cerámica",
         stock: 30,
         website: "/contact",
-        price: 3500,
+        price: 3900,
         guideSlug: "guia-sublimar-tazas-ceramica",
         variants: [
             {
@@ -130,7 +130,7 @@ export const productsData: Product[] = [
         category: "Cerámica",
         stock: 30,
         website: "/contact",
-        price: 3100,
+        price: 3600,
         guideSlug: "guia-sublimar-tazas-ceramica",
         badge: "Triple AAA",
         variants: [
@@ -193,7 +193,7 @@ TABLA DE TALLES NIÑOS (ANCHO x LARGO):
 • Talle 12: 40 cm Ancho | 54 cm Largo
 
 * Las medidas corresponden a la prenda tomada de frente (ancho de axila a axila y largo desde el cuello/hombro al bajo).`,
-        image: "/product/RemeraSpunNiñoBlanca.jpeg",
+        image: "/product/RemeraSpunPremiumNiño.png",
         category: "Textiles",
         stock: null,
         website: "/contact",
@@ -202,7 +202,7 @@ TABLA DE TALLES NIÑOS (ANCHO x LARGO):
             {
                 colorName: "Remera Blanca Spun Niño",
                 colorCode: "#ffffff",
-                image: "/product/RemeraSpunNiñoBlanca.jpeg",
+                image: "/product/RemeraSpunPremiumNiño.png",
             },
             {
                 colorName: "Tabla de Talles Niños",
@@ -229,7 +229,7 @@ TABLA DE TALLES NIÑOS (ANCHO x LARGO):
 • Talle 12: 40 cm Ancho | 54 cm Largo
 
 * Las medidas corresponden a la prenda tomada de frente (ancho de axila a axila y largo desde el cuello/hombro al bajo).`,
-        image: "/product/RemeraModalPremiumNiño.png",
+        image: "/product/RemeraModalNiñoBlanca.jpeg",
         category: "Textiles",
         stock: null,
         website: "/contact",
@@ -238,7 +238,7 @@ TABLA DE TALLES NIÑOS (ANCHO x LARGO):
             {
                 colorName: "Remera Blanca Modal Premium Niño",
                 colorCode: "#ffffff",
-                image: "/product/RemeraModalPremiumNiño.png",
+                image: "/product/RemeraModalNiñoBlanca.jpeg",
             },
             {
                 colorName: "Tabla de Talles Niños",
@@ -862,7 +862,7 @@ TABLA DE TALLES (ANCHO x LARGO):
         category: "Cerámica",
         stock: 20,
         website: "/contact",
-        price: 5100,
+        price: 5300,
     },
     {
         id: 50,
@@ -873,7 +873,7 @@ TABLA DE TALLES (ANCHO x LARGO):
         category: "Cerámica",
         stock: 30,
         website: "/contact",
-        price: 3900,
+        price: 4500,
     },
     {
         id: 32,
