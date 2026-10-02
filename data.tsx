@@ -387,7 +387,7 @@ TABLA DE TALLES NIÑOS (ANCHO x LARGO):
         category: "Textiles",
         stock: null,
         website: "/contact",
-        price: 6000,
+        price: 6500,
         variants: [
             {
                 colorName: "Blanco",
