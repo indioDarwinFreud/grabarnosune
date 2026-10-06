@@ -1,7 +1,7 @@
 # Documentación Técnica — Grabar Nos Une
 
-**Fecha de Última Actualización:** 23/09/2026
-**Versión del Proyecto:** 3.3 (Actualización de Catálogo - Textiles)
+**Fecha de Última Actualización:** 05/10/2026
+**Versión del Proyecto:** 3.4 (Actualización de Catálogo - Mates & Accesorios)
 
 
 ---
@@ -261,7 +261,7 @@ El catálogo en `data.tsx` usa el campo `category` para el filtrado estricto por
 | `"Cerámica"` | Tazas de cerámica — **3 productos separados** | **Cerámica Nacional** (id: 2, $3.100, sin stock) \| **Taza Orca** (id: 66, $3.500) \| **Taza AAA Premium** (id: 67, $3.100, badge Triple AAA) \| Glitter \| Perlada \| Mágica \| Interior Color |
 | `"Insumos"` | Consumibles para el proceso de sublimación | Papel Art-Jet, tintas, Holofan, Winky Paper |
 | `"Plástico"` | Artículos plásticos de bazar y souvenirs | Vasos, botellas, luncheras, kit de masas |
-| `"Acero"` | Artículos de acero inoxidable sublimables | Termos, botellas térmicas, vaso térmico con tapa acrílico |
+| `"Acero / Aluminio"` | Artículos de acero inoxidable, metal y aluminio | Termos, botellas térmicas, vaso térmico, bombillas para mate |
 | `"Madera"` | Artículos de MDF y madera | *(sin productos activos aún)* |
 
 > **Regla de oro:** Si se agrega un producto nuevo, su campo `category` DEBE coincidir exactamente con uno de los valores de la tabla anterior (respetando mayúsculas, tildes y espacios). El filtrado es estricto.

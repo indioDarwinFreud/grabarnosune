@@ -587,46 +587,52 @@ TABLA DE TALLES (ANCHO x LARGO):
     },
     {
         id: 18,
-        title: "Mate de Polímero Sublimate",
+        title: "Mate Sublimable de Polímero",
         location: "Polímero - Mates",
-        description: "Mate plástico de polímero premium importado Sublimate. Incluye bombilla de acero inoxidable. Mayor brillo, resistencia a golpes y hermoso acabado con interior de color.",
-        image: "/product/MateGeneral.jpeg",
+        description: "Mate plástico de polímero premium sublimable con acabado brillante y gran resistencia a golpes. Interior de color a elección. Medidas: Alto 8,5 cm | Diámetro 8 cm.",
+        details: `Especificaciones Técnicas Mate Sublimable de Polímero:
+• Medidas: Alto 8,5 cm | Diámetro 8 cm
+• Material: Polímero virgen 100% sublimable con acabado brillante
+• Gran resistencia a golpes y caídas
+• Colores de interior disponibles: Rosa, Rojo, Gris, Azul, Negro
+• Excelente definición y fidelidad de color al sublimar`,
+        image: "/product/Mate Sublimable de Polímero-1.jpeg",
         category: "Polímero",
-        stock: 15,
+        stock: 25,
         website: "/contact",
         price: 4400,
         variants: [
             {
-                colorName: "Aqua Marine",
-                colorCode: "#00a896",
-                image: "/product/Sublimate1.jpeg",
+                colorName: "Muestra Sublimada",
+                colorCode: "#71007A",
+                image: "/product/Mate Sublimable de Polímero-1.jpeg",
             },
             {
-                colorName: "Naranja Otoñal",
-                colorCode: "#e76f51",
-                image: "/product/Sublimate2.jpeg",
+                colorName: "Interior Rosa",
+                colorCode: "#f472b6",
+                image: "/product/Mate Sublimable de Polímero-2.jpeg",
             },
             {
-                colorName: "Mora Púrpura",
-                colorCode: "#7209b7",
-                image: "/product/Sublimate3.jpeg",
+                colorName: "Interior Rojo",
+                colorCode: "#ef4444",
+                image: "/product/Mate Sublimable de Polímero-3.jpeg",
             },
             {
-                colorName: "Amarillo Toscano",
-                colorCode: "#f9c74f",
-                image: "/product/Sublimate4.jpeg",
+                colorName: "Interior Gris",
+                colorCode: "#6b7280",
+                image: "/product/Mate Sublimable de Polímero-4.jpeg",
             },
             {
-                colorName: "Verde Manzana",
-                colorCode: "#90be6d",
-                image: "/product/Sublimate5.jpeg",
+                colorName: "Interior Azul",
+                colorCode: "#2563eb",
+                image: "/product/Mate Sublimable de Polímero-5.jpeg",
             },
             {
-                colorName: "Fucsia Glam",
-                colorCode: "#f72585",
-                image: "/product/Sublimate6.jpeg",
-            }
-        ]
+                colorName: "Interior Negro",
+                colorCode: "#1f2937",
+                image: "/product/Mate Sublimable de Polímero-6.jpeg",
+            },
+        ],
     },
     {
         id: 20,
@@ -1568,6 +1574,22 @@ TABLA DE TALLES (ANCHO x LARGO):
 • Varios modelos y diseños temáticos disponibles.
 • Material: Plástico resistente libre de BPA.
 • Excelente calidad para fiestas, eventos y souvenirs.`,
+    },
+    {
+        id: 77,
+        title: "Bombilla para Mate",
+        location: "Acero / Aluminio - Accesorios Materos",
+        description: "Bombilla metálica para mate con resorte desmontable de fácil limpieza. Gran surtido de colores vibrantes y terminaciones para acompañar tu mate personalizado.",
+        image: "/product/BombillaMate.jpeg",
+        category: "Acero / Aluminio",
+        stock: 50,
+        website: "/contact",
+        price: 1500,
+        details: `Especificaciones Técnicas Bombilla para Mate:
+• Material: Metálica esmaltada / anodizada de alta calidad
+• Filtro con resorte desmontable para una limpieza rápida y eficaz
+• Amplia variedad de colores disponibles
+• El complemento ideal para tus mates`,
     },
 ];
 

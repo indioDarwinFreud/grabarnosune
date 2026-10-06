@@ -501,3 +501,12 @@
   - **Remera Spun Niño (`id: 5`, $3.200)**: Imagen principal y variante fijadas a `/product/RemeraSpunPremiumNiño.png` (foto del niño con "Mundo Spun") + `/TallesNiños.jpeg`.
   - **Remera Modal Premium Niño (`id: 76`, $4.200)**: Imagen principal y variante fijadas a `/product/RemeraModalNiñoBlanca.jpeg` (foto de remera blanca lisa sobre madera) + `/TallesNiños.jpeg`.
 
+- **05/10/2026 - Actualización de Mate Sublimable de Polímero e Incorporación de Bombilla para Mate:**
+  - **[MATE SUBLIMABLE DE POLÍMERO]**: Se actualizó la ficha del **Mate Sublimable de Polímero** (`id: 18`, $4.400) en `data.tsx`:
+    - **Imagen de portada**: Foto con acabado brillante sublimado (`/product/Mate Sublimable de Polímero-1.jpeg`).
+    - **Medidas & Ficha técnica (`details`)**: Alto: 8,5 cm | Diámetro: 8 cm. Polímero virgen 100% sublimable, gran resistencia a golpes.
+    - **Variantes de interior**: Rosa (`_2.jpeg`), Rojo (`_3.jpeg`), Gris (`_4.jpeg`), Azul (`_5.jpeg`), Negro (`_6.jpeg`).
+  - **[NUEVO PRODUCTO - BOMBILLA PARA MATE]**: Se agregó **Bombilla para Mate** (`id: 77`, $1.500) en `data.tsx` dentro de la categoría `"Acero / Aluminio"`:
+    - **Imagen principal**: `/product/BombillaMate.jpeg` (abanico con variedad de colores).
+    - **Ficha técnica (`details`)**: Metálica con resorte desmontable de fácil limpieza, gran surtido de colores disponibles.
+
