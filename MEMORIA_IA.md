@@ -510,3 +510,13 @@
     - **Imagen principal**: `/product/BombillaMate.jpeg` (abanico con variedad de colores).
     - **Ficha técnica (`details`)**: Metálica con resorte desmontable de fácil limpieza, gran surtido de colores disponibles.
 
+- **08/10/2026 - Incorporación de Vaso Quencher Sublimable 1,2L:**
+  - **[NUEVO PRODUCTO - ACERO / ALUMINIO]**: Se agregó el **Vaso Quencher Sublimable 1,2L** (`id: 78`, $19.000) en [`data.tsx`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/data.tsx) dentro de la categoría `"Acero / Aluminio"`:
+    - **Imagen principal**: `/product/Vaso Quencher  Sublimable 1,2L-3.jpeg` (100% Sublimable).
+    - **Variantes interactivas**:
+      - *100% Sublimable* (`/product/Vaso Quencher  Sublimable 1,2L-3.jpeg`)
+      - *Pico Intercambiable* (`/product/Vaso Quencher  Sublimable 1,2L-1.jpeg`)
+      - *Tapa a Rosca* (`/product/Vaso Quencher  Sublimable 1,2L-2.jpeg`)
+    - **Ficha técnica (`details`)**: Capacidad 1,2 L (1200 ml), acero inoxidable de doble pared con retención térmica frío/calor, tapa a rosca hermética con pico intercambiable, manija ergonómica reforzada e incluye sorbete.
+
+

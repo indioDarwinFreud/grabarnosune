@@ -1591,6 +1591,41 @@ TABLA DE TALLES (ANCHO x LARGO):
 • Amplia variedad de colores disponibles
 • El complemento ideal para tus mates`,
     },
+    {
+        id: 78,
+        title: "Vaso Quencher Sublimable 1,2L",
+        location: "Acero Inoxidable - Vasos Térmicos",
+        description: "Vaso Quencher de acero inoxidable con capacidad de 1,2 litros. Cuenta con manija ergonómica, tapa a rosca con pico intercambiable y sorbete. 100% sublimable, ideal para conservar bebidas frías o calientes.",
+        image: "/product/Vaso Quencher  Sublimable 1,2L-3.jpeg",
+        category: "Acero / Aluminio",
+        stock: 25,
+        website: "/contact",
+        price: 19000,
+        details: `Especificaciones Técnicas Vaso Quencher:
+• Capacidad: 1,2 Litros (1200 ml).
+• Material: Acero inoxidable de alta resistencia térmica (doble pared).
+• 100% Sublimable: superficie tratada para estampado de máxima definición.
+• Tapa a rosca hermética con pico intercambiable.
+• Manija ergonómica de agarre seguro.
+• Incluye sorbete.`,
+        variants: [
+            {
+                colorName: "100% Sublimable",
+                colorCode: "#71007A",
+                image: "/product/Vaso Quencher  Sublimable 1,2L-3.jpeg",
+            },
+            {
+                colorName: "Pico Intercambiable",
+                colorCode: "#f59e0b",
+                image: "/product/Vaso Quencher  Sublimable 1,2L-1.jpeg",
+            },
+            {
+                colorName: "Tapa a Rosca",
+                colorCode: "#cbd5e1",
+                image: "/product/Vaso Quencher  Sublimable 1,2L-2.jpeg",
+            },
+        ],
+    },
 ];
 
 export const testimonialsData: Testimonial[] = [
