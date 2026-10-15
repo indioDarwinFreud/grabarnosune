@@ -1626,6 +1626,33 @@ TABLA DE TALLES (ANCHO x LARGO):
             },
         ],
     },
+    {
+        id: 79,
+        title: "Papel Especial Tatufan",
+        location: "Papeles Especiales - Tatuajes Temporales",
+        description: "Papel especial Tatufan by Art-Jet en formato A4 para crear tatuajes temporales mágicos y divertidos. Diseñado para imprimir con impresoras inkjet y tintas al agua. Incluye hoja imprimible y film de transferencia para aplicar fácilmente con agua sobre la piel.",
+        image: "/product/PapelEspecialTatufan.jpeg",
+        category: "Papeles especiales",
+        stock: 50,
+        website: "/contact",
+        price: 3400,
+        details: `Especificaciones Técnicas Papel Especial Tatufan:
+• Precio por hoja individual / juego: $3.400.
+• Marca: Tatufan by Art-Jet.
+• Formato: A4.
+• Contenido del juego: (1) hoja imprimible con tinta al agua / inkjet + (1) hoja de transferencia para tatuajes temporales.
+• Compatibilidad: Apto para impresoras de inyección de tinta (inkjet) con tintas estándar o fotográficas al agua.
+• Modo de uso: Imprimí tu diseño en la hoja base, colocá la lámina adhesiva transparente, recortá la figura y aplicala sobre la piel limpia humedeciendo con un paño.
+• Ideal para: Fiestas infantiles, cumpleaños, eventos temáticos, souvenirs y proyectos creativos.`,
+        variants: [
+            {
+                colorName: "Hoja A4",
+                colorCode: "#f59e0b",
+                image: "/product/PapelEspecialTatufan.jpeg",
+                price: 3400,
+            },
+        ],
+    },
 ];
 
 export const testimonialsData: Testimonial[] = [

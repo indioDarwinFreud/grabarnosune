@@ -519,4 +519,13 @@
       - *Tapa a Rosca* (`/product/Vaso Quencher  Sublimable 1,2L-2.jpeg`)
     - **Ficha técnica (`details`)**: Capacidad 1,2 L (1200 ml), acero inoxidable de doble pared con retención térmica frío/calor, tapa a rosca hermética con pico intercambiable, manija ergonómica reforzada e incluye sorbete.
 
+- **15/10/2026 - Incorporación de Papel Especial Tatufan:**
+  - **[NUEVO PRODUCTO - PAPELES ESPECIALES]**: Se agregó **Papel Especial Tatufan** (`id: 79`, $3.400 por hoja/juego) en [`data.tsx`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/data.tsx) dentro de la categoría `"Papeles especiales"`:
+    - **Imagen principal**: `/product/PapelEspecialTatufan.jpeg` (portada oficial Tatufan by Art-Jet).
+    - **Variante**: *Hoja A4* (`/product/PapelEspecialTatufan.jpeg`, $3.400).
+    - **Ficha técnica (`details`)**: Formato A4, marca Art-Jet. Contenido del juego: (1) hoja imprimible con tinta al agua / inkjet + (1) hoja de transferencia para tatuajes temporales. Diseñado para aplicar con agua sobre la piel.
+  - **[FILTRADO COMPATIBLE]**: Se actualizó la lógica en [`ProductsContent.tsx`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/app/products/ProductsContent.tsx) para asegurar que el producto aparezca tanto en el filtro `"Papeles especiales"` como de forma complementaria en `"Insumos para estampar"`.
+
+
+
 

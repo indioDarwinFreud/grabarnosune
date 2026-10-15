@@ -1,7 +1,7 @@
 # Documentación Técnica — Grabar Nos Une
 
-**Fecha de Última Actualización:** 05/10/2026
-**Versión del Proyecto:** 3.4 (Actualización de Catálogo - Mates & Accesorios)
+**Fecha de Última Actualización:** 15/10/2026
+**Versión del Proyecto:** 3.5 (Incorporación de Papel Especial Tatufan)
 
 
 ---
@@ -260,6 +260,7 @@ El catálogo en `data.tsx` usa el campo `category` para el filtrado estricto por
 | `"Polímero"` | Artículos plásticos con recubrimiento polimérico | Mates, tazas plásticas, jarros, cubiertos, rompecabezas, llaveros |
 | `"Cerámica"` | Tazas de cerámica — **3 productos separados** | **Cerámica Nacional** (id: 2, $3.100, sin stock) \| **Taza Orca** (id: 66, $3.500) \| **Taza AAA Premium** (id: 67, $3.100, badge Triple AAA) \| Glitter \| Perlada \| Mágica \| Interior Color |
 | `"Insumos"` | Consumibles para el proceso de sublimación | Papel Art-Jet, tintas, Holofan, Winky Paper |
+| `"Papeles especiales"` | Papeles y films para aplicaciones específicas | Papel Especial Tatufan (tatuajes temporales A4) |
 | `"Plástico"` | Artículos plásticos de bazar y souvenirs | Vasos, botellas, luncheras, kit de masas |
 | `"Acero / Aluminio"` | Artículos de acero inoxidable, metal y aluminio | Termos, botellas térmicas, vaso térmico, bombillas para mate |
 | `"Madera"` | Artículos de MDF y madera | *(sin productos activos aún)* |

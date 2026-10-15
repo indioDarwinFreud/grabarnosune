@@ -88,7 +88,7 @@ function ProductsContent() {
             } else if (catLower === "polímero" || catLower === "polimero") {
                 matchesCategory = product.category === "Polímero" || product.category === "Polimero";
             } else if (catLower === "insumos para estampar") {
-                matchesCategory = product.category === "Insumos";
+                matchesCategory = product.category === "Insumos" || product.category === "Papeles especiales";
             } else if (catLower === "cartón" || catLower === "carton") {
                 matchesCategory = product.category === "Cartón" || product.category === "Carton";
             } else if (catLower === "papeles especiales") {
@@ -97,7 +97,8 @@ function ProductsContent() {
                         product.title.toLowerCase().includes("papel") || 
                         product.title.toLowerCase().includes("winky") || 
                         product.title.toLowerCase().includes("holofan") ||
-                        product.title.toLowerCase().includes("sublistick")
+                        product.title.toLowerCase().includes("sublistick") ||
+                        product.title.toLowerCase().includes("tatufan")
                     ));
             } else if (catLower === "plástico" || catLower === "plastico") {
                 matchesCategory = product.category === "Plástico" || product.category === "Plastico";
