@@ -281,7 +281,7 @@ Cuida tus prendas. Lávalas con agua fría o tibia utilizando el ciclo suave del
         category: "Textiles",
         stock: null,
         website: "/contact",
-        price: 8700,
+        price: 9000,
         variants: [
             {
                 colorName: "Blanco",
@@ -387,7 +387,7 @@ TABLA DE TALLES NIÑOS (ANCHO x LARGO):
         category: "Textiles",
         stock: null,
         website: "/contact",
-        price: 6500,
+        price: 7000,
         variants: [
             {
                 colorName: "Blanco",
@@ -430,7 +430,7 @@ TABLA DE TALLES (ANCHO x LARGO):
         category: "Textiles",
         stock: 40,
         website: "/contact",
-        price: 5500,
+        price: 6000,
         variants: [
             {
                 colorName: "Blanco",
@@ -1276,6 +1276,7 @@ TABLA DE TALLES (ANCHO x LARGO):
         stock: 25,
         website: "/contact",
         price: 13900,
+        badge: "Sin Stock",
         variants: [
             {
                 colorName: "Vista General",
@@ -1299,6 +1300,7 @@ TABLA DE TALLES (ANCHO x LARGO):
         stock: 30,
         website: "/contact",
         price: 13100,
+        badge: "Sin Stock",
     },
     {
         id: 61,
@@ -1309,7 +1311,7 @@ TABLA DE TALLES (ANCHO x LARGO):
         category: "Acero",
         stock: 25,
         website: "/contact",
-        price: 13900,
+        price: 16900,
     },
     {
         id: 62,
@@ -1321,6 +1323,7 @@ TABLA DE TALLES (ANCHO x LARGO):
         stock: 20,
         website: "/contact",
         price: 12900,
+        badge: "Sin Stock",
     },
     {
         id: 63,
@@ -1332,6 +1335,7 @@ TABLA DE TALLES (ANCHO x LARGO):
         stock: 30,
         website: "/contact",
         price: 11900,
+        badge: "Sin Stock",
     },
     {
         id: 64,
@@ -1340,9 +1344,10 @@ TABLA DE TALLES (ANCHO x LARGO):
         description: "Botella térmica sublimable de 500ml fabricada en acero inoxidable de doble pared. Mantiene bebidas frías o calientes durante todo el día. Acabado blanco brillante listo para estampar.",
         image: "/product/Botella Termica Sublimable 500ml.jpeg",
         category: "Acero",
-        stock: 30,
+        stock: null,
         website: "/contact",
         price: 13500,
+        badge: "Sin Stock",
     },
     {
         id: 65,

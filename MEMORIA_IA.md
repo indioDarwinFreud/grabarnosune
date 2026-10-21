@@ -526,6 +526,9 @@
     - **Ficha técnica (`details`)**: Formato A4, marca Art-Jet. Contenido del juego: (1) hoja imprimible con tinta al agua / inkjet + (1) hoja de transferencia para tatuajes temporales. Diseñado para aplicar con agua sobre la piel.
   - **[FILTRADO COMPATIBLE]**: Se actualizó la lógica en [`ProductsContent.tsx`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/app/products/ProductsContent.tsx) para asegurar que el producto aparezca tanto en el filtro `"Papeles especiales"` como de forma complementaria en `"Insumos para estampar"`.
 
+- **21/10/2026 - Etiquetas Sin Stock en Catálogo de Acero:**
+  - **[CATÁLOGO]**: Se agregó la etiqueta/badge `"Sin Stock"` a los productos **Botella Térmica Sublimable 500ml** (`id: 64`, `stock: null`) y **Termo Taza Térmico** (`id: 62`) en [`data.tsx`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/data.tsx).
+
 
 
 
