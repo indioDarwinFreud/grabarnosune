@@ -1,7 +1,7 @@
 # Documentación Técnica — Grabar Nos Une
 
-**Fecha de Última Actualización:** 15/10/2026
-**Versión del Proyecto:** 3.5 (Incorporación de Papel Especial Tatufan)
+**Fecha de Última Actualización:** 21/10/2026
+**Versión del Proyecto:** 3.6 (Actualización de precios y etiquetas Sin Stock en catálogo de Acero y Textiles)
 
 
 ---

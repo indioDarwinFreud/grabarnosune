@@ -1658,6 +1658,70 @@ TABLA DE TALLES (ANCHO x LARGO):
             },
         ],
     },
+    {
+        id: 80,
+        title: "Botella Deportiva Hoppy 750ml",
+        location: "Plástico - Botella Deportiva",
+        description: "Botella deportiva Hoppy de 750ml, ideal para personalizar con sublimación. Diseño ergonómico, resistente y libre de BPA. Perfecta para actividades físicas, viajes y uso diario.",
+        image: "/product/Botella deportiva hoppy 750ml_1.jpeg",
+        category: "Plástico",
+        stock: 20,
+        website: "/contact",
+        price: 3600,
+        details: `Especificaciones Técnicas Botella Deportiva Hoppy 750ml:
+• Precio: $3.600.
+• Capacidad: 750 ml.
+• Material: Plástico resistente libre de BPA, 100% sublimable.
+• Cierre: Tapa a rosca segura.
+• Uso: Actividades deportivas, viajes, uso diario.
+• Ideal para: Personalización con sublimación full print.`,
+        variants: [
+            {
+                colorName: "Vista 1",
+                colorCode: "#e2e8f0",
+                image: "/product/Botella deportiva hoppy 750ml_1.jpeg",
+                price: 3600,
+            },
+            {
+                colorName: "Vista 2",
+                colorCode: "#94a3b8",
+                image: "/product/Botella deportiva hoppy 750ml_2.jpeg",
+                price: 3600,
+            },
+        ],
+    },
+    {
+        id: 81,
+        title: "Botella Deportiva Hoppy 400ml",
+        location: "Plástico - Botella Deportiva",
+        description: "Botella deportiva Hoppy de 400ml, compacta y cómoda para llevar a todos lados. Personalizable con sublimación, libre de BPA. Ideal para niños y para quienes buscan un formato más pequeño.",
+        image: "/product/Botella deportiva hoppy 400ml_1.jpeg",
+        category: "Plástico",
+        stock: 20,
+        website: "/contact",
+        price: 3000,
+        details: `Especificaciones Técnicas Botella Deportiva Hoppy 400ml:
+• Precio: $3.000.
+• Capacidad: 400 ml.
+• Material: Plástico resistente libre de BPA, 100% sublimable.
+• Cierre: Tapa a rosca segura.
+• Uso: Actividades deportivas, escuela, viajes, uso diario.
+• Ideal para: Personalización con sublimación full print.`,
+        variants: [
+            {
+                colorName: "Vista 1",
+                colorCode: "#e2e8f0",
+                image: "/product/Botella deportiva hoppy 400ml_1.jpeg",
+                price: 3000,
+            },
+            {
+                colorName: "Vista 2",
+                colorCode: "#94a3b8",
+                image: "/product/Botella deportiva hoppy 400ml_2.jpeg",
+                price: 3000,
+            },
+        ],
+    },
 ];
 
 export const testimonialsData: Testimonial[] = [

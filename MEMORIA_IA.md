@@ -526,8 +526,24 @@
     - **Ficha técnica (`details`)**: Formato A4, marca Art-Jet. Contenido del juego: (1) hoja imprimible con tinta al agua / inkjet + (1) hoja de transferencia para tatuajes temporales. Diseñado para aplicar con agua sobre la piel.
   - **[FILTRADO COMPATIBLE]**: Se actualizó la lógica en [`ProductsContent.tsx`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/app/products/ProductsContent.tsx) para asegurar que el producto aparezca tanto en el filtro `"Papeles especiales"` como de forma complementaria en `"Insumos para estampar"`.
 
-- **21/10/2026 - Etiquetas Sin Stock en Catálogo de Acero:**
-  - **[CATÁLOGO]**: Se agregó la etiqueta/badge `"Sin Stock"` a los productos **Botella Térmica Sublimable 500ml** (`id: 64`, `stock: null`) y **Termo Taza Térmico** (`id: 62`) en [`data.tsx`](file:///d:/Proyectos/Locales/DaianaGrabarNosUne/data.tsx).
+- **21/10/2026 - Actualización de Precios, Etiquetas Sin Stock y Despliegue en Vercel:**
+  - **[PRECIOS TEXTILES]**:
+    - **Remera Blanca Algodón Peinado** (`id: 6`): actualizada de $8.700 a **$9.000**.
+    - **Remera Niños Algodón Peinado 24.1** (`id: 7`): actualizada de $6.500 a **$7.000**.
+    - **Body Bebé Algodón 24.1** (`id: 69`): actualizado de $5.500 a **$6.000**.
+  - **[PRECIOS Y SIN STOCK EN ACERO]**:
+    - **Termo Botella con Tapa de Bambú 500ml** (`id: 61`): actualizado de $13.900 a **$16.900**.
+    - Se incorporó la etiqueta `badge: "Sin Stock"` a los siguientes artículos de la línea de acero inoxidable:
+      - **Termo Botella Cordón 500ml** (`id: 59`, $13.900).
+      - **Vaso Térmico con Tapa de Acrílico 500ml** (`id: 60`, $13.100).
+      - **Termo Taza Térmico** (`id: 62`, $12.900).
+      - **Termo Botella Digital Inteligente** (`id: 63`, $11.900).
+      - **Botella Térmica Sublimable 500ml** (`id: 64`, $13.500, `stock: null`).
+  - **[DEPLOY & CI]**: Sincronización exitosa con GitHub (commit `f557399`) y validación de compilación local y en producción Vercel aprobada con 0 errores de ESLint y Next.js.
+
+- **22/10/2026 - Incorporación de Botellas Deportivas Hoppy:**
+  - **[NUEVO PRODUCTO - PLÁSTICO]**: Se agregó **Botella Deportiva Hoppy 750ml** (`id: 80`, $3.600, `/product/Botella deportiva hoppy 750ml_1.jpeg`). Categoría: `Plástico`. Con 2 variantes de vista.
+  - **[NUEVO PRODUCTO - PLÁSTICO]**: Se agregó **Botella Deportiva Hoppy 400ml** (`id: 81`, $3.000, `/product/Botella deportiva hoppy 400ml_1.jpeg`). Categoría: `Plástico`. Con 2 variantes de vista. Descripción orientada a niños y formato compacto.
 
 
 
