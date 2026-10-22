@@ -542,8 +542,9 @@
   - **[DEPLOY & CI]**: Sincronización exitosa con GitHub (commit `f557399`) y validación de compilación local y en producción Vercel aprobada con 0 errores de ESLint y Next.js.
 
 - **22/10/2026 - Incorporación de Botellas Deportivas Hoppy:**
-  - **[NUEVO PRODUCTO - PLÁSTICO]**: Se agregó **Botella Deportiva Hoppy 750ml** (`id: 80`, $3.600, `/product/Botella deportiva hoppy 750ml_1.jpeg`). Categoría: `Plástico`. Con 2 variantes de vista.
+  - **[NUEVO PRODUCTO - PLÁSTICO]**: Se agregó **Botella Deportiva Hoppy 750ml** (`id: 80`, $3.600, `/product/Botella Deportiva Hoppy 750ml_1.jpeg`). Categoría: `Plástico`. Con 2 variantes de vista.
   - **[NUEVO PRODUCTO - PLÁSTICO]**: Se agregó **Botella Deportiva Hoppy 400ml** (`id: 81`, $3.000, `/product/Botella deportiva hoppy 400ml_1.jpeg`). Categoría: `Plástico`. Con 2 variantes de vista. Descripción orientada a niños y formato compacto.
+  - **[FIX CASE-SENSITIVITY EN PRODUCCIÓN]**: Se corrigió el nombre de archivo de la imagen de la botella de 750ml en `data.tsx` (`Botella deportiva...` → `Botella Deportiva...`). En Windows (localhost) funcionaba por ser case-insensitive, pero en servidores Linux (Vercel/producción) causaba 404 al no coincidir las mayúsculas de "Deportiva" y "Hoppy" con el archivo real en git.
 
 
 
