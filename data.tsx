@@ -1323,7 +1323,7 @@ TABLA DE TALLES (ANCHO x LARGO):
         stock: 20,
         website: "/contact",
         price: 12900,
-        badge: "Sin Stock",
+        badge: "Disponible en color blanco",
     },
     {
         id: 63,
