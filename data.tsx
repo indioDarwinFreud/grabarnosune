@@ -1722,6 +1722,72 @@ TABLA DE TALLES (ANCHO x LARGO):
             },
         ],
     },
+    {
+        id: 82,
+        title: "Contenedor cuadrado tipo taper Medida 10.5x10.5x7 cm",
+        location: "Plástico - Organizadores & Souvenirs",
+        description: "Contenedor cuadrado tipo taper (10.5 x 10.5 x 7 cm). Ideal para viandas, golosineros, souvenirs, combos personalizados y organización. Disponible en colores pasteles, colores fuertes y línea glitter.",
+        image: "/product/ContenedorCuadradoTipoTaperMedida10.5x10.5x7Cm.jpeg",
+        category: "Plástico",
+        stock: 50,
+        website: "/contact",
+        price: 1490,
+        details: `Especificaciones Técnicas Contenedor Cuadrado Tipo Taper:
+• Medidas: 10.5 x 10.5 x 7 cm.
+• Formato: Cuadrado con tapa hermética a presión.
+• Material: Plástico resistente libre de BPA.
+• Colores Pasteles: Rosa, celeste, amarillo, salmón, lila.
+• Colores Fuertes: Rojo, verde, azul.
+• Acabados: Línea colores lisos y línea Glitter.
+• Usos: Souvenirs, golosineros, viandas escolares, orden en el hogar y personalización.`,
+        variants: [
+            {
+                colorName: "Rosa Pastel",
+                colorCode: "#fbcfe8",
+                image: "/product/ContenedorCuadradoTipoTaperMedida10.5x10.5x7Cm.jpeg",
+            },
+            {
+                colorName: "Celeste Pastel",
+                colorCode: "#bae6fd",
+                image: "/product/ContenedorCuadradoTipoTaperMedida10.5x10.5x7Cm.jpeg",
+            },
+            {
+                colorName: "Amarillo Pastel",
+                colorCode: "#fef08a",
+                image: "/product/ContenedorCuadradoTipoTaperMedida10.5x10.5x7Cm.jpeg",
+            },
+            {
+                colorName: "Salmón Pastel",
+                colorCode: "#fca5a5",
+                image: "/product/ContenedorCuadradoTipoTaperMedida10.5x10.5x7Cm.jpeg",
+            },
+            {
+                colorName: "Lila Pastel",
+                colorCode: "#e9d5ff",
+                image: "/product/ContenedorCuadradoTipoTaperMedida10.5x10.5x7Cm.jpeg",
+            },
+            {
+                colorName: "Rojo Fuerte",
+                colorCode: "#dc2626",
+                image: "/product/ContenedorCuadradoTipoTaperMedida10.5x10.5x7Cm.jpeg",
+            },
+            {
+                colorName: "Verde Fuerte",
+                colorCode: "#16a34a",
+                image: "/product/ContenedorCuadradoTipoTaperMedida10.5x10.5x7Cm.jpeg",
+            },
+            {
+                colorName: "Azul Fuerte",
+                colorCode: "#2563eb",
+                image: "/product/ContenedorCuadradoTipoTaperMedida10.5x10.5x7Cm.jpeg",
+            },
+            {
+                colorName: "Glitter",
+                colorCode: "linear-gradient(135deg, #fbcfe8 0%, #c084fc 50%, #67e8f9 100%)",
+                image: "/product/ContenedorCuadradoTipoTaperMedida10.5x10.5x7Cm.jpeg",
+            },
+        ],
+    },
 ];
 
 export const testimonialsData: Testimonial[] = [

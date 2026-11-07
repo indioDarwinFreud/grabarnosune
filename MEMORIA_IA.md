@@ -546,6 +546,15 @@
   - **[NUEVO PRODUCTO - PLÁSTICO]**: Se agregó **Botella Deportiva Hoppy 400ml** (`id: 81`, $3.000, `/product/Botella deportiva hoppy 400ml_1.jpeg`). Categoría: `Plástico`. Con 2 variantes de vista. Descripción orientada a niños y formato compacto.
   - **[FIX CASE-SENSITIVITY EN PRODUCCIÓN]**: Se corrigió el nombre de archivo de la imagen de la botella de 750ml en `data.tsx` (`Botella deportiva...` → `Botella Deportiva...`). En Windows (localhost) funcionaba por ser case-insensitive, pero en servidores Linux (Vercel/producción) causaba 404 al no coincidir las mayúsculas de "Deportiva" y "Hoppy" con el archivo real en git.
 
+- **07/11/2026 - Incorporación de Contenedor Cuadrado Tipo Taper:**
+  - **[NUEVO PRODUCTO - PLÁSTICO]**: Se agregó **Contenedor cuadrado tipo taper Medida 10.5x10.5x7 cm** (`id: 82`, $1.490, `/product/ContenedorCuadradoTipoTaperMedida10.5x10.5x7Cm.jpeg`) al catálogo en `data.tsx` dentro de la categoría `"Plástico"`.
+  - **[VARIANTES INTERACTIVAS & COLORES]**: Se incorporaron 9 variantes interactivas de color y acabado:
+    - *Colores Pasteles:* Rosa Pastel, Celeste Pastel, Amarillo Pastel, Salmón Pastel, Lila Pastel.
+    - *Colores Fuertes:* Rojo Fuerte, Verde Fuerte, Azul Fuerte.
+    - *Línea Especial:* Glitter con gradiente distintivo.
+  - **[FICHA TÉCNICA (details)]**: Se documentaron medidas exactas (10.5 x 10.5 x 7 cm), material plástico libre de BPA, tapa hermética a presión y aplicaciones (souvenirs, golosineros, viandas escolares, orden en el hogar).
+  - **[CALIDAD & VALIDACIÓN]**: Verificación exitosa de TypeScript (`npx tsc --noEmit`) y ESLint (`next lint`) con 0 advertencias y 0 errores.
+
 
 
 
