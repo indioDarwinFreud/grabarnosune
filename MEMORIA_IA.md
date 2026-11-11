@@ -555,6 +555,17 @@
   - **[FICHA TÉCNICA (details)]**: Se documentaron medidas exactas (10.5 x 10.5 x 7 cm), material plástico libre de BPA, tapa hermética a presión y aplicaciones (souvenirs, golosineros, viandas escolares, orden en el hogar).
   - **[CALIDAD & VALIDACIÓN]**: Verificación exitosa de TypeScript (`npx tsc --noEmit`) y ESLint (`next lint`) con 0 advertencias y 0 errores.
 
+- **11/11/2026 - Incorporación de Cepillos de Dientes y Actualización de Precios:**
+  - **[NUEVOS PRODUCTOS - PLÁSTICO]**:
+    - **Cepillo de dientes GLITTER con envoltorio individual** (`id: 83`, $1.400, `/product/CepilloDeDientesEnvoltorioIndividualGLITTER.jpeg`): Línea Glitter con tubo transparente higiénico, tapa combinada y cerdas suaves infantiles.
+    - **Cepillo de dientes luminoso con envoltorio individual + Vaso para cepillos de color** (`id: 84`, $1.100, `/product/CepilloDeDientesLuminoso.jpeg`): Línea Glow en la oscuridad, cerdas blancas suaves y vaso plástico de color (9cm de alto) con 12 opciones de color seleccionables en variantes.
+    - **Cepillo de dientes con envoltorio individual + tubo con tapa** (`id: 85`, $1.500, `/product/CepilloDeDientesConEnvoltorioIndividual.jpeg`): Línea estándar con diseño clásico, tubo con tapa y doble protección higiénica.
+  - **[ACTUALIZACIÓN DE PRECIOS]**:
+    - **Gorra Trucker Adulto** (`id: 9`): actualizado de $3.000 a **$3.100**.
+    - **Gorra Trucker Niño** (`id: 10`): actualizado de $2.800 a **$2.900**.
+    - **Cubiertos de Polímero Personalizables (Libre de BPA)**: Cuchillo (`id: 20`), Tenedor (`id: 21`) y Cuchara (`id: 22`) actualizados de $365 a **$400** c/u.
+  - **[CALIDAD & VALIDACIÓN]**: Normalización de nombres de archivos estáticos (eliminado espacio al final de `CepilloDeDientesConEnvoltorioIndividual.jpeg`), compilación de tipos (`tsc --noEmit`) y linter (`next lint`) con 0 errores y 0 advertencias.
+
 
 
 

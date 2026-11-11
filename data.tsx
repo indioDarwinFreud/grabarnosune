@@ -478,7 +478,7 @@ TABLA DE TALLES (ANCHO x LARGO):
         category: "Textiles",
         stock: 45,
         website: "/contact",
-        price: 3000,
+        price: 3100,
     },
     {
         id: 10,
@@ -489,7 +489,7 @@ TABLA DE TALLES (ANCHO x LARGO):
         category: "Textiles",
         stock: 25,
         website: "/contact",
-        price: 2800,
+        price: 2900,
     },
     {
         id: 11,
@@ -643,7 +643,7 @@ TABLA DE TALLES (ANCHO x LARGO):
         category: "Polímero",
         stock: null,
         website: "/contact",
-        price: 365,
+        price: 400,
         variants: [
             {
                 colorName: "Diseño Impreso",
@@ -676,7 +676,7 @@ TABLA DE TALLES (ANCHO x LARGO):
         category: "Polímero",
         stock: null,
         website: "/contact",
-        price: 365,
+        price: 400,
         variants: [
             {
                 colorName: "Diseño Impreso",
@@ -709,7 +709,7 @@ TABLA DE TALLES (ANCHO x LARGO):
         category: "Polímero",
         stock: null,
         website: "/contact",
-        price: 365,
+        price: 400,
         variants: [
             {
                 colorName: "Diseño Impreso",
@@ -1787,6 +1787,121 @@ TABLA DE TALLES (ANCHO x LARGO):
                 image: "/product/ContenedorCuadradoTipoTaperMedida10.5x10.5x7Cm.jpeg",
             },
         ],
+    },
+    {
+        id: 83,
+        title: "Cepillo de dientes GLITTER con envoltorio individual",
+        location: "Plástico - Higiene & Souvenirs",
+        description: "Cepillo de dientes infantil línea Glitter con cerdas suaves y diseño atractivo con destellos de glitter. Viene con tubo individual higiénico transparente, tapa a rosca combinada y cerdas suaves para niños. Ideal para regalos, eventos, souvenirs y clínicas.",
+        image: "/product/CepilloDeDientesEnvoltorioIndividualGLITTER.jpeg",
+        category: "Plástico",
+        stock: 50,
+        website: "/contact",
+        price: 1400,
+        details: `Especificaciones Técnicas Cepillos de Dientes Infantiles - Línea GLITTER:
+• Diseño atractivo combinado con glitter.
+• Tubo individual higiénico transparente con tapa a rosca combinada.
+• Cerdas suaves ideales para niños (Nylon suave).
+• Material del tubo: Plástico de alta transparencia.
+• Doble protección: Con envoltorio individual (cepillo) + tubo con tapa.
+• Ideal para regalos, eventos, souvenirs y clínicas odontológicas.`,
+    },
+    {
+        id: 84,
+        title: "Cepillo de dientes luminoso con envoltorio individual + Vaso para cepillos de color",
+        location: "Plástico - Higiene & Souvenirs",
+        description: "Cepillo de dientes luminoso (Línea Glow) que brilla en la oscuridad con cerdas suaves para niños en un único tono blanco, con envoltorio individual + vaso plástico de color a juego de 9cm de alto. Ideal para crear hábitos divertidos, eventos y souvenirs.",
+        image: "/product/CepilloDeDientesLuminoso.jpeg",
+        category: "Plástico",
+        stock: 50,
+        website: "/contact",
+        price: 1100,
+        details: `Especificaciones Técnicas Cepillos de Dientes Infantiles - Línea GLOW:
+• Diseño innovador que brilla en la oscuridad (Glow in the dark).
+• Cepillo en un único tono con cerdas blancas suaves para niños.
+• Incluye vaso plástico de color a juego (Medidas: 45mm x 90mm de alto).
+• Empaque individual higiénico transparente.
+• Variedad de colores de vasos: Rosa pastel, rojo, celeste pastel, amarillo pastel, verde, lila, transparente, turquesa, blanco, dorado, plateado, negro.
+• Ideal para crear hábitos divertidos, souvenirs y regalos.`,
+        variants: [
+            {
+                colorName: "Rosa Pastel",
+                colorCode: "#fbcfe8",
+                image: "/product/CepilloDeDientesLuminoso.jpeg",
+            },
+            {
+                colorName: "Rojo",
+                colorCode: "#ef4444",
+                image: "/product/CepilloDeDientesLuminoso.jpeg",
+            },
+            {
+                colorName: "Celeste Pastel",
+                colorCode: "#bae6fd",
+                image: "/product/CepilloDeDientesLuminoso.jpeg",
+            },
+            {
+                colorName: "Amarillo Pastel",
+                colorCode: "#fef08a",
+                image: "/product/CepilloDeDientesLuminoso.jpeg",
+            },
+            {
+                colorName: "Verde",
+                colorCode: "#22c55e",
+                image: "/product/CepilloDeDientesLuminoso.jpeg",
+            },
+            {
+                colorName: "Lila",
+                colorCode: "#d8b4fe",
+                image: "/product/CepilloDeDientesLuminoso.jpeg",
+            },
+            {
+                colorName: "Transparente",
+                colorCode: "rgba(255,255,255,0.7)",
+                image: "/product/CepilloDeDientesLuminoso.jpeg",
+            },
+            {
+                colorName: "Turquesa",
+                colorCode: "#06b6d4",
+                image: "/product/CepilloDeDientesLuminoso.jpeg",
+            },
+            {
+                colorName: "Blanco",
+                colorCode: "#ffffff",
+                image: "/product/CepilloDeDientesLuminoso.jpeg",
+            },
+            {
+                colorName: "Dorado",
+                colorCode: "#eab308",
+                image: "/product/CepilloDeDientesLuminoso.jpeg",
+            },
+            {
+                colorName: "Plateado",
+                colorCode: "#cbd5e1",
+                image: "/product/CepilloDeDientesLuminoso.jpeg",
+            },
+            {
+                colorName: "Negro",
+                colorCode: "#171717",
+                image: "/product/CepilloDeDientesLuminoso.jpeg",
+            },
+        ],
+    },
+    {
+        id: 85,
+        title: "Cepillo de dientes con envoltorio individual + tubo con tapa",
+        location: "Plástico - Higiene & Souvenirs",
+        description: "Cepillo de dientes infantil línea estándar con diseño clásico y ergonómico. Cuenta con doble protección: envoltorio individual higiénico + tubo transparente con tapa de color. Cerdas suaves para niños, ideal para viajes, eventos y souvenirs.",
+        image: "/product/CepilloDeDientesConEnvoltorioIndividual.jpeg",
+        category: "Plástico",
+        stock: 50,
+        website: "/contact",
+        price: 1500,
+        details: `Especificaciones Técnicas Cepillos de Dientes Infantiles - Línea Estándar:
+• Diseño clásico y ergonómico.
+• Doble protección: Envoltorio individual + Tubo transparente con tapa.
+• Tubo transparente higiénico de plástico de alta transparencia.
+• Cerdas suaves para niños (Nylon suave).
+• Ideal para viajes, eventos escolares, souvenirs y regalos.`,
     },
 ];
 

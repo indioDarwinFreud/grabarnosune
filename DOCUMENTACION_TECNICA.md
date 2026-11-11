@@ -1,7 +1,7 @@
 # Documentación Técnica — Grabar Nos Une
 
-**Fecha de Última Actualización:** 07/11/2026
-**Versión del Proyecto:** 3.7 (Incorporación de Contenedor cuadrado tipo taper y botellas Hoppy al catálogo de Plásticos)
+**Fecha de Última Actualización:** 11/11/2026
+**Versión del Proyecto:** 3.8 (Incorporación de Cepillos de Dientes infantiles a Plásticos y actualización de precios en Gorras y Cubiertos)
 
 
 ---
@@ -261,7 +261,7 @@ El catálogo en `data.tsx` usa el campo `category` para el filtrado estricto por
 | `"Cerámica"` | Tazas de cerámica — **3 productos separados** | **Cerámica Nacional** (id: 2, $3.100, sin stock) \| **Taza Orca** (id: 66, $3.500) \| **Taza AAA Premium** (id: 67, $3.100, badge Triple AAA) \| Glitter \| Perlada \| Mágica \| Interior Color |
 | `"Insumos"` | Consumibles para el proceso de sublimación | Papel Art-Jet, tintas, Holofan, Winky Paper |
 | `"Papeles especiales"` | Papeles y films para aplicaciones específicas | Papel Especial Tatufan (tatuajes temporales A4) |
-| `"Plástico"` | Artículos plásticos de bazar y souvenirs | Vasos, botellas, luncheras, contenedores tipo taper, kit de masas |
+| `"Plástico"` | Artículos plásticos de bazar y souvenirs | Vasos, botellas, luncheras, contenedores tipo taper, cepillos de dientes infantiles, kit de masas |
 | `"Acero / Aluminio"` | Artículos de acero inoxidable, metal y aluminio | Termos, botellas térmicas, vaso térmico, bombillas para mate |
 | `"Madera"` | Artículos de MDF y madera | *(sin productos activos aún)* |
 
