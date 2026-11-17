@@ -1903,6 +1903,22 @@ TABLA DE TALLES (ANCHO x LARGO):
 • Cerdas suaves para niños (Nylon suave).
 • Ideal para viajes, eventos escolares, souvenirs y regalos.`,
     },
+    {
+        id: 86,
+        title: "Medias de Fútbol",
+        location: "Textiles - Medias",
+        description: "Medias de fútbol deportivas de diseño anatómico y elástico. Brindan un ajuste cómodo y seguro para alto rendimiento en partidos y entrenamientos.",
+        image: "/product/MediasFutbol.jpeg",
+        category: "Textiles",
+        stock: 30,
+        website: "/contact",
+        price: 5500,
+        details: `Especificaciones Técnicas Medias de Fútbol:
+• Medias deportivas largas de fútbol.
+• Tejido elástico y anatómico con refuerzo y compresión en zonas clave.
+• Excelente calce y comodidad durante la actividad física.
+• Ideales para entrenamientos, partidos y personalización.`,
+    },
 ];
 
 export const testimonialsData: Testimonial[] = [

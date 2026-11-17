@@ -1,7 +1,7 @@
 # Documentación Técnica — Grabar Nos Une
 
-**Fecha de Última Actualización:** 11/11/2026
-**Versión del Proyecto:** 3.8 (Incorporación de Cepillos de Dientes infantiles a Plásticos y actualización de precios en Gorras y Cubiertos)
+**Fecha de Última Actualización:** 17/11/2026
+**Versión del Proyecto:** 3.9 (Incorporación de Medias de Fútbol a Textiles)
 
 
 ---
@@ -256,7 +256,7 @@ El catálogo en `data.tsx` usa el campo `category` para el filtrado estricto por
 
 | Categoría (`category`) | Descripción | Ejemplos de productos |
 |---|---|---|
-| `"Textiles"` | Prendas sublimables o estampables | Remeras, gorras (trucker, gabardina, prelavada), buzos, camperas, medias |
+| `"Textiles"` | Prendas sublimables o estampables | Remeras, gorras (trucker, gabardina, prelavada), buzos, camperas, medias, medias de fútbol |
 | `"Polímero"` | Artículos plásticos con recubrimiento polimérico | Mates, tazas plásticas, jarros, cubiertos, rompecabezas, llaveros |
 | `"Cerámica"` | Tazas de cerámica — **3 productos separados** | **Cerámica Nacional** (id: 2, $3.100, sin stock) \| **Taza Orca** (id: 66, $3.500) \| **Taza AAA Premium** (id: 67, $3.100, badge Triple AAA) \| Glitter \| Perlada \| Mágica \| Interior Color |
 | `"Insumos"` | Consumibles para el proceso de sublimación | Papel Art-Jet, tintas, Holofan, Winky Paper |

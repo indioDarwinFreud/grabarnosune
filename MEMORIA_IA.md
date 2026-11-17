@@ -566,6 +566,11 @@
     - **Cubiertos de Polímero Personalizables (Libre de BPA)**: Cuchillo (`id: 20`), Tenedor (`id: 21`) y Cuchara (`id: 22`) actualizados de $365 a **$400** c/u.
   - **[CALIDAD & VALIDACIÓN]**: Normalización de nombres de archivos estáticos (eliminado espacio al final de `CepilloDeDientesConEnvoltorioIndividual.jpeg`), compilación de tipos (`tsc --noEmit`) y linter (`next lint`) con 0 errores y 0 advertencias.
 
+- **17/11/2026 - Incorporación de Medias de Fútbol en Sección Textiles:**
+  - **[NUEVO PRODUCTO - TEXTILES]**: Se agregó **Medias de Fútbol** (`id: 86`, $5.500, `/product/MediasFutbol.jpeg`) al catálogo en `data.tsx` dentro de la categoría `"Textiles"`.
+  - **[UBICACIÓN & DETALLES]**: `location: "Textiles - Medias"`. Se documentó ficha técnica (`details`) con diseño anatómico y elástico, refuerzo y compresión en zonas clave, ideal para entrenamientos, partidos y personalización.
+  - **[CALIDAD & VALIDACIÓN]**: Verificación exitosa de TypeScript (`npx tsc --noEmit`) y ESLint (`npm run lint`) con 0 errores y 0 advertencias.
+
 
 
 
